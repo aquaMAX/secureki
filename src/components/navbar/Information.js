@@ -10,7 +10,7 @@ const StyledInformation = styled.div`
         position: absolute;
         width: 1000vw;
         height: 24px;
-        left: 35vw;
+        left: 35%;
         top: 11px;
         
 
@@ -32,7 +32,6 @@ const Information = () => {
         <>
         <StyledInformation>
             <h1>The automation in SecureKi can save you time and double your revenue. Learn more → </h1>
-            
         </StyledInformation>
         </>
     )

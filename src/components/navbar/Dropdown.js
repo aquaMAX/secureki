@@ -34,22 +34,13 @@ const StyledLink = styled.div`
 const StyledButton = styled.button`
     background-color: #FFFFFF;
     color: #073233;
-    padding: 16px;
+    padding: 27px 4px;
     font-size: 16px;
     border: none;
     &:hover {
         text-decoration: underline;
     }
 `
-
-const Triangle = styled.div`
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 100px solid red;
-`
-
 
 const DropdownMenu = ({name}) => {
     return (
@@ -61,6 +52,8 @@ const DropdownMenu = ({name}) => {
               <a href="#">Link 3</a>
             </StyledLink> 
         </StyledDropdown>
+        
+        
     )
 }
 

@@ -10,8 +10,9 @@ const StyledInformation = styled.div`
         position: absolute;
         width: 1000vw;
         height: 24px;
-        left: 416px;
+        left: 35vw;
         top: 11px;
+        
 
         font-family: Messina Sans;
         font-style: normal;

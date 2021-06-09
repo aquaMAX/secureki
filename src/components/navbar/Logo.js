@@ -7,16 +7,13 @@ const LogoStyling = styled.img`
 
 height: 43px;
 width: 193px;
-left: 163px;
-top: 18px;
 border-radius: 0px;
-
-
+margin-bottom: 0px;
 position: absolute;
-left: 11.32%;
-right: 75.28%;
-top: 5.38%;
-bottom: 20.78%;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+flex: 1 300px;
 
 `;
 

@@ -5,23 +5,20 @@ const StyledInformation = styled.div`
     background-color: #145156;
     height: 45px;
     width: 100vw;
+    display: flex;
+    justify-content: center;
  
     > h1 {
         position: absolute;
-        width: 1000vw;
+        width: 100vw;
         height: 24px;
-        left: 35%;
         top: 11px;
-        
-
+        text-align: center;
         font-family: Messina Sans;
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
         line-height: 24px;
-
-        display: flex;
-        align-items: center;
         letter-spacing: 0.1px;
         color: #FFFFFF;
     }

@@ -4,7 +4,7 @@ import Button from './Button';
 import Information from './Information'
 import Logo from './Logo'
 
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import DropdownMenu from './Dropdown';
 
 const Nav = styled.nav`
@@ -26,25 +26,52 @@ const Triangle = styled.div`
     border-top: 4.5px solid #FF6938;
 `
 
+const StyledLogo = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+const StyledDropdown = styled.div`
+    display: flex;
+    justify-content: center;
+    align-content: center;
+`
+
+const StyledRow = styled(Row)`
+    margin-left: 0px;
+    margin-right: 0px;
+`
+
+
 const Navigation = () => {
     return (
         <>
         <Information/>
         <Nav>
-            <Row>
+            <StyledRow>
                 <Col>
-                <Row>
-                    <Col></Col>
+                <Row style={{marginRight:30, marginLeft:0,}}>
+                    
+                    
                     <Col>
+                    <StyledLogo>
                         <Logo />
+                        </StyledLogo>
                     </Col>
+                    
                 </Row>
                 </Col>
                 <Col xs={3}>
                     <Row>
-                        <Col><Row><DropdownMenu name="Product" /><Triangle /></Row></Col>
-                        <Col><Row><DropdownMenu name="Resources" /><Triangle /></Row></Col>
-                        <Col><Row><DropdownMenu name="Company" /><Triangle /></Row></Col>
+                        <Col>
+                            
+                            <StyledDropdown>
+                                <DropdownMenu name="Product" /><Triangle />
+                                <DropdownMenu name="Resources" /><Triangle />
+                                <DropdownMenu name="Company" /><Triangle />
+                            </StyledDropdown>
+                            
+                        </Col>
                     </Row>
                 </Col>
                 <Col>
@@ -55,7 +82,7 @@ const Navigation = () => {
                         <Col></Col>
                     </Row>
                 </Col>
-            </Row>  
+            </StyledRow>  
         </Nav>
         </>
     )

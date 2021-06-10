@@ -4,6 +4,8 @@ import styled from 'styled-components'
 const StyledDropdown = styled.div`
     position: relative;
     display: inline-block;
+    margin-left: 25px;
+    
     &:hover {
         display: block;
         >div {

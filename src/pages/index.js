@@ -19,11 +19,7 @@ export const query = graphql`
 const IndexPage = ({data}) => (
   <>
   <Navigation></Navigation>
-    <ul>
-      {data.allStrapiArticles.edges.map(articles => (
-        <li key={articles.id}>{articles.node.id}</li>
-      ))}
-    </ul>
+
   </>
 )
 

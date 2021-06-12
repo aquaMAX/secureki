@@ -4,18 +4,12 @@ import styled from "styled-components";
 import SecurekiLogo from "../../assets/logo.svg"
 
 const LogoStyling = styled.img`
-
-height: 43px;
-width: 193px;
-border-radius: 0px;
-margin-bottom: 0px;
-margin-top: 18px;
-position: absolute;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-flex: 1 300px;
-
+    height: 43px;
+    width: 193px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin-top: 18px;
+    position: absolute;
 `;
 
 const Logo = () => {

@@ -3,22 +3,24 @@ import { Link, graphql } from "gatsby"
 import Navigation from "../components/navbar/Navigation"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
+import Article from '../components/body/Article.js'
+import Slider from '../components/body/Slider/Slider.js'
+import '../css/typography.css';
+import { ThreePrinciplesSection } from "../components/body/ThreePrinciplesSection";
+import { DetailedOffer } from "../components/body/DetailedOffer";
+import { SecondDetailedOffer } from "../components/body/SecondDetailedOffer";
+import { DetailsWithPictures } from "../components/body/DetailsWithPictures";
 
-export const query = graphql`
-  {
-    allStrapiArticles {
-      edges {
-        node {
-          id
-        }
-      }
-    }
-  }
-`
 
 const IndexPage = ({data}) => (
   <>
   <Navigation></Navigation>
+  <Article />
+  <ThreePrinciplesSection />
+  <Slider />
+  <DetailedOffer />
+  <SecondDetailedOffer />
+  <DetailsWithPictures />
 
   </>
 )

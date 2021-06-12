@@ -39,6 +39,9 @@ const StyledButton = styled.button`
     padding: 27px 4px;
     font-size: 16px;
     border: none;
+    font-family: Messina Sans;
+    font-style: normal;
+    font-weight: normal;
     &:hover {
         text-decoration: underline;
     }

@@ -26,9 +26,8 @@ const Triangle = styled.div`
     border-top: 4.5px solid #FF6938;
 `
 
-const StyledLogo = styled.div`
-    display: flex;
-    justify-content: center;
+const StyledLogo = styled(Col)`
+    padding-left: 10.5em;
 `
 
 const StyledDropdown = styled.div`
@@ -42,6 +41,10 @@ const StyledRow = styled(Row)`
     margin-right: 0px;
 `
 
+const StyledCol = styled(Col)`
+    padding-left: 0px;
+`
+
 
 const Navigation = () => {
     return (
@@ -49,18 +52,15 @@ const Navigation = () => {
         <Information/>
         <Nav>
             <StyledRow>
-                <Col>
-                <Row style={{marginRight:30, marginLeft:0,}}>
+                <StyledCol>
+                <Row >
                     
-                    
-                    <Col>
-                    <StyledLogo>
-                        <Logo />
+                        <StyledLogo>
+                            <Logo />
                         </StyledLogo>
-                    </Col>
                     
                 </Row>
-                </Col>
+                </StyledCol>
                 <Col xs={3}>
                     <Row>
                         <Col>

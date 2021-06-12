@@ -10,6 +10,9 @@ const StyledButton = styled.button`
     color: ${props => props.font};
     border-radius: 1.4em;
     border-width: 0px;
+    font-family: Messina Sans;
+    font-style: normal;
+    font-weight: normal;
 
 `
 

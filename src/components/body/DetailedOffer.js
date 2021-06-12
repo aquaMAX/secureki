@@ -11,10 +11,18 @@ const Container = styled.div`
 `
 const TextContainer = styled(Col)`
     padding-top: 8.1875em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    
 `
 
 const ImageContainer = styled(Col)`
+    width: 39.8125em;
     padding-top: 3.5em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
 `
 const StyledRow = styled(Row)`
     padding-left: 10.3125em;
@@ -53,6 +61,8 @@ const StyledTitle = styled.div`
 
     margin-top: 0.5em;
     margin-bottom: 0.85em;
+    
+    margin-right: 0;
 
     font-family: Messina Sans;
     font-style: normal;
@@ -66,6 +76,7 @@ const StyledTitle = styled.div`
 `
 
 const StyledContent = styled.div`
+    width: 27.8125em;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: normal;
@@ -74,10 +85,12 @@ const StyledContent = styled.div`
     /* or 150% */
     letter-spacing: 0.00625em;
     margin-bottom: 2em;
+    margin-right: 7.8125em;
     color: #17494D;
 `
 
 const StyledMoreabout = styled.div`
+    width: 20.25em;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: 600;
@@ -103,10 +116,16 @@ const StyledPointer = styled.div`
     color: #FF6938;
 `
 
+const Styledimg = styled.img`
+    min-width: 39.8125em;
+    margin-bottom: 0;
+`
+
 export const DetailedOffer = () => {
     return (
         <>
         <Container>
+            <Row style={{margin: 0}}>
             <StyledRow>
                 <TextContainer>
                     <StyledSlogan>
@@ -125,10 +144,11 @@ export const DetailedOffer = () => {
                     
                 </TextContainer>
                 <ImageContainer>
-                    <img src={pierwszy} />
+                    <Styledimg src={pierwszy} />
                 </ImageContainer>
 
             </StyledRow>
+            </Row>
         </Container>
         </>
     )

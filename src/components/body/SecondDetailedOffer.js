@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import drugi from "../../assets/drugi.png"
 
 const Container = styled.div`
-    height: 40em;
+    height: 45.5em;
     width: 100vw;
     background: #FCF5F0;
     padding-bottom: 7.125em;
@@ -16,7 +16,10 @@ const TextContainer = styled(Col)`
 `
 
 const ImageContainer = styled(Col)`
-    padding-top: 3.5em;
+    padding-top: 2.5em;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
 `
 const StyledRow = styled(Row)`
     padding-left: 3.875em;
@@ -110,27 +113,31 @@ const SecondParagraph = styled(Row)`
 
 `
 
+const Styledimg = styled.img`
+    min-width: 41.125em;
+`
+
 export const SecondDetailedOffer = () => {
     return (
         <>
         <Container>
             <StyledRow>
                 <ImageContainer>
-                    <img src={drugi} />
+                    <Styledimg src={drugi} />
                 </ImageContainer>
                 <TextContainer>
                     <StyledSlogan>
-                    PAM
+                        PAM
                     </StyledSlogan>
                     <StyledTitle>
-                    Keep unauthorized users out. Safeguard privileged access and credentials.
+                        Keep unauthorized users out. Safeguard privileged access and credentials.
                     </StyledTitle>
                     <StyledContent>
                         <Row>
-                    Compromised access and credentials most often are the leading attack vectors of a security breach.
-                    </Row><Row><span><br />
-                    Our comprehensive privileged access management is designed to manage and monitor privileged access to accounts and applications, alert system administrators on high-risk events, reduce operations complexity, and meeting regulatory compliance with ease.  
-                    </span></Row>
+                        Compromised access and credentials most often are the leading attack vectors of a security breach.
+                        </Row><Row><span><br />
+                        Our comprehensive privileged access management is designed to manage and monitor privileged access to accounts and applications, alert system administrators on high-risk events, reduce operations complexity, and meeting regulatory compliance with ease.  
+                        </span></Row>
                     </StyledContent>
                     <StyledMoreabout>
                         <text>Learn more on Privileged Access Management</text>

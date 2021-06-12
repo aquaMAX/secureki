@@ -10,7 +10,7 @@ import { ThreePrinciplesSection } from "../components/body/ThreePrinciplesSectio
 import { DetailedOffer } from "../components/body/DetailedOffer";
 import { SecondDetailedOffer } from "../components/body/SecondDetailedOffer";
 import { DetailsWithPictures } from "../components/body/DetailsWithPictures";
-
+import { Stories } from "../components/body/Stories";
 
 const IndexPage = ({data}) => (
   <>
@@ -21,6 +21,7 @@ const IndexPage = ({data}) => (
   <DetailedOffer />
   <SecondDetailedOffer />
   <DetailsWithPictures />
+  <Stories />
 
   </>
 )

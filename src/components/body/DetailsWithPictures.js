@@ -2,6 +2,9 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import pierwszy from "../../assets/pierwszy.png"
+import paypal from "../../assets/paypal.svg"
+import pay from "../../assets/pay.svg"
+import mailchimp from "../../assets/mailchimp.svg"
 
 const Container = styled.div`
     height: 40em;
@@ -10,6 +13,7 @@ const Container = styled.div`
 `
 const TextContainer = styled(Col)`
     padding-top: 8.1875em;
+    padding-left: 0;
 `
 
 const ImageContainer = styled(Col)`
@@ -24,29 +28,33 @@ const StyledRow = styled(Row)`
 
 const StyledTitle = styled.div`
 
-    height: 3.6em;
-    width: 12.075em;
+    height: 3.125em;
+    width: 7.770833333333333em;
+    
 
     margin-top: 0.5em;
-    margin-bottom: 0.85em;
+    margin-bottom: 0.6875em;
 
     font-family: Messina Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.5em;
-    line-height: 1.2em;
+    font-size: 3em;
+    line-height: 1.0625em;
     /* or 120% */
-    letter-spacing: -0.00625em;
+    letter-spacing: -0.010416666666666666em;
 
     color: #073233;
 `
 
-const StyledContent = styled.div`
+const StyledContent = styled(Row)`
+    
+    width: 21.333333333333332em;
+    height: 3.2222222222222223em;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 1.125em;
+    line-height: 1.5555555555555556em;
     /* or 150% */
     letter-spacing: 0.00625em;
     margin-bottom: 2em;
@@ -54,16 +62,20 @@ const StyledContent = styled.div`
     padding-left: 0.9375em;
 `
 
-const StyledMoreabout = styled.div`
+const StyledMoreabout = styled(Row)`
+    width: 12.825em;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: 600;
     font-size: 1em;
     line-height: 1.5em;
+    padding-left: 0.9375em;
     /* or 150% */
     display: flex;
     align-items: center;
     letter-spacing: 0.00625em;
+
+    margin-top: 7.625em;
     
     color: #073233;
     > text {
@@ -80,6 +92,28 @@ const StyledPointer = styled.div`
     color: #FF6938;
 `
 
+const LogosRow = styled(Row)`
+    width: 25em;
+    height: 2.9375em;
+    padding-left: 0.9375em;
+`
+
+const PaypalLogo = styled.img`
+    min-width: 5.726875em;
+    width: 5.726875em;
+    padding-top: 0.7415625em;
+`
+
+const PayLogo = styled.img`
+    min-width: 2.73125em;
+    width: 2.73125em;
+`
+
+const MailchimpLogo = styled.img`
+    min-width: 10.25em;
+    width: 10.25em;
+`
+
 export const DetailsWithPictures = () => {
     return (
         <>
@@ -90,14 +124,26 @@ export const DetailsWithPictures = () => {
                     Trusted by leading companies
                     </StyledTitle>
                     <StyledContent>
-                        <Row>
-                    Compromised access and credentials most often are the leading attack vectors of a security breach.
+                        <Row style={{paddingLeft: "0.8333333333333334em"}}>
+                        Discover from our customers how SecureKi improves their security and business.
                     </Row><Row><span><br />
-                    Placeholder  
+                        <LogosRow>
+                            <Col>
+                                <PaypalLogo src={paypal} />
+                            </Col>
+                            <Col>
+                                <PayLogo src={pay} />
+                            </Col>
+                            <Col>
+                                
+                                <MailchimpLogo src={mailchimp} />
+                                
+                            </Col>
+                        </LogosRow>
                     </span></Row>
                     </StyledContent>
                     <StyledMoreabout>
-                        <text>Learn about Multifactor Authentication</text>
+                        <text>See customer stories</text>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
                     

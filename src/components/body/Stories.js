@@ -42,7 +42,7 @@ const StyledRow = styled(Row)`
 export const Stories = () => {
     return (
         <Container>
-            <Row style={{textAlign: "center"}}>
+            <Row style={{textAlign: "center", marginLeft: 0, marginRight: 0}}>
                 <StyledTitle>
                     <h1>
                     Featured customer stories

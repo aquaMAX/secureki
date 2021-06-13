@@ -13,7 +13,7 @@ const StyledImage = styled.img`
     position: absolute;
     display: flex;
     float: right;
-    margin-left: 2.125em;
+    margin-left: auto;
     
 `
 const FixedCol = styled(Col)`
@@ -41,20 +41,13 @@ const FixedRow = styled(Row)`
 const StyledTitle = styled.div`
         /* Medium length displa */
 
-    position: static;
-    width: 487px;
-    height: 129px;
-    left: 0px;
-   
-
     font-family: Messina Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 56px;
-    line-height: 60px;
+    font-size: 3.5em;
+    line-height: 1.0714285714285714em;
     /* or 107% */
-    letter-spacing: -1px;
-
+    letter-spacing: -0.017857142857142856em;
     color: #073233;
 
     mix-blend-mode: normal;
@@ -63,7 +56,7 @@ const StyledTitle = styled.div`
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 24px 0px;
+    margin: 0.42857142857142855em 0px;
 `
 const ColoredP = styled.div`
     color: #FF6938;
@@ -72,16 +65,15 @@ const ColoredP = styled.div`
 const StyledTextBody = styled.div`
     /* Separated they live */
     position: static;
-    width: 487px;
-    height: 77px;
-    left: 0px;
-    top: calc(50% - 77px/2 + 76.5px);
+    width: 27.055555555555557em;
+    height: 4.277777777777778em;
+
 
     font-family: Messina Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125em;
+    line-height: 1.5555555555555556em;
     /* or 156% */
 
     color: #17494D;
@@ -103,11 +95,16 @@ const StyledLeftColumn = styled(Col)`
     margin-top: 4.75em;
 `
 
+const ButtonsRow = styled(Row)`
+    justify-content: center;
+    display: flex;
+`
+
 const StyledTrialText = styled.div`
     /* Separated they live */
 
     position: absolute;
-    width: 4.1875em;
+    
     height: 1.25em;
     margin-top: 1em;
 
@@ -119,11 +116,12 @@ const StyledTrialText = styled.div`
     /* identical to box height, or 125% */
     display: flex;
     align-items: center;
-
+    margin-left: 14.9375em;
     color: #073233;
 
     mix-blend-mode: normal;
 
+    border-bottom: 3px solid #FF6938;
 `
 
 const FixedButtonsRow = styled(Row)`
@@ -134,10 +132,19 @@ const FixedButtonsRow = styled(Row)`
 
 const StyledButtonFix = styled(StyledButton)`
     margin: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 1.875em;
-    padding-left: 1.875em;
+    padding-top: 0.6666666666666666em;
+    padding-bottom: 0.8888888888888888em;
+    padding-right: 1.6666666666666667em;
+    padding-left: 1.6666666666666667em;
+    font-family: Messina Sans;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3333333333333333em;
+    letter-spacing: 0.005555555638339784em;
+    text-align: center;
+    border-radius: 1.6666666666666667em;
+
 `
 
 const Notice = styled.div`
@@ -148,11 +155,11 @@ const Notice = styled.div`
     font-weight: normal;
     font-size: 0.8125em;
     line-height: 2.1538461538461537em;
-
     color: #17494D;
-
     mix-blend-mode: normal;
 `
+
+
 
 const Article = () => {
     return (
@@ -178,14 +185,10 @@ const Article = () => {
                             <StyledButtonFix background="#FF6938" font="#FFFFFF">
                                 Request a demo
                             </StyledButtonFix>
-                        </Row>
-                    </Col>
-                    <Col>
                         <StyledTrialText>
-                            <Row>
                                 Free trial
-                            </Row>
                         </StyledTrialText>
+                        </Row>
                     </Col>
                 </FixedButtonsRow>
                 <FixedRow>
@@ -200,7 +203,7 @@ const Article = () => {
             </StyledLeftColumn>
             </>
 
-            <FixedCol xs={6}>
+            <FixedCol>
                 <StyledImage src={hero}/>
             </FixedCol>
         </FixedRow>   

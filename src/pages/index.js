@@ -11,6 +11,8 @@ import { DetailedOffer } from "../components/body/DetailedOffer";
 import { SecondDetailedOffer } from "../components/body/SecondDetailedOffer";
 import { DetailsWithPictures } from "../components/body/DetailsWithPictures";
 import { Stories } from "../components/body/Stories";
+import { GetStarted } from "../components/body/GetStarted"
+import { Footer } from "../components/body/Footer"
 
 const IndexPage = ({data}) => (
   <>
@@ -22,6 +24,8 @@ const IndexPage = ({data}) => (
   <SecondDetailedOffer />
   <DetailsWithPictures />
   <Stories />
+  <GetStarted />
+  <Footer />
 
   </>
 )

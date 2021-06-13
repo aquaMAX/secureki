@@ -53,14 +53,14 @@ const StyledCol = styled(Col)`
 
 const StyledUnderline = styled.div`
     /* Line 2 */
-    width: 69.125em;    
+    width: 100%;    
     background: #E5E5E5;
     color: #E5E5E5;
     opacity: 0.3;
     border: 0.0625em solid #FFFFFF;
     transform: rotate(-0.05deg);
     margin-left: 10.4375em;
-
+    margin-right: 10.4375em;
 `
 
 const StyledRow = styled(Row)`

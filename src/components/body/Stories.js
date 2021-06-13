@@ -39,6 +39,12 @@ const StyledRow = styled(Row)`
     padding-right: 10.4375em;
 `
 
+const StoriesCol = styled(Col)`
+    padding: 0; 
+    justify-content: center; 
+    display: flex;
+`
+
 export const Stories = () => {
     return (
         <Container>
@@ -50,30 +56,30 @@ export const Stories = () => {
                 </StyledTitle>
             </Row>
             <StyledRow>
-                <Col style={{padding: 0}}>
+                <StoriesCol>
                     <StoriesCard 
                     story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
                     image="andrea"
                     title="Jasmine Jakuza"
                     position="Solutions Engineer"
                     />
-                </Col>
-                <Col style={{padding: 0}}>
+                </StoriesCol>
+                <StoriesCol>
                 <StoriesCard 
                     story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
                     image="andrea"
                     title="Jasmine Jakuza"
                     position="Solutions Engineer"
                     />
-                </Col>
-                <Col style={{padding: 0}}>   
+                </StoriesCol>
+                <StoriesCol>   
                 <StoriesCard 
                     story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
                     image="andrea"
                     title="Jasmine Jakuza"
                     position="Solutions Engineer"
                     />
-                </Col>
+                </StoriesCol>
             </StyledRow>
             
         </Container>

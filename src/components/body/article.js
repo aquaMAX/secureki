@@ -3,39 +3,24 @@ import { Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import hero from "../../assets/hero NEW 1.png"
 import StyledButton from "../navbar/Button.js"
+import square from "../../assets/decorations/square.svg"
+import circle from "../../assets/decorations/circle.svg"
+import smallcircle from "../../assets/decorations/smallcircle.svg"
 
 const StyledImage = styled.img`
-    display: block;
     border-radius: 0px;
     margin-bottom: 0px;
-    width: 42.875em;
+    min-width: 42.875em;
     height: 32.5em;
-    position: absolute;
-    display: flex;
-    float: right;
-    margin-left: auto;
     
 `
 const FixedCol = styled(Col)`
-    justify-content: space-between;
-    align-items: stretch;
     padding-right: 0px;
     padding-left: 0px;
-    width: 42.875em;
-    height: 32.5em;
-    display: flex;
-    float: right;
-    justify-content: space-between;
-    
 `
 
 const StyledContent = styled.div`
-    padding-top: 4.8125em;
-`
-
-
-const FixedRow = styled(Row)`
-    margin: 0;
+    
 `
 
 const StyledTitle = styled.div`
@@ -51,12 +36,11 @@ const StyledTitle = styled.div`
     color: #073233;
 
     mix-blend-mode: normal;
-
     /* Inside Auto Layout */
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 0.42857142857142855em 0px;
+    margin-bottom: 0.42857142857142855em;
 `
 const ColoredP = styled.div`
     color: #FF6938;
@@ -64,10 +48,8 @@ const ColoredP = styled.div`
 
 const StyledTextBody = styled.div`
     /* Separated they live */
-    position: static;
-    width: 27.055555555555557em;
-    height: 4.277777777777778em;
 
+    max-width: 27.055555555555557em;
 
     font-family: Messina Sans;
     font-style: normal;
@@ -79,12 +61,8 @@ const StyledTextBody = styled.div`
     color: #17494D;
 
     mix-blend-mode: normal;
-
-    /* Inside Auto Layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin-bottom: 2.5em;
+    margin-right: 5.555555555555555em;
+    margin-bottom: 2.2222222222222223em;
     
 `
 
@@ -92,7 +70,7 @@ const StyledLeftColumn = styled(Col)`
     margin-left: 10.5em;
     margin-right: 0;
     padding: 0;
-    margin-top: 4.75em;
+    margin-top: 9.375em;
 `
 
 const ButtonsRow = styled(Row)`
@@ -124,16 +102,13 @@ const StyledTrialText = styled.div`
     border-bottom: 3px solid #FF6938;
 `
 
-const FixedButtonsRow = styled(Row)`
-    margin: 0;
-    height: 1.25em;
-    margin-bottom: 3.5em;
-`
+
+
 
 const StyledButtonFix = styled(StyledButton)`
     margin: 0;
     padding-top: 0.6666666666666666em;
-    padding-bottom: 0.8888888888888888em;
+    padding-bottom: 0.7888888888888888em;
     padding-right: 1.6666666666666667em;
     padding-left: 1.6666666666666667em;
     font-family: Messina Sans;
@@ -148,8 +123,8 @@ const StyledButtonFix = styled(StyledButton)`
 `
 
 const Notice = styled.div`
-    position: absolute;
-
+    
+    margin-top: 4.5em;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: normal;
@@ -159,12 +134,64 @@ const Notice = styled.div`
     mix-blend-mode: normal;
 `
 
+const StyledSquare = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 6.75em;
+    margin-top: 6.125em;
+`
+
+const StyledSmallOneCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 2em;
+    margin-top: 38.5em;
+`
+
+const StyledCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 5.125em;
+    margin-top: 32em;
+`
+
+const StyledSmallTwoCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 3.0625em;
+    margin-top: 29.5625em;
+`
+
+const StyledSmallThreeCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 44.25em;
+    margin-top: 30.3125em;
+`
+
+const FixedButtonsRow = styled(Row)`
+    margin: 0;
+`
+
+const FixedRow = styled(Row)`
+    margin: 0;
+`
+
 
 
 const Article = () => {
     return (
+        <div>
+        <StyledCircle src={circle} />
+        <StyledSquare src={square} />
+        <StyledSmallOneCircle src={smallcircle} />
+        <StyledSmallTwoCircle src={smallcircle} />
+        <StyledSmallThreeCircle src={smallcircle} />
+        
         <StyledContent>
+            
         <FixedRow>
+
             <>
             <StyledLeftColumn>
                 <FixedRow>
@@ -176,29 +203,25 @@ const Article = () => {
                 <FixedRow>
                     <StyledTextBody>
                         Secure access for your business, customers, or employees with our unparalleled identity security backed by
-                        a zero–trust philosophy.
+                        <br />a zero–trust philosophy.
                     </StyledTextBody>
                 </FixedRow>
                 <FixedButtonsRow>
-                    <Col>
-                        <Row>
-                            <StyledButtonFix background="#FF6938" font="#FFFFFF">
-                                Request a demo
-                            </StyledButtonFix>
-                        <StyledTrialText>
-                                Free trial
-                        </StyledTrialText>
-                        </Row>
-                    </Col>
+                    
+                    <StyledButtonFix background="#FF6938" font="#FFFFFF">
+                        Request a demo
+                    </StyledButtonFix>
+                    <StyledTrialText>
+                        Free trial
+                    </StyledTrialText>
+                    
                 </FixedButtonsRow>
                 <FixedRow>
-                    <Col>
-                        <Row>
-                            <Notice>
-                            *We never sell your data. No credit card required.
-                            </Notice>
-                        </Row>
-                    </Col>
+                    
+                    <Notice>
+                    *We never sell your data. No credit card required.
+                    </Notice>
+                    
                 </FixedRow>
             </StyledLeftColumn>
             </>
@@ -208,6 +231,7 @@ const Article = () => {
             </FixedCol>
         </FixedRow>   
         </StyledContent>
+        </div>
     )
 }
 

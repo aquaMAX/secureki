@@ -3,6 +3,8 @@ import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../../assets/anna.png"
 import group from "../../../assets/elementsgroup.svg"
+import squareslide from "../../../assets/decorations/squareslide.svg"
+import circleslide from "../../../assets/decorations/circleslide.svg"
 
 const Container = styled.div`
     height: 32.5em;
@@ -93,6 +95,7 @@ const StyledPointer = styled.div`
     color: #FFFFFF;
 `
 
+
 const Styledimg = styled.img`
     min-width: 30.125em;
     z-index: 2;
@@ -103,13 +106,31 @@ const StyledGroupElements = styled.img`
     z-index: 1;
     position: absolute;
     margin-left: 35.375em;
-    margin-top: 2.75em
+    margin-top: 2.75em;
 `
+
+const StyledSquare = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 8.3125em;
+    margin-top: 21.9375em;
+`
+
+const StyledCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 11.96875em;
+    margin-top: 25.6875em;
+`
+
+
 
 export const FirstSlide = () => {
     return (
         <>
         <Container>
+            <StyledSquare src={squareslide} />
+            <StyledCircle src={circleslide} />
             <StyledGroupElements src={group} />
             <StyledRow>
                 <ImageContainer>
@@ -135,3 +156,5 @@ export const FirstSlide = () => {
         </>
     )
 }
+
+

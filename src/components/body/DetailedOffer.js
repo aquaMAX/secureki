@@ -18,7 +18,6 @@ const TextContainer = styled(Col)`
 `
 
 const ImageContainer = styled(Col)`
-    width: 39.8125em;
     padding-top: 3.5em;
     padding-left: 0;
     padding-right: 0;
@@ -125,7 +124,7 @@ export const DetailedOffer = () => {
     return (
         <>
         <Container>
-            <Row style={{margin: 0}}>
+            
             <StyledRow>
                 <TextContainer>
                     <StyledSlogan>
@@ -148,7 +147,7 @@ export const DetailedOffer = () => {
                 </ImageContainer>
 
             </StyledRow>
-            </Row>
+            
         </Container>
         </>
     )

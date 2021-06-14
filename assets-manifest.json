@@ -1,0 +1,12 @@
+{
+  "main.js": "render-page.js",
+  "render-page.js.map": "render-page.js.map",
+  "static/anna.png": "static/anna-f03bf1685dab0ffe2a28177e19455b30.png",
+  "static/drugi.png": "static/drugi-ee45530b01f3ff7285e942cffc2eef9d.png",
+  "static/elementsgroup.svg": "static/elementsgroup-f1a7974074486cf6f6ae3948c04e11bc.svg",
+  "static/hero NEW 1.png": "static/hero NEW 1-466fbcd01c16d6f39bd734e85ff4c55b.png",
+  "static/hero NEW 1.svg": "static/hero NEW 1-179fa96c76599528ae89c817d702c61d.svg",
+  "static/logo.svg": "static/logo-515aa73e70baf3220b5bd17a4882be08.svg",
+  "static/mailchimp.svg": "static/mailchimp-d3f1e07b2f6e641994fc221c93389366.svg",
+  "static/pierwszy.png": "static/pierwszy-707d52f6b4d613575211eb77f36843e6.png"
+}

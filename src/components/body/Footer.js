@@ -9,7 +9,7 @@ import linkedin from "../../assets/logos/linkedin.svg"
 
 const Container = styled.div`
     height: 23.9375em;
-    width: 100vw;
+
     background: #073233;
 
 

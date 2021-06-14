@@ -5,7 +5,7 @@ import drugi from "../../assets/drugi.png"
 
 const Container = styled.div`
     height: 45.5em;
-    width: 100vw;
+    
     background: #FCF5F0;
     padding-bottom: 7.125em;
 

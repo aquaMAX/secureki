@@ -8,7 +8,7 @@ import circleslide from "../../../assets/decorations/circleslide.svg"
 
 const Container = styled.div`
     height: 32.5em;
-    width: 100vw;
+   
     max-width: 1440px;
     background: #114748;
     padding-bottom: 7.125em;

@@ -11,7 +11,7 @@ import recempty from '../../assets/customer/recempty.svg'
 
 const Container = styled.div`
     height: 40em;
-    width: 100vw;
+    
     background: #FFFFFF;
     max-width: 1440px;
     display: block;
@@ -32,7 +32,7 @@ const StyledTitle = styled(Col)`
 
     > h1 {
         position: absolute;
-        width: 100vw;
+      
         font-family: Messina Sans;
         font-style: normal;
         font-weight: bold;

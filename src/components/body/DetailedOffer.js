@@ -5,7 +5,7 @@ import pierwszy from "../../assets/pierwszy.png"
 
 const Container = styled.div`
     height: 40em;
-    width: 100vw;
+    
     background: #FCF5F0;
 
     max-width: 1440px;

@@ -6,8 +6,6 @@ import { FirstSlide } from './FirstSlide';
 
 const Container = styled.div`
     height: 32.5em;
-    width: 100vw;
-    
     
     background: #114748;
 `

@@ -8,7 +8,7 @@ import mailchimp from "../../assets/mailchimp.svg"
 
 const Container = styled.div`
     height: 40em;
-    width: 100vw;
+    
     background: #FFFFFF;
 
     max-width: 1440px;

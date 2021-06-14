@@ -5,13 +5,13 @@ import Button from "../navbar/Button"
 
 const Container = styled.div`
     height: 22.875em;
-    width: 100vw;
+ 
     background: #FCF5F0;
 `
 
 const StyledTitle = styled(Col)`
     /* Short headline */
-    width: 100vw;
+    
     height: 3em;
     justify-content: center;
     display: flex;
@@ -21,7 +21,7 @@ const StyledTitle = styled(Col)`
 
     > h1 {
         position: absolute;
-        width: 100vw;
+     
         font-family: Messina Sans;
         font-style: normal;
         font-weight: bold;

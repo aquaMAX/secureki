@@ -16,19 +16,25 @@ const StyledInformation = styled.div`
         text-align: center;
         font-family: Messina Sans;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 15px;
         line-height: 24px;
         letter-spacing: 0.1px;
         color: #FFFFFF;
+        > p {
+            display: inline;
+            font-weight: 700;
+            border-bottom: 1px solid;
+        }
     }
+
 `
 
 const Information = () => {
     return (
         <>
         <StyledInformation>
-            <h1>The automation in SecureKi can save you time and double your revenue. Learn more → </h1>
+            <h1>The automation in SecureKi can save you time and <p>double</p> your revenue. Learn more → </h1>
         </StyledInformation>
         </>
     )

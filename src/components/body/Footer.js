@@ -68,6 +68,8 @@ const StyledRow = styled(Row)`
     padding-bottom: 5.625em;
     padding-left: 10.5em;
     padding-right: 19.625em;
+    display: flex;
+    justify-content: center;
     margin-left: 0;
     margin-right: 0;
 `

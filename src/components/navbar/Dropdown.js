@@ -41,7 +41,7 @@ const StyledButton = styled.button`
     border: none;
     font-family: Messina Sans;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     &:hover {
         text-decoration: underline;
     }

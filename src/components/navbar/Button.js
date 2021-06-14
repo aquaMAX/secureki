@@ -12,7 +12,9 @@ const StyledButton = styled.button`
     border-width: 0px;
     font-family: Messina Sans;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    line-height: 24px;
 
 `
 

@@ -7,10 +7,14 @@ import { FirstSlide } from './FirstSlide';
 const Container = styled.div`
     height: 32.5em;
     width: 100vw;
+    
+    
     background: #114748;
 `
 
 const StyledCarousel = styled(Carousel)`
+
+
     >ol {
         >li {
             width: 6px;
@@ -31,6 +35,7 @@ margin: 0px 8px;
     }
     >a {
         >span {
+            opacity: 0;
             color: #114748;
             background: #114748;
         }

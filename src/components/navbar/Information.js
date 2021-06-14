@@ -21,10 +21,13 @@ const StyledInformation = styled.div`
         line-height: 24px;
         letter-spacing: 0.1px;
         color: #FFFFFF;
+
         > p {
             display: inline;
             font-weight: 700;
-            border-bottom: 1px solid;
+            text-underline-offset: auto;
+            text-decoration: underline solid #FFFFFF;
+            
         }
     }
 

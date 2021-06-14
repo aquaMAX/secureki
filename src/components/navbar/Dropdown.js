@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import pointer from '../../assets/logos/pointer.svg'
 
 const StyledDropdown = styled.div`
     position: relative;
     display: inline-block;
     margin-left: 25px;
+    height: 4.25em;
+    transition: 0.3s;
     
     &:hover {
         display: block;
+        transition: 0.3s;
         >div {
             display: block;
         }
@@ -21,6 +25,7 @@ const StyledLink = styled.div`
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    transition: 0.3s;
  
     > a {
         color: black;
@@ -36,21 +41,31 @@ const StyledLink = styled.div`
 const StyledButton = styled.button`
     background-color: #FFFFFF;
     color: #073233;
-    padding: 27px 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 27px;
     font-size: 16px;
     border: none;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: 600;
+    transition: 0.3s;
     &:hover {
-        text-decoration: underline;
+        text-underline-offset: 2.5px;
+        text-decoration: underline solid #FF6938;
+        text-decoration-thickness: 3px;
     }
+`
+
+const StyledPointer = styled.img`
+    margin-bottom: 0;
+    padding-left: 5px;
 `
 
 const DropdownMenu = ({name}) => {
     return (
         <StyledDropdown>
-           <StyledButton>{name}</StyledButton>
+           <StyledButton>{name}<StyledPointer src={pointer} /></StyledButton>
            <StyledLink>
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>

@@ -7,11 +7,13 @@ import square from "../../assets/decorations/square.svg"
 import circle from "../../assets/decorations/circle.svg"
 import smallcircle from "../../assets/decorations/smallcircle.svg"
 
+
 const StyledImage = styled.img`
     border-radius: 0px;
     margin-bottom: 0px;
     min-width: 42.875em;
     height: 32.5em;
+    margin-top: 12.25em;
     
 `
 const FixedCol = styled(Col)`
@@ -20,13 +22,18 @@ const FixedCol = styled(Col)`
 `
 
 const StyledContent = styled.div`
-    
+max-width: 1440px;
+        display: block;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 `
 
 const StyledTitle = styled.div`
         /* Medium length displa */
 
-    font-family: Messina Sans;
+    font-family: "Messina Sans";
     font-style: normal;
     font-weight: bold;
     font-size: 3.5em;
@@ -51,11 +58,13 @@ const StyledTextBody = styled.div`
 
     max-width: 27.055555555555557em;
 
-    font-family: Messina Sans;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Messina Sans';
+    font-style: regular;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
     font-size: 1.125em;
     line-height: 1.5555555555555556em;
+    opacity: 1;
     /* or 156% */
 
     color: #17494D;
@@ -70,7 +79,7 @@ const StyledLeftColumn = styled(Col)`
     margin-left: 10.5em;
     margin-right: 0;
     padding: 0;
-    margin-top: 9.375em;
+    margin-top: 17em;
 `
 
 const ButtonsRow = styled(Row)`
@@ -78,7 +87,7 @@ const ButtonsRow = styled(Row)`
     display: flex;
 `
 
-const StyledTrialText = styled.div`
+const StyledTrialText = styled.button`
     /* Separated they live */
 
     position: absolute;
@@ -94,12 +103,20 @@ const StyledTrialText = styled.div`
     /* identical to box height, or 125% */
     display: flex;
     align-items: center;
-    margin-left: 14.9375em;
+    margin-left: 13.9375em;
     color: #073233;
 
     mix-blend-mode: normal;
-
+    
+    border: 0;
+    background: none;
+    padding: 0;
     border-bottom: 3px solid #FF6938;
+    transition: 0.3s;
+    &:hover {
+        color: #1E5A5F;
+        
+    }
 `
 
 
@@ -119,6 +136,10 @@ const StyledButtonFix = styled(StyledButton)`
     letter-spacing: 0.005555555638339784em;
     text-align: center;
     border-radius: 1.6666666666666667em;
+    transition: 0.3s;
+    &:hover {
+        background: #E55A2D;
+    }
 
 `
 
@@ -127,7 +148,7 @@ const Notice = styled.div`
     margin-top: 4.5em;
     font-family: Messina Sans;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 200;
     font-size: 0.8125em;
     line-height: 2.1538461538461537em;
     color: #17494D;
@@ -138,35 +159,35 @@ const StyledSquare = styled.img`
     z-index: -1;
     position: absolute;
     margin-left: 6.75em;
-    margin-top: 6.125em;
+    margin-top: 13.75em;
 `
 
 const StyledSmallOneCircle = styled.img`
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     margin-left: 2em;
-    margin-top: 38.5em;
+    margin-top: 46.125em;
 `
 
 const StyledCircle = styled.img`
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     margin-left: 5.125em;
-    margin-top: 32em;
+    margin-top: 39.625em;
 `
 
 const StyledSmallTwoCircle = styled.img`
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     margin-left: 3.0625em;
-    margin-top: 29.5625em;
+    margin-top: 37.1875em;
 `
 
 const StyledSmallThreeCircle = styled.img`
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     margin-left: 44.25em;
-    margin-top: 30.3125em;
+    margin-top: 37.9375em;
 `
 
 const FixedButtonsRow = styled(Row)`
@@ -182,19 +203,22 @@ const FixedRow = styled(Row)`
 const Article = () => {
     return (
         <div>
+
+        
+        <StyledContent>
+        <StyledSquare src={square} />
         <StyledCircle src={circle} />
         <StyledSquare src={square} />
         <StyledSmallOneCircle src={smallcircle} />
         <StyledSmallTwoCircle src={smallcircle} />
         <StyledSmallThreeCircle src={smallcircle} />
-        
-        <StyledContent>
             
         <FixedRow>
 
             <>
             <StyledLeftColumn>
                 <FixedRow>
+                    
                     <StyledTitle>
                         <FixedRow>Identity Security</FixedRow>
                         <FixedRow>for{'\u00A0'}<ColoredP>Your Workforce</ColoredP></FixedRow>

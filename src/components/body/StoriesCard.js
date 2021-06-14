@@ -9,6 +9,7 @@ const Container = styled.div`
     background: #FFFFFF;
     box-shadow: 0px 0.9375em 2.1875em rgba(0, 0, 0, 0.06);
     align-items: center;
+    z-index: 2;
 
 `
 

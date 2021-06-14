@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import Button from "../navbar/Button"
 import mark from "../../assets/footermark.svg"
+import instagram from "../../assets/logos/instagram.svg"
+import facebook from "../../assets/logos/facebook.svg"
+import linkedin from "../../assets/logos/linkedin.svg"
 
 const Container = styled.div`
     height: 23.9375em;
@@ -19,8 +22,8 @@ const StyledCol = styled(Col)`
     
     > p {
         font-family: Messina Sans;
-        font-style: normal;
-        font-weight: normal;
+        font-style: light;
+        font-weight: 200;
         font-size: 0.875em;
         line-height: 1.7142857142857142em;
         /* identical to box height, or 171% */
@@ -28,7 +31,7 @@ const StyledCol = styled(Col)`
 
         color: #FFFFFF;
 
-        opacity: 0.7;
+        opacity: 0.5;
 
         /* Inside Auto Layout */
         flex: none;
@@ -94,7 +97,7 @@ const StyledPolicy = styled(Col)`
 
 font-family: Messina Sans;
 font-style: normal;
-font-weight: normal;
+font-weight: 200;
 font-size: 0.875em;
 line-height: 1.4285714285714286em;
 /* identical to box height, or 143% */
@@ -102,7 +105,7 @@ display: flex;
 
 color: #FFFFFF;
 
-opacity: 0.6;
+opacity: 0.4;
 > p {
    padding-right: 10.4375em; 
 }
@@ -121,6 +124,10 @@ const StyledRights = styled.div`
 const StyledImgCol = styled(Col)`
     padding: 0;
     margin-top: 0.3125em;
+`
+
+const StyledSocials = styled.img`
+    margin-right: 0.75em;
 `
 
 export const Footer = () => {
@@ -148,9 +155,9 @@ export const Footer = () => {
                 </StyledCol>
                 <StyledCol>
                     <h1>Find us</h1>
-                    <p>Instagram</p>
-                    <p>Facebook</p>
-                    <p>Linkedin</p>
+                    <p><StyledSocials src={instagram} />Instagram</p>
+                    <p><StyledSocials src={facebook} />Facebook</p>
+                    <p><StyledSocials src={linkedin} />Linkedin</p>
                 </StyledCol>
             </StyledRow>
             <NoMarginRow>

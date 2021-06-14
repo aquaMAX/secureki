@@ -7,6 +7,12 @@ const Container = styled.div`
     height: 40em;
     width: 100vw;
     background: #FCF5F0;
+
+    max-width: 1440px;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
    
 `
 const TextContainer = styled(Col)`
@@ -56,7 +62,7 @@ const StyledSlogan = styled.div`
 const StyledTitle = styled.div`
 
     height: 3.6em;
-    width: 12.075em;
+    
 
     margin-top: 0.5em;
     margin-bottom: 0.85em;
@@ -75,7 +81,7 @@ const StyledTitle = styled.div`
 `
 
 const StyledContent = styled.div`
-    width: 27.8125em;
+    
     font-family: Messina Sans;
     font-style: normal;
     font-weight: normal;
@@ -88,8 +94,8 @@ const StyledContent = styled.div`
     color: #17494D;
 `
 
-const StyledMoreabout = styled.div`
-    width: 20.25em;
+const StyledMoreabout = styled.button`
+   
     font-family: Messina Sans;
     font-style: normal;
     font-weight: 600;
@@ -99,17 +105,26 @@ const StyledMoreabout = styled.div`
     display: flex;
     align-items: center;
     letter-spacing: 0.00625em;
-    
     color: #073233;
+    border: 0;
+    background: none;
+    padding: 0;
     > text {
-        border-bottom: 3px solid #FF6938;
+        text-underline-offset: 2.5px;
+        text-decoration: underline solid #FF6938;
+        text-decoration-thickness: 3px;
+        transition: 0.3s;
+        &:hover {
+            padding-right: 1em;
+        }   
+
     }  
 `
 
 const StyledPointer = styled.div`
-    margin-left: 0.5em;
-    margin-bottom: 0.3em;
-    font-size: 1em;
+    margin-left: 0.7em;
+    margin-bottom: 0.18em;
+    font-size: 1.1em;
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FF6938;
@@ -122,7 +137,7 @@ const Styledimg = styled.img`
 
 export const DetailedOffer = () => {
     return (
-        <>
+        <div style={{background: "#FCF5F0"}}>
         <Container>
             
             <StyledRow>
@@ -149,6 +164,6 @@ export const DetailedOffer = () => {
             </StyledRow>
             
         </Container>
-        </>
+        </div>
     )
 }

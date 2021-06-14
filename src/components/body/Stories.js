@@ -3,12 +3,22 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import StoriesCard from './StoriesCard.js'
 import andrea from '../../assets/andrea.png'
+import cirbig from '../../assets/customer/cirbig.svg'
+import cirsmall from '../../assets/customer/cirsmall.svg'
+import rec from '../../assets/customer/rec.svg'
+import recempty from '../../assets/customer/recempty.svg'
 
 
 const Container = styled.div`
     height: 40em;
     width: 100vw;
     background: #FFFFFF;
+    max-width: 1440px;
+    display: block;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 `
 
 const StyledTitle = styled(Col)`
@@ -45,9 +55,43 @@ const StoriesCol = styled(Col)`
     display: flex;
 `
 
+const StyledRec = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 5.3125em;
+    margin-top: 3.3125em;
+`
+
+const StyledSmallCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 81.0625em;
+    margin-top: 34.5em;
+`
+
+const StyledCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 84.1875em;
+    margin-top: 28em;
+`
+
+const StyledRecEmpty = styled.img`
+    z-index: 3;
+    position: absolute;
+    margin-left: 78.0625em;
+    margin-top: 28.9375em;
+`
+
+
+
 export const Stories = () => {
     return (
         <Container>
+            <StyledRecEmpty src={recempty} />
+            <StyledRec src={rec} />
+            <StyledSmallCircle src={cirsmall} />
+            <StyledCircle src={cirbig} />
             <Row style={{textAlign: "center", marginLeft: 0, marginRight: 0}}>
                 <StyledTitle>
                     <h1>

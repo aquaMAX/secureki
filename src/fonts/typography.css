@@ -1,0 +1,49 @@
+
+
+  @font-face {
+    font-family: "Messina Sans";
+    font-weight: semibold;
+    src: url("MessinaSans-SemiBold.otf") format("opentype");
+  }
+
+   @font-face {
+    font-family: "Messina Sans";
+    font-weight: bold;
+    src: url("MessinaSans-Bold.otf");
+  }
+
+  
+  @font-face {
+    font-family: "Messina Sans";
+    font-style: italic;
+    src: url("MessinaSans-BookItalic.otf");
+  }
+
+@font-face {
+  font-family: "Messina Sans";
+  
+  src: url("MessinaSans-Light.otf");
+  font-weight: 200;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'Messina Sans';
+
+  src: url("MessinaSans-Regular.otf");
+}
+  
+
+
+/*
+@font-face {
+    font-family: "Messina Sans";
+    
+    src: url("MessinaSans-Black.otf");
+  }
+
+  
+
+*/
+
+ 

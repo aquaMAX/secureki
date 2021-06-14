@@ -1,15 +1,16 @@
 import * as React from 'react'
 import styled from "styled-components";
 //import SecurekiLogo from "../../assets/securekianimated.gif"
-import SecurekiLogo from "../../assets/logo.svg"
+import SecurekiLogo from "../../assets/SECUREKi Logo.svg"
 
 const LogoStyling = styled.img`
-    height: 43px;
-    width: 193px;
+    height: 2.6875em;
+    width: 12.0625em;
     border-radius: 0px;
     margin-bottom: 0px;
-    margin-top: 18px;
+    margin-top: 1.125em;
     position: absolute;
+    margin-left: 10.8875em;
 `;
 
 const Logo = () => {

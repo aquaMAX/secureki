@@ -8,6 +8,13 @@ import security from '../../assets/logos/security.svg'
 const Container = styled.div`
     height: 21.3125em;
     width: 100vw;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    
     padding-top: 5.09375em;
 `
 const StyledRow = styled(Row)`

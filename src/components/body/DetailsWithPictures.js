@@ -10,6 +10,12 @@ const Container = styled.div`
     height: 40em;
     width: 100vw;
     background: #FFFFFF;
+
+    max-width: 1440px;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 `
 const TextContainer = styled(Col)`
     padding-top: 8.1875em;
@@ -62,7 +68,7 @@ const StyledContent = styled(Row)`
     padding-left: 0.9375em;
 `
 
-const StyledMoreabout = styled(Row)`
+const StyledMoreabout = styled.button`
     width: 12.825em;
     font-family: Messina Sans;
     font-style: normal;
@@ -78,15 +84,25 @@ const StyledMoreabout = styled(Row)`
     margin-top: 7.625em;
     
     color: #073233;
+    border: 0;
+    background: none;
+    padding: 0;
     > text {
-        border-bottom: 3px solid #FF6938;
-    }  
+        text-underline-offset: 2.5px;
+        text-decoration: underline solid #FF6938;
+        text-decoration-thickness: 3px;
+        transition: 0.3s;
+        &:hover {
+            padding-right: 1em;
+        }   
+
+    } 
 `
 
 const StyledPointer = styled.div`
-    margin-left: 0.5em;
-    margin-bottom: 0.3em;
-    font-size: 1em;
+    margin-left: 0.7em;
+    margin-bottom: 0.18em;
+    font-size: 1.1em;
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FF6938;

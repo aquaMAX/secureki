@@ -34,18 +34,28 @@ const StyledTitle = styled(Col)`
 
 const StyledButton = styled(Button)`
     border: 2px solid #FF6938;
-    border-radius: 30px;
+    border-radius: 40px;
     position: absolute;
     margin-left: 9em;
-    padding: 0.2687em 1.125em 0.2687em 1.125em;
+    padding: 0.5687em 1.425em 0.5687em 1.425em;
     font-size: 1.125em;
+    transition: 0.3s;
+    &:hover {
+        background: #E55A2D;
+        color: #FFFFFF;
+    }
 `
 
 const StyledSecondButton = styled(Button)`
     position: absolute;
-    margin-right: 9em;
-    padding: 0.3798111111111111em 1.2361111111111112em 0.3798111111111111em 1.2361111111111112em;
+    margin-right: 9.5em;
+    padding: 0.6687em 1.525em 0.6687em 1.525em;
     font-size: 1.125em;
+    transition: 0.3s;
+    &:hover {
+        background: #E55A2D;
+        
+    }
 `
 
 const StyledCol = styled(Col)`
@@ -72,7 +82,7 @@ export const GetStarted = () => {
                 <StyledCol>
                     <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
               
-                    <StyledButton background="#FCF5F0" font="#FF6938">Free demo</StyledButton>
+                    <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
                 </StyledCol>
             </StyledRow>
         </Container>

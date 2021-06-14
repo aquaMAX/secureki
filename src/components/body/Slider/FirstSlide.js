@@ -9,8 +9,10 @@ import circleslide from "../../../assets/decorations/circleslide.svg"
 const Container = styled.div`
     height: 32.5em;
     width: 100vw;
+    max-width: 1440px;
     background: #114748;
     padding-bottom: 7.125em;
+    margin: auto;
 `
 const TextContainer = styled(Col)`
     padding-left: 0;
@@ -67,7 +69,7 @@ const StyledTitle = styled.div`
     /* “All base UI element */
 `
 
-const StyledMoreabout = styled.div`
+const StyledMoreabout = styled.button`
     font-family: Messina Sans;
     font-style: normal;
     font-weight: 400;
@@ -81,15 +83,27 @@ const StyledMoreabout = styled.div`
 
     /* Link */
     color: #FFFFFF;
+    margin-right: 0;
+    border: 0;
+    background: none;
+    padding: 0;
+    
     > text {
-        border-bottom: 3px solid #FF6938;
+        text-underline-offset: 4px;
+        text-decoration: underline solid #FF6938;
+        text-decoration-thickness: 3px;
+        transition: 0.3s;
+        &:hover {
+            padding-right: 1em;
+        }   
     }  
 `
 
 const StyledPointer = styled.div`
     margin-left: 0.5em;
     margin-bottom: 0.3em;
-    font-size: 1em;
+    font-size: 1.1em;
+    font-weight: bold;
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FFFFFF;

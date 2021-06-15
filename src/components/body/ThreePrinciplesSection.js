@@ -8,7 +8,7 @@ import security from '../../assets/logos/security.svg'
 const Container = styled.div`
     height: 21.3125em;
  
-    max-width: 1440px;
+    max-width: 90em;
     display: flex;
     justify-content: center;
     -webkit-justify-content: center;

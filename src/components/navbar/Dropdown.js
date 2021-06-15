@@ -5,7 +5,7 @@ import pointer from '../../assets/logos/pointer.svg'
 const StyledDropdown = styled.div`
     position: relative;
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 1.5625em;
     height: 4.25em;
     transition: 0.3s;
     
@@ -22,14 +22,14 @@ const StyledLink = styled.div`
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 10em;
+    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
     z-index: 1;
     transition: 0.3s;
  
     > a {
         color: black;
-        padding: 12px 16px;
+        padding: 0.75 1em;
         text-decoration: none;
         display: block;
         &:hover {
@@ -41,25 +41,25 @@ const StyledLink = styled.div`
 const StyledButton = styled.button`
     background-color: #FFFFFF;
     color: #073233;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 27px;
-    font-size: 16px;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-top: 1.6875em;
+    font-size: 1em;
     border: none;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: 600;
     transition: 0.3s;
     &:hover {
-        text-underline-offset: 2.5px;
+        text-underline-offset: 0.15625em;
         text-decoration: underline solid #FF6938;
-        text-decoration-thickness: 3px;
+        text-decoration-thickness: 0.1875em;
     }
 `
 
 const StyledPointer = styled.img`
     margin-bottom: 0;
-    padding-left: 5px;
+    padding-left: 0.3125em;
 `
 
 const DropdownMenu = ({name}) => {

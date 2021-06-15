@@ -32,9 +32,9 @@ const StyledCol = styled.div`
         /* identical to box height, or 171% */
         letter-spacing: 0.0371428571428571435em;
 
-        color: #FFFFFF;
+        color: #B5C1C2;
 
-        opacity: 0.7;
+        opacity: 1;
 
         /* Inside Auto Layout */
         flex: none;

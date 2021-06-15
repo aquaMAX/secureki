@@ -3,23 +3,22 @@ import styled from "styled-components"
 
 const StyledInformation = styled.div`
     background-color: #145156;
-    height: 45px;
-    width: 100vw;
+    height: 2.8125em;
     display: flex;
     justify-content: center;
  
     > h1 {
         position: absolute;
         width: 100vw;
-        height: 24px;
-        top: 11px;
+        height: 1.6em;
+        top: 0.7333333333333333em;
         text-align: center;
         font-family: Messina Sans;
         font-style: normal;
         font-weight: 400;
-        font-size: 15px;
-        line-height: 24px;
-        letter-spacing: 0.1px;
+        font-size: 0.9375em;
+        line-height: 1.6em;
+        letter-spacing: 0.006666666666666667em;
         color: #FFFFFF;
 
         > p {

@@ -9,8 +9,8 @@ import DropdownMenu from './Dropdown';
 
 const Nav = styled.nav`
     background: #FFFFFF;
-    box-shadow: 0px 4px 20px rgba(7, 50, 51, 0.04);
-    height: 77px;
+    box-shadow: 0 0.25em 1.25em rgba(7, 50, 51, 0.04);
+    height: 4.8125em;
 
 `;
 
@@ -18,12 +18,12 @@ const Triangle = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-top: 38px;
+    margin-top: 2.375em;
     width: 0;
     height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-top: 4.5px solid #FF6938;
+    border-left: 0.1875em solid transparent;
+    border-right: 0.1875em solid transparent;
+    border-top: 0.28125em solid #FF6938;
 `
 
 const StyledLogo = styled(Col)`
@@ -62,6 +62,7 @@ const StyledContactButton = styled(Button)`
 `
 
 const StyledStartedButton = styled(Button)`
+    margin-left: 9.1875em;
     transition: 0.3s;
     &:hover {
         background: #E55A2D;
@@ -96,13 +97,13 @@ const Navigation = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col>
-                    <Row>
-                        <Col></Col>
-                        <Col><StyledContactButton background="#F9F1EE" font="#FF6938" weight="400">Contact Us</StyledContactButton></Col>
-                        <Col><StyledStartedButton background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton></Col>
-                        <Col></Col>
-                    </Row>
+                <Col style={{paddingLeft: "3em"}}>
+                    
+                        
+                        <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400">Contact Us</StyledContactButton>
+                        <StyledStartedButton background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton>
+                        
+                    
                 </Col>
             </StyledRow>  
         </Nav>

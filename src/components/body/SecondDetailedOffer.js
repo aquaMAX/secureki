@@ -9,7 +9,7 @@ const Container = styled.div`
     background: #FCF5F0;
     padding-bottom: 7.125em;
 
-    max-width: 1440px;
+    max-width: 90em;
     justify-content: center;
     -webkit-justify-content: center;
     margin-left: auto;

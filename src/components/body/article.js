@@ -9,21 +9,21 @@ import smallcircle from "../../assets/decorations/smallcircle.svg"
 
 
 const StyledImage = styled.img`
-    border-radius: 0px;
-    margin-bottom: 0px;
+    border-radius: 0;
+    margin-bottom: 0;
     min-width: 42.875em;
     height: 32.5em;
     margin-top: 12.25em;
     
 `
 const FixedCol = styled(Col)`
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
 `
 
 const StyledContent = styled.div`
-max-width: 1440px;
-        display: block;
+    max-width: 90em;
+    display: block;
     justify-content: center;
     -webkit-justify-content: center;
     margin-left: auto;
@@ -56,7 +56,7 @@ const ColoredP = styled.div`
 const StyledTextBody = styled.div`
     /* Separated they live */
 
-    max-width: 27.055555555555557em;
+    
 
     font-family: 'Messina Sans';
     font-style: regular;
@@ -202,7 +202,7 @@ const FixedRow = styled(Row)`
 
 const Article = () => {
     return (
-        <div>
+        
 
         
         <StyledContent>
@@ -255,7 +255,7 @@ const Article = () => {
             </FixedCol>
         </FixedRow>   
         </StyledContent>
-        </div>
+        
     )
 }
 

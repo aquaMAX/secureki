@@ -8,7 +8,7 @@ const Container = styled.div`
     
     background: #FCF5F0;
 
-    max-width: 1440px;
+    max-width: 90em;
     justify-content: center;
     -webkit-justify-content: center;
     margin-left: auto;

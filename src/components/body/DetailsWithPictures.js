@@ -15,7 +15,7 @@ const Container = styled.div`
     height: 45.875em;
     background: #FFFFFF;
 
-    max-width: 1440px;
+    max-width: 90em;
     justify-content: center;
     -webkit-justify-content: center;
     margin-left: auto;

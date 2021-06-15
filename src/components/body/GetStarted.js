@@ -39,10 +39,12 @@ const StyledButton = styled(Button)`
     margin-left: 9em;
     padding: 0.5687em 1.425em 0.5687em 1.425em;
     font-size: 1.125em;
+    font-weight: bold;
     transition: 0.3s;
     &:hover {
         background: #E55A2D;
         color: #FFFFFF;
+        border-color: #E55A2D;
     }
 `
 
@@ -51,6 +53,7 @@ const StyledSecondButton = styled(Button)`
     margin-right: 9.5em;
     padding: 0.6687em 1.525em 0.6687em 1.525em;
     font-size: 1.125em;
+    font-weight: bold;
     transition: 0.3s;
     &:hover {
         background: #E55A2D;

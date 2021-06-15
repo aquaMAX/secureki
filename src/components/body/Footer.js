@@ -9,29 +9,32 @@ import linkedin from "../../assets/logos/linkedin.svg"
 
 const Container = styled.div`
     height: 23.9375em;
-
     background: #073233;
-
+    max-width: 90em;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 
 `
 
-const StyledCol = styled(Col)`
+const StyledCol = styled.div`
     padding-left: 0;
     padding-right: 0;
     justify-content: center;
     
     > p {
         font-family: Messina Sans;
-        font-style: light;
+        font-style: regular;
         font-weight: 200;
         font-size: 0.875em;
         line-height: 1.7142857142857142em;
         /* identical to box height, or 171% */
-        letter-spacing: 0.0071428571428571435em;
+        letter-spacing: 0.0371428571428571435em;
 
         color: #FFFFFF;
 
-        opacity: 0.5;
+        opacity: 0.7;
 
         /* Inside Auto Layout */
         flex: none;
@@ -43,12 +46,12 @@ const StyledCol = styled(Col)`
     > h1 {
         /* First page */
         font-family: Messina Sans;
-        font-style: normal;
-        font-weight: 600;
+        font-style: regular;
+        font-weight: 400;
         font-size: 1em;
         line-height: 1.5em;
         /* identical to box height, or 150% */
-        letter-spacing: 0.00625em;
+        letter-spacing: 0.0325em;
 
         color: #FFFFFF;
 }
@@ -70,9 +73,7 @@ const StyledRow = styled(Row)`
     padding-top: 5.125em;
     padding-bottom: 5.625em;
     padding-left: 10.5em;
-    padding-right: 19.625em;
-    display: flex;
-    justify-content: center;
+    
     margin-left: 0;
     margin-right: 0;
 `
@@ -86,7 +87,7 @@ const NoMarginPolicyRow = styled(Row)`
     margin-left: 0;
     margin-right: 0;
     padding-top: 2.7142857142857144em;
-    padding-bottom: 2.857142857142857em;
+    
     background: #073233;
     
 `
@@ -121,7 +122,7 @@ const StyledRights = styled.div`
     padding-left: 14.6875em;
 `
 
-const StyledImgCol = styled(Col)`
+const StyledImgCol = styled.div`
     padding: 0;
     margin-top: 0.3125em;
 `
@@ -130,35 +131,60 @@ const StyledSocials = styled.img`
     margin-right: 0.75em;
 `
 
+const Product = styled.div`
+    margin-left: 6em;
+`
+
+const Resources = styled.div`
+    margin-left: 5.375em;
+`
+
+const Company = styled.div`
+    margin-left: 7.4375em;
+`
+
+const Findus = styled.div`
+    margin-left: 7.625em;
+`
+
 export const Footer = () => {
     return (
-        <Container>
+        <div style={{background: "#073233"}}>
+            <Container>
             <StyledRow>
                 <StyledImgCol>
                     <img src={mark} />
                 </StyledImgCol>
-                <StyledCol xs={4}>
-                    <h1>Product</h1>
-                    <p>Multifactor Authentication</p>
-                    <p>Privileged Access Management</p>
-                </StyledCol>
-                <StyledCol>
-                    <h1>Resources</h1>
-                    <p>Datasheet</p>
-                    <p>Customer Stories</p>
-                </StyledCol>
-                <StyledCol>
-                    <h1>Company</h1>
-                    <p>Newsroom</p>
-                    <p>About Us</p>
-                    <p>Career</p>
-                </StyledCol>
-                <StyledCol>
-                    <h1>Find us</h1>
-                    <p><StyledSocials src={instagram} />Instagram</p>
-                    <p><StyledSocials src={facebook} />Facebook</p>
-                    <p><StyledSocials src={linkedin} />Linkedin</p>
-                </StyledCol>
+                    <Product>
+                        <StyledCol>
+                            <h1>Product</h1>
+                            <p>Multifactor Authentication</p>
+                            <p>Privileged Access Management</p>
+                        </StyledCol>
+                    </Product>
+                    <Resources>
+                        <StyledCol>
+                            <h1>Resources</h1>
+                            <p>Datasheet</p>
+                            <p>Customer Stories</p>
+                        </StyledCol>
+                    </Resources>
+                    <Company>
+                        <StyledCol>
+                            <h1>Company</h1>
+                            <p>Newsroom</p>
+                            <p>About Us</p>
+                            <p>Career</p>
+                        </StyledCol>
+                    </Company>
+                    <Findus>
+                        <StyledCol>
+                            <h1>Find us</h1>
+                            <p><StyledSocials src={instagram} />Instagram</p>
+                            <p><StyledSocials src={facebook} />Facebook</p>
+                            <p><StyledSocials src={linkedin} />Linkedin</p>
+                        </StyledCol>
+                    </Findus>
             </StyledRow>
             <NoMarginRow>
                 <StyledUnderline />
@@ -174,5 +200,7 @@ export const Footer = () => {
             </NoMarginPolicyRow>
 
         </Container>
+        </div>
+        
     )
 }

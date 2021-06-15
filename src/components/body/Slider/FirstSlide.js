@@ -38,7 +38,7 @@ const StyledSlogan = styled.div`
 
     font-family: Messina Sans;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 0.75em;
     line-height: 2em;
     /* or 200% */
@@ -55,7 +55,7 @@ const StyledTitle = styled.div`
 
     font-family: Messina Sans;
     font-style: normal;
-    font-weight: bold;
+    font-weight: semibold;
     font-size: 1.5em;
     line-height: 1.3333333333333333em;
     padding-right: 8.416666666666666em;
@@ -72,14 +72,14 @@ const StyledTitle = styled.div`
 const StyledMoreabout = styled.button`
     font-family: Messina Sans;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1em;
     line-height: 1.5em;
     /* or 150% */
     display: flex;
     align-items: center;
     letter-spacing: 0.05625em;
-    margin-top: 7.875em;
+    margin-top: 7.475em;
 
     /* Link */
     color: #FFFFFF;

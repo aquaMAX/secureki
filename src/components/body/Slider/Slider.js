@@ -22,13 +22,9 @@ const StyledCarousel = styled(Carousel)`
             -moz-border-radius: 200px 200px 200px 200px;
             -webkit-border-radius: 200px 200px 200px 200px;
             border: 0px solid #000000;
-
-
-
-/* Inside Auto Layout */
-margin: 0px 8px;
-
-        }
+            margin: 0px 4px;
+            opacity: 0.2;
+}
        
     }
     >a {
@@ -48,6 +44,12 @@ const Slider = () => {
                     <Carousel.Item>
                         
                         <FirstSlide />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                    <FirstSlide />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                    <FirstSlide />
                     </Carousel.Item>
                     <Carousel.Item>
                     <FirstSlide />

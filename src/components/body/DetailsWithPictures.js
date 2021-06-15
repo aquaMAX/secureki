@@ -5,10 +5,14 @@ import pierwszy from "../../assets/pierwszy.png"
 import paypal from "../../assets/paypal.svg"
 import pay from "../../assets/pay.svg"
 import mailchimp from "../../assets/mailchimp.svg"
+import { StackedPictures } from './StackedPictures';
+
+
+
+
 
 const Container = styled.div`
-    height: 40em;
-    
+    height: 45.875em;
     background: #FFFFFF;
 
     max-width: 1440px;
@@ -20,10 +24,11 @@ const Container = styled.div`
 const TextContainer = styled(Col)`
     padding-top: 8.1875em;
     padding-left: 0;
+    padding-right: 0;
 `
 
 const ImageContainer = styled(Col)`
-    padding-top: 3.5em;
+    padding: 0;
 `
 const StyledRow = styled(Row)`
     padding-left: 13.5625em;
@@ -36,11 +41,8 @@ const StyledTitle = styled.div`
 
     height: 3.125em;
     width: 7.770833333333333em;
-    
-
     margin-top: 0.5em;
     margin-bottom: 0.6875em;
-
     font-family: Messina Sans;
     font-style: normal;
     font-weight: bold;
@@ -135,7 +137,7 @@ export const DetailsWithPictures = () => {
         <>
         <Container>
             <StyledRow>
-                <TextContainer>
+                <TextContainer xs={5}>
                     <StyledTitle>
                     Trusted by leading companies
                     </StyledTitle>
@@ -151,9 +153,7 @@ export const DetailsWithPictures = () => {
                                 <PayLogo src={pay} />
                             </Col>
                             <Col>
-                                
                                 <MailchimpLogo src={mailchimp} />
-                                
                             </Col>
                         </LogosRow>
                     </span></Row>
@@ -165,9 +165,8 @@ export const DetailsWithPictures = () => {
                     
                 </TextContainer>
                 <ImageContainer>
-                    <img src={pierwszy} />
+                    <StackedPictures />
                 </ImageContainer>
-
             </StyledRow>
         </Container>
         </>

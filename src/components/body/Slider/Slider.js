@@ -24,6 +24,7 @@ const StyledCarousel = styled(Carousel)`
             border: 0px solid #000000;
             margin: 0px 4px;
             opacity: 0.2;
+            margin-bottom: 2.0625em;
 }
        
     }

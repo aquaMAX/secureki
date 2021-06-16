@@ -8,9 +8,14 @@ import { Row, Col } from 'react-bootstrap';
 import DropdownMenu from './Dropdown';
 
 const Nav = styled.nav`
-    background: #FFFFFF;
-    box-shadow: 0 0.25em 1.25em rgba(7, 50, 51, 0.04);
+
     height: 4.8125em;
+    max-width: 90em;
+    display: block;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 
 `;
 
@@ -52,9 +57,13 @@ position: fixed;
   left: 0;
   right: 0;
   z-index: 10;
+  background: #FFFFFF;
+    box-shadow: 0 0.25em 1.25em rgba(7, 50, 51, 0.04);
 `
 
 const StyledContactButton = styled(Button)`
+    font-family: Messina Sans semibold;
+    font-weight: 600;
     transition: 0.3s;
     &:hover {
         background: #EEDDD7;
@@ -62,6 +71,7 @@ const StyledContactButton = styled(Button)`
 `
 
 const StyledStartedButton = styled(Button)`
+    font-family: Messina Sans semibold;
     margin-left: 9.1875em;
     transition: 0.3s;
     &:hover {

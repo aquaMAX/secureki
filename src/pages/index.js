@@ -1,12 +1,10 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import Navigation from "../components/navbar/Navigation"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from "react-bootstrap";
+
 import Article from '../components/body/Article.js'
 import Slider from '../components/body/Slider/Slider.js'
 import '../fonts/typography.css';
-import styled from 'styled-components';
+
 import { ThreePrinciplesSection } from "../components/body/ThreePrinciplesSection";
 import { DetailedOffer } from "../components/body/DetailedOffer";
 import { SecondDetailedOffer } from "../components/body/SecondDetailedOffer";

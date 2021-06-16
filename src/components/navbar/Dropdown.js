@@ -46,9 +46,9 @@ const StyledButton = styled.button`
     padding-top: 1.6875em;
     font-size: 1em;
     border: none;
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-style: normal;
-    font-weight: 600;
+    font-weight: semibold;
     transition: 0.3s;
     &:hover {
         text-underline-offset: 0.15625em;

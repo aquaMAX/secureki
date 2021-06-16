@@ -1,13 +1,13 @@
 
 
   @font-face {
-    font-family: "Messina Sans";
-    font-weight: semibold;
+    font-family: "Messina Sans semibold";
+    font-weight: 400;
     src: url("MessinaSans-SemiBold.otf") format("opentype");
   }
 
    @font-face {
-    font-family: "Messina Sans";
+    font-family: "Messina Sans bold";
     font-weight: bold;
     src: url("MessinaSans-Bold.otf");
   }

@@ -53,7 +53,7 @@ const StyledTitle = styled.div`
 
     position: absolute;
 
-    font-family: Messina Sans;
+    font-family: Messina Sans bold;
     font-style: normal;
     font-weight: semibold;
     font-size: 1.5em;
@@ -71,14 +71,13 @@ const StyledTitle = styled.div`
 
 const StyledMoreabout = styled.button`
     font-family: Messina Sans;
-    font-style: normal;
     font-weight: 200;
     font-size: 1em;
     line-height: 1.5em;
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.05625em;
+    letter-spacing: 0.01825em;
     margin-top: 7.475em;
 
     /* Link */
@@ -102,7 +101,7 @@ const StyledMoreabout = styled.button`
 const StyledPointer = styled.div`
     margin-left: 0.5em;
     margin-bottom: 0.3em;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: bold;
     line-height: 1.5em;
     letter-spacing: 0.00625em;

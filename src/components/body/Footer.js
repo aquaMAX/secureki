@@ -53,7 +53,7 @@ const StyledCol = styled.div`
         /* identical to box height, or 150% */
         letter-spacing: 0.0325em;
 
-        color: #FFFFFF;
+        color: #B5C1C2;
 }
 `
 

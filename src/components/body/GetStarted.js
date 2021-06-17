@@ -22,7 +22,7 @@ const StyledTitle = styled(Col)`
     > h1 {
         position: absolute;
      
-        font-family: Messina Sans;
+        font-family: Messina Sans bold;
         font-style: normal;
         font-weight: bold;
         font-size: 2.5em;
@@ -38,6 +38,7 @@ const StyledButton = styled(Button)`
     position: absolute;
     margin-left: 9em;
     padding: 0.5687em 1.425em 0.5687em 1.425em;
+    font-family: Messina Sans bold;
     font-size: 1.125em;
     font-weight: bold;
     transition: 0.3s;
@@ -52,6 +53,7 @@ const StyledSecondButton = styled(Button)`
     position: absolute;
     margin-right: 9.5em;
     padding: 0.6687em 1.525em 0.6687em 1.525em;
+    font-family: Messina Sans bold;
     font-size: 1.125em;
     font-weight: bold;
     transition: 0.3s;

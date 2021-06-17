@@ -30,7 +30,7 @@ const StyledCol = styled.div`
         font-size: 0.875em;
         line-height: 1.7142857142857142em;
         /* identical to box height, or 171% */
-        letter-spacing: 0.0371428571428571435em;
+        letter-spacing: 0.0201428571428571435em;
 
         color: #B5C1C2;
 
@@ -45,25 +45,25 @@ const StyledCol = styled.div`
 
     > h1 {
         /* First page */
-        font-family: Messina Sans;
+        font-family: Messina Sans book;
         font-style: regular;
-        font-weight: 400;
+        font-weight: 200;
         font-size: 1em;
         line-height: 1.5em;
         /* identical to box height, or 150% */
         letter-spacing: 0.0325em;
 
-        color: #B5C1C2;
+        color: #FFFFFF;
 }
 `
 
 const StyledUnderline = styled.div`
     /* Line 2 */
     width: 100%;    
-    background: #E5E5E5;
-    color: #E5E5E5;
     opacity: 0.3;
-    border: 0.0625em solid #FFFFFF;
+    background: #073233;
+    border: 1px solid #FFFFFF;
+    border-width: 0.5px;
     transform: rotate(-0.05deg);
     margin-left: 10.4375em;
     margin-right: 10.4375em;
@@ -104,10 +104,11 @@ line-height: 1.4285714285714286em;
 /* identical to box height, or 143% */
 display: flex;
 
-color: #FFFFFF;
+color: #B5C1C2;
 
-opacity: 0.4;
+
 > p {
+    opacity: 0.8;
    padding-right: 10.4375em; 
 }
 `
@@ -116,10 +117,13 @@ const StyledParagraph = styled.div`
     padding-left: 0.8571428571428571em;
     padding-right: 0.8571428571428571em;
     margin-left: auto;
+    opacity: 0.8;
 `
 
 const StyledRights = styled.div`
     padding-left: 14.6875em;
+    opacity: 1;
+    color: #B5C1C2;
 `
 
 const StyledImgCol = styled.div`
@@ -129,6 +133,8 @@ const StyledImgCol = styled.div`
 
 const StyledSocials = styled.img`
     margin-right: 0.75em;
+    color: #B5C1C2;
+    opacity: 0.8;
 `
 
 const Product = styled.div`
@@ -144,7 +150,7 @@ const Company = styled.div`
 `
 
 const Findus = styled.div`
-    margin-left: 7.625em;
+    margin-left: 7.525em;
 `
 
 export const Footer = () => {

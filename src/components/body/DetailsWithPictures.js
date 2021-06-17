@@ -43,7 +43,7 @@ const StyledTitle = styled.div`
     width: 7.770833333333333em;
     margin-top: 0.5em;
     margin-bottom: 0.6875em;
-    font-family: Messina Sans;
+    font-family: Messina Sans bold;
     font-style: normal;
     font-weight: bold;
     font-size: 3em;

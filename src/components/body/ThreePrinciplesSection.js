@@ -42,7 +42,7 @@ const StyledParagraph = styled(Row)`
 const StyledTitle = styled.div` 
     position: static;
 
-    font-family: Messina Sans;
+    font-family: Messina Sans bold;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5em;

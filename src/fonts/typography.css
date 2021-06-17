@@ -33,17 +33,20 @@
   src: url("MessinaSans-Regular.otf");
 }
   
-
-
-/*
 @font-face {
-    font-family: "Messina Sans";
-    
+  font-family: "Messina Sans book";
+  src: url("MessinaSans-Book.otf");
+}
+
+
+@font-face {
+    font-family: "Messina Sans black";
+    font-weight: normal;
     src: url("MessinaSans-Black.otf");
   }
 
   
 
-*/
+
 
  

@@ -33,7 +33,7 @@ const StyledContent = styled.div`
 const StyledTitle = styled.div`
         /* Medium length displa */
 
-    font-family: "Messina Sans";
+    font-family: "Messina Sans bold";
     font-style: normal;
     font-weight: bold;
     font-size: 3.5em;

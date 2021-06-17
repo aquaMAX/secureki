@@ -33,7 +33,7 @@ const StyledTitle = styled(Col)`
     > h1 {
         position: absolute;
       
-        font-family: Messina Sans;
+        font-family: Messina Sans bold;
         font-style: normal;
         font-weight: bold;
         font-size: 2.5em;

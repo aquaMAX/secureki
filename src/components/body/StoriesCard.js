@@ -44,7 +44,7 @@ const ImageContainer = styled.img`
 const TitleContainer = styled(Row)`
     width: 8.5em;
     height: 1.5em;
-    font-family: Messina Sans;
+    font-family: Messina Sans bold;
     font-style: normal;
     font-weight: bold;
     font-size: 1em;

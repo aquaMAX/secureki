@@ -95,7 +95,7 @@ const StyledTrialText = styled.button`
     height: 1.25em;
     margin-top: 1em;
 
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 600;
     font-size: 1em;
@@ -128,10 +128,10 @@ const StyledButtonFix = styled(StyledButton)`
     padding-bottom: 0.7888888888888888em;
     padding-right: 1.6666666666666667em;
     padding-left: 1.6666666666666667em;
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-size: 1.125em;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3333333333333333em;
     letter-spacing: 0.005555555638339784em;
     text-align: center;

@@ -36,9 +36,9 @@ const StyledSlogan = styled.div`
     /* Name Surname Lead ma */
 
 
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 0.75em;
     line-height: 2em;
     /* or 200% */
@@ -70,8 +70,8 @@ const StyledTitle = styled.div`
 `
 
 const StyledMoreabout = styled.button`
-    font-family: Messina Sans;
-    font-weight: 200;
+    font-family: Messina Sans semibold;
+    font-weight: 400;
     font-size: 1em;
     line-height: 1.5em;
     /* or 150% */

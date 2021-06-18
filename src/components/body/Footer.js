@@ -26,11 +26,11 @@ const StyledCol = styled.div`
     > p {
         font-family: Messina Sans;
         font-style: regular;
-        font-weight: 200;
+        font-weight: 400;
         font-size: 0.875em;
         line-height: 1.7142857142857142em;
         /* identical to box height, or 171% */
-        letter-spacing: 0.0201428571428571435em;
+        letter-spacing: 0.0071428571428571435em;
 
         color: #B5C1C2;
 
@@ -45,9 +45,9 @@ const StyledCol = styled.div`
 
     > h1 {
         /* First page */
-        font-family: Messina Sans book;
+        font-family: Messina Sans semibold;
         font-style: regular;
-        font-weight: 200;
+        font-weight: 400;
         font-size: 1em;
         line-height: 1.5em;
         /* identical to box height, or 150% */
@@ -62,11 +62,12 @@ const StyledUnderline = styled.div`
     width: 100%;    
     opacity: 0.3;
     background: #073233;
-    border: 1px solid #FFFFFF;
-    border-width: 0.5px;
+    border-bottom: 1px solid #FFFFFF;
     transform: rotate(-0.05deg);
     margin-left: 10.4375em;
     margin-right: 10.4375em;
+
+    
 `
 
 const StyledRow = styled(Row)`
@@ -109,7 +110,7 @@ color: #B5C1C2;
 
 > p {
     opacity: 0.8;
-   padding-right: 10.4375em; 
+ margin-right: 10.86464em; 
 }
 `
 
@@ -121,7 +122,7 @@ const StyledParagraph = styled.div`
 `
 
 const StyledRights = styled.div`
-    padding-left: 14.6875em;
+    margin-left: 10.4375em;
     opacity: 1;
     color: #B5C1C2;
 `

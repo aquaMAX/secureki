@@ -62,7 +62,7 @@ const StyledSlogan = styled.div`
 const StyledTitle = styled.div`
 
     height: 3.6em;
-    
+    max-width: 12.075em;
 
     margin-top: 0.5em;
     margin-bottom: 0.85em;
@@ -96,7 +96,7 @@ const StyledContent = styled.div`
 
 const StyledMoreabout = styled.button`
    
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 600;
     font-size: 1em;

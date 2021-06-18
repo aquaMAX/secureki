@@ -72,7 +72,7 @@ const StyledContent = styled(Row)`
 
 const StyledMoreabout = styled.button`
     width: 12.825em;
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 600;
     font-size: 1em;

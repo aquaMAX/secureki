@@ -90,7 +90,7 @@ const StyledContent = styled.div`
 `
 
 const StyledMoreabout = styled.button`
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 600;
     font-size: 1em;

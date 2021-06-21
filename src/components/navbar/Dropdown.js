@@ -8,12 +8,9 @@ const StyledDropdown = styled.div`
     margin-left: 1.5625em;
     height: 4.25em;
     transition: 0.3s;
-    
     &:hover {
-        display: block;
-        transition: 0.3s;
         >div {
-            transition: 0.3s;
+            
             display: block;
         }
     }
@@ -24,17 +21,20 @@ const StyledLink = styled.div`
     padding-top: 1.9375em;
     padding-bottom: 1.125em;
     padding-left: 2.125em;
-        padding-right: 2.125em;
+    padding-right: 2.125em;
     display: none;
     position: absolute;
     background: #FFFFFF;
-box-shadow: 0px 4px 20px rgba(7, 50, 51, 0.08);
-border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(7, 50, 51, 0.08);
+    border-radius: 10px;
     min-width: 10em;
-    
-   
+    transition: all .5s cubic-bezier(.165,.84,.44,1);
+    transition-property: transform;
+    &:hover {
+        display: block;
+    }
     z-index: 1;
-    transition: 0.3s;
+    
  
     > a {
         width: ${props => props.name=="Product" ? "10.3125em" : props.name=="Resources" ? "5.1875em" : "4.5em"};
@@ -42,14 +42,13 @@ border-radius: 10px;
         font-size: 1em;
         color: black;
         padding-bottom: 0.8125em;
-
+        color: #073233;
         line-height: 1.3125em;
-        
-        
         display: block;
         transition: 0.3s;
         &:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            transform: translateX(0.75em);
         }
     }
 `

@@ -99,7 +99,7 @@ const StyledPolicy = styled(Col)`
 
 font-family: Messina Sans;
 font-style: normal;
-font-weight: 200;
+font-weight: 400;
 font-size: 0.875em;
 line-height: 1.4285714285714286em;
 /* identical to box height, or 143% */

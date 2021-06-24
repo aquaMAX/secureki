@@ -176,6 +176,7 @@ const StyledPercentage = styled.div`
 `
 
 const ChartTitle = styled.div`
+    height: 1.8391666666666667em;
     font-family: Messina Sans bold;
     margin-bottom: 0.47750000000000004em;
     font-size: 0.75em;
@@ -223,7 +224,7 @@ export const ChartOffer = () => {
         <div style={{background: "#FCF5F0"}}>
         <Container>
             <StyledRow>
-                <ImageContainer>
+                <ImageContainer xs={6.5}>
                     <Styledimg src={drugi} />
                 </ImageContainer>
                 <TextContainer>

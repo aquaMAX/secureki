@@ -1,38 +1,36 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import pierwszy from "../../assets/pierwszy.png"
-import image from "../../assets/MFA/offer-2.png"
-import dot from "../../assets/MFA/dot.svg"
+import drugi from "../../assets/mfa/offer-3.png"
 
 const Container = styled.div`
-    height: 51em;
+    height: 37.8125em;
     
-    background: #FCF5F0;
+    background: #FFFFFF;
+    padding-bottom: 7.125em;
 
     max-width: 90em;
     justify-content: center;
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
-   
 `
 const TextContainer = styled(Col)`
-    padding-top: 1.1875em;
     padding-left: 0;
-    padding-right: 0;
-    margin-right: 0;
-    
+    padding-top: 12.5625em;
+    margin-left: 10.3125em;
 `
 
 const ImageContainer = styled(Col)`
-    padding-top: 1.1875em;
+    
+    padding-top: 9.375em;
+    margin: 0;
     padding-left: 0;
     padding-right: 0;
-    margin-left: 0;
+    padding-left: 13.5625em;
 `
 const StyledRow = styled(Row)`
-    padding-left: 10.3125em;
+    padding-left: 0;
     margin-right: 0;
     margin-left: 0;
 `
@@ -62,13 +60,11 @@ const StyledSlogan = styled.div`
 
 const StyledTitle = styled.div`
 
-    height: 2.95em;
-    max-width: 12.075em;
-
+    height: 2.4em;
+    width: 11.125em;
+    padding-right: 1em;
     margin-top: 0.5em;
-    margin-bottom: 0.4em;
-    
-    margin-right: 0;
+    margin-bottom: 0.35em;
 
     font-family: Messina Sans bold;
     font-style: normal;
@@ -82,7 +78,7 @@ const StyledTitle = styled.div`
 `
 
 const StyledContent = styled.div`
-    width: 27.8125em;
+    width: 24.875em;
     font-family: Messina Sans;
     font-style: normal;
     font-weight: normal;
@@ -92,10 +88,11 @@ const StyledContent = styled.div`
     letter-spacing: 0.00625em;
     margin-bottom: 2em;
     color: #17494D;
+    
+    padding-left: 0.9375em; 
 `
 
 const StyledMoreabout = styled.button`
-    
     font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 600;
@@ -105,11 +102,11 @@ const StyledMoreabout = styled.button`
     display: flex;
     align-items: center;
     letter-spacing: 0.00625em;
+    
     color: #073233;
     border: 0;
     background: none;
     padding: 0;
-    margin-top: 2.0625em;
     > text {
         text-underline-offset: 2.5px;
         text-decoration: underline solid #FF6938;
@@ -119,7 +116,7 @@ const StyledMoreabout = styled.button`
             padding-right: 1em;
         }   
 
-    }  
+    } 
 `
 
 const StyledPointer = styled.div`
@@ -131,81 +128,42 @@ const StyledPointer = styled.div`
     color: #FF6938;
 `
 
+const SecondParagraph = styled(Row)`
+
+`
+
 const Styledimg = styled.img`
-    min-width: 44.375em;
-    margin-bottom: 0;
-    margin-right: 3.125em;
-
+    min-width: 28em;
 `
 
-const StyledList = styled.div`
-    max-width: 28.5625em;
-`
-
-const StyledDot = styled.img`
-    margin: 0;
-    margin-right: 0.8em;
-    z-index: 1;
-    position: absolute;
-`
-
-const ListElement = styled(Row)`
-    margin: 0;
-    margin-bottom: 0.4325em;
-    
-    padding: 0;
-
-    font-family: Messina Sans;
-    font-size: 1em;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5em;
-    letter-spacing: 0.00625em;
-    text-align: left;
-    color: #17494D;
-    > div {
-        padding-top: 0.09em;
-        margin-left: 1.6875em;
-    }
-
-
-`
-
-export const Offer = () => {
+export const LastOffer = () => {
     return (
-        <div style={{background: "#FCF5F0"}}>
+        <div style={{background: "#FFFFFF"}}>
         <Container>
-            
             <StyledRow>
+                <ImageContainer xs={5.5}>
+                    <Styledimg src={drugi} />
+                </ImageContainer>
                 <TextContainer>
                     <StyledSlogan>
                         MFA
                     </StyledSlogan>
                     <StyledTitle>
-                    Convenient Authentication Methods
+                    Seamless, Fast Deployment
                     </StyledTitle>
                     <StyledContent>
-                    Providing user-friendly authentication methods does not mean you’ll add unnecessary friction to your experience. With various login options provided, users get to choose the one that best fits their workflow.   
+                        <Row>
+                        Setting up shouldn’t be a headache. SecureKi MFA integrates with your existing infrastructure with little to no effort to deploy.</Row>
                     </StyledContent>
-                    <StyledList>
-                        <ListElement><StyledDot src={dot}/><div>SMS and email One Time Password (OTP)</div></ListElement>
-                        <ListElement><StyledDot src={dot}/><div>Mobile time-based OTP token</div></ListElement>
-                        <ListElement><StyledDot src={dot}/><div>Supports mobile fingerprint-sensor for FIDO <br />authentication</div></ListElement>
-                        <ListElement><StyledDot src={dot}/><div>Supports Apple devices using Face ID authentication</div></ListElement>
-                        <ListElement><StyledDot src={dot}/><div>Supports Palm and Finger Vein Scanner and even <br />offline login</div></ListElement>
-                    </StyledList>
                     <StyledMoreabout>
                         <text>Learn about Multifactor Authentication</text>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
                     
                 </TextContainer>
-                <ImageContainer>
-                    <Styledimg src={image} />
-                </ImageContainer>
+
 
             </StyledRow>
-            
         </Container>
         </div>
     )

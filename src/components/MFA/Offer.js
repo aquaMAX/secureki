@@ -18,7 +18,7 @@ const Container = styled.div`
    
 `
 const TextContainer = styled(Col)`
-    padding-top: 8.1875em;
+    padding-top: 1.1875em;
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
@@ -97,7 +97,7 @@ const StyledContent = styled.div`
 `
 
 const StyledMoreabout = styled.button`
-   
+    
     font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 600;
@@ -111,6 +111,7 @@ const StyledMoreabout = styled.button`
     border: 0;
     background: none;
     padding: 0;
+    margin-top: 2.0625em;
     > text {
         text-underline-offset: 2.5px;
         text-decoration: underline solid #FF6938;
@@ -138,17 +139,36 @@ const Styledimg = styled.img`
 `
 
 const StyledList = styled.div`
-    height: 13.75em;
     max-width: 28.5625em;
 `
 
 const StyledDot = styled.img`
     margin: 0;
+    margin-right: 0.8em;
+    z-index: 1;
+    position: absolute;
 `
 
 const ListElement = styled(Row)`
     margin: 0;
+    margin-bottom: 0.4325em;
+    
     padding: 0;
+
+    font-family: Messina Sans;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0.00625em;
+    text-align: left;
+    color: #17494D;
+    > div {
+        padding-top: 0.09em;
+        margin-left: 1.6875em;
+    }
+
+
 `
 
 export const Offer = () => {
@@ -168,11 +188,11 @@ export const Offer = () => {
                     Providing user-friendly authentication methods does not mean you’ll add unnecessary friction to your experience. With various login options provided, users get to choose the one that best fits their workflow.   
                     </StyledContent>
                     <StyledList>
-                        <ListElement><StyledDot src={dot}/>SMS and email One Time Password (OTP)</ListElement>
-                        <ListElement><StyledDot src={dot}/></ListElement>
-                        <ListElement><StyledDot src={dot}/></ListElement>
-                        <ListElement><StyledDot src={dot}/></ListElement>
-                        <ListElement><StyledDot src={dot}/></ListElement>
+                        <ListElement><StyledDot src={dot}/><div>SMS and email One Time Password (OTP)</div></ListElement>
+                        <ListElement><StyledDot src={dot}/><div>Mobile time-based OTP token</div></ListElement>
+                        <ListElement><StyledDot src={dot}/><div>Supports mobile fingerprint-sensor for FIDO <br />authentication</div></ListElement>
+                        <ListElement><StyledDot src={dot}/><div>Supports Apple devices using Face ID authentication</div></ListElement>
+                        <ListElement><StyledDot src={dot}/><div>Supports Palm and Finger Vein Scanner and even <br />offline login</div></ListElement>
                     </StyledList>
                     <StyledMoreabout>
                         <text>Learn about Multifactor Authentication</text>

@@ -10,6 +10,7 @@ import { Footer } from "../components/body/Footer"
 import { Offer } from "../components/MFA/Offer.js"
 import { ChartOffer } from "../components/MFA/ChartOffer.js"
 import { LastOffer } from "../components/MFA/LastOffer.js"
+import { WhatsNew } from "../components/MFA/WhatsNew"
 import StickyNav from "../components/navbar/StickyNav.js"
 import Slider from '../components/body/Slider/Slider.js'
 
@@ -21,6 +22,7 @@ const MultifactorAuth = () => (
     <ChartOffer />
     <Offer />
     <LastOffer />
+    <WhatsNew />
     <GetStarted />
     <Footer />
     <StickyNav />

@@ -73,7 +73,7 @@ const StyledRow = styled(Row)`
     margin-right: 0;
 `
 
-export const GetStarted = () => {
+export const Join = () => {
     return (
         <Container>
             <StyledRow>

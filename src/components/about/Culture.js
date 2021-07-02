@@ -33,15 +33,19 @@ const StyledTitle = styled.div`
 
     
     width: 7.770833333333333em;
-    margin-top: 0.5em;
-    margin-bottom: 1.125rem;
+    
+    margin-bottom: 2.8125rem;
     font-family: Messina Sans bold;
     font-style: normal;
     font-weight: bold;
     font-size: 2.5rem;
-    line-height: 3rem;
+    line-height: 2.3rem;
     /* or 120% */
     letter-spacing: -0.0313rem;
+
+    display: flex;
+    align-items: flex-end;
+    
 
     color: #073233;
 `

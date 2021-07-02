@@ -4,28 +4,33 @@ import { Row, Col } from 'react-bootstrap'
 import Button from "../navbar/Button"
 
 const Container = styled.div`
-    height: 22.875em;
+    height: 10.5625rem;
  
     background: #FCF5F0;
+
+    max-width: 90em;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 `
 
-const StyledTitle = styled(Col)`
+const StyledTitle = styled.div`
     /* Short headline */
     
-    height: 3em;
-    justify-content: center;
-    display: flex;
+    height: 3rem;
     color: #073233;
-    margin-bottom: 2em;
-    margin-top: 6.75em;
+    margin-bottom: 3.8125rem;
+    margin-top: 3.75rem;
+    margin-left: 10.3125rem;
 
     > h1 {
-        position: absolute;
+        
      
         font-family: Messina Sans bold;
         font-style: normal;
         font-weight: bold;
-        font-size: 2.5em;
+        font-size: 2.5rem;
         line-height: 1.2em;
         text-align: center;
         letter-spacing: -0.0125em;
@@ -35,8 +40,9 @@ const StyledTitle = styled(Col)`
 const StyledButton = styled(Button)`
     border: 2px solid #FF6938;
     border-radius: 40px;
-    position: absolute;
-    margin-left: 9em;
+  
+    margin-left: 61.625rem;
+    margin-top: 3.8125rem;
     padding: 0.5687em 1.425em 0.5687em 1.425em;
     font-family: Messina Sans bold;
     font-size: 1.125em;
@@ -50,8 +56,8 @@ const StyledButton = styled(Button)`
 `
 
 const StyledSecondButton = styled(Button)`
-    position: absolute;
-    margin-right: 9.5em;
+    margin-left: 71.375rem;
+    margin-top: 3.875rem;
     padding: 0.6687em 1.525em 0.6687em 1.525em;
     font-family: Messina Sans bold;
     font-size: 1.125em;
@@ -63,33 +69,30 @@ const StyledSecondButton = styled(Button)`
     }
 `
 
-const StyledCol = styled(Col)`
-    justify-content: center;
-    display: flex;
-`
-
 const StyledRow = styled(Row)`
     margin-left: 0;
     margin-right: 0;
+    display: flex;
 `
 
 export const Join = () => {
     return (
+        <div style={{background: "#FCF5F0"}}>
         <Container>
             <StyledRow>
                 <StyledTitle>
                     <h1>
-                    About us
+                    Want to join us?
                     </h1>
                 </StyledTitle>
-            </StyledRow>
-            <StyledRow>
-                <StyledCol>
-                    <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                
+                <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                    <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
               
-                    <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
-                </StyledCol>
+                    
+                
             </StyledRow>
         </Container>
+        </div>
     )
 }

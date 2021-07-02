@@ -32,6 +32,16 @@ const MFAButton = styled(StyledButton)`
     background: #FF6938;
     border-radius: 1.875em;
     margin: 0;
+    font-family: Messina Sans semibold;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.0063rem;
+    transition: 0.3s;
+    
+    &:hover {
+        background: #E55A2D;
+        
+    }
 `
 
 const StyledTitle = styled(Row)`
@@ -41,10 +51,6 @@ const StyledTitle = styled(Row)`
     justify-content: center;
     display: flex;
     color: #073233;
-    
-   
-    
-
     > h1 {
         position: absolute;
      

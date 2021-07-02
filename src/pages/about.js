@@ -10,6 +10,7 @@ import { Footer } from "../components/body/Footer"
 import Culture from "../components/about/Culture"
 import StickyNav from "../components/navbar/StickyNav.js"
 import Pictures from "../components/about/Pictures"
+import { Join } from "../components/about/Join"
 
 
 const About = () => (
@@ -18,6 +19,7 @@ const About = () => (
     <Customers />
     <Culture />
     <Pictures />
+    <Join />
     <Footer />
     <StickyNav />
   </>

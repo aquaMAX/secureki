@@ -58,11 +58,11 @@ const StyledSlogan = styled.div`
 
 const StyledTitle = styled.div`
 
-    height: 5.525em;
+    
     width: 12.075em;
     padding-right: 1em;
     margin-top: 0.5em;
-    margin-bottom: 0.35em;
+    margin-bottom: 2.625rem;
 
     font-family: Messina Sans bold;
     font-style: normal;

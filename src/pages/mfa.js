@@ -14,7 +14,7 @@ import { WhatsNew } from "../components/MFA/WhatsNew"
 import StickyNav from "../components/navbar/StickyNav.js"
 import Slider from '../components/body/Slider/Slider.js'
 
-const MultifactorAuth = () => (
+const MFA = () => (
   <>
     
     <MFAHeader />
@@ -29,6 +29,6 @@ const MultifactorAuth = () => (
   </>
 )
 
-export default MultifactorAuth;
+export default MFA;
 
 

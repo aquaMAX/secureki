@@ -6,6 +6,14 @@ import Header from '../../assets/PAM/header.png'
 import StyledButton from '../navbar/Button.js'
 import checkpoint from '../../assets/MFA/checkpoint.svg'
 
+import circle from "../../assets/decorations/circle.svg"
+import smallcircle from "../../assets/decorations/smallcircle.svg"
+
+import rec from "../../assets/pam/header/rec.svg"
+import siderec from "../../assets/pam/header/siderec.svg"
+import emptyrec from "../../assets/pam/header/emptyrec.svg"
+import sidesmallrec from "../../assets/pam/header/sidesmallrec.svg"
+
 const Layout = styled.div`
     max-width: 90em;
     height: 60.75em;
@@ -20,14 +28,58 @@ const FixedRow = styled(Row)`
     margin: 0;
 `
 
+const StyledRec = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 2.6875rem;
+    margin-top: 11.75rem;
+`
+
+const StyledSideRec = styled.div`
+    z-index: -1;
+    position: absolute;
+    margin-left: 85.875rem;
+    margin-top: 46.9375rem;
+    background: url(${siderec});
+    width: 4.125rem;
+    height: 9.3125rem;
+    @media (min-width: 1523px) {
+        width: 9.3125rem;
+    }
+`
+
+const StyledEmptyRec = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: -2rem;
+    margin-top: 13.0625rem;
+`
+
+const StyledSmallOneCircle = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 2em;
+    margin-top: 46.125em;
+`
+
+const StyledCircle = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 4.5625rem;
+    margin-top: 48.75rem;
+`
+
+const StyledSmallTwoCircle = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 1.4375rem;
+    margin-top: 55.25rem;
+`
+
 const TextRow = styled(Row)`
     margin: 0;
     flex-wrap: nowrap;
     align-items: flex-start;
-`
-
-const FixedCol = styled(Col)`
-
 `
 
 const StyledText = styled(Col)`
@@ -78,7 +130,7 @@ const StyledBody = styled.div`
 
     color: #17494D;
     margin-top: 1.5555555555555556em;
-    margin-bottom: 0.7777777777777778em;
+    margin-bottom: 30px;
     /* Inside Auto Layout */
     flex: none;
     order: 1;
@@ -108,9 +160,9 @@ const StyledCheckpoint = styled.img`
 
 const StyledParagraph = styled.div`
     > .paragraph {
-        margin-bottom: 0.5em;
+        
         > p {
-            margin-bottom: 0;
+            margin-bottom: 0.5rem;
             font-family: Messina Sans;
             font-style: normal;
             font-weight: normal;
@@ -122,6 +174,9 @@ const StyledParagraph = styled.div`
             letter-spacing: 0.00625em;
             
             color: #17494D; 
+            &::last-child {
+                margin-bottom: 0;
+            }
         }
     }
 `
@@ -129,6 +184,12 @@ const StyledParagraph = styled.div`
 export const PAMHeader = () => {
 return (
     <Layout>
+        <StyledRec src={rec} />
+        <StyledEmptyRec src={emptyrec} />
+        <StyledSideRec />
+        <StyledCircle src={circle} />
+        <StyledSmallOneCircle src={smallcircle} />
+        <StyledSmallTwoCircle src={smallcircle} />
         <FixedRow>
             <StyledText>
                 <StyledTitle> 

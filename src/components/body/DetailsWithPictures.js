@@ -39,10 +39,10 @@ const StyledRow = styled(Row)`
 
 const StyledTitle = styled.div`
 
-    height: 3.125em;
+    
     width: 7.770833333333333em;
     margin-top: 0.5em;
-    margin-bottom: 0.6875em;
+    margin-bottom: 2.625rem;
     font-family: Messina Sans bold;
     font-style: normal;
     font-weight: bold;

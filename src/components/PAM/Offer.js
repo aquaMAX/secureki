@@ -17,7 +17,7 @@ const Container = styled.div`
 `
 const TextContainer = styled(Col)`
     padding-left: 0;
-    padding-top: 9.4375em;
+    padding-top: 11.0625rem;
     margin-left: 3.6875em;
 `
 
@@ -61,8 +61,8 @@ const StyledTitle = styled.div`
     
     width: 12.075em;
     padding-right: 1em;
-    margin-top: 0.25em;
-    margin-bottom: 0.35em;
+    margin-top: 0.625rem;
+    margin-bottom: 2.125rem;
 
     font-family: Messina Sans bold;
     font-style: normal;

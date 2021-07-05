@@ -62,11 +62,11 @@ const StyledSlogan = styled.div`
 
 const StyledTitle = styled.div`
 
-    height: 2.95em;
+    
     max-width: 12.075em;
 
     margin-top: 0.5em;
-    margin-bottom: 0.4em;
+    margin-bottom: 2.625rem;
     
     margin-right: 0;
 

@@ -6,6 +6,9 @@ import Header from '../../assets/MFA/header.png'
 import StyledButton from '../navbar/Button.js'
 import checkpoint from '../../assets/MFA/checkpoint.svg'
 
+import circle from "../../assets/decorations/circle.svg"
+import smallcircle from "../../assets/decorations/smallcircle.svg"
+
 const Layout = styled.div`
     max-width: 90em;
     height: 55.9375em;
@@ -24,8 +27,25 @@ const TextRow = styled(Row)`
     margin: 0;
 `
 
-const FixedCol = styled(Col)`
+const StyledSmallOneCircle = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 3.1875rem;
+    margin-top: 21.5rem;
+`
 
+const StyledCircle = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 6.3125rem;
+    margin-top: 15rem;
+`
+
+const StyledSmallTwoCircle = styled.img`
+    z-index: -1;
+    position: absolute;
+    margin-left: 4.25rem;
+    margin-top: 11.4375rem;
 `
 
 const StyledText = styled(Col)`
@@ -126,6 +146,10 @@ const StyledParagraph = styled.div`
 export const MFAHeader = () => {
 return (
     <Layout>
+        <StyledCircle src={circle} />
+        <StyledSmallOneCircle src={smallcircle} />
+        <StyledSmallTwoCircle src={smallcircle} />
+       
         <FixedRow>
             <StyledText>
                 <StyledTitle> 

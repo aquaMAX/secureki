@@ -3,6 +3,9 @@ import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../assets/mfa/offer-3.png"
 
+import circle from "../../assets/decorations/circle.svg"
+import smallcircle from "../../assets/decorations/smallcircle.svg"
+
 const Container = styled.div`
     height: 37.8125em;
     
@@ -19,6 +22,20 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 12.5625em;
     margin-left: 10.3125em;
+`
+
+const StyledCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 9.625rem;
+    margin-top: 27.3125rem;
+`
+
+const StyledSmallTwoCircle = styled.img`
+    z-index: 1;
+    position: absolute;
+    margin-left: 6.5rem;
+    margin-top: 33.8125rem;
 `
 
 const ImageContainer = styled(Col)`
@@ -60,11 +77,11 @@ const StyledSlogan = styled.div`
 
 const StyledTitle = styled.div`
 
-    height: 2.4em;
+    
     width: 11.125em;
     padding-right: 1em;
     margin-top: 0.5em;
-    margin-bottom: 0.35em;
+    margin-bottom: 2.625rem;
 
     font-family: Messina Sans bold;
     font-style: normal;
@@ -140,6 +157,8 @@ export const LastOffer = () => {
     return (
         <div style={{background: "#FFFFFF"}}>
         <Container>
+        <StyledCircle src={circle} />
+        <StyledSmallTwoCircle src={smallcircle} />
             <StyledRow>
                 <ImageContainer xs={5.5}>
                     <Styledimg src={drugi} />

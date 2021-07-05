@@ -12,6 +12,7 @@ import StickyNav from "../components/navbar/StickyNav.js"
 
 import { Join } from "../components/about/Join"
 import { Body } from "../components/careers/Body"
+import Openings from "../components/careers/Openings"
 
 
 const Careers = () => (
@@ -19,6 +20,7 @@ const Careers = () => (
     <CareersHeader />
     <Body />
     <Join />
+    <Openings />
     <Footer />
     <StickyNav />
   </>

@@ -3,12 +3,25 @@ import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../assets/careers/body/image 10.png"
 
+import emptyrec from "../../assets/careers/body/emptyrec.svg"
+import whiterec from "../../assets/careers/body/whiterec.svg"
+
+const EmptyRec = styled.img`
+    position: absolute;
+    z-index: 1;
+    margin-top: 20.4375rem;
+    margin-left: 82.125rem;
+`
+
+const WhiteRec = styled.img`
+    position: absolute;
+    z-index: -1;
+    margin-top: 22.4375rem;
+    margin-left: 74.6875rem;
+`
+
 const Container = styled.div`
     height: 31.25rem;
-    
-    
-    
-
     max-width: 90em;
     justify-content: center;
     -webkit-justify-content: center;
@@ -16,19 +29,23 @@ const Container = styled.div`
     margin-right: auto;
 `
 const TextContainer = styled(Col)`
-    padding-left: 0;
-    
-    margin-left: 3.6875em;
+    padding: 0;
+    width: 43.9375rem;
+    padding-left: 10.3125rem;
 `
 
 const ImageContainer = styled(Col)`
     padding-top: 3.5625rem;
+    
     margin: 0;
     padding-left: 0;
     padding-right: 0;
+    display: flex;
+    justify-content: end;
+    
 `
 const StyledRow = styled(Row)`
-    padding-left: 1.5em;
+    padding-left: 0;
     margin-right: 0;
     margin-left: 0;
 `
@@ -99,6 +116,11 @@ const StyledContent = styled.div`
 
 const Styledimg = styled.img`
     min-width: 36rem;
+    max-width: 36rem;
+    max-height: 24.125rem;
+    margin: 0;
+    
+    
 `
 
 export const Body = () => {
@@ -107,7 +129,7 @@ export const Body = () => {
         <Container>
             <StyledRow>
 
-                <TextContainer>
+                <TextContainer xs={'auto'}>
                     <StyledSlogan>
                         CAREERS / ALL OPEN POSITIONS
                     </StyledSlogan>
@@ -119,12 +141,14 @@ export const Body = () => {
                     </StyledContent>
                     
                 </TextContainer>
-                <ImageContainer>
+                <ImageContainer xs={5}>
                     <Styledimg src={drugi} />
                 </ImageContainer>
 
-
+                <WhiteRec src={whiterec} />
+            <EmptyRec src={emptyrec} />
             </StyledRow>
+
         </Container>
 
     )

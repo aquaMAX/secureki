@@ -24,6 +24,7 @@ const StyledCol = styled.div`
     justify-content: center;
     
     > p {
+        
         font-family: Messina Sans;
         font-style: regular;
         font-weight: 400;
@@ -34,13 +35,18 @@ const StyledCol = styled.div`
 
         color: #B5C1C2;
 
-        opacity: 1;
+        opacity: 0.7;
 
         /* Inside Auto Layout */
         flex: none;
         order: 1;
         flex-grow: 0;
         margin: 0.3125em 0;
+        transition: 0.3s;
+        &:hover {
+            transform: translateX(0.75em);
+            cursor: pointer;
+        }
 }
 
     > h1 {
@@ -66,15 +72,12 @@ const StyledUnderline = styled.div`
     transform: rotate(-0.05deg);
     margin-left: 10.4375em;
     margin-right: 10.4375em;
-
-    
 `
 
 const StyledRow = styled(Row)`
     padding-top: 5.125em;
     padding-bottom: 5.625em;
-    padding-left: 10.5em;
-    
+    padding-left: 10.5em; 
     margin-left: 0;
     margin-right: 0;
 `
@@ -95,22 +98,17 @@ const NoMarginPolicyRow = styled(Row)`
 
 const StyledPolicy = styled(Col)`
     /* Terms of Service */
-
-
-font-family: Messina Sans;
-font-style: normal;
-font-weight: 400;
-font-size: 0.875em;
-line-height: 1.4285714285714286em;
-/* identical to box height, or 143% */
-display: flex;
-
-color: #B5C1C2;
-
-
+    font-family: Messina Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875em;
+    line-height: 1.4285714285714286em;
+    /* identical to box height, or 143% */
+    display: flex;
+    color: #B5C1C2;
 > p {
-    opacity: 0.8;
- margin-right: 10.86464em; 
+    opacity: 0.6;
+    margin-right: 10.86464em; 
 }
 `
 
@@ -118,13 +116,21 @@ const StyledParagraph = styled.div`
     padding-left: 0.8571428571428571em;
     padding-right: 0.8571428571428571em;
     margin-left: auto;
-    opacity: 0.8;
+    opacity: 0.6;
 `
 
 const StyledRights = styled.div`
     margin-left: 10.4375em;
-    opacity: 1;
+    opacity: 0.6;
     color: #B5C1C2;
+    font-family: Messina Sans;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: left;
+
 `
 
 const StyledImgCol = styled.div`
@@ -135,7 +141,14 @@ const StyledImgCol = styled.div`
 const StyledSocials = styled.img`
     margin-right: 0.75em;
     color: #B5C1C2;
-    opacity: 0.8;
+    opacity: 0.6;
+    font-family: Messina Sans;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    text-align: left;
 `
 
 const Product = styled.div`
@@ -201,8 +214,8 @@ export const Footer = () => {
                     <StyledRights>© 2021 SecureKi. All right reserved.</StyledRights>
                 </StyledPolicy>
                 <StyledPolicy>
-                <StyledParagraph>Privacy Policy</StyledParagraph>
-                <p>Terms of Service</p>
+                    <StyledParagraph>Privacy Policy</StyledParagraph>
+                    <p>Terms of Service</p>
                 </StyledPolicy>
             </NoMarginPolicyRow>
 

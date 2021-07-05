@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import pierwszy from "../../assets/pierwszy.png"
+import { Link } from 'gatsby'
 
 const Container = styled.div`
     height: 40em;
@@ -151,10 +152,15 @@ export const DetailedOffer = () => {
                     <StyledContent>
                         When it comes to protecting your data, passwords are the weakest link. That is why multifactor authentication has become the identity and access management standard for preventing unauthorized access. Verify the identity of all users with SecureKi.   
                     </StyledContent>
+                    <Link 
+                        to="/mfa"
+                        style={{textDecoration: "none"}}
+                    >
                     <StyledMoreabout>
                         <text>Learn about Multifactor Authentication</text>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
+                    </Link>
                     
                 </TextContainer>
                 <ImageContainer>

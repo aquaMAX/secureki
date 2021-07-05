@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import pointer from '../../assets/logos/pointer.svg'
+import { Link } from "gatsby"
 
 const StyledDropdown = styled.div`
     position: relative;
@@ -82,8 +83,12 @@ const DropdownMenu = ({name}) => {
         <StyledDropdown>
            <StyledButton>{name}<StyledPointer src={pointer} /></StyledButton>
            <StyledLink name={name} type="text">
-              <a href="#">{name == "Product" ? "Multifactor Authentication  (MFA)" : name == "Resources" ? "Newsroom" : "Career"}</a>
-              <a href="#">{name == "Product" ? "Privileged Access Management (PAM)" : name == "Resources" ? "Resources" : "About Us"}</a>
+              <Link to={name == "Product" ? "/mfa" : name == "Resources" ? "#" : "/careers"}>
+                  {name == "Product" ? "Multifactor Authentication  (MFA)" : name == "Resources" ? "Newsroom" : "Career"}
+            </Link>
+              <Link to={name == "Product" ? "/pam" : name == "Resources" ? "#" : "/about"}>
+                  {name == "Product" ? "Privileged Access Management (PAM)" : name == "Resources" ? "Resources" : "About Us"}
+                </Link>
               {name == "Company" ? <a>Blog</a> : null}
             </StyledLink> 
         </StyledDropdown>

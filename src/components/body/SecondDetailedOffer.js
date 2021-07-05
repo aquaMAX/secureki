@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../assets/drugi.png"
+import { Link } from 'gatsby'
 
 const Container = styled.div`
     height: 45.5em;
@@ -155,10 +156,15 @@ export const SecondDetailedOffer = () => {
                         Our comprehensive privileged access management is designed to manage and monitor privileged access to accounts and applications, alert system administrators on high-risk events, reduce operations complexity, and meeting regulatory compliance with ease.  
                         </span></Row>
                     </StyledContent>
+                    <Link 
+                        to="/pam"
+                        style={{textDecoration: "none"}}
+                    >
                     <StyledMoreabout>
                         <text>Learn more on Privileged Access Management</text>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
+                    </Link>
                     
                 </TextContainer>
 

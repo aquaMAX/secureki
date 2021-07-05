@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from "styled-components";
 //import SecurekiLogo from "../../assets/securekianimated.gif"
 import SecurekiLogo from "../../assets/SECUREKi Logo.svg"
+import { Link } from 'gatsby'
 
 const LogoStyling = styled.img`
     height: 2.6875em;
@@ -15,7 +16,9 @@ const LogoStyling = styled.img`
 
 const Logo = () => {
     return (
-        <LogoStyling src={SecurekiLogo} />
+        <Link to="../">
+            <LogoStyling src={SecurekiLogo} />
+        </Link>
     )
 }
 

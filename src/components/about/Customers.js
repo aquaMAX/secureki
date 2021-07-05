@@ -57,6 +57,7 @@ const StyledTitle = styled(Row)`
     justify-content: center;
     display: flex;
     color: #073233;
+    margin: 0;
     > h1 {
         position: absolute;
      
@@ -94,6 +95,7 @@ const ButtonContainer = styled.div`
 `
 
 const CustomersRow = styled(Row)`
+    margin: 0;
     margin-top: 2.5rem;
     height: 3.0625rem;
     display: flex;

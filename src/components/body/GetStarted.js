@@ -79,7 +79,7 @@ export const GetStarted = () => {
             <StyledRow>
                 <StyledTitle>
                     <h1>
-                    About us
+                    Ready to get started?
                     </h1>
                 </StyledTitle>
             </StyledRow>

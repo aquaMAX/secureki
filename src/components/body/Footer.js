@@ -35,7 +35,7 @@ const StyledCol = styled.div`
 
         color: #B5C1C2;
 
-        opacity: 0.7;
+        opacity: 1;
 
         /* Inside Auto Layout */
         flex: none;
@@ -107,7 +107,7 @@ const StyledPolicy = styled(Col)`
     display: flex;
     color: #B5C1C2;
 > p {
-    opacity: 0.6;
+    opacity: 1;
     margin-right: 10.86464em; 
 }
 `
@@ -116,12 +116,12 @@ const StyledParagraph = styled.div`
     padding-left: 0.8571428571428571em;
     padding-right: 0.8571428571428571em;
     margin-left: auto;
-    opacity: 0.6;
+    opacity: 1;
 `
 
 const StyledRights = styled.div`
     margin-left: 10.4375em;
-    opacity: 0.6;
+    opacity: 1;
     color: #B5C1C2;
     font-family: Messina Sans;
     font-size: 0.875rem;

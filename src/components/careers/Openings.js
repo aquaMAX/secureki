@@ -28,7 +28,7 @@ const StyledTitle = styled(Row)`
         font-family: Messina Sans bold;
         font-style: normal;
         font-weight: bold;
-        font-size: 3.5em;
+        font-size: 2.5rem;
         line-height: 0.8571428571428571em;
         text-align: center;
         letter-spacing: -0.008928571428571428em;

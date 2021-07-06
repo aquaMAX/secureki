@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
-import FeaturesElement from './FeaturesElement.js'
+
 import andrea from '../../assets/andrea.png'
 import cirbig from '../../assets/customer/cirbig.svg'
 import cirsmall from '../../assets/customer/cirsmall.svg'

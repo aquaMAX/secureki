@@ -22,6 +22,8 @@ const StyledPosition = styled(Col)`
     line-height: 1.5rem;
     letter-spacing: 0.0063rem;
     text-align: left;
+    color: #114A4F;
+
 
 `
 
@@ -34,6 +36,8 @@ const StyledLocation = styled(Col)`
     line-height: 1.5rem;
     letter-spacing: 0.0063rem;
     text-align: left;
+    color: #073233;
+
 `
 
 const PointerContainer = styled(Col)`
@@ -46,14 +50,19 @@ const StyledPointer = styled.div`
     padding: 0;
     margin-top: 0.3125rem;
     /* Arrow */
-    width: 0.625rem;
-	height: 0.625rem;
+    width: 0.525rem;
+	height: 0.525rem;
     box-sizing: border-box;
     
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 1px 1px 0;
+    box-shadow: -0.25px -0.25px 0px 0.25px rgba(0,0,0,1) inset;
+-webkit-box-shadow: -0.25px -0.25px 0px 0.25px rgba(0,0,0,1) inset;
+-moz-box-shadow: -0.25px -0.25px 0px 0.25px rgba(0,0,0,1) inset;
+    color: #073233;
+
 
 
 `

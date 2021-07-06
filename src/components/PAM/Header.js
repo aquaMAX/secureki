@@ -151,6 +151,8 @@ const MFAButton = styled(StyledButton)`
     background: #FF6938;
     border-radius: 1.875em;
     margin: 0;
+    font-family: Messina Sans semibold;
+    font-size: 1.125rem;
 `
 
 const StyledCheckpoint = styled.img`

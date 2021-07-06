@@ -19,8 +19,8 @@ const Careers = () => (
   <>
     <CareersHeader />
     <Body />
-    <Join />
     <Openings />
+    <Join />
     <Footer />
     <StickyNav />
   </>

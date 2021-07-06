@@ -116,6 +116,28 @@ const BlurImage = styled.img`
     z-index: 1;
     margin-top: 57.1875rem;
     margin-left: 16.9375rem;
+    background: linear-gradient(270.61deg, rgba(255, 255, 255, 0) 25.2%, #FFFFFF 87.06%);
+`
+
+const Blur = styled.div`
+    width: 10.5rem;
+    height: 8.5rem;
+    position: absolute;
+    z-index: 2;
+    margin-top: 58.1875rem;
+    margin-left: 15.9375rem;
+    background: linear-gradient(270.61deg, rgba(255, 255, 255, 0) 25.2%, #FFFFFF 87.06%);
+    transform: rotate(-90deg);
+`
+
+const RightBlur = styled.div`
+    width: 20.25rem;
+    height: 9.875rem;
+    position: absolute;
+    z-index: 6;
+    margin-top: 30.5625rem;
+    margin-left: 59.6875rem;
+    background: linear-gradient(269.93deg, #FFFFFF 22.49%, rgba(255, 255, 255, 0) 61.98%);
 `
 
 const BottomRightImage = styled.img`
@@ -168,6 +190,7 @@ return (
     <>
     
     <Layout>
+        
     <CircleBigOrange src={circlebigorange} />
         <CircleBigWhite src={circlebigwhite} />
         <CircleSmallBlue src={circlesmallblue} />
@@ -183,7 +206,10 @@ return (
         <RightImage src={rightimage} />
         <BottomImage src={bottomimage} />
         <LeftImage src={leftimage} />
+        <Blur />
+        <RightBlur />
         <BlurImage src={blur} />
+        
         <BottomRightImage src={bottomrightimage} />
                 
                 <StyledTitle>

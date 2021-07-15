@@ -18,8 +18,8 @@ const Container = styled.div`
     padding-top: 5.09375em;
 `
 const StyledRow = styled(Row)`
-    padding-left: 10.5em;
-    padding-right: 10.5em;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
     margin-left: 0;
     margin-right: 0;
 `

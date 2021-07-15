@@ -41,22 +41,22 @@ const StyledCarousel = styled(Carousel)`
 const Slider = () => {
     return (
         <Container>
-                                       <StyledCarousel>
+                <StyledCarousel>
                     <Carousel.Item>
                         
                         <FirstSlide />
                     </Carousel.Item>
                     <Carousel.Item>
-                    <FirstSlide />
+                        <FirstSlide />
                     </Carousel.Item>
                     <Carousel.Item>
-                    <FirstSlide />
+                        <FirstSlide />
                     </Carousel.Item>
                     <Carousel.Item>
-                    <FirstSlide />
+                        <FirstSlide />
                     </Carousel.Item>
                     <Carousel.Item>
-                    <FirstSlide />
+                        <FirstSlide />
                     </Carousel.Item>
                 </StyledCarousel>
         </Container>

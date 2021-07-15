@@ -18,6 +18,9 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 10.6875em;
     margin-left: 0;
+    @media (max-width: 1439px) {
+        padding-top: 9.6875em;
+    }
 `
 
 const ImageContainer = styled(Col)`
@@ -30,6 +33,10 @@ const StyledRow = styled(Row)`
     padding-left: 10.375em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 1439px) {
+        
+        padding-left: 4vw;
+    }
 `
 
 const StyledSlogan = styled.div`
@@ -66,6 +73,11 @@ const StyledTitle = styled.div`
     margin-bottom: 0.35em;
     letter-spacing: 0.01625em;
 
+    @media (max-width: 1439px) {
+        padding-right: 1em;
+    }
+
+
     /* “All base UI element */
 `
 
@@ -95,6 +107,10 @@ const StyledMoreabout = styled.button`
         &:hover {
             padding-right: 1em;
         }   
+    }
+
+    @media (max-width: 1130px) {
+        margin-top: 9.275rem
     }  
 `
 
@@ -113,27 +129,41 @@ const Styledimg = styled.img`
     min-width: 30.125em;
     z-index: 2;
     position: absolute;
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 25.125rem;
+        height: auto;
+    }
 `
 
 const StyledGroupElements = styled.img`
     z-index: 1;
     position: absolute;
-    margin-left: 35.375em;
+    margin-left: 25em;
     margin-top: 2.75em;
+    @media (max-width: 1439px) {
+        margin-left: 20em;
+    }
 `
 
 const StyledSquare = styled.img`
     z-index: 1;
     position: absolute;
-    margin-left: 8.3125em;
+    margin-left: -2.0625em;
     margin-top: 21.9375em;
+    @media (max-width: 1439px) {
+        margin-top: 19.0625rem;
+    }
 `
 
 const StyledCircle = styled.img`
     z-index: 1;
     position: absolute;
-    margin-left: 11.96875em;
+    margin-left: 1.59375em;
     margin-top: 25.6875em;
+    @media (max-width: 1439px) {
+        margin-top: 22.8125rem;
+    }
 `
 
 
@@ -142,11 +172,12 @@ export const FirstSlide = () => {
     return (
         <>
         <Container>
+
+            <StyledRow>
             <StyledSquare src={squareslide} />
             <StyledCircle src={circleslide} />
             <StyledGroupElements src={group} />
-            <StyledRow>
-                <ImageContainer>
+                <ImageContainer lg={7} xl>
                     <Styledimg src={drugi} />
                 </ImageContainer>
                 <TextContainer>

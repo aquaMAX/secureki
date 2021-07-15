@@ -29,12 +29,20 @@ const ImageContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
+    @media (max-width: 1439px) {
+        display: flex;
+        align-items: center;
+    }
 `
 const StyledRow = styled(Row)`
     padding-left: 10.3125em;
     padding-right: 4.25em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 1429px) {
+        padding-left: 3.125rem;
+        padding-right: 0;
+    }
 `
 
 const StyledSlogan = styled.div`
@@ -93,6 +101,10 @@ const StyledContent = styled.div`
     margin-bottom: 2em;
     margin-right: 7.8125em;
     color: #17494D;
+    @media (max-width: 1439px) {
+        margin-right: 0;
+        max-width: 27.8125rem;
+    }
 `
 
 const StyledMoreabout = styled.button`
@@ -134,6 +146,11 @@ const StyledPointer = styled.div`
 const Styledimg = styled.img`
     min-width: 39.8125em;
     margin-bottom: 0;
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 53.5vw;
+        height: auto;
+    }
 `
 
 export const DetailedOffer = () => {

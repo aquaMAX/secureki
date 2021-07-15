@@ -19,6 +19,10 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 1078px) {
+        height: 60em;
+    }
 `
 
 const StyledTitle = styled(Col)`
@@ -47,6 +51,15 @@ const StyledRow = styled(Row)`
     margin: 0;
     padding-left: 10.4375em;
     padding-right: 10.4375em;
+    @media (max-width: 1439px) {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        max-width: 69.125rem;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `
 
 const StoriesCol = styled(Col)`
@@ -60,6 +73,9 @@ const StyledRec = styled.img`
     position: absolute;
     margin-left: 5.3125em;
     margin-top: 3.3125em;
+    @media (max-width: 1440px) {
+        margin-left: 1vw;
+    }
 `
 
 const StyledSmallCircle = styled.img`

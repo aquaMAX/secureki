@@ -35,6 +35,9 @@ const StyledRow = styled(Row)`
     padding-right: 4.25em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 1439px) {
+        padding-left: 3.125rem;
+    }
 `
 
 const StyledTitle = styled.div`
@@ -137,7 +140,7 @@ export const DetailsWithPictures = () => {
         <>
         <Container>
             <StyledRow>
-                <TextContainer xl={5} lg={3}>
+                <TextContainer xl={5} lg={5}>
                     <StyledTitle>
                     Trusted by leading companies
                     </StyledTitle>

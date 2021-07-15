@@ -20,6 +20,12 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 5.3125em;
     margin-left: 7.4375em;
+    @media (max-width: 1439px) {
+        max-width: 47vw;
+        align-items: right;
+        
+        margin-left: auto;
+    }
 `
 
 const ImageContainer = styled(Col)`
@@ -27,11 +33,19 @@ const ImageContainer = styled(Col)`
     margin: 0;
     padding-left: 0;
     padding-right: 0;
+    @media (max-width: 1439px) {
+        
+        display: flex;
+        align-items: center;
+    }
 `
 const StyledRow = styled(Row)`
     padding-left: 3.875em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 1429px) {
+        padding-left: 0;
+    }
 `
 
 const StyledSlogan = styled.div`
@@ -55,6 +69,7 @@ const StyledSlogan = styled.div`
 
     background: #FF6938;
     border-radius: 2.5em;
+    
 `
 
 const StyledTitle = styled.div`
@@ -74,6 +89,10 @@ const StyledTitle = styled.div`
     letter-spacing: -0.00625em;
 
     color: #073233;
+    @media (max-width: 1439px) {
+        padding-right: 3.125rem;
+
+    }
 `
 
 const StyledContent = styled.div`
@@ -88,6 +107,13 @@ const StyledContent = styled.div`
     color: #17494D;
     padding-right: 9.75em;
     padding-left: 0.9375em; 
+    @media (max-width: 1439px) {
+        padding-right: 0;
+        max-width: 36.625rem;
+        > .Content {
+            max-width: 27.8125rem;
+        }
+    }
 `
 
 const StyledMoreabout = styled.button`
@@ -126,12 +152,14 @@ const StyledPointer = styled.div`
     color: #FF6938;
 `
 
-const SecondParagraph = styled(Row)`
-
-`
-
 const Styledimg = styled.img`
     min-width: 41.125em;
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 44.5vw;
+        height: auto;
+        margin-bottom: 0;
+    }
 `
 
 export const SecondDetailedOffer = () => {
@@ -139,7 +167,7 @@ export const SecondDetailedOffer = () => {
         <div style={{background: "#FCF5F0"}}>
         <Container>
             <StyledRow>
-                <ImageContainer>
+                <ImageContainer lg={6} xl>
                     <Styledimg src={drugi} />
                 </ImageContainer>
                 <TextContainer>
@@ -150,9 +178,9 @@ export const SecondDetailedOffer = () => {
                         Keep unauthorized users out. Safeguard privileged access and credentials.
                     </StyledTitle>
                     <StyledContent>
-                        <Row>
+                        <Row className="Content">
                         Compromised access and credentials most often are the leading attack vectors of a security breach.
-                        </Row><Row><span><br />
+                        </Row><Row className="Content"><span><br />
                         Our comprehensive privileged access management is designed to manage and monitor privileged access to accounts and applications, alert system administrators on high-risk events, reduce operations complexity, and meeting regulatory compliance with ease.  
                         </span></Row>
                     </StyledContent>

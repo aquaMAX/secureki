@@ -67,6 +67,9 @@ const StyledSmallCircle = styled.img`
     position: absolute;
     margin-left: 81.0625em;
     margin-top: 34.5em;
+    @media (max-width: 1440px) {
+        display: none;
+    }
 `
 
 const StyledCircle = styled.img`
@@ -74,6 +77,9 @@ const StyledCircle = styled.img`
     position: absolute;
     margin-left: 84.1875em;
     margin-top: 28em;
+    @media (max-width: 1440px) {
+        display: none;
+    }
 `
 
 const StyledRecEmpty = styled.img`
@@ -81,6 +87,9 @@ const StyledRecEmpty = styled.img`
     position: absolute;
     margin-left: 78.0625em;
     margin-top: 28.9375em;
+    @media (max-width: 1440px) {
+        display: none;
+    }
 `
 
 

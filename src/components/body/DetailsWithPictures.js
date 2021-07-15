@@ -137,7 +137,7 @@ export const DetailsWithPictures = () => {
         <>
         <Container>
             <StyledRow>
-                <TextContainer xs={5}>
+                <TextContainer xl={5} lg={3}>
                     <StyledTitle>
                     Trusted by leading companies
                     </StyledTitle>

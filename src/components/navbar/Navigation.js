@@ -85,7 +85,7 @@ const Navigation = () => {
         <Information/>
         <Nav>
             <StyledRow>
-                <StyledCol>
+                <StyledCol lg={3} xl>
                 <Row >
                     
                         <StyledLogo>
@@ -94,7 +94,7 @@ const Navigation = () => {
                     
                 </Row>
                 </StyledCol>
-                <Col xs={4}>
+                <Col lg={5} xl={4}>
                     <Row>
                         <Col>
                             
@@ -107,7 +107,7 @@ const Navigation = () => {
                         </Col>
                     </Row>
                 </Col>
-                <Col style={{paddingLeft: "3em"}}>
+                <Col lg={3} xl style={{paddingLeft: "3em"}}>
                     
                         
                         <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400">Contact Us</StyledContactButton>

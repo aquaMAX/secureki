@@ -14,6 +14,11 @@ const StyledImage = styled.img`
     min-width: 42.875em;
     height: 32.5em;
     margin-top: 12.25em;
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 53.5vw;
+        height: auto;
+    }
     
 `
 const FixedCol = styled(Col)`
@@ -48,6 +53,10 @@ const StyledTitle = styled.div`
     order: 0;
     flex-grow: 0;
     margin-bottom: 0.42857142857142855em;
+    @media (max-width: 1439px) {
+        font-size: calc(100vw / 25)
+    }
+
 `
 const ColoredP = styled.div`
     color: #FF6938;
@@ -80,6 +89,9 @@ const StyledLeftColumn = styled(Col)`
     margin-right: 0;
     padding: 0;
     margin-top: 17em;
+    @media (max-width: 1439px) {
+        margin-left: 3.125rem;
+    }
 `
 
 const ButtonsRow = styled(Row)`
@@ -160,6 +172,10 @@ const StyledSquare = styled.img`
     position: absolute;
     margin-left: 6.75em;
     margin-top: 13.75em;
+    @media (max-width: 1439px) {
+        margin-left: 0;
+    }
+
 `
 
 const StyledSmallOneCircle = styled.img`
@@ -167,6 +183,9 @@ const StyledSmallOneCircle = styled.img`
     position: absolute;
     margin-left: 2em;
     margin-top: 46.125em;
+    @media (max-width: 1439px) {
+        display: none;
+    }
 `
 
 const StyledCircle = styled.img`
@@ -174,6 +193,10 @@ const StyledCircle = styled.img`
     position: absolute;
     margin-left: 5.125em;
     margin-top: 39.625em;
+    @media (max-width: 1439px) {
+        display: none;
+    }
+
 `
 
 const StyledSmallTwoCircle = styled.img`
@@ -181,6 +204,10 @@ const StyledSmallTwoCircle = styled.img`
     position: absolute;
     margin-left: 3.0625em;
     margin-top: 37.1875em;
+    @media (max-width: 1439px) {
+        display: none;
+    }
+    
 `
 
 const StyledSmallThreeCircle = styled.img`
@@ -188,6 +215,7 @@ const StyledSmallThreeCircle = styled.img`
     position: absolute;
     margin-left: 44.25em;
     margin-top: 37.9375em;
+
 `
 
 const FixedButtonsRow = styled(Row)`
@@ -196,6 +224,7 @@ const FixedButtonsRow = styled(Row)`
 
 const FixedRow = styled(Row)`
     margin: 0;
+    
 `
 
 
@@ -213,10 +242,10 @@ const Article = () => {
         <StyledSmallTwoCircle src={smallcircle} />
         <StyledSmallThreeCircle src={smallcircle} />
             
-        <FixedRow>
+        <FixedRow lg={2}>
 
             <>
-            <StyledLeftColumn>
+            <StyledLeftColumn lg={5} xl>
                 <FixedRow>
                     
                     <StyledTitle>
@@ -250,7 +279,7 @@ const Article = () => {
             </StyledLeftColumn>
             </>
 
-            <FixedCol>
+            <FixedCol xl>
                 <StyledImage src={hero}/>
             </FixedCol>
         </FixedRow>   

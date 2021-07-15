@@ -52,16 +52,15 @@ const StyledPointer = styled.div`
     /* Arrow */
     width: 0.525rem;
 	height: 0.525rem;
-    box-sizing: border-box;
+    border-top: 1px solid #073233;
+    border-right: 1px solid #073233;
     
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    border: solid black;
-    border-width: 0 1px 1px 0;
-    box-shadow: -0.25px -0.25px 0px 0.25px rgba(0,0,0,1) inset;
--webkit-box-shadow: -0.25px -0.25px 0px 0.25px rgba(0,0,0,1) inset;
--moz-box-shadow: -0.25px -0.25px 0px 0.25px rgba(0,0,0,1) inset;
-    color: #073233;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    box-shadow: -0.25px 0 0px -0.25px rgba(0,0,0,1) inset;
+    -webkit-box-shadow: -0.25px 0 0px -0.25px rgba(0,0,0,1) inset;
+    -moz-box-shadow: -0.25px 0 0px -0.25px rgba(0,0,0,1) inset;
 
 
 

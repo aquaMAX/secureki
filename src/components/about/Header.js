@@ -28,7 +28,10 @@ const MFAButton = styled(StyledButton)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.75em 2.625em;
+    padding-left: 1.75rem;;
+    padding-right: 1.75rem;;
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
     background: #FF6938;
     border-radius: 1.875em;
     margin: 0;

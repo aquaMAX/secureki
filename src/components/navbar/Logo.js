@@ -16,7 +16,7 @@ const LogoStyling = styled.img`
 
 const Logo = () => {
     return (
-        <Link to="https://karolhamuda.github.io/site">
+        <Link to="http://secureki.maverickstudio.pl/">
             <LogoStyling src={SecurekiLogo} />
         </Link>
     )

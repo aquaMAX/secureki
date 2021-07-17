@@ -14,11 +14,16 @@ const StyledImage = styled.img`
     min-width: 42.875em;
     height: 32.5em;
     margin-top: 12.25em;
+
     @media (max-width: 1439px) {
         min-width: auto;
         max-width: 53.5vw;
         height: auto;
     }
+    @media (max-width: 960px) {
+        max-width: 23.4375rem;
+        margin-top: 3.1875rem;
+    } 
     
 `
 const FixedCol = styled(Col)`
@@ -33,6 +38,9 @@ const StyledContent = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 960px) {
+        max-width: 23.4375rem;
+    }
 `
 
 const StyledTitle = styled.div`
@@ -56,6 +64,22 @@ const StyledTitle = styled.div`
     @media (max-width: 1439px) {
         font-size: calc(100vw / 25)
     }
+    @media (max-width: 960px) {
+        margin-left: 1.3125rem;
+        margin-right: 1.25rem;
+        font-family: Messina Sans;
+        font-size: 2.375rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: -0.0625rem;
+        text-align: center;
+
+        > .Title {
+            justify-content: center;
+        }
+
+    }
 
 `
 const ColoredP = styled.div`
@@ -63,10 +87,6 @@ const ColoredP = styled.div`
 `
 
 const StyledTextBody = styled.div`
-    /* Separated they live */
-
-    
-
     font-family: 'Messina Sans';
     font-style: regular;
     font-weight: 400;
@@ -75,13 +95,25 @@ const StyledTextBody = styled.div`
     line-height: 1.5555555555555556em;
     opacity: 1;
     /* or 156% */
-
     color: #17494D;
-
     mix-blend-mode: normal;
     margin-right: 5.555555555555555em;
     margin-bottom: 2.2222222222222223em;
-    
+    @media (max-width: 960px) {
+        font-family: Messina Sans;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: 0rem;
+        text-align: center;
+        margin-left: 1.125rem;
+        margin-right: 1.125rem;
+        margin-bottom: 0;
+        justify-content: center;
+
+
+    }
 `
 
 const StyledLeftColumn = styled(Col)`
@@ -91,6 +123,9 @@ const StyledLeftColumn = styled(Col)`
     margin-top: 17em;
     @media (max-width: 1439px) {
         margin-left: 3.125rem;
+    }
+    @media (max-width: 960px) {
+        margin-left: 0;
     }
 `
 
@@ -129,6 +164,10 @@ const StyledTrialText = styled.button`
         color: #1E5A5F;
         
     }
+    @media (max-width: 960px) {
+        margin-left: 9.625rem;
+        margin-top: 6.5rem;    
+    } 
 `
 
 
@@ -152,6 +191,10 @@ const StyledButtonFix = styled(StyledButton)`
     &:hover {
         background: #E55A2D;
     }
+    @media (max-width: 960px) {
+        margin-left: 5.25rem;
+        margin-top: 1.6875rem;    
+    } 
 
 `
 
@@ -165,6 +208,10 @@ const Notice = styled.div`
     line-height: 2.1538461538461537em;
     color: #17494D;
     mix-blend-mode: normal;
+    @media (max-width: 960px) {
+        margin-left: 2.6875rem;
+        margin-top: 9.3125rem;    
+    } 
 `
 
 const StyledSquare = styled.img`
@@ -242,14 +289,14 @@ const Article = () => {
         <StyledSmallTwoCircle src={smallcircle} />
         <StyledSmallThreeCircle src={smallcircle} />
             
-        <FixedRow lg={2}>
+        <FixedRow xs={1} lg={2}>
 
             <>
             <StyledLeftColumn lg={5} xl>
                 <FixedRow>
                     
                     <StyledTitle>
-                        <FixedRow>Identity Security</FixedRow>
+                        <FixedRow className="Title">Identity Security</FixedRow>
                         <FixedRow>for{'\u00A0'}<ColoredP>Your Workforce</ColoredP></FixedRow>
                     </StyledTitle>
                 </FixedRow>
@@ -259,7 +306,7 @@ const Article = () => {
                         <br />a zero–trust philosophy.
                     </StyledTextBody>
                 </FixedRow>
-                <FixedButtonsRow>
+                <FixedButtonsRow xs={1} lg={2}>
                     
                     <StyledButtonFix background="#FF6938" font="#FFFFFF">
                         Request a demo

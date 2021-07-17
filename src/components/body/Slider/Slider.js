@@ -8,6 +8,11 @@ const Container = styled.div`
     height: 32.5em;
     
     background: #114748;
+    @media (max-width: 960px) {
+        
+        height: 36.5625rem;
+        padding-bottom: 0;
+    }
 `
 
 const StyledCarousel = styled(Carousel)`
@@ -25,15 +30,24 @@ const StyledCarousel = styled(Carousel)`
             margin: 0px 4px;
             opacity: 0.2;
             margin-bottom: 2.0625em;
-}
-       
-    }
+            @media (max-width: 960px) {
+                display: none;
+            }  
+            }
+            @media (max-width: 960px) {
+                display: none;
+            }    
+        }
     >a {
         >span {
             opacity: 0;
             color: #114748;
             background: #114748;
+
         }
+        @media (max-width: 960px) {
+                display: none;
+            } 
         
     }
 `

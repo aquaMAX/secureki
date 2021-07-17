@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../assets/drugi.png"
 import { Link } from 'gatsby'
+import Media from 'react-media'
 
 const Container = styled.div`
     height: 45.5em;
@@ -15,17 +16,29 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 960px) {
+        max-width: 23.4375rem;
+        height: 62.3125rem;
+        padding-bottom: 0;
+    } 
 `
 const TextContainer = styled(Col)`
-    padding-left: 0;
+    max-width: 45rem;
+    padding-left: 5.625rem;
     padding-top: 5.3125em;
-    margin-left: 7.4375em;
+   
     @media (max-width: 1439px) {
         max-width: 47vw;
         align-items: right;
         
         margin-left: auto;
     }
+    @media (max-width: 960px) {
+        max-width: 27.8125rem;
+        margin-left: 1.125rem;
+        padding-top: 0;
+    } 
+    
 `
 
 const ImageContainer = styled(Col)`
@@ -69,6 +82,7 @@ const StyledSlogan = styled.div`
 
     background: #FF6938;
     border-radius: 2.5em;
+
     
 `
 
@@ -93,6 +107,13 @@ const StyledTitle = styled.div`
         padding-right: 3.125rem;
 
     }
+    @media (max-width: 960px) {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.4375rem;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    } 
 `
 
 const StyledContent = styled.div`
@@ -112,6 +133,17 @@ const StyledContent = styled.div`
         max-width: 36.625rem;
         > .Content {
             max-width: 27.8125rem;
+        }
+    }
+    @media (max-width: 960px) {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.0063rem;
+        text-align: left;
+        max-width: 21.3125rem;
+        > .Content {
+            max-width: 21.3125rem;
         }
     }
 `
@@ -160,17 +192,21 @@ const Styledimg = styled.img`
         height: auto;
         margin-bottom: 0;
     }
+    @media (max-width: 960px) {
+        max-width: 100vw;
+    }
 `
 
 export const SecondDetailedOffer = () => {
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
-            <StyledRow>
-                <ImageContainer lg={6} xl>
+
+            <StyledRow xs={1} lg={2}>
+                <ImageContainer xs={{ order: 2 }} lg={{ order: 1 }} lg={6} xl>
                     <Styledimg src={drugi} />
                 </ImageContainer>
-                <TextContainer>
+                <TextContainer lg={{ order: 2 }}>
                     <StyledSlogan>
                         PAM
                     </StyledSlogan>
@@ -189,7 +225,17 @@ export const SecondDetailedOffer = () => {
                         style={{textDecoration: "none"}}
                     >
                     <StyledMoreabout>
-                        <text>Learn more on Privileged Access Management</text>
+                        <Media queries={{
+                            small: "(max-width: 960px)",
+                            large: "(min-width: 961px)"
+                        }}>
+                            {matches => (
+                                <>
+                                {matches.small && <text>Learn more on PAM</text> }
+                                {matches.large && <text>Learn more on Privileged Access Management</text> }
+                                </>
+                            )}
+                        </Media>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
                     </Link>
@@ -198,6 +244,7 @@ export const SecondDetailedOffer = () => {
 
 
             </StyledRow>
+   
         </Container>
         </div>
     )

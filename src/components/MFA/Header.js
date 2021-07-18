@@ -17,14 +17,38 @@ const Layout = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+    }
 `
 
 const FixedRow = styled(Row)`
     margin: 0;
 `
 
+const TextTitleRow = styled(Row)`
+    margin: 0;
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+        margin-left: 1.125rem;
+    }
+`
+
+const ButtonRow = styled(Row)`
+    margin: 0;
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+        
+    }
+`
+
 const TextRow = styled(Row)`
     margin: 0;
+    @media (max-width: 991px) {
+        margin-left: 1.125rem;
+    }
 `
 
 const StyledSmallOneCircle = styled.img`
@@ -32,6 +56,9 @@ const StyledSmallOneCircle = styled.img`
     position: absolute;
     margin-left: 3.1875rem;
     margin-top: 21.5rem;
+    @media (max-width: 991px) {
+        display: none;
+    }
 `
 
 const StyledCircle = styled.img`
@@ -39,6 +66,9 @@ const StyledCircle = styled.img`
     position: absolute;
     margin-left: 6.3125rem;
     margin-top: 15rem;
+    @media (max-width: 991px) {
+        display: none;
+    }
 `
 
 const StyledSmallTwoCircle = styled.img`
@@ -46,6 +76,9 @@ const StyledSmallTwoCircle = styled.img`
     position: absolute;
     margin-left: 4.25rem;
     margin-top: 11.4375rem;
+    @media (max-width: 991px) {
+        display: none;
+    }
 `
 
 const StyledText = styled(Col)`
@@ -53,6 +86,9 @@ const StyledText = styled(Col)`
     margin-left: 10.3125em;
     max-width: 29.3125em;
     padding: 0;
+    @media (max-width: 991px) {
+        margin: 0;
+    }
 `
 const StyledImageContainer = styled(Col)`
     padding: 0;
@@ -65,6 +101,11 @@ const StyledImage = styled.img`
     width: 40.375em;
     position: absolute;
     z-index: -1;
+    @media (max-width: 991px) {
+        margin-left: -2.0625rem;
+        margin-top: 5.625rem;
+        position: relative;
+    }
 `
 
 const ColoredP = styled.div`
@@ -82,6 +123,17 @@ const StyledTitle = styled.div`
     /* or 118% */
     letter-spacing: -0.0196078431372549em;
     color: #073233;
+    @media (max-width: 991px) {
+        margin-left: 1.3125rem;
+        margin-right: 1.25rem;
+        font-family: Messina Sans;
+        font-size: 2.375rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: -0.0625rem;
+        text-align: center;
+    }
 `
 
 const StyledBody = styled.div`
@@ -101,6 +153,11 @@ const StyledBody = styled.div`
     flex: none;
     order: 1;
     flex-grow: 0;
+    @media (max-width: 991px) {
+        display: flex;
+        text-align: center;
+        margin-left: 1.125rem;
+    }
 
 `
 
@@ -152,11 +209,11 @@ return (
         <StyledSmallOneCircle src={smallcircle} />
         <StyledSmallTwoCircle src={smallcircle} />
        
-        <FixedRow>
-            <StyledText>
+        <FixedRow xs={1} lg={2}>
+            <StyledText xs={{order: 2}} lg={{order: 1}}>
                 <StyledTitle> 
                 Multifactor Authentication 
-                <TextRow>from{'\u00A0'}<ColoredP>SecureKi</ColoredP></TextRow>    
+                <TextTitleRow>from{'\u00A0'}<ColoredP>SecureKi</ColoredP></TextTitleRow>    
                 </StyledTitle>
                 <StyledBody>
                     Whether you’re looking for a two-factor authentication solution to meet your compliance needs or building a full zero-trust security framework, SecureKi has got you covered.
@@ -177,11 +234,11 @@ return (
                         </TextRow>
                     </StyledParagraph>
                 </StyledList>
-                <TextRow>
+                <ButtonRow>
                 <MFAButton background={"#FF6938"} font={"#FFFFFF"}>
                     Try free
                 </MFAButton>
-                </TextRow>
+                </ButtonRow>
                 
             
             </StyledText>

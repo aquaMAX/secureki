@@ -15,6 +15,10 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 69.75rem;
+    } 
    
 `
 const TextContainer = styled(Col)`
@@ -35,6 +39,10 @@ const StyledRow = styled(Row)`
     padding-left: 10.3125em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 991px) {
+        padding-left: 1.125rem;
+        
+    }
 `
 
 const StyledSlogan = styled.div`
@@ -92,6 +100,10 @@ const StyledContent = styled.div`
     letter-spacing: 0.00625em;
     margin-bottom: 2em;
     color: #17494D;
+    @media (max-width: 991px) {
+        width: auto;
+        margin-right: 5px;
+    }
 `
 
 const StyledMoreabout = styled.button`
@@ -135,6 +147,11 @@ const Styledimg = styled.img`
     min-width: 44.375em;
     margin-bottom: 0;
     margin-right: 3.125em;
+    @media (max-width: 991px) {
+        min-width: 30.25rem;
+        max-width: 30.25rem;
+        margin-left: -4rem;
+    }
 
 `
 
@@ -176,7 +193,7 @@ export const Offer = () => {
         <div style={{background: "#FCF5F0"}}>
         <Container>
             
-            <StyledRow>
+            <StyledRow xs={1} lg={2}>
                 <TextContainer>
                     <StyledSlogan>
                         MFA
@@ -192,7 +209,7 @@ export const Offer = () => {
                         <ListElement><StyledDot src={dot}/><div>Mobile time-based OTP token</div></ListElement>
                         <ListElement><StyledDot src={dot}/><div>Supports mobile fingerprint-sensor for FIDO <br />authentication</div></ListElement>
                         <ListElement><StyledDot src={dot}/><div>Supports Apple devices using Face ID authentication</div></ListElement>
-                        <ListElement><StyledDot src={dot}/><div>Supports Palm and Finger Vein Scanner and even <br />offline login</div></ListElement>
+                        <ListElement><StyledDot src={dot}/><div>Supports Palm and Finger Vein Scanner and even offline login</div></ListElement>
                     </StyledList>
                     <StyledMoreabout>
                         <text>Learn about Multifactor Authentication</text>

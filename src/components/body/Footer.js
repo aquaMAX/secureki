@@ -8,13 +8,18 @@ import facebook from "../../assets/logos/facebook.svg"
 import linkedin from "../../assets/logos/linkedin.svg"
 
 const Container = styled.div`
-    height: 23.9375em;
+    height: 24.9375em;
     background: #073233;
     max-width: 90em;
     justify-content: center;
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    background: #073233;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 54.6875rem;
+    } 
 
 `
 
@@ -32,11 +37,8 @@ const StyledCol = styled.div`
         line-height: 1.7142857142857142em;
         /* identical to box height, or 171% */
         letter-spacing: 0.0071428571428571435em;
-
         color: #B5C1C2;
-
         opacity: 1;
-
         /* Inside Auto Layout */
         flex: none;
         order: 1;
@@ -47,6 +49,12 @@ const StyledCol = styled.div`
             transform: translateX(0.75em);
             cursor: pointer;
         }
+        @media (max-width: 991px) {
+            margin: 0;
+            margin-bottom: 0.3125rem;
+            font-size: 0.875rem;
+            line-height: auto;
+    } 
 }
 
     > h1 {
@@ -60,6 +68,9 @@ const StyledCol = styled.div`
         letter-spacing: 0.0325em;
 
         color: #FFFFFF;
+        @media (max-width: 991px) {
+            margin-bottom: 0.3125rem;
+    } 
 }
 `
 
@@ -72,6 +83,11 @@ const StyledUnderline = styled.div`
     transform: rotate(-0.05deg);
     margin-left: 10.4375em;
     margin-right: 10.4375em;
+    @media (max-width: 991px) {
+        margin-left: 1.125rem;
+        margin-right: 1.125rem;
+    } 
+    
 `
 
 const StyledRow = styled(Row)`
@@ -80,6 +96,11 @@ const StyledRow = styled(Row)`
     padding-left: 10.5em; 
     margin-left: 0;
     margin-right: 0;
+    @media (max-width: 991px) {
+        padding-top: 3.3125rem;
+        padding-bottom: 2.9375rem;
+        padding-left: 1.125rem; 
+    } 
 `
 
 const NoMarginRow = styled(Row)`
@@ -91,8 +112,10 @@ const NoMarginPolicyRow = styled(Row)`
     margin-left: 0;
     margin-right: 0;
     padding-top: 2.7142857142857144em;
-    
     background: #073233;
+    @media (max-width: 991px) {
+        padding-top: 2.5rem;
+    } 
     
 `
 
@@ -109,6 +132,9 @@ const StyledPolicy = styled(Col)`
 > p {
     opacity: 1;
     margin-right: 10.86464em; 
+    @media (max-width: 991px) {
+        margin-right: 0;
+    } 
 }
 `
 
@@ -117,6 +143,12 @@ const StyledParagraph = styled.div`
     padding-right: 0.8571428571428571em;
     margin-left: auto;
     opacity: 1;
+    @media (max-width: 991px) {
+        margin-left: 0;
+        
+        padding-left: 0;
+        padding-right: 0;
+    } 
 `
 
 const StyledRights = styled.div`
@@ -130,12 +162,17 @@ const StyledRights = styled.div`
     line-height: 1.25rem;
     letter-spacing: 0rem;
     text-align: left;
+    @media (max-width: 991px) {
+        margin-left: 0;
+        margin-bottom: 0.5625rem;
+    } 
 
 `
 
-const StyledImgCol = styled.div`
+const StyledImgCol = styled(Col)`
     padding: 0;
     margin-top: 0.3125em;
+    margin-right: 3rem;
 `
 
 const StyledSocials = styled.img`
@@ -151,28 +188,55 @@ const StyledSocials = styled.img`
     text-align: left;
 `
 
-const Product = styled.div`
-    margin-left: 6em;
+const Product = styled(Col)`
+    margin-right: 5.375rem;
+    min-width: 13rem;
+    padding: 0;
+    @media (max-width: 991px) {
+        margin-left: 0;
+        margin-top: 1.375rem;
+        margin-bottom: 2.5rem;
+    } 
 `
 
-const Resources = styled.div`
-    margin-left: 5.375em;
+const Resources = styled(Col)`
+    max-width: 7.25rem;
+    margin-right: 7.4375rem;
+    margin-left: 0;
+    padding: 0;
+    @media (max-width: 991px) {
+        margin-left: 0;
+        margin-bottom: 2.5rem;
+    } 
 `
 
-const Company = styled.div`
-    margin-left: 7.4375em;
+const Company = styled(Col)`
+    max-width: 5rem;
+    margin-right: 7.4375rem;
+    margin-left: 0;
+    padding: 0;
+    @media (max-width: 991px) {
+        margin-left: 0;
+        margin-bottom: 2.5rem;
+    } 
 `
 
-const Findus = styled.div`
-    margin-left: 7.525em;
+const Findus = styled(Col)`
+    margin-left: 0;
+    padding: 0;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
+
+
 
 export const Footer = () => {
     return (
         <div style={{background: "#073233"}}>
             <Container>
-            <StyledRow>
-                <StyledImgCol>
+            <StyledRow xs={1} lg={6}>
+                <StyledImgCol lg={1}>
                     <img src={mark} />
                 </StyledImgCol>
                     <Product>
@@ -209,7 +273,7 @@ export const Footer = () => {
             <NoMarginRow>
                 <StyledUnderline />
             </NoMarginRow>
-            <NoMarginPolicyRow>
+            <NoMarginPolicyRow xs={1} lg={2}>
                 <StyledPolicy>
                     <StyledRights>© 2021 SecureKi. All right reserved.</StyledRights>
                 </StyledPolicy>

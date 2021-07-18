@@ -14,6 +14,11 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 53.75rem;
+        padding-bottom: 0;
+    } 
    
 `
 const TextContainer = styled(Col)`
@@ -21,6 +26,10 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
+    @media (max-width: 991px) {
+        padding-left: 1.125rem;
+        padding-top: 3.4375rem;
+    } 
     
 `
 
@@ -29,12 +38,25 @@ const ImageContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
+    @media (max-width: 1439px) {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+    }
+
 `
 const StyledRow = styled(Row)`
     padding-left: 10.3125em;
     padding-right: 4.25em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 1429px) {
+        padding-left: 3.125rem;
+        padding-right: 0;
+    }
+    @media (max-width: 991px) {
+        padding-left: 0;
+    } 
 `
 
 const StyledSlogan = styled.div`
@@ -79,6 +101,15 @@ const StyledTitle = styled.div`
     letter-spacing: -0.00625em;
 
     color: #073233;
+    @media (max-width: 991px) {
+        font-size: 1.875rem;
+        font-weight: 700;
+        line-height: 2.4375rem;
+        letter-spacing: -0.0063rem;
+        text-align: left;
+        margin-bottom: 1.5625rem;
+        max-width: 21.3125rem;
+    } 
 `
 
 const StyledContent = styled.div`
@@ -93,6 +124,13 @@ const StyledContent = styled.div`
     margin-bottom: 2em;
     margin-right: 7.8125em;
     color: #17494D;
+    @media (max-width: 1439px) {
+        margin-right: 0;
+        max-width: 27.8125rem;
+    }
+    @media (max-width: 991px) {
+        margin-right: 1rem;
+    } 
 `
 
 const StyledMoreabout = styled.button`
@@ -134,6 +172,19 @@ const StyledPointer = styled.div`
 const Styledimg = styled.img`
     min-width: 39.8125em;
     margin-bottom: 0;
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 53.5vw;
+        height: auto;
+    }
+    @media (max-width: 991px) {
+        max-width: 100vw;
+        min-height: 22.5rem;
+        max-width: 27.75rem;
+        
+        margin-left: -4.3125rem;
+        padding-bottom: 0;
+    } 
 `
 
 export const DetailedOffer = () => {

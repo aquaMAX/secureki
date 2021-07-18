@@ -20,6 +20,9 @@ const Andrea = styled.img`
     position: absolute;
     margin-left: 3.104375em;
     margin-top: 10.375em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const Cotton = styled.img`
@@ -27,6 +30,9 @@ const Cotton = styled.img`
     position: absolute;
     margin-left: 18.229375em;
     margin-top: 20.8125em;
+    @media (max-width: 991px) {
+        margin-left: 12.4956rem;
+    } 
 `
 
 const Menta = styled.img`
@@ -34,6 +40,9 @@ const Menta = styled.img`
     position: absolute;
     margin-left: 19.479375em;
     margin-top: 4.5em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const BigCircle = styled.img`
@@ -41,6 +50,9 @@ const BigCircle = styled.img`
     position: absolute;
     margin-left: 35.0625em;
     margin-top: 10.8125em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const BrownCircle = styled.img`
@@ -48,6 +60,9 @@ const BrownCircle = styled.img`
     position: absolute;
     margin-left: 12.9375em;
     margin-top: 36.3125em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const EmptyRec = styled.img`
@@ -55,6 +70,9 @@ const EmptyRec = styled.img`
     position: absolute;
     margin-left: 0.979375em;
     margin-top: 11.6875em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const OrangeCircle = styled.img`
@@ -62,6 +80,9 @@ const OrangeCircle = styled.img`
     position: absolute;
     margin-left: 14.916875em;
     margin-top: 35.25em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const OrangeRec = styled.img`
@@ -69,6 +90,9 @@ const OrangeRec = styled.img`
     position: absolute;
     margin-left: 1.666875em;
     margin-top: 9.25em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const Rec = styled.img`
@@ -76,6 +100,9 @@ const Rec = styled.img`
     position: absolute;
     margin-left: 21.041875em;
     margin-top: 22.9375em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const SmallCircle = styled.img`
@@ -83,6 +110,9 @@ const SmallCircle = styled.img`
     position: absolute;
     margin-left: 31.979375em;
     margin-top: 17.3125em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 const SmallTopCircle = styled.img`
@@ -90,6 +120,9 @@ const SmallTopCircle = styled.img`
     position: absolute;
     margin-left: 33.041875em;
     margin-top: 8.375em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
 `
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../../assets/anna.png"
+import drugi2 from "../../../assets/ann2.png"
 import group from "../../../assets/elementsgroup.svg"
 import squareslide from "../../../assets/decorations/squareslide.svg"
 import circleslide from "../../../assets/decorations/circleslide.svg"
@@ -13,11 +14,23 @@ const Container = styled.div`
     background: #114748;
     padding-bottom: 7.125em;
     margin: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 36.5625rem;
+        padding-bottom: 0;
+    } 
 `
 const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 10.6875em;
     margin-left: 0;
+    @media (max-width: 1439px) {
+        padding-top: 9.6875em;
+    }
+    @media (max-width: 991px) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 `
 
 const ImageContainer = styled(Col)`
@@ -25,11 +38,21 @@ const ImageContainer = styled(Col)`
     margin: 0;
     padding-left: 0;
     padding-right: 0;
+    @media (max-width: 991px) {
+        padding-top: 0;
+    } 
 `
 const StyledRow = styled(Row)`
     padding-left: 10.375em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 1439px) {
+        
+        padding-left: 4vw;
+    }
+    @media (max-width: 991px) {
+        padding-left: 0;
+    } 
 `
 
 const StyledSlogan = styled.div`
@@ -39,11 +62,15 @@ const StyledSlogan = styled.div`
     font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     line-height: 2em;
     /* or 200% */
     letter-spacing: 0.050333333333333333em;
     color: #BDCCC7;
+    @media (max-width: 991px) {
+           margin-left: 1.125rem; 
+           margin-top: 2.5rem;
+    }
 
 `
 
@@ -65,6 +92,21 @@ const StyledTitle = styled.div`
     margin-top: 0.5em;
     margin-bottom: 0.35em;
     letter-spacing: 0.01625em;
+
+    @media (max-width: 1439px) {
+        padding-right: 1em;
+    }
+    @media (max-width: 991px) {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.75rem;
+        letter-spacing: 0rem;
+        text-align: left;
+        margin-left: 1.125rem;
+        margin-top: 1.375rem;
+        margin-bottom: 1.375rem;
+    }
+
 
     /* “All base UI element */
 `
@@ -95,6 +137,14 @@ const StyledMoreabout = styled.button`
         &:hover {
             padding-right: 1em;
         }   
+    }
+
+    @media (max-width: 1130px) {
+        margin-top: 9.275rem
+    }
+    @media (max-width: 991px) {
+           margin-left: 1.125rem; 
+           margin-top: 9.8125rem;
     }  
 `
 
@@ -113,27 +163,56 @@ const Styledimg = styled.img`
     min-width: 30.125em;
     z-index: 2;
     position: absolute;
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 25.125rem;
+        height: auto;
+    }
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        margin-bottom: 0;
+        min-width: auto;
+        position: relative;
+    } 
 `
 
 const StyledGroupElements = styled.img`
     z-index: 1;
     position: absolute;
-    margin-left: 35.375em;
+    margin-left: 25em;
     margin-top: 2.75em;
+    @media (max-width: 1439px) {
+        margin-left: 20em;
+    }
+    @media (max-width: 991px) {
+        display: none;
+    } 
 `
 
 const StyledSquare = styled.img`
     z-index: 1;
     position: absolute;
-    margin-left: 8.3125em;
+    margin-left: -2.0625em;
     margin-top: 21.9375em;
+    @media (max-width: 1439px) {
+        margin-top: 19.0625rem;
+    }
+    @media (max-width: 991px) {
+        display: none;
+    } 
 `
 
 const StyledCircle = styled.img`
     z-index: 1;
     position: absolute;
-    margin-left: 11.96875em;
+    margin-left: 1.59375em;
     margin-top: 25.6875em;
+    @media (max-width: 1439px) {
+        margin-top: 22.8125rem;
+    }
+    @media (max-width: 991px) {
+        display: none;
+    } 
 `
 
 
@@ -142,16 +221,17 @@ export const FirstSlide = () => {
     return (
         <>
         <Container>
+
+            <StyledRow xs={1} lg={2}>
             <StyledSquare src={squareslide} />
             <StyledCircle src={circleslide} />
             <StyledGroupElements src={group} />
-            <StyledRow>
-                <ImageContainer>
-                    <Styledimg src={drugi} />
+                <ImageContainer lg={7} xl>
+                    <Styledimg src={drugi2} />
                 </ImageContainer>
                 <TextContainer>
                     <StyledSlogan>
-                    ARIANNE KOWALSKI, LEAD MARKETING SPECIALIST, MAILCHIP
+                    ARIANNE KOWALSKI, LEAD MARKETING SPECIALIST,{'\u00A0'}MAILCHIP
                     </StyledSlogan>
                     <StyledTitle>
                     “All base UI elements are made using Nested Symbols and shared styles that are logically connected.”

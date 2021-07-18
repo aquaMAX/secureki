@@ -17,11 +17,20 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 47.3125rem;
+    } 
 `
 const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 12.5625em;
     margin-left: 10.3125em;
+    @media (max-width: 991px) {
+        padding: 0;
+        margin-left: 1.125rem;
+        margin-top: 3.0625rem;
+    } 
 `
 
 const StyledCircle = styled.img`
@@ -29,6 +38,9 @@ const StyledCircle = styled.img`
     position: absolute;
     margin-left: 9.625rem;
     margin-top: 27.3125rem;
+    @media (max-width: 991px) {
+        display: none;
+    } 
 `
 
 const StyledSmallTwoCircle = styled.img`
@@ -36,6 +48,9 @@ const StyledSmallTwoCircle = styled.img`
     position: absolute;
     margin-left: 6.5rem;
     margin-top: 33.8125rem;
+    @media (max-width: 991px) {
+        display: none;
+    } 
 `
 
 const ImageContainer = styled(Col)`
@@ -45,6 +60,11 @@ const ImageContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     padding-left: 13.5625em;
+    @media (max-width: 991px) {
+        padding: 0;
+        margin-left: 1.125rem;
+        margin-top: 2.9375rem;
+    } 
 `
 const StyledRow = styled(Row)`
     padding-left: 0;
@@ -92,6 +112,9 @@ const StyledTitle = styled.div`
     letter-spacing: -0.00625em;
 
     color: #073233;
+    @media (max-width: 991px) {
+        width: auto;
+    }
 `
 
 const StyledContent = styled.div`
@@ -107,6 +130,12 @@ const StyledContent = styled.div`
     color: #17494D;
     
     padding-left: 0.9375em; 
+    @media (max-width: 991px) {
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
 `
 
 const StyledMoreabout = styled.button`
@@ -151,6 +180,17 @@ const SecondParagraph = styled(Row)`
 
 const Styledimg = styled.img`
     min-width: 28em;
+    @media (max-width: 991px) {
+        min-width: 21.25rem;
+    } 
+`
+
+const FixedRow = styled(Row)`
+    @media (max-width: 991px) {
+        margin: 0;
+        padding: 0;
+    } 
+
 `
 
 export const LastOffer = () => {
@@ -160,10 +200,10 @@ export const LastOffer = () => {
         <StyledCircle src={circle} />
         <StyledSmallTwoCircle src={smallcircle} />
             <StyledRow>
-                <ImageContainer xs={5.5}>
+                <ImageContainer xs={5.5} xs={{order: 2}} lg={{order: 1}}>
                     <Styledimg src={drugi} />
                 </ImageContainer>
-                <TextContainer>
+                <TextContainer lg={{order: 2}}>
                     <StyledSlogan>
                         MFA
                     </StyledSlogan>
@@ -171,8 +211,9 @@ export const LastOffer = () => {
                     Seamless, Fast Deployment
                     </StyledTitle>
                     <StyledContent>
-                        <Row>
-                        Setting up shouldn’t be a headache. SecureKi MFA integrates with your existing infrastructure with little to no effort to deploy.</Row>
+                        <FixedRow>
+                        Setting up shouldn’t be a headache. SecureKi MFA integrates with your existing infrastructure with little to no effort to deploy.
+                        </FixedRow>
                     </StyledContent>
                     <StyledMoreabout>
                         <text>Learn about Multifactor Authentication</text>

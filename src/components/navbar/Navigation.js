@@ -6,6 +6,8 @@ import Logo from './Logo'
 
 import { Row, Col } from 'react-bootstrap';
 import DropdownMenu from './Dropdown';
+import Media from 'react-media'
+import Mobile from './Mobile';
 
 const Nav = styled.nav`
 
@@ -82,41 +84,53 @@ const StyledStartedButton = styled(Button)`
 const Navigation = () => {
     return (
         <StickyInner className="sticky-inner">
-        <Information/>
-        <Nav>
-            <StyledRow>
-                <StyledCol>
-                <Row >
-                    
-                        <StyledLogo>
-                            <Logo />
-                        </StyledLogo>
-                    
-                </Row>
-                </StyledCol>
-                <Col xs={4}>
-                    <Row>
-                        <Col>
-                            
-                            <StyledDropdown>
-                                <DropdownMenu name="Product" />
-                                <DropdownMenu name="Resources" />
-                                <DropdownMenu name="Company" />
-                            </StyledDropdown>
-                            
-                        </Col>
-                    </Row>
-                </Col>
-                <Col style={{paddingLeft: "3em"}}>
-                    
-                        
-                        <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400">Contact Us</StyledContactButton>
-                        <StyledStartedButton background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton>
-                        
-                    
-                </Col>
-            </StyledRow>  
-        </Nav>
+            <Media queries={{
+                            small: "(max-width: 993px)",
+                            large: "(min-width: 994px)"
+                        }}>
+                            {matches => (
+                                <>
+                                {matches.small && <Mobile /> }
+                                {matches.large && <>
+                                            <Information/>
+                                            <Nav>
+                                                <StyledRow>
+                                                    <StyledCol lg={3} xl>
+                                                    <Row >
+                                                        
+                                                            <StyledLogo>
+                                                                <Logo />
+                                                            </StyledLogo>
+                                                        
+                                                    </Row>
+                                                    </StyledCol>
+                                                    <Col lg={5} xl={4}>
+                                                        <Row>
+                                                            <Col>
+                                                                
+                                                                <StyledDropdown>
+                                                                    <DropdownMenu name="Product" />
+                                                                    <DropdownMenu name="Resources" />
+                                                                    <DropdownMenu name="Company" />
+                                                                </StyledDropdown>
+                                                                
+                                                            </Col>
+                                                        </Row>
+                                                    </Col>
+                                                    <Col lg={3} xl style={{paddingLeft: "3em"}}>
+                                                        
+                                                            
+                                                            <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400">Contact Us</StyledContactButton>
+                                                            <StyledStartedButton background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton>
+                                                            
+                                                        
+                                                    </Col>
+                                                </StyledRow>  
+                                            </Nav></>}
+                                </>
+                            )}
+                </Media>
+  
         
         
         </StickyInner>

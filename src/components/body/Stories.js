@@ -19,6 +19,14 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 1078px) {
+        height: 60em;
+    }
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 68.75rem;
+    } 
 `
 
 const StyledTitle = styled(Col)`
@@ -29,7 +37,9 @@ const StyledTitle = styled(Col)`
     display: flex;
     color: #073233;
     margin-bottom: 5.125em;
-
+    @media (max-width: 991px) {
+        margin-top: 2.5rem;
+        } 
     > h1 {
         position: absolute;
       
@@ -40,6 +50,16 @@ const StyledTitle = styled(Col)`
         line-height: 1.2em;
         text-align: center;
         letter-spacing: -0.0125em;
+        @media (max-width: 991px) {
+            width: 20.375rem;
+            font-size: 1.875rem;
+            
+            
+            line-height: 2.4375rem;
+            letter-spacing: -0.0313rem;
+            text-align: center;
+
+        } 
     }
 `
 
@@ -47,6 +67,15 @@ const StyledRow = styled(Row)`
     margin: 0;
     padding-left: 10.4375em;
     padding-right: 10.4375em;
+    @media (max-width: 1439px) {
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        max-width: 69.125rem;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `
 
 const StoriesCol = styled(Col)`
@@ -56,10 +85,18 @@ const StoriesCol = styled(Col)`
 `
 
 const StyledRec = styled.img`
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     margin-left: 5.3125em;
     margin-top: 3.3125em;
+    @media (min-width: 994px) and (max-width: 1439px) {
+        display: none;
+    }
+    @media (max-width: 991px) {
+        margin-left: -5.125rem;
+        margin-top: 7.8125rem;
+    }
+
 `
 
 const StyledSmallCircle = styled.img`
@@ -67,6 +104,9 @@ const StyledSmallCircle = styled.img`
     position: absolute;
     margin-left: 81.0625em;
     margin-top: 34.5em;
+    @media (max-width: 1440px) {
+        display: none;
+    }
 `
 
 const StyledCircle = styled.img`
@@ -74,6 +114,9 @@ const StyledCircle = styled.img`
     position: absolute;
     margin-left: 84.1875em;
     margin-top: 28em;
+    @media (max-width: 1440px) {
+        display: none;
+    }
 `
 
 const StyledRecEmpty = styled.img`
@@ -81,6 +124,9 @@ const StyledRecEmpty = styled.img`
     position: absolute;
     margin-left: 78.0625em;
     margin-top: 28.9375em;
+    @media (max-width: 1440px) {
+        display: none;
+    }
 `
 
 
@@ -100,7 +146,9 @@ export const Stories = () => {
                 </StyledTitle>
             </Row>
             <StyledRow>
+            
                 <StoriesCol>
+                
                     <StoriesCard 
                     story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
                     image="andrea"

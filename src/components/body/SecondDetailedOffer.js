@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../assets/drugi.png"
 import { Link } from 'gatsby'
+import Media from 'react-media'
 
 const Container = styled.div`
     height: 45.5em;
@@ -15,11 +16,31 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 62.3125rem;
+        padding-bottom: 0;
+    } 
 `
 const TextContainer = styled(Col)`
-    padding-left: 0;
+    max-width: 45rem;
+    padding-left: 5.625rem;
     padding-top: 5.3125em;
-    margin-left: 7.4375em;
+   
+    @media (max-width: 1439px) {
+        max-width: 47vw;
+        align-items: right;
+        
+        margin-left: auto;
+    }
+    @media (max-width: 991px) {
+        max-width: 22.0625rem;
+        margin-left: 1.125rem;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    } 
+    
 `
 
 const ImageContainer = styled(Col)`
@@ -27,11 +48,19 @@ const ImageContainer = styled(Col)`
     margin: 0;
     padding-left: 0;
     padding-right: 0;
+    @media (max-width: 1439px) {
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+    }
 `
 const StyledRow = styled(Row)`
     padding-left: 3.875em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 1429px) {
+        padding-left: 0;
+    }
 `
 
 const StyledSlogan = styled.div`
@@ -55,6 +84,8 @@ const StyledSlogan = styled.div`
 
     background: #FF6938;
     border-radius: 2.5em;
+
+    
 `
 
 const StyledTitle = styled.div`
@@ -74,6 +105,17 @@ const StyledTitle = styled.div`
     letter-spacing: -0.00625em;
 
     color: #073233;
+    @media (max-width: 1439px) {
+        width: auto;
+
+    }
+    @media (max-width: 991px) {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 2.4375rem;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    } 
 `
 
 const StyledContent = styled.div`
@@ -88,6 +130,24 @@ const StyledContent = styled.div`
     color: #17494D;
     padding-right: 9.75em;
     padding-left: 0.9375em; 
+    @media (max-width: 1439px) {
+        padding-right: 0;
+        max-width: 36.625rem;
+        > .Content {
+            max-width: 27.8125rem;
+        }
+    }
+    @media (max-width: 991px) {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.0063rem;
+        text-align: left;
+        max-width: 21.3125rem;
+        > .Content {
+            max-width: 21.3125rem;
+        }
+    }
 `
 
 const StyledMoreabout = styled.button`
@@ -126,23 +186,32 @@ const StyledPointer = styled.div`
     color: #FF6938;
 `
 
-const SecondParagraph = styled(Row)`
-
-`
-
 const Styledimg = styled.img`
     min-width: 41.125em;
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 44.5vw;
+        height: auto;
+        margin-bottom: 0;
+    }
+    @media (max-width: 991px) {
+        max-width: 100vw;
+        height: 30.0625rem;
+        min-width: 33.5rem;
+        margin-left: -10.0625rem;
+    }
 `
 
 export const SecondDetailedOffer = () => {
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
-            <StyledRow>
-                <ImageContainer>
+
+            <StyledRow xs={1} lg={2}>
+                <ImageContainer xs={{ order: 2 }} lg={{ order: 1 }} lg={6} xl>
                     <Styledimg src={drugi} />
                 </ImageContainer>
-                <TextContainer>
+                <TextContainer lg={{ order: 2 }}>
                     <StyledSlogan>
                         PAM
                     </StyledSlogan>
@@ -150,9 +219,9 @@ export const SecondDetailedOffer = () => {
                         Keep unauthorized users out. Safeguard privileged access and credentials.
                     </StyledTitle>
                     <StyledContent>
-                        <Row>
+                        <Row className="Content">
                         Compromised access and credentials most often are the leading attack vectors of a security breach.
-                        </Row><Row><span><br />
+                        </Row><Row className="Content"><span><br />
                         Our comprehensive privileged access management is designed to manage and monitor privileged access to accounts and applications, alert system administrators on high-risk events, reduce operations complexity, and meeting regulatory compliance with ease.  
                         </span></Row>
                     </StyledContent>
@@ -161,7 +230,17 @@ export const SecondDetailedOffer = () => {
                         style={{textDecoration: "none"}}
                     >
                     <StyledMoreabout>
-                        <text>Learn more on Privileged Access Management</text>
+                        <Media queries={{
+                            small: "(max-width: 991px)",
+                            large: "(min-width: 961px)"
+                        }}>
+                            {matches => (
+                                <>
+                                {matches.small && <text>Learn more on PAM</text> }
+                                {matches.large && <text>Learn more on Privileged Access Management</text> }
+                                </>
+                            )}
+                        </Media>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
                     </Link>
@@ -170,6 +249,7 @@ export const SecondDetailedOffer = () => {
 
 
             </StyledRow>
+   
         </Container>
         </div>
     )

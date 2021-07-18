@@ -12,6 +12,11 @@ const LogoStyling = styled.img`
     margin-top: 1.125em;
     position: absolute;
     margin-left: 10.8875em;
+    
+
+    @media (max-width: 1439px) {
+        margin-left: 3.125rem;
+    }
 `;
 
 const Logo = () => {

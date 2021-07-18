@@ -10,6 +10,12 @@ const Container = styled.div`
     box-shadow: 0px 0.9375em 2.1875em rgba(0, 0, 0, 0.06);
     align-items: center;
     z-index: 2;
+    margin-bottom: 1.25rem;
+    @media (max-width: 991px) {
+        width: 19.375rem;
+        height: 17.25rem;
+        padding-bottom: 0;
+    } 
 
 `
 
@@ -30,6 +36,10 @@ const TextContainer = styled(Row)`
     padding-right: 1.2777777777777777em;
     padding-top: 1.8888888888888888em;
     padding-bottom: 0.5655555555555556em;
+
+    @media (max-width: 991px) {
+        font-size: 0.9375rem;
+    } 
 `
 
 const ImageContainer = styled.img`

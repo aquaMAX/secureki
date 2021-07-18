@@ -5,8 +5,16 @@ import Button from "../navbar/Button"
 
 const Container = styled.div`
     height: 22.875em;
- 
+    max-width: 90em;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     background: #FCF5F0;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 17rem;
+    } 
 `
 
 const StyledTitle = styled(Col)`
@@ -18,6 +26,10 @@ const StyledTitle = styled(Col)`
     color: #073233;
     margin-bottom: 2em;
     margin-top: 6.75em;
+    @media (max-width: 991px) {
+        margin-top: 4.3125rem;
+        margin-bottom: 2.5rem;
+    } 
 
     > h1 {
         position: absolute;
@@ -29,6 +41,14 @@ const StyledTitle = styled(Col)`
         line-height: 1.2em;
         text-align: center;
         letter-spacing: -0.0125em;
+        @media (max-width: 991px) {
+            font-size: 1.875rem;
+            font-weight: 700;
+            line-height: 2.4375rem;
+            letter-spacing: 0rem;
+            text-align: center;
+            margin-bottom: 0;
+        } 
     }
 `
 
@@ -47,6 +67,10 @@ const StyledButton = styled(Button)`
         color: #FFFFFF;
         border-color: #E55A2D;
     }
+    @media (max-width: 991px) {
+        margin-top: 0;
+        margin-bottom: 0;
+    } 
 `
 
 const StyledSecondButton = styled(Button)`
@@ -61,6 +85,10 @@ const StyledSecondButton = styled(Button)`
         background: #E55A2D;
         
     }
+    @media (max-width: 991px) {
+        margin-top: 0;
+        margin-bottom: 0;
+    } 
 `
 
 const StyledCol = styled(Col)`
@@ -71,10 +99,15 @@ const StyledCol = styled(Col)`
 const StyledRow = styled(Row)`
     margin-left: 0;
     margin-right: 0;
+    @media (max-width: 991px) {
+        margin-top: 0;
+        margin-bottom: 0;
+    } 
 `
 
 export const GetStarted = () => {
     return (
+        <div style={{background: "#FCF5F0"}}>
         <Container>
             <StyledRow>
                 <StyledTitle>
@@ -91,5 +124,6 @@ export const GetStarted = () => {
                 </StyledCol>
             </StyledRow>
         </Container>
+        </div>
     )
 }

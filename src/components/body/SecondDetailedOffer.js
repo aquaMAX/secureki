@@ -16,7 +16,7 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 62.3125rem;
         padding-bottom: 0;
@@ -33,10 +33,12 @@ const TextContainer = styled(Col)`
         
         margin-left: auto;
     }
-    @media (max-width: 960px) {
-        max-width: 27.8125rem;
+    @media (max-width: 991px) {
+        max-width: 22.0625rem;
         margin-left: 1.125rem;
         padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
     } 
     
 `
@@ -47,7 +49,7 @@ const ImageContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     @media (max-width: 1439px) {
-        
+        padding-top: 0;
         display: flex;
         align-items: center;
     }
@@ -104,10 +106,10 @@ const StyledTitle = styled.div`
 
     color: #073233;
     @media (max-width: 1439px) {
-        padding-right: 3.125rem;
+        width: auto;
 
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
     font-size: 1.875rem;
     font-weight: 700;
     line-height: 2.4375rem;
@@ -135,7 +137,7 @@ const StyledContent = styled.div`
             max-width: 27.8125rem;
         }
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.5rem;
@@ -192,8 +194,11 @@ const Styledimg = styled.img`
         height: auto;
         margin-bottom: 0;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         max-width: 100vw;
+        height: 30.0625rem;
+        min-width: 33.5rem;
+        margin-left: -10.0625rem;
     }
 `
 
@@ -226,7 +231,7 @@ export const SecondDetailedOffer = () => {
                     >
                     <StyledMoreabout>
                         <Media queries={{
-                            small: "(max-width: 960px)",
+                            small: "(max-width: 991px)",
                             large: "(min-width: 961px)"
                         }}>
                             {matches => (

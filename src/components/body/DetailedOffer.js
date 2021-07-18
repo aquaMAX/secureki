@@ -14,7 +14,7 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 53.75rem;
         padding-bottom: 0;
@@ -26,7 +26,7 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         padding-left: 1.125rem;
         padding-top: 3.4375rem;
     } 
@@ -54,7 +54,7 @@ const StyledRow = styled(Row)`
         padding-left: 3.125rem;
         padding-right: 0;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         padding-left: 0;
     } 
 `
@@ -101,7 +101,7 @@ const StyledTitle = styled.div`
     letter-spacing: -0.00625em;
 
     color: #073233;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         font-size: 1.875rem;
         font-weight: 700;
         line-height: 2.4375rem;
@@ -128,7 +128,7 @@ const StyledContent = styled.div`
         margin-right: 0;
         max-width: 27.8125rem;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         margin-right: 1rem;
     } 
 `
@@ -177,7 +177,7 @@ const Styledimg = styled.img`
         max-width: 53.5vw;
         height: auto;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         max-width: 100vw;
         min-height: 22.5rem;
         max-width: 27.75rem;

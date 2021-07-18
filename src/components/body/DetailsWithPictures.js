@@ -6,6 +6,8 @@ import paypal from "../../assets/paypal.svg"
 import pay from "../../assets/pay.svg"
 import mailchimp from "../../assets/mailchimp.svg"
 import { StackedPictures } from './StackedPictures';
+import Total from "../../assets/stacked images/Total.png"
+import Media from 'react-media'
 
 
 
@@ -20,11 +22,19 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 47.875rem;
+        padding-bottom: 0;
+    } 
 `
 const TextContainer = styled(Col)`
     padding-top: 8.1875em;
     padding-left: 0;
     padding-right: 0;
+    @media (max-width: 991px) {
+        padding-top: 0;
+    } 
 `
 
 const ImageContainer = styled(Col)`
@@ -38,6 +48,9 @@ const StyledRow = styled(Row)`
     @media (max-width: 1439px) {
         padding-left: 3.125rem;
     }
+    @media (max-width: 991px) {
+        padding-left: 1.1875rem;
+    } 
 `
 
 const StyledTitle = styled.div`
@@ -55,6 +68,17 @@ const StyledTitle = styled.div`
     letter-spacing: -0.010416666666666666em;
 
     color: #073233;
+
+    @media (max-width: 991px) {
+    width: 18.3125rem;
+    font-size: 1.875rem;
+
+    font-weight: 700;
+    line-height: 2.4375rem;
+    letter-spacing: 0rem;
+    text-align: left;
+
+    } 
 `
 
 const StyledContent = styled(Row)`
@@ -71,6 +95,10 @@ const StyledContent = styled(Row)`
     margin-bottom: 2em;
     color: #17494D;
     padding-left: 0.9375em;
+
+    @media (max-width: 991px) {
+        width: 20.125rem;
+    } 
 `
 
 const StyledMoreabout = styled.button`
@@ -114,32 +142,63 @@ const StyledPointer = styled.div`
 `
 
 const LogosRow = styled(Row)`
-    width: 25em;
+    width: 23.4375rem;
     height: 2.9375em;
     padding-left: 0.9375em;
+    @media (max-width: 991px) {
+        width: 23.0375rem;
+        padding-left: 0.925rem;
+        margin: 0;
+    }
 `
 
 const PaypalLogo = styled.img`
     min-width: 5.726875em;
     width: 5.726875em;
     padding-top: 0.7415625em;
+    @media (max-width: 991px) {
+        min-width: 5.6719rem;
+        padding-top: 0.625rem;
+    } 
 `
 
 const PayLogo = styled.img`
     min-width: 2.73125em;
     width: 2.73125em;
+    
+    @media (max-width: 991px) {
+        min-width: 2.7056rem;
+        
+    } 
 `
 
 const MailchimpLogo = styled.img`
     min-width: 10.25em;
     width: 10.25em;
+    @media (max-width: 991px) {
+        min-width: 9.0506rem;
+        margin-top: 0.24rem;
+        margin-left: 0.25rem;
+    } 
+`
+
+const StyledCol = styled(Col)`
+    @media (max-width: 991px) {
+        padding: 0
+    } 
+`
+
+const StyledImage = styled.img`
+    
+    margin-top: 1.5625rem;
+    min-width: 22.25rem;
 `
 
 export const DetailsWithPictures = () => {
     return (
         <>
         <Container>
-            <StyledRow>
+            <StyledRow xs={1} lg={2}>
                 <TextContainer xl={5} lg={5}>
                     <StyledTitle>
                     Trusted by leading companies
@@ -149,15 +208,15 @@ export const DetailsWithPictures = () => {
                         Discover from our customers how SecureKi improves their security and business.
                     </Row><Row><span><br />
                         <LogosRow>
-                            <Col>
+                            <StyledCol xs={4}>
                                 <PaypalLogo src={paypal} />
-                            </Col>
-                            <Col>
+                            </StyledCol>
+                            <StyledCol xs={2}>
                                 <PayLogo src={pay} />
-                            </Col>
-                            <Col>
+                            </StyledCol>
+                            <StyledCol xs={5}>
                                 <MailchimpLogo src={mailchimp} />
-                            </Col>
+                            </StyledCol>
                         </LogosRow>
                     </span></Row>
                     </StyledContent>
@@ -168,7 +227,18 @@ export const DetailsWithPictures = () => {
                     
                 </TextContainer>
                 <ImageContainer>
-                    <StackedPictures />
+                <Media queries={{
+                            small: "(max-width: 991px)",
+                            large: "(min-width: 994px)"
+                        }}>
+                            {matches => (
+                                <>
+                                {matches.small && <StyledImage src={Total} /> }
+                                {matches.large && <StackedPictures /> }
+                                </>
+                            )}
+                </Media>
+                    
                 </ImageContainer>
             </StyledRow>
         </Container>

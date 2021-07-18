@@ -23,6 +23,10 @@ const Container = styled.div`
     @media (max-width: 1078px) {
         height: 60em;
     }
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 68.75rem;
+    } 
 `
 
 const StyledTitle = styled(Col)`
@@ -33,7 +37,9 @@ const StyledTitle = styled(Col)`
     display: flex;
     color: #073233;
     margin-bottom: 5.125em;
-
+    @media (max-width: 991px) {
+        margin-top: 2.5rem;
+        } 
     > h1 {
         position: absolute;
       
@@ -44,6 +50,16 @@ const StyledTitle = styled(Col)`
         line-height: 1.2em;
         text-align: center;
         letter-spacing: -0.0125em;
+        @media (max-width: 991px) {
+            width: 20.375rem;
+            font-size: 1.875rem;
+            
+            
+            line-height: 2.4375rem;
+            letter-spacing: -0.0313rem;
+            text-align: center;
+
+        } 
     }
 `
 
@@ -69,13 +85,18 @@ const StoriesCol = styled(Col)`
 `
 
 const StyledRec = styled.img`
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     margin-left: 5.3125em;
     margin-top: 3.3125em;
-    @media (max-width: 1440px) {
-        margin-left: 1vw;
+    @media (min-width: 994px) and (max-width: 1439px) {
+        display: none;
     }
+    @media (max-width: 991px) {
+        margin-left: -5.125rem;
+        margin-top: 7.8125rem;
+    }
+
 `
 
 const StyledSmallCircle = styled.img`
@@ -125,7 +146,9 @@ export const Stories = () => {
                 </StyledTitle>
             </Row>
             <StyledRow>
+            
                 <StoriesCol>
+                
                     <StoriesCard 
                     story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
                     image="andrea"

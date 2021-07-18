@@ -20,7 +20,7 @@ const StyledImage = styled.img`
         max-width: 53.5vw;
         height: auto;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         max-width: 23.4375rem;
         margin-top: 3.1875rem;
     } 
@@ -38,7 +38,7 @@ const StyledContent = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         max-width: 23.4375rem;
     }
 `
@@ -64,7 +64,7 @@ const StyledTitle = styled.div`
     @media (max-width: 1439px) {
         font-size: calc(100vw / 25)
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         margin-left: 1.3125rem;
         margin-right: 1.25rem;
         font-family: Messina Sans;
@@ -99,7 +99,7 @@ const StyledTextBody = styled.div`
     mix-blend-mode: normal;
     margin-right: 5.555555555555555em;
     margin-bottom: 2.2222222222222223em;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         font-family: Messina Sans;
         font-size: 1.125rem;
         font-style: normal;
@@ -124,8 +124,9 @@ const StyledLeftColumn = styled(Col)`
     @media (max-width: 1439px) {
         margin-left: 3.125rem;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         margin-left: 0;
+        margin-top: 8.4375rem;
     }
 `
 
@@ -164,7 +165,7 @@ const StyledTrialText = styled.button`
         color: #1E5A5F;
         
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         margin-left: 9.625rem;
         margin-top: 6.5rem;    
     } 
@@ -191,7 +192,7 @@ const StyledButtonFix = styled(StyledButton)`
     &:hover {
         background: #E55A2D;
     }
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         margin-left: 5.25rem;
         margin-top: 1.6875rem;    
     } 
@@ -208,7 +209,7 @@ const Notice = styled.div`
     line-height: 2.1538461538461537em;
     color: #17494D;
     mix-blend-mode: normal;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         margin-left: 2.6875rem;
         margin-top: 9.3125rem;    
     } 
@@ -220,7 +221,9 @@ const StyledSquare = styled.img`
     margin-left: 6.75em;
     margin-top: 13.75em;
     @media (max-width: 1439px) {
-        margin-left: 0;
+        margin-left: -0.45rem;
+        margin-top: 6.625rem;
+        max-height: 8.1875rem;
     }
 
 `
@@ -262,7 +265,9 @@ const StyledSmallThreeCircle = styled.img`
     position: absolute;
     margin-left: 44.25em;
     margin-top: 37.9375em;
-
+    @media (max-width: 1439px) {
+        display: none;
+    }
 `
 
 const FixedButtonsRow = styled(Row)`

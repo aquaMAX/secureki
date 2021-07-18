@@ -16,7 +16,7 @@ const Container = styled.div`
     margin-right: auto;
     
     padding-top: 5.09375em;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 34.4375rem;
     } 
@@ -26,7 +26,7 @@ const StyledRow = styled(Row)`
     padding-right: 3.125rem;
     margin-left: 0;
     margin-right: 0;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         padding-left: 1.125rem;
         padding-right: 1.5rem;
     } 
@@ -83,7 +83,7 @@ const StyledAccesibilityCol = styled(Col)`
 const StyledAutomationCol = styled(Col)`
     padding: 0;
     padding-left: 2.6875em;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         padding-left: 0;
     } 
 `
@@ -91,7 +91,7 @@ const StyledAutomationCol = styled(Col)`
 const StyledSecurityCol = styled(Col)`
     padding: 0;
     padding-left: 2.6875em;
-    @media (max-width: 960px) {
+    @media (max-width: 991px) {
         padding-left: 0;
     } 
 `

@@ -94,6 +94,7 @@ const StyledTitle = styled.div`
     color: #073233;
     @media (max-width: 991px) {
         padding: 0;
+        width: auto;
         
     }
 `

@@ -11,6 +11,10 @@ const Container = styled.div`
     align-items: center;
     z-index: 2;
 
+    @media (max-width: 991px) {
+        height: 26.0625rem;
+    } 
+
 `
 
 const StyledRow = styled(Row)` 

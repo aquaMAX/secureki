@@ -13,6 +13,11 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 93.75rem;
+        padding-bottom: 0;
+    } 
 `
 
 const StyledTitle = styled(Col)`

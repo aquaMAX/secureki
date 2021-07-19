@@ -34,6 +34,12 @@ const ImageContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+    }
+
+
 `
 const StyledRow = styled(Row)`
     padding-left: 10.3125em;
@@ -148,9 +154,10 @@ const Styledimg = styled.img`
     margin-bottom: 0;
     margin-right: 3.125em;
     @media (max-width: 991px) {
-        min-width: 30.25rem;
-        max-width: 30.25rem;
+        min-width: 23.4375rem;
+        max-width: 23.4375rem;
         margin-left: -4rem;
+        margin-right: 0;
     }
 
 `

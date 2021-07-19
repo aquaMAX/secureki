@@ -105,6 +105,7 @@ const StyledImage = styled.img`
         margin-left: -2.0625rem;
         margin-top: 5.625rem;
         position: relative;
+        margin-right: 0;
     }
 `
 

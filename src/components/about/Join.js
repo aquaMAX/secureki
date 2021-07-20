@@ -13,6 +13,10 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 17rem;
+    } 
 `
 
 const StyledTitle = styled.div`
@@ -23,6 +27,12 @@ const StyledTitle = styled.div`
     margin-bottom: 3.8125rem;
     margin-top: 3.75rem;
     margin-left: 10.3125rem;
+    @media (max-width: 991px) {
+        margin: 0;
+        margin-top: 4.3125rem;
+        text-align: center;
+        justify-content: center;
+    } 
 
     > h1 {
         
@@ -34,6 +44,12 @@ const StyledTitle = styled.div`
         line-height: 1.2em;
         text-align: center;
         letter-spacing: -0.0125em;
+        @media (max-width: 991px) {
+            font-size: 1.875rem;
+            margin: 0;
+            text-align: center;
+            justify-content: center;
+    } 
     }
 `
 
@@ -53,6 +69,14 @@ const StyledButton = styled(Button)`
         color: #FFFFFF;
         border-color: #E55A2D;
     }
+    @media (max-width: 991px) {
+        margin: 0;
+        margin-top: 9.3125rem;
+        text-align: center;
+        justify-content: center;
+        margin-right: 9.25rem;
+        width: 8.625rem;
+    } 
 `
 
 const StyledSecondButton = styled(Button)`
@@ -67,12 +91,25 @@ const StyledSecondButton = styled(Button)`
         background: #E55A2D;
         
     }
+    @media (max-width: 991px) {
+        margin: 0;
+        margin-top: 9.3125rem;
+        text-align: center;
+        justify-content: center;
+        margin-left: 9.25rem;
+        width: 8.25rem;
+    } 
 `
 
 const StyledRow = styled(Row)`
     margin-left: 0;
     margin-right: 0;
     display: flex;
+    @media (max-width: 991px) {
+        margin: 0;
+        text-align: center;
+        justify-content: center;
+    } 
 `
 
 export const Join = () => {

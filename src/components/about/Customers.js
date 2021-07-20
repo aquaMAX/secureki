@@ -19,11 +19,18 @@ const Layout = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 34.875rem;
+    } 
     
 `
 
 const Container = styled.div`
      padding-top: 15.3125rem;
+     @media (max-width: 991px) {
+        padding-top: 4.0625rem;
+    }
 `
 
 const MFAButton = styled(StyledButton)`
@@ -87,11 +94,20 @@ const StyledContent = styled(Row)`
     display: block;
 
     color: #17494D;
+    @media (max-width: 991px) {
+        margin-left: 1.125rem;
+        margin-right: 1.125rem;
+        width: auto; 
+    }
 `
 
 const ButtonContainer = styled.div`
     margin-top: 2.125rem;
     margin-left: 37.5rem;
+    @media (max-width: 991px) {
+        margin-left: 4.1875rem;
+        margin-top: 5rem;
+    }
 `
 
 const CustomersRow = styled(Row)`
@@ -100,12 +116,22 @@ const CustomersRow = styled(Row)`
     height: 3.0625rem;
     display: flex;
     justify-content: center;
+    @media (max-width: 991px) {
+        margin-right: 1.125rem;
+        margin-left: 1.125rem;
+       
+    }
 `
 
 const StyledCustomer = styled.img`
     margin-right: 3.125rem;
     &:last-child {
         margin-right: 0;
+    }
+    @media (max-width: 991px) {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 2rem;
     }
 `
 

@@ -6,8 +6,10 @@ import StyledButton from '../navbar/Button.js'
 import checkpoint from '../../assets/MFA/checkpoint.svg'
 
 import image from '../../assets/about/header/image.png'
+import mobile from '../../assets/about/header/about-header-mobile.png'
 import elementsgroup from '../../assets/about/header/elementsgroup.svg'
 import rec from '../../assets/about/header/rec.svg'
+import Media from 'react-media';
 
 const Layout = styled.div`
     max-width: 90em;
@@ -17,11 +19,18 @@ const Layout = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 64.7125rem;
+    } 
     
 `
 
 const Container = styled.div`
      padding-top: 12.84375em;
+     @media (max-width: 991px) {
+        padding-top: 8.6875rem;
+    } 
 `
 
 const MFAButton = styled(StyledButton)`
@@ -45,6 +54,11 @@ const MFAButton = styled(StyledButton)`
         background: #E55A2D;
         
     }
+    @media (max-width: 991px) {
+        margin-left: 7rem;
+        
+        min-width: 9.5rem;
+    } 
 `
 
 const StyledTitle = styled(Row)`
@@ -66,11 +80,11 @@ const StyledTitle = styled(Row)`
         text-align: center;
         letter-spacing: -0.008928571428571428em;
     }
-`
-
-const StyledRow = styled(Row)`
-    margin-left: 0;
-    margin-right: 0;
+    @media (max-width: 991px) {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    } 
 `
 
 const StyledContent = styled(Row)`
@@ -88,11 +102,20 @@ const StyledContent = styled(Row)`
     display: block;
 
     color: #17494D;
+    @media (max-width: 991px) {
+        width: auto;
+        margin-left: 1.125rem;
+        margin-right: 1.125rem;
+    } 
 `
 
 const ButtonContainer = styled.div`
     margin-top: 2.125rem;
     margin-left: 40.2813rem;
+    @media (max-width: 991px) {
+        margin-left: auto;
+        justify-content: center;
+    } 
 `
 
 const StyledImage = styled.img`
@@ -101,6 +124,14 @@ const StyledImage = styled.img`
     width: 69.125rem;
     margin-top: 8.1563rem;
     margin-left: 10.4375rem;
+    @media (max-width: 991px) {
+        margin:0;
+        margin-top: 6.6rem;
+        margin-left: -3.6875rem;
+        min-width: 27.875rem;
+        max-width: 27.875rem;
+        position: relative;
+    } 
 `
 
 const StyledElements = styled.img`
@@ -108,16 +139,25 @@ const StyledElements = styled.img`
     z-index: 1;
     margin-top: 28.9063rem;
     margin-left: 73.5625rem;
+    @media (max-width: 991px) {
+        display: none;
+    } 
 `
 
 const StyledRec = styled.img`
     position: absolute;
     z-index: 1; 
-    margin-top: 4.0938rem;
-    margin-left: 5.75rem;
+    margin-top: -37.0938rem;
+    margin-left: 0;
+    @media (max-width: 991px) {
+        position: relative;
+    } 
 `
 
-
+const Wrapper = styled.div`
+    max-width: 23.4375rem;
+    overflow: hidden;
+`
 
 export const AboutHeader = () => {
 return (
@@ -140,7 +180,18 @@ return (
                 </ButtonContainer>
                 
                 </Container>
-                <StyledImage src={image} />  
+                <Media queries={{
+                    small: "(max-width: 991px)",
+                    large: "(min-width: 961px)"
+                }}>
+                    {matches => (
+                        <>
+                        {matches.large && <StyledImage src={image} /> }
+                        {matches.small && <Wrapper><StyledImage src={mobile} /></Wrapper> }
+                        </>
+                    )}
+                </Media>
+                  
                 <StyledElements src={elementsgroup} /> 
                 <StyledRec src={rec} />
                 

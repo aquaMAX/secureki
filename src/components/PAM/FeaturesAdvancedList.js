@@ -12,7 +12,7 @@ import sixth from '../../assets/pam/features/advanced/sixth.svg'
 const StyledRow = styled(Row)`
     margin: 0;
     width: 64.225em;
-    margin-left: 13.375em;
+    margin-left: 12.875em;
     display: "block";
     opacity: ${props => props.newstate == false ? "1" : "0"};
     align-content: space-around;
@@ -27,8 +27,10 @@ const StoriesCol = styled.div`
     padding: 0; 
     justify-content: center; 
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2.0625em;
-    margin-right: 1.9375em;
+    
     &:last-child {
         margin-right: 0;
     }
@@ -86,7 +88,7 @@ const StyledTitle = styled.div`
 export  const FeaturesAdvancedList = ({state}) => {
     return (
         <>
-            <StyledRow newstate={state} xs={1}>
+            <StyledRow newstate={state} xs={1} lg={3}>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={first}/>
@@ -121,7 +123,7 @@ export  const FeaturesAdvancedList = ({state}) => {
                     </FeatureContainer>
                 </StoriesCol>
             </StyledRow>
-            <StyledRow newstate={state} xs={1}>
+            <StyledRow newstate={state} xs={1} lg={3}>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={fourth}/>

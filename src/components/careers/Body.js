@@ -11,6 +11,12 @@ const EmptyRec = styled.img`
     z-index: 1;
     margin-top: 20.4375rem;
     margin-left: 82.125rem;
+    @media (max-width: 991px) {
+        display: none;
+    }
+    @media (max-width: 1439px) {
+        display: none;
+    } 
 `
 
 const WhiteRec = styled.img`
@@ -18,6 +24,12 @@ const WhiteRec = styled.img`
     z-index: -1;
     margin-top: 22.4375rem;
     margin-left: 74.6875rem;
+    @media (max-width: 991px) {
+        display: none;
+    }
+    @media (max-width: 1439px) {
+        display: none;
+    } 
 `
 
 const Container = styled.div`
@@ -27,11 +39,27 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 73.5625rem;
+    } 
 `
 const TextContainer = styled(Col)`
     padding: 0;
     width: 43.9375rem;
     padding-left: 10.3125rem;
+    @media (max-width: 991px) {
+        width: auto;
+        padding-left: 1.125rem;
+    } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 1.125rem;
+        width: auto;
+        justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: 1.25rem;
+    
+    }
 `
 
 const ImageContainer = styled(Col)`
@@ -42,6 +70,17 @@ const ImageContainer = styled(Col)`
     padding-right: 0;
     display: flex;
     justify-content: end;
+    @media (max-width: 991px) {
+        padding: 0;
+    } 
+ 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    
+    
+    }
     
 `
 const StyledRow = styled(Row)`
@@ -65,6 +104,11 @@ const StyledSlogan = styled.div`
     flex: none;
     order: 0;
     flex-grow: 0;
+    @media (max-width: 991px) {
+        width: auto;
+        font-size: 1.125rem;
+        text-align: center;
+    } 
     
 
 `
@@ -91,6 +135,14 @@ const StyledTitle = styled.div`
     order: 1;
     flex-grow: 0;
     margin: 1.5rem 0rem;
+    @media (max-width: 991px) {
+        width: auto;
+        font-size: 2.375rem;
+        line-height: 2.4375rem;
+        text-align: center;
+        margin-left: 2.1875rem;
+        margin-right: 2.1875rem;
+    } 
 
 `
 
@@ -111,6 +163,15 @@ const StyledContent = styled.div`
     order: 2;
     flex-grow: 0;
     margin: 1.5rem 0px;
+    @media (max-width: 991px) {
+        width: 21.3125rem;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        text-align: center;
+        margin-bottom: 3.25rem;
+        margin-right: 1.0625rem;
+    } 
+
 `
 
 
@@ -119,8 +180,33 @@ const Styledimg = styled.img`
     max-width: 36rem;
     max-height: 24.125rem;
     margin: 0;
+
+    @media (max-width: 991px) {
+        width: 28.9375rem;
+        margin-left: -1.5rem;
+    } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 45vw;
+        min-width: 45vw;
+        margin-left: auto;
+    }
+
+
     
-    
+`
+
+
+const Wrapper = styled.div`
+    @media (max-width: 991px) {
+    min-width: 23.4375rem;
+    overflow: hidden;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        overflow: hidden;
+        
+        min-width: 45vw;
+        min-height: 19.375rem;
+    }
 `
 
 export const Body = () => {
@@ -142,7 +228,7 @@ export const Body = () => {
                     
                 </TextContainer>
                 <ImageContainer xs={5}>
-                    <Styledimg src={drugi} />
+                    <Wrapper><Styledimg src={drugi} /></Wrapper>
                 </ImageContainer>
 
                 <WhiteRec src={whiterec} />

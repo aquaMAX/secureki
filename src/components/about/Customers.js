@@ -99,6 +99,13 @@ const StyledContent = styled(Row)`
         margin-right: 1.125rem;
         width: auto; 
     }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 `
 
 const ButtonContainer = styled.div`
@@ -107,6 +114,12 @@ const ButtonContainer = styled.div`
     @media (max-width: 991px) {
         margin-left: 4.1875rem;
         margin-top: 5rem;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 `
 

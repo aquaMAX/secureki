@@ -59,6 +59,11 @@ const MFAButton = styled(StyledButton)`
         
         min-width: 9.5rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: auto;
+        
+        min-width: 9.5rem;
+    }
 `
 
 const StyledTitle = styled(Row)`
@@ -107,6 +112,11 @@ const StyledContent = styled(Row)`
         margin-left: 1.125rem;
         margin-right: 1.125rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: auto;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
 `
 
 const ButtonContainer = styled.div`
@@ -116,6 +126,12 @@ const ButtonContainer = styled.div`
         margin-left: auto;
         justify-content: center;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 `
 
 const StyledImage = styled.img`
@@ -132,6 +148,11 @@ const StyledImage = styled.img`
         max-width: 27.875rem;
         position: relative;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 0;
+        width: auto;
+        position: relative;
+    }
 `
 
 const StyledElements = styled.img`
@@ -139,7 +160,7 @@ const StyledElements = styled.img`
     z-index: 1;
     margin-top: 28.9063rem;
     margin-left: 73.5625rem;
-    @media (max-width: 991px) {
+    @media (max-width: 1439px) {
         display: none;
     } 
 `
@@ -147,16 +168,32 @@ const StyledElements = styled.img`
 const StyledRec = styled.img`
     position: absolute;
     z-index: 1; 
-    margin-top: -37.0938rem;
-    margin-left: 0;
+    margin-top: 5rem;
+    margin-left: 6rem;
     @media (max-width: 991px) {
-        position: relative;
+        position: absolute;
+        margin-top: -24rem;
+        margin-left: -3rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: none;
+    }
 `
 
 const Wrapper = styled.div`
+@media (max-width: 991px) {
     max-width: 23.4375rem;
     overflow: hidden;
+}
+@media (min-width: 992px) and (max-width: 1439px) {
+    display: block;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    }
 `
 
 export const AboutHeader = () => {
@@ -186,7 +223,7 @@ return (
                 }}>
                     {matches => (
                         <>
-                        {matches.large && <StyledImage src={image} /> }
+                        {matches.large && <Wrapper><StyledImage src={image} /></Wrapper> }
                         {matches.small && <Wrapper><StyledImage src={mobile} /></Wrapper> }
                         </>
                     )}

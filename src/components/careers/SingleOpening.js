@@ -7,6 +7,14 @@ const Container = styled.div`
     padding-left: 10.3125rem;
     margin-top: 4.1875rem;
     height: auto;
+    @media (max-width: 991px) {
+        max-width: 99vw;
+        padding-left: 1.125rem;
+        justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    } 
     
 `
 

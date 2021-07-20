@@ -101,6 +101,13 @@ const StyledRow = styled(Row)`
         padding-bottom: 2.9375rem;
         padding-left: 1.125rem; 
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        justify-content: center;
+        -webkit-justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
 `
 
 const NoMarginRow = styled(Row)`
@@ -197,6 +204,9 @@ const Product = styled(Col)`
         margin-top: 1.375rem;
         margin-bottom: 2.5rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-right: 3.375rem;
+    }
 `
 
 const Resources = styled(Col)`
@@ -208,6 +218,9 @@ const Resources = styled(Col)`
         margin-left: 0;
         margin-bottom: 2.5rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-right: 3.375rem;
+    }
 `
 
 const Company = styled(Col)`
@@ -219,6 +232,9 @@ const Company = styled(Col)`
         margin-left: 0;
         margin-bottom: 2.5rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-right: 3.375rem;
+    }
 `
 
 const Findus = styled(Col)`

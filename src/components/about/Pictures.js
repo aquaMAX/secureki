@@ -14,6 +14,10 @@ const StyledPic = styled.img`
         max-height: 6.4375rem; 
         margin-right: 0.5625rem; 
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 33vw;
+        
+    }
 `
 
 const Container = styled.div`
@@ -29,6 +33,7 @@ const Container = styled.div`
         max-width: 23.4375rem;
         height: 11.5625rem;
     } 
+   
 `
 
 const PicRow = styled(Row)`
@@ -36,6 +41,14 @@ const PicRow = styled(Row)`
     margin-left: 10.4375rem;
     @media (max-width: 991px) {
        margin-left: 1.125rem; 
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+        
+        
     }
 `
 

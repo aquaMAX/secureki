@@ -168,8 +168,10 @@ const Styledimg = styled.img`
 `
 
 const Wrapper = styled.div`
+@media (max-width: 991px) {
     max-width: 22.1375rem;
     overflow: hidden;
+}
 `
 
 const NoMarginRow = styled(Row)`

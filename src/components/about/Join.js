@@ -77,6 +77,9 @@ const StyledButton = styled(Button)`
         margin-right: 9.25rem;
         width: 8.625rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 66vw;
+    } 
 `
 
 const StyledSecondButton = styled(Button)`
@@ -98,6 +101,9 @@ const StyledSecondButton = styled(Button)`
         justify-content: center;
         margin-left: 9.25rem;
         width: 8.25rem;
+    } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 81vw;
     } 
 `
 

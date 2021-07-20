@@ -26,6 +26,7 @@ const TextContainer = styled(Col)`
     @media (max-width: 991px) {
         padding-top: 0;
     } 
+
 `
 
 const ImageContainer = styled(Col)`
@@ -40,6 +41,12 @@ const StyledRow = styled(Row)`
         padding: 0;
         
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 0;
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
 `
 
 const StyledTitle = styled.div`
@@ -81,22 +88,21 @@ const StyledContent = styled(Row)`
     color: #17494D;
     padding-left: 0.9375em;
     @media (max-width: 991px) {
-        
-
-
-
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem;
-    letter-spacing: 0.0063rem;
-    text-align: left;
-
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0.0063rem;
+        text-align: left;
         width: auto;
         margin-left: 0;
         margin-right: 1.125rem;
         padding-left: 0;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: auto;
+        max-width: 29.75rem;
+    }
 `
 
 const Styledimg = styled.img`
@@ -143,7 +149,7 @@ const Culture = () => {
                     
                     <Media queries={{
                             small: "(max-width: 991px)",
-                            large: "(min-width: 961px)"
+                            large: "(min-width: 992px)"
                         }}>
                             {matches => (
                                 <>

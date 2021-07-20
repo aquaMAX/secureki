@@ -16,6 +16,10 @@ const StyledRow = styled(Row)`
     opacity: ${props => props.newstate == true ? "1" : "0"};
     align-content: space-around;
     transition: all 0.3s;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        margin-left: 0; 
+    } 
     
 `
 
@@ -90,7 +94,7 @@ const StyledTitle = styled.div`
 export const FeaturesBasicList = ({state}) => {
     return (
         <Container>
-            <StyledRow newstate={state}>
+            <StyledRow newstate={state} xs={1}>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={first}/>
@@ -125,7 +129,7 @@ export const FeaturesBasicList = ({state}) => {
                     </FeatureContainer>
                 </StoriesCol>
             </StyledRow>
-            <StyledRow newstate={state}>
+            <StyledRow newstate={state} xs={1}>
 
                 <StoriesCol>
                     <FeatureContainer>

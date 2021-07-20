@@ -21,6 +21,10 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 155.375rem;
+    } 
 `
 
 const StyledTitle = styled(Col)`
@@ -32,6 +36,10 @@ const StyledTitle = styled(Col)`
     color: #073233;
     margin-bottom: 2.0625em;
     margin-top: 8em;
+    @media (max-width: 991px) {
+        width: auto;
+        margin-left: 0;
+    } 
 
     > h1 {
         position: absolute;
@@ -43,25 +51,9 @@ const StyledTitle = styled(Col)`
         text-align: center;
         letter-spacing: -0.0125em;
     }
-`
-
-const StyledRow = styled(Row)`
-    margin: 0;
-    width: 64.225em;
-    margin-left: 13.375em;
-    display: flex;
-    align-content: space-around;
-`
-
-const StoriesCol = styled.div`
-    padding: 0; 
-    justify-content: center; 
-    display: flex;
-    margin-bottom: 2.0625em;
-    margin-right: 1.9375em;
-    &:last-child {
-        margin-right: 0;
-    }
+    @media (max-width: 991px) {
+        margin-top: 3.0625rem;
+    } 
 `
 
 const StyledBasic = styled.button`
@@ -78,7 +70,11 @@ const StyledBasic = styled.button`
     transition: 0.3s;
     background: none;
     border: none;
-        margin-left: 40.5em;
+    margin-left: 40.5em;
+    @media (max-width: 991px) {
+        margin-left: 0;
+    } 
+        
 
 `
 
@@ -97,6 +93,9 @@ const StyledAdvanced = styled.button`
     background: none;
     border: none;
     margin-left: 2.59375em;   
+    @media (max-width: 991px) {
+        margin-left: 6.125rem;
+    } 
 `
 
 const StyledButtonsRow = styled.div`
@@ -105,6 +104,10 @@ const StyledButtonsRow = styled.div`
     display: flex;
     height: 2.25em;
     margin-bottom: 3.1875em;
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+    } 
 `
 
 const StyledLine = styled(Row)`
@@ -116,6 +119,10 @@ const StyledLine = styled(Row)`
     background-color: #EDEDED;
     z-index: 1;
     position: absolute;
+    @media (max-width: 991px) {
+        width: 21.25rem;
+        margin-left: 0;
+    } 
 `
 
 const StyledUnderline = styled.div`
@@ -127,6 +134,10 @@ const StyledUnderline = styled.div`
     z-index: 2;
     position: absolute;
     transition: 0.3s;
+    @media (max-width: 991px) {
+        width: 10.625rem;
+        margin-left: ${props => (props.state == true ? "0" : "10.625rem")};
+    } 
 `
 
 

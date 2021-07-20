@@ -94,8 +94,7 @@ const StyledTitle = styled.div`
     color: #073233;
     @media (max-width: 991px) {
         padding: 0;
-        width: auto;
-        
+        width: auto; 
     }
 `
 
@@ -169,7 +168,7 @@ const Styledimg = styled.img`
 `
 
 const Wrapper = styled.div`
-    max-width: 13.4375rem;
+    max-width: 22.1375rem;
     overflow: hidden;
 `
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../assets/PAM/offer-1.png"
+import Media from 'react-media'
 
 const Container = styled.div`
     height: 45.5em;
@@ -14,11 +15,21 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        height: 52.8125rem;
+    } 
 `
 const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 11.0625rem;
     margin-left: 3.6875em;
+    @media (max-width: 991px) {
+        margin-top: 3.0625rem;
+        margin-left: 1.125rem;
+        padding-left: 0;
+        padding-top: 0;
+    }
 `
 
 const ImageContainer = styled(Col)`
@@ -31,6 +42,9 @@ const StyledRow = styled(Row)`
     padding-left: 1.5em;
     margin-right: 0;
     margin-left: 0;
+    @media (max-width: 991px) {
+        padding-left: 0;
+    }
 `
 
 const StyledSlogan = styled.div`
@@ -54,6 +68,10 @@ const StyledSlogan = styled.div`
 
     background: #FF6938;
     border-radius: 2.5em;
+    @media (max-width: 991px) {
+        
+        
+    }
 `
 
 const StyledTitle = styled.div`
@@ -73,6 +91,11 @@ const StyledTitle = styled.div`
     letter-spacing: -0.00625em;
 
     color: #073233;
+    @media (max-width: 991px) {
+        font-size: 1.875rem;
+        padding-right: 0;
+        width: auto;
+    }
 `
 
 const StyledContent = styled.div`
@@ -86,7 +109,10 @@ const StyledContent = styled.div`
     letter-spacing: 0.00625em;
     margin-bottom: 2em;
     color: #17494D;
-    
+    @media (max-width: 991px) {
+        
+        width: auto;
+    }
      
 `
 
@@ -126,12 +152,18 @@ const StyledPointer = styled.div`
     color: #FF6938;
 `
 
-const SecondParagraph = styled(Row)`
-
+const Wrapper = styled.div`
+    max-width: 22.1375rem;
+    overflow: hidden;
 `
 
 const Styledimg = styled.img`
     min-width: 46.6875em;
+    @media (max-width: 991px) {
+        min-width: 29.8125rem;
+        margin-left: -4.9375rem;
+        margin-top: -5.1rem;
+    } 
 `
 
 export const Offer = () => {
@@ -139,8 +171,8 @@ export const Offer = () => {
         <div style={{background: "#FCF5F0"}}>
         <Container>
             <StyledRow>
-                <ImageContainer>
-                    <Styledimg src={drugi} />
+                <ImageContainer xs={{ order: 2 }} lg={{ order: 1 }}>
+                    <Wrapper><Styledimg src={drugi} /></Wrapper>
                 </ImageContainer>
                 <TextContainer>
                     <StyledSlogan>
@@ -153,8 +185,18 @@ export const Offer = () => {
                         Credential management alone isn’t sufficient when it comes to protecting your privileged access. Our SecureKi’s Privileged Access Management solutions come equipped with session recording, fine-grained access control, multifactor authentication, single sign-on, and policy defining capabilities — all the essential needs when it comes to securing your credentials. 
                     </StyledContent>
                     <StyledMoreabout>
-                        <text>Learn more on Privileged Access Management</text>
-                        <StyledPointer>   →</StyledPointer>
+                    <Media queries={{
+                            small: "(max-width: 991px)",
+                            large: "(min-width: 961px)"
+                        }}>
+                            {matches => (
+                                <>
+                                {matches.small && <><text>Learn more on PAM</text><StyledPointer>   →</StyledPointer></> }
+                                {matches.large && <><text>Learn more on Privileged Access Management</text><StyledPointer>   →</StyledPointer></> }
+                                </>
+                            )}
+                        </Media>
+                        
                     </StyledMoreabout>
                     
                 </TextContainer>

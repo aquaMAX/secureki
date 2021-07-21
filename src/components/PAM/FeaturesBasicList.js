@@ -44,7 +44,7 @@ const Container = styled.div`
 
 const FeatureContainer = styled.div`
     width: 19.8125em;
-    height: 22.0625em;
+    height: 23.0625em;
     background: #FFFFFF;
     border: 1px solid #EDEDED;
     border-radius: 5px;
@@ -79,7 +79,7 @@ const StyledIcon = styled.img`
 `
 
 const StyledTitle = styled.div`
-    font-family: Messina Sans;
+    font-family: Messina Sans Bold;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -101,7 +101,7 @@ export const FeaturesBasicList = ({state}) => {
                     <FeatureContainer>
                         <StyledIcon src={first}/>
                         <StyledTitle>
-                            Integrated Password Management1
+                            Integrated Password Management
                         </StyledTitle>
                         <TextContainer>
                             Support and integrate with various operating systems and platforms, from Unix to Windows, to compliant directories like AD and LDAP, to systems like RADIUS and TACACS.

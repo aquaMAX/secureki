@@ -67,7 +67,7 @@ const StyledTitle = styled.div`
     @media (max-width: 991px) {
         margin-left: 1.3125rem;
         margin-right: 1.25rem;
-        font-family: Messina Sans;
+        font-family: Messina Sans Bold;
         font-size: 2.375rem;
         font-style: normal;
         font-weight: 700;

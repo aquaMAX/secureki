@@ -192,6 +192,21 @@ const StyledImage = styled.img`
     
     margin-top: 1.5625rem;
     min-width: 22.25rem;
+    @media (min-width: 992px) {
+        display: none;
+    }
+`
+
+const MobileDisplayer = styled.div`
+    @media (min-width: 992px) {
+        display: none;
+    }
+`
+
+const DesktopDisplayer = styled.div`
+    @media (max-width: 991px) {
+        display: none;
+    }
 `
 
 export const DetailsWithPictures = () => {
@@ -227,17 +242,17 @@ export const DetailsWithPictures = () => {
                     
                 </TextContainer>
                 <ImageContainer>
-                <Media queries={{
-                            small: "(max-width: 991px)",
-                            large: "(min-width: 994px)"
-                        }}>
-                            {matches => (
-                                <>
-                                {matches.small && <StyledImage src={Total} /> }
-                                {matches.large && <StackedPictures /> }
-                                </>
-                            )}
-                </Media>
+                
+                <>
+                        <DesktopDisplayer>
+                            <StackedPictures />
+                        </DesktopDisplayer>
+                        <MobileDisplayer>
+                            
+                            <StyledImage src={Total} />
+                            
+                        </MobileDisplayer> 
+                    </>
                     
                 </ImageContainer>
             </StyledRow>

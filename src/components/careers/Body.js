@@ -41,7 +41,7 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 73.5625rem;
+        height: 56.5625rem;
     } 
 `
 const TextContainer = styled(Col)`

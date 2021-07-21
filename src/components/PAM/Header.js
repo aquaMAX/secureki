@@ -161,7 +161,6 @@ const StyledTitle = styled.div`
         width: auto; 
         font-size: 2.375rem;
         font-style: normal;
-        font-weight: 700;
         line-height: 3rem;
         letter-spacing: -0.0625rem;
         text-align: center;
@@ -289,7 +288,7 @@ return (
                 
             
             </StyledText>
-            <StyledImageContainer>
+            <StyledImageContainer xs={{order: 1}} lg={{order: 2}}>
                 <Wrapper>
                     <StyledImage src={Header}/>
                 </Wrapper>

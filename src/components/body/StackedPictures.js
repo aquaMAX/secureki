@@ -126,6 +126,8 @@ const SmallTopCircle = styled.img`
 `
 
 
+
+
 export const StackedPictures = () => {
     return (
         <>

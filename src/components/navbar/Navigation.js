@@ -81,17 +81,25 @@ const StyledStartedButton = styled(Button)`
     }
 `
 
+const MobileDisplayer = styled.div`
+    @media (min-width: 994px) {
+        display: none;
+    }
+`
+
+const DesktopDisplayer = styled.div`
+    @media (max-width: 993px) {
+        display: none;
+    }
+`
+
 const Navigation = () => {
     return (
         <StickyInner className="sticky-inner">
-            <Media queries={{
-                            small: "(max-width: 993px)",
-                            large: "(min-width: 994px)"
-                        }}>
-                            {matches => (
+            
                                 <>
-                                {matches.small && <Mobile /> }
-                                {matches.large && <>
+                                 <MobileDisplayer><Mobile /></MobileDisplayer>
+                                 <DesktopDisplayer>
                                             <Information/>
                                             <Nav>
                                                 <StyledRow>
@@ -126,10 +134,10 @@ const Navigation = () => {
                                                         
                                                     </Col>
                                                 </StyledRow>  
-                                            </Nav></>}
+                                            </Nav></DesktopDisplayer>
                                 </>
-                            )}
-                </Media>
+                            
+                
   
         
         

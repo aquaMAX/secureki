@@ -153,8 +153,10 @@ const StyledPointer = styled.div`
 `
 
 const Wrapper = styled.div`
+@media (max-width: 991px) {
     max-width: 22.1375rem;
     overflow: hidden;
+}
 `
 
 const Styledimg = styled.img`

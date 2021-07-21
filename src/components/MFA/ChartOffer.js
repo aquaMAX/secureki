@@ -197,7 +197,7 @@ const StyledChartText = styled.div`
     margin-top: 2.4571428571428573em;
     margin-left: 0.8285714285714286em;
 
-    font-family: Messina Sans;
+    font-family: Messina Sans Bold;
     font-size: 2.1875em;
     font-style: normal;
     font-weight: 700;

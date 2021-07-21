@@ -15,6 +15,9 @@ const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 4px 20px rgba(7, 50, 51, 0.04);
+    @media (min-width: 994px) {
+        display: none;
+    }
 `
 
 const StyledLogo = styled.img`

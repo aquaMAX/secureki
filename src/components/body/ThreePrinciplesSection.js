@@ -22,8 +22,8 @@ const Container = styled.div`
     } 
 `
 const StyledRow = styled(Row)`
-    padding-left: 3.125rem;
-    padding-right: 3.125rem;
+    padding-left: 10.5rem;
+    padding-right: 10.375rem;
     margin-left: 0;
     margin-right: 0;
     @media (max-width: 991px) {

@@ -73,7 +73,7 @@ const StyledIcon = styled.img`
 `
 
 const StyledTitle = styled.div`
-    font-family: Messina Sans;
+    font-family: Messina Sans Bold;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;

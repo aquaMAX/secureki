@@ -151,6 +151,8 @@ const StyledPointer = styled.div`
 
 const Styledimg = styled.img`
     min-width: 44.375em;
+    max-width: 44.375rem;
+    margin-left: -7.95rem;
     margin-bottom: 0;
     margin-right: 3.125em;
     @media (max-width: 991px) {
@@ -224,7 +226,7 @@ export const Offer = () => {
                     </StyledMoreabout>
                     
                 </TextContainer>
-                <ImageContainer>
+                <ImageContainer >
                     <Styledimg src={image} />
                 </ImageContainer>
 

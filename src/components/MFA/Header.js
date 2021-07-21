@@ -243,7 +243,7 @@ return (
                 
             
             </StyledText>
-            <StyledImageContainer>
+            <StyledImageContainer xs={{order: 1}} lg={{order: 2}}>
                 <StyledImage src={Header}/>
             </StyledImageContainer>
         </FixedRow>

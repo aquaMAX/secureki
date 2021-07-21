@@ -107,6 +107,9 @@ const StyledContent = styled(Row)`
     display: block;
 
     color: #17494D;
+    > b {
+        font-family: Messina Sans bold;
+    }
     @media (max-width: 991px) {
         width: auto;
         margin-left: 1.125rem;

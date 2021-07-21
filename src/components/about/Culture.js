@@ -3,7 +3,7 @@ import { StackedPictures } from '../body/StackedPictures'
 import styled from 'styled-components'
 import { Col, Row } from "react-bootstrap"
 import pictures from '../../assets/about/culture/Group 603.png'
-import Media from 'react-media'
+
 
 const Container = styled.div`
     height: 44.4375rem;
@@ -120,12 +120,27 @@ const Wrapper = styled.div`
 
 const TextRow = styled(Row)`
     padding-left: 0.8333333333333334em;
+    > b {
+        font-family: Messina Sans bold;
+    }
     @media (max-width: 991px) {
         
         padding: 0;
         margin: 0;
     }
 
+`
+
+const MobileDisplayer = styled.div`
+    @media (min-width: 992px) {
+        display: none;
+    }
+`
+
+const DesktopDisplayer = styled.div`
+    @media (max-width: 991px) {
+        display: none;
+    }
 `
 
 const Culture = () => {
@@ -138,7 +153,7 @@ const Culture = () => {
                         Our Culture
                     </StyledTitle>
                     <StyledContent>
-                        <TextRow style={{}}>
+                        <TextRow>
                         <b>At SecureKi, we believe that building the right kind of products has to start from within by hiring people from different backgrounds and empowering team members to innovate, learn together, and lead.</b>
                         <br />
                         As a company, we are constantly iterating, solving problems, and working together to build better products and create better experiences for everyone.
@@ -146,19 +161,16 @@ const Culture = () => {
                     </StyledContent>
                 </TextContainer>
                 <ImageContainer>
-                    
-                    <Media queries={{
-                            small: "(max-width: 991px)",
-                            large: "(min-width: 992px)"
-                        }}>
-                            {matches => (
-                                <>
-                                {matches.large && <StackedPictures />}
-                                {matches.small && <Wrapper><Styledimg src={pictures} /></Wrapper>} 
-
-                                </>
-                            )}
-                    </Media>
+                    <>
+                        <DesktopDisplayer>
+                            <StackedPictures />
+                        </DesktopDisplayer>
+                        <MobileDisplayer>
+                            <Wrapper>
+                                <Styledimg src={pictures} />
+                            </Wrapper>
+                        </MobileDisplayer> 
+                    </>
                 </ImageContainer>
             </StyledRow>
         </Container>

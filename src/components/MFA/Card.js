@@ -35,7 +35,7 @@ const ImageContainer = styled.img`
 
 const TitleContainer = styled(Row)`
     margin: 0;
-    font-family: Messina Sans;
+    font-family: Messina Sans Bold;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;

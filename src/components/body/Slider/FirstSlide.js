@@ -160,20 +160,13 @@ const StyledPointer = styled.div`
 
 
 const Styledimg = styled.img`
-    min-width: 30.125em;
+    min-width: 30.125rem;
     z-index: 2;
     position: absolute;
-    @media (max-width: 1439px) {
-        min-width: auto;
-        max-width: 25.125rem;
-        height: auto;
-    }
     @media (max-width: 991px) {
-        max-width: 23.4375rem;
-        margin-bottom: 0;
-        min-width: auto;
-        position: relative;
-    } 
+        display: none;
+    }
+
 `
 
 const StyledGroupElements = styled.img`
@@ -215,6 +208,27 @@ const StyledCircle = styled.img`
     } 
 `
 
+const StyledDesktopimg = styled.img`
+    z-index: 2;
+    position: absolute;
+    @media (min-width: 991px) {
+        display: none;
+    
+    }
+    
+    @media (max-width: 1439px) {
+        min-width: auto;
+        max-width: 25.125rem;
+        height: auto;
+    }
+    @media (max-width: 991px) {
+        max-width: 23.4375rem;
+        margin-bottom: 0;
+        min-width: auto;
+        position: relative;
+    } 
+`
+
 
 
 export const FirstSlide = () => {
@@ -227,7 +241,8 @@ export const FirstSlide = () => {
             <StyledCircle src={circleslide} />
             <StyledGroupElements src={group} />
                 <ImageContainer lg={7} xl>
-                    <Styledimg src={drugi2} />
+                    <Styledimg src={drugi} />
+                    <StyledDesktopimg src={drugi2} />
                 </ImageContainer>
                 <TextContainer>
                     <StyledSlogan>

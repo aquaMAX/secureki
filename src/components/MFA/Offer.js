@@ -26,6 +26,7 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
+
     
 `
 

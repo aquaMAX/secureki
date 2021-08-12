@@ -141,6 +141,7 @@ const StyledPolicy = styled(Col)`
     margin-right: 10.86464em; 
     @media (max-width: 991px) {
         margin-right: 0;
+        margin-left:  1.5rem;
     } 
 }
 `

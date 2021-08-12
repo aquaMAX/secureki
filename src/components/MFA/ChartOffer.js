@@ -18,7 +18,7 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 75.5625rem;
+        height: 72.5625rem;
     } 
 `
 const TextContainer = styled(Col)`
@@ -29,7 +29,7 @@ const TextContainer = styled(Col)`
         padding: 0;
         margin: 0;
         margin-left: 1.125rem;
-        margin-top: 2rem;
+        margin-top: 3.0625rem;
     }
 `
 
@@ -96,6 +96,8 @@ const StyledTitle = styled.div`
     @media (max-width: 991px) {
         padding: 0;
         width: auto; 
+        margin-bottom: 1.5625rem;
+        font-size: 1.875rem;
     }
 `
 
@@ -114,6 +116,7 @@ const StyledContent = styled.div`
     @media (max-width: 991px) {
         padding: 0;
         margin-left: 0.9375rem;
+        margin-bottom: 1.5625rem;
         max-width: 20.5rem;
     }
 `
@@ -170,7 +173,7 @@ const Styledimg = styled.img`
 
 const Wrapper = styled.div`
 @media (max-width: 991px) {
-    max-width: 22.1375rem;
+    max-width: 22.0375rem;
     overflow: hidden;
 }
 `

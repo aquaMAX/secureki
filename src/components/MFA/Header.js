@@ -19,6 +19,7 @@ const Layout = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
+        height: 58em;
     }
 `
 
@@ -127,6 +128,7 @@ const StyledTitle = styled.div`
     @media (max-width: 991px) {
         margin-left: 1.3125rem;
         margin-right: 1.25rem;
+        margin-top: 1.5625rem;
         font-family: Messina Sans;
         font-size: 2.375rem;
         font-style: normal;
@@ -158,6 +160,8 @@ const StyledBody = styled.div`
         display: flex;
         text-align: center;
         margin-left: 1.125rem;
+        margin-bottom: 1.5625rem;
+        margin-top: 1.5625rem;
     }
 
 `

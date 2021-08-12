@@ -127,6 +127,7 @@ const StyledContent = styled.div`
     @media (max-width: 1439px) {
         margin-right: 0;
         max-width: 27.8125rem;
+        margin-bottom: 1.5625rem;
     }
     @media (max-width: 991px) {
         margin-right: 1rem;

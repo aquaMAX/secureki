@@ -19,7 +19,7 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 47.3125rem;
+        height: 46.3125rem;
     } 
 `
 const TextContainer = styled(Col)`
@@ -114,6 +114,8 @@ const StyledTitle = styled.div`
     color: #073233;
     @media (max-width: 991px) {
         width: auto;
+        margin-bottom: 1.5625rem;
+        font-size: 1.875rem;
     }
 `
 
@@ -172,10 +174,6 @@ const StyledPointer = styled.div`
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FF6938;
-`
-
-const SecondParagraph = styled(Row)`
-
 `
 
 const Styledimg = styled.img`

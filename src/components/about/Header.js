@@ -84,11 +84,17 @@ const StyledTitle = styled(Row)`
         line-height: 0.8571428571428571em;
         text-align: center;
         letter-spacing: -0.008928571428571428em;
+        @media (max-width: 991px) {
+            font-size: 2.375rem;
+            
+        } 
     }
     @media (max-width: 991px) {
         width: auto;
         margin-left: 0;
         margin-right: 0;
+        height: 3em;
+        
     } 
 `
 
@@ -145,7 +151,7 @@ const StyledImage = styled.img`
     margin-left: 10.4375rem;
     @media (max-width: 991px) {
         margin:0;
-        margin-top: 6.6rem;
+        margin-top: 8rem;
         margin-left: -3.6875rem;
         min-width: 27.875rem;
         max-width: 27.875rem;

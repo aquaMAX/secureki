@@ -95,6 +95,7 @@ const StyledTitle = styled.div`
         font-size: 1.875rem;
         padding-right: 0;
         width: auto;
+        margin-bottom: 1.5625rem;
     }
 `
 

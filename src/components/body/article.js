@@ -67,6 +67,7 @@ const StyledTitle = styled.div`
     @media (max-width: 991px) {
         margin-left: 1.3125rem;
         margin-right: 1.25rem;
+        margin-bottom: 1.5625rem;
         font-family: Messina Sans Bold;
         font-size: 2.375rem;
         font-style: normal;
@@ -301,7 +302,7 @@ const Article = () => {
                 <FixedRow>
                     
                     <StyledTitle>
-                        <FixedRow className="Title">Identity Security</FixedRow>
+                        <FixedRow className="Title">Identity Security1</FixedRow>
                         <FixedRow>for{'\u00A0'}<ColoredP>Your Workforce</ColoredP></FixedRow>
                     </StyledTitle>
                 </FixedRow>

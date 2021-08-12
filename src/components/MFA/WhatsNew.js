@@ -15,8 +15,9 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 93.75rem;
+        height: 88.75rem;
         padding-bottom: 0;
+        padding-top: 0;
     } 
 `
 
@@ -28,6 +29,10 @@ const StyledTitle = styled(Col)`
     display: flex;
     color: #073233;
     margin-bottom: 5.125em;
+    @media (max-width: 991px) {
+        
+        height: 2em;
+    }
 
     > h1 {
         position: absolute;
@@ -39,6 +44,10 @@ const StyledTitle = styled(Col)`
         line-height: 1.2em;
         text-align: center;
         letter-spacing: -0.0125em;
+        @media (max-width: 991px) {
+        
+            font-size: 1.875rem;
+        }
     }
 `
 

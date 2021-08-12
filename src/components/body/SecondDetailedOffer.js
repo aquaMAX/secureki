@@ -18,7 +18,7 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 62.3125rem;
+        height: 58.8025rem;
         padding-bottom: 0;
     } 
 `
@@ -110,11 +110,12 @@ const StyledTitle = styled.div`
 
     }
     @media (max-width: 991px) {
-    font-size: 1.875rem;
-    font-weight: 700;
-    line-height: 2.4375rem;
-    letter-spacing: -0.10000000149011612px;
-    text-align: left;
+        font-size: 1.875rem;
+        font-weight: 700;
+        line-height: 2.4375rem;
+        letter-spacing: -0.10000000149011612px;
+        text-align: left;
+        margin-bottom: 1.5625rem;
     } 
 `
 

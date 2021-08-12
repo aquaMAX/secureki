@@ -24,7 +24,7 @@ const Layout = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 72.625rem;
+        height: 69.625rem;
     }
 `
 
@@ -135,7 +135,7 @@ const StyledImage = styled.img`
     z-index: -1;
     @media (max-width: 991px) {
         min-width: 27rem;
-        margin-top: 4.5625rem;
+        margin-top: 3.5625rem;
         margin-left: -3.875rem;
         position: relative;
     }
@@ -164,7 +164,7 @@ const StyledTitle = styled.div`
         line-height: 3rem;
         letter-spacing: -0.0625rem;
         text-align: center;
-
+        margin-top: -3rem;
     }
 `
 
@@ -246,6 +246,20 @@ const StyledParagraph = styled.div`
     }
 `
 
+const Displayer = styled.div`
+    display: none;
+    @media (min-width: 992px) {
+        display: block;
+    }
+`
+
+const Breaker = styled.div`
+    display: inline;
+    @media (min-width: 992px) {
+        display: none;
+    }
+`
+
 export const PAMHeader = () => {
 return (
     <Layout>
@@ -258,8 +272,8 @@ return (
         <FixedRow xs={1} lg={2}>
             <StyledText xs={{order: 2}} lg={{order: 1}}>
                 <StyledTitle> 
-                Privileged Access Management 
-                <TextRow>from{'\u00A0'}<ColoredP>SecureKi</ColoredP></TextRow>    
+                Privileged Access Management<Breaker>{'\u00A0'}from</Breaker>
+                <TextRow><Displayer>from{'\u00A0'}</Displayer><ColoredP>SecureKi</ColoredP></TextRow>    
                 </StyledTitle>
                 <StyledBody>
                 Our next generation of privileged access management (PAM) solution is a simple-to-deploy, automated, proven solution to secure your privileged credentials in any physical and virtual environment.

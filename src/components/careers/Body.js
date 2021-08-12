@@ -50,14 +50,14 @@ const TextContainer = styled(Col)`
     padding-left: 10.3125rem;
     @media (max-width: 991px) {
         width: auto;
-        padding-left: 1.125rem;
+        padding-left: 0;
     } 
     @media (min-width: 992px) and (max-width: 1439px) {
         padding-left: 1.125rem;
         width: auto;
         justify-content: center;
-    -webkit-justify-content: center;
-    margin-left: 1.25rem;
+        -webkit-justify-content: center;
+        margin-left: 1.25rem;
     
     }
 `
@@ -170,6 +170,7 @@ const StyledContent = styled.div`
         text-align: center;
         margin-bottom: 3.25rem;
         margin-right: 1.0625rem;
+        margin-left: 1.0625rem;
     } 
 
 `

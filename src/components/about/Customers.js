@@ -76,6 +76,9 @@ const StyledTitle = styled(Row)`
         text-align: center;
         letter-spacing: -0.0313rem;
         margin: 0;
+        @media (max-width: 991px) {
+            font-size: 1.875rem;
+        }
     }
 `
 

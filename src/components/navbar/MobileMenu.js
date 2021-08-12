@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
+import { Link } from 'gatsby'
 
 const Container = styled.div`
     height: ${props=>props.status === true ? "100vh" : "0"};
@@ -35,8 +36,8 @@ const StyledUnderline = styled.div`
     width: 100%;
     opacity: 0.3;
     border-bottom: 1px solid #BDCCC7;
-    transition: 0.7s cubic-bezier(.83,.13,.18,1.06);
-    opacity: ${props=>props.status === true ? "1" : "0"};
+    transition: 0s cubic-bezier(.83,.13,.18,1.06);
+    visibility: ${props=>props.status === true ? "visible" : "hidden"};
 `
 
 const StyledProduct = styled.div`
@@ -56,8 +57,8 @@ const StyledProduct = styled.div`
     /* or 356% */
 
     color: #073233;
-    transition: 0.7s cubic-bezier(.83,.13,.18,1.06);
-    opacity: ${props=>props.status === true ? "1" : "0"};
+    transition: 0s cubic-bezier(.83,.13,.18,1.06);
+    visibility: ${props=>props.status === true ? "visible" : "hidden"};
 `
 
 const StyledResources = styled.div`
@@ -72,8 +73,8 @@ const StyledResources = styled.div`
     letter-spacing: 0px;
     text-align: left;
     color: #073233;
-    transition: 0.8s cubic-bezier(.83,.13,.18,1.06);
-    opacity: ${props=>props.status === true ? "1" : "0"};
+    transition: 0s cubic-bezier(.83,.13,.18,1.06);
+    visibility: ${props=>props.status === true ? "visible" : "hidden"};
 `
 
 const StyledCompany = styled.div`
@@ -88,8 +89,8 @@ const StyledCompany = styled.div`
     letter-spacing: 0rem;
     text-align: left;
     color: #073233;
-    transition: 0.9s cubic-bezier(.83,.13,.18,1.06);
-    opacity: ${props=>props.status === true ? "1" : "0"};
+    transition: 0s cubic-bezier(.83,.13,.18,1.06);
+    visibility: ${props=>props.status === true ? "visible" : "hidden"};
 `
 
 const StyledButtonRow = styled(Row)`
@@ -99,8 +100,8 @@ const StyledButtonRow = styled(Row)`
 
     display: flex;
     justify-content: center;
-    transition: 0.3s;
-    opacity: ${props=>props.status === true ? "1" : "0"};
+    transition: 0s;
+    visibility: ${props=>props.status === true ? "visible" : "hidden"};
 `
 
 const StyledButton = styled.button`
@@ -133,8 +134,8 @@ const StyledIconCol = styled(Col)`
     justify-content: flex-end;
     margin-right: 2.6875rem;
     margin-top: 1.6875rem;
-    transition: 0.7s cubic-bezier(.83,.13,.18,1.06);
-    opacity: ${props=>props.status === true ? "1" : "0"};
+    transition: 0s cubic-bezier(.83,.13,.18,1.06);
+    visibility: ${props=>props.status === true ? "visible" : "hidden"};
 `
 const Icon = () => {
     return (
@@ -146,57 +147,75 @@ const Icon = () => {
 
 const StyledProductLinkRow = styled(Row)`
     height: ${props=>props.currentMenu === "Product" ? "auto" : 0 };
-    opacity: ${props=>props.currentMenu === "Product" && props.status === true ? 1 : 0};
+    visibility: ${props=>props.currentMenu === "Product" && props.status === true ? "visible" : "hidden" };
     margin: 0;
     padding: 0;
     margin-left: 3.3125rem;
     margin-top: ${props=>props.currentMenu === "Product" ? "0.8125rem" : 0};
-    font-family: Messina Sans bold;
+    font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: 1.3125rem;
     letter-spacing: 0rem;
     text-align: left;
+    color: #073233;
     /*transform: ${props=>props.currentMenu === "Product" ? "translateY(0)" : "translateY(-100%)"};
-    transition: transform 0.3s cubic-bezier(.83,.13,.18,1.06); */
+    transition: transform 0s cubic-bezier(.83,.13,.18,1.06); */
     
 `
 
 const StyledResourcesLinkRow = styled(Row)`
     height: ${props=>props.currentMenu === "Resources" ? "auto" : 0 };
-    opacity: ${props=>props.currentMenu === "Resources" && props.status === true ? 1 : 0};
+    visibility: ${props=>props.currentMenu === "Resources" && props.status === true ? "visible" : "hidden" };
     margin: 0;
     padding: 0;
     margin-left: 3.3125rem;
     margin-top: ${props=>props.currentMenu === "Resources" ? "0.8125rem" : 0};
-    font-family: Messina Sans bold;
+    font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: 1.3125rem;
     letter-spacing: 0rem;
     text-align: left;
-    /* transition: height 0.5s;
-    transition: margin-top 0.5s cubic-bezier(.83,.13,.18,1.06); */
+    color: #073233;
+    /* transition: height 0s;
+    transition: margin-top 0s cubic-bezier(.83,.13,.18,1.06); */
 `
 
 const StyledCompanyLinkRow = styled(Row)`
     height: ${props=>props.currentMenu === "Company" ? "auto" : 0 };
-    opacity: ${props=>props.currentMenu === "Company" && props.status === true ? 1 : 0};
+    visibility: ${props=>props.currentMenu === "Company" && props.status === true ? "visible" : "hidden" };
     margin: 0;
     padding: 0;
     margin-left: 3.3125rem;
     margin-top: ${props=>props.currentMenu === "Company" ? "0.8125rem" : 0};
-    font-family: Messina Sans bold;
+    font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: 1.3125rem;
     letter-spacing: 0rem;
     text-align: left;
-   /* transition: height 0.5s;
-    transition: margin-top 0.5s cubic-bezier(.83,.13,.18,1.06); */
+    color: #073233;
+   /* transition: height 0s;
+    transition: margin-top 0s cubic-bezier(.83,.13,.18,1.06); */
+`
+
+const Breaker = styled.br`
+    display: none; 
+    @media (max-width: 991px ) {
+        display: block;
+    }
+`
+
+const StyledLink = styled(Link)`
+    color: #073233;
+    &:hover {
+        text-decoration: none;
+        color: #073233;
+    }
 `
 
 
@@ -217,12 +236,16 @@ const MobileMenu = ({status}) => {
                 </StyledIconCol>
                 <StyledUnderline status={status}/>
             </StyledRow>
-            <StyledProductLinkRow currentMenu={currentMenu} status={status}>
-                Multifactor Authentication (MFA)
-            </StyledProductLinkRow>
-            <StyledProductLinkRow currentMenu={currentMenu} status={status}>
-                Privileged Access Management (PAM)
-            </StyledProductLinkRow>
+            <StyledLink to={"/mfa"}>
+                <StyledProductLinkRow currentMenu={currentMenu} status={status}>
+                    Multifactor <Breaker /> Authentication (MFA)
+                </StyledProductLinkRow>
+            </StyledLink>
+            <StyledLink to={"/pam"}>
+                <StyledProductLinkRow currentMenu={currentMenu} status={status}>
+                    Privileged Access <Breaker /> Management (PAM)
+                </StyledProductLinkRow>
+            </StyledLink>
             <StyledRow onClick={()=>selectMenu("Resources")}>
                 <StyledCol>
                     <StyledResources status={status}>
@@ -250,15 +273,19 @@ const MobileMenu = ({status}) => {
                     <Icon />
                 </StyledIconCol>
             </StyledRow>
-            <StyledCompanyLinkRow currentMenu={currentMenu} status={status}>
-                Career
-            </StyledCompanyLinkRow>
-            <StyledCompanyLinkRow currentMenu={currentMenu} status={status}>
-                About Us
-            </StyledCompanyLinkRow>
-            <StyledCompanyLinkRow currentMenu={currentMenu} status={status}>
-                Blog
-            </StyledCompanyLinkRow>
+            <StyledLink to={"/careers"}>
+                <StyledCompanyLinkRow currentMenu={currentMenu} status={status}>
+                    Career
+                </StyledCompanyLinkRow>
+            </StyledLink>
+            <StyledLink to={"/about"}>
+                <StyledCompanyLinkRow currentMenu={currentMenu} status={status}>
+                    About Us
+                </StyledCompanyLinkRow>
+            </StyledLink>
+                <StyledCompanyLinkRow currentMenu={currentMenu} status={status}>
+                    Blog
+                </StyledCompanyLinkRow>
             <StyledButtonRow status={status}>
                 <StyledButton status={status}>
                     Request a demo

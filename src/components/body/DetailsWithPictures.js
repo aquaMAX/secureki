@@ -70,14 +70,15 @@ const StyledTitle = styled.div`
     color: #073233;
 
     @media (max-width: 991px) {
-    width: 18.3125rem;
-    font-size: 1.875rem;
+        width: 18.3125rem;
+        font-size: 1.875rem;
 
-    font-weight: 700;
-    line-height: 2.4375rem;
-    letter-spacing: 0rem;
-    text-align: left;
-
+        font-weight: 700;
+        line-height: 2.4375rem;
+        letter-spacing: 0rem;
+        text-align: left;
+        margin-bottom: 1.5625rem;
+        margin-top: 3.0625rem;
     } 
 `
 

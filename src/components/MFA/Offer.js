@@ -94,6 +94,12 @@ const StyledTitle = styled.div`
     letter-spacing: -0.00625em;
 
     color: #073233;
+
+    
+    @media (max-width: 991px) {
+        margin-bottom: 1.5625rem;
+        font-size: 1.945rem;
+    }
 `
 
 const StyledContent = styled.div`
@@ -110,6 +116,7 @@ const StyledContent = styled.div`
     @media (max-width: 991px) {
         width: auto;
         margin-right: 5px;
+        margin-bottom: 1.5625rem;
     }
 `
 

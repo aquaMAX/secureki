@@ -180,6 +180,7 @@ const Styledimg = styled.img`
     min-width: 28em;
     @media (max-width: 991px) {
         min-width: 21.25rem;
+        padding-right: 1.0625rem;
     } 
 `
 

@@ -11,10 +11,10 @@ const Container = styled.div`
         max-width: 99vw;
         padding-left: 1.125rem;
         justify-content: center;
-    -webkit-justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.9375rem;
+        -webkit-justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.0625rem;
     } 
     
 `
@@ -29,6 +29,7 @@ const StyledTitle = styled(Row)`
     line-height: 2rem;
     letter-spacing: -0.0063rem;
     text-align: left;
+    color: #073233;
     @media (max-width: 991px) {
         padding-bottom: 1.0625rem;
     } 

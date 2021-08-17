@@ -16,7 +16,7 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 53.75rem;
+        height: 54.75rem;
         padding-bottom: 0;
     } 
    
@@ -181,11 +181,24 @@ const Styledimg = styled.img`
     @media (max-width: 991px) {
         max-width: 100vw;
         min-height: 22.5rem;
-        max-width: 27.75rem;
+        max-width: 33.35rem;
         
-        margin-left: -4.3125rem;
+        margin-left: -4.8125rem;
         padding-bottom: 0;
     } 
+`
+
+const Wrapper = styled.div`
+    @media (max-width: 991px) {
+    min-width: 23.3375rem;
+    overflow: hidden;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        overflow: hidden;
+        
+        min-width: 45vw;
+        min-height: 19.375rem;
+    }
 `
 
 export const DetailedOffer = () => {
@@ -216,7 +229,7 @@ export const DetailedOffer = () => {
                     
                 </TextContainer>
                 <ImageContainer>
-                    <Styledimg src={pierwszy} />
+                    <Wrapper><Styledimg src={pierwszy} /></Wrapper>
                 </ImageContainer>
 
             </StyledRow>

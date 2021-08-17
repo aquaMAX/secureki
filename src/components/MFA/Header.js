@@ -32,7 +32,7 @@ const TextTitleRow = styled(Row)`
     @media (max-width: 991px) {
         display: flex;
         justify-content: center;
-        margin-left: 1.125rem;
+        margin-left: 0;
     }
 `
 
@@ -104,6 +104,7 @@ const StyledImage = styled.img`
     z-index: -1;
     @media (max-width: 991px) {
         margin-left: -2.0625rem;
+        min-width: 24.25rem;
         margin-top: 5.625rem;
         position: relative;
         margin-right: 0;
@@ -129,7 +130,7 @@ const StyledTitle = styled.div`
         margin-left: 1.3125rem;
         margin-right: 1.25rem;
         margin-top: 1.5625rem;
-        font-family: Messina Sans;
+        font-family: Messina Sans bold;
         font-size: 2.375rem;
         font-style: normal;
         font-weight: 700;
@@ -160,6 +161,7 @@ const StyledBody = styled.div`
         display: flex;
         text-align: center;
         margin-left: 1.125rem;
+        margin-right: 1.125rem;
         margin-bottom: 1.5625rem;
         margin-top: 1.5625rem;
     }

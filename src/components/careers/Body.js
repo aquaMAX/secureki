@@ -184,7 +184,8 @@ const Styledimg = styled.img`
 
     @media (max-width: 991px) {
         width: 28.9375rem;
-        margin-left: -1.5rem;
+        margin-top: -2rem;
+        margin-left: -6rem;
     } 
     @media (min-width: 992px) and (max-width: 1439px) {
         max-width: 45vw;
@@ -200,6 +201,7 @@ const Styledimg = styled.img`
 const Wrapper = styled.div`
     @media (max-width: 991px) {
     min-width: 23.4375rem;
+    max-height: 20.4375rem;
     overflow: hidden;
     }
     @media (min-width: 992px) and (max-width: 1439px) {

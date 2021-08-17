@@ -50,6 +50,9 @@ const FeatureContainer = styled.div`
     border-radius: 5px;
     align-items: center;
     z-index: 2;
+    @media (max-width: 991px) {
+        height: auto; 
+    } 
 
 `
 

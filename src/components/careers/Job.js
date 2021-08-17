@@ -8,8 +8,12 @@ const StyledRow = styled(Row)`
     border-top: 1px outset RGB(17,74,79);
     border-top: 1px outset RGBA(17,74,79,0.11);
     background-color: ${props => props.backgroundColor};
-  
+    max-width: 69.375rem;
     padding-top: 0.75rem;
+    @media (max-width: 991px) {
+        
+        margin-right: 1.0625rem;
+    } 
 `
 
 const StyledPosition = styled(Col)`
@@ -37,6 +41,11 @@ const StyledLocation = styled(Col)`
     letter-spacing: 0.0063rem;
     text-align: left;
     color: #073233;
+    padding-left: 3.25rem;
+    @media (max-width: 991px) {
+        display: none;
+        padding-left: 0;
+    } 
 
 `
 
@@ -44,6 +53,13 @@ const PointerContainer = styled(Col)`
     padding: 0;
     width: 0.625rem;
     height: 0.3125rem;
+    padding-left: 2rem;
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 0rem;
+        
+    } 
 `
 
 const StyledPointer = styled.div`
@@ -61,6 +77,10 @@ const StyledPointer = styled.div`
     box-shadow: -0.25px 0 0px -0.25px rgba(0,0,0,1) inset;
     -webkit-box-shadow: -0.25px 0 0px -0.25px rgba(0,0,0,1) inset;
     -moz-box-shadow: -0.25px 0 0px -0.25px rgba(0,0,0,1) inset;
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: flex-end;
+    } 
 
 
 

@@ -12,7 +12,7 @@ const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
     @media (max-width: 991px) {
-        height: 63em;
+        height: 56em;
     } 
 `
 
@@ -25,6 +25,10 @@ const StyledTitle = styled(Row)`
     display: flex;
     color: #073233;
     margin: 0;
+    @media (max-width: 991px) {
+            padding-top: 0;
+            min-height: 0;
+        } 
     > h1 {
         padding-bottom: 0.25rem;
         margin: 0;
@@ -38,6 +42,7 @@ const StyledTitle = styled(Row)`
         @media (max-width: 991px) {
             font-size: 1.875rem;
             padding-bottom: 0;
+            padding-top: 0;
         } 
     }
 `

@@ -23,7 +23,7 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 161.375rem;
+        height: 151.375rem;
     } 
 `
 

@@ -45,7 +45,7 @@ const StyledProduct = styled.div`
     margin-left: 1.9375rem;
     margin-bottom: 1.1875rem;
 
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
@@ -65,7 +65,7 @@ const StyledResources = styled.div`
     margin-top: 1.3125rem;
     margin-left: 1.9375rem;
     margin-bottom: 1.1875rem;
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
@@ -81,7 +81,7 @@ const StyledCompany = styled.div`
     margin-top: 1.3125rem;
     margin-left: 1.9375rem;
     
-    font-family: Messina Sans;
+    font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
@@ -152,7 +152,7 @@ const StyledProductLinkRow = styled(Row)`
     padding: 0;
     margin-left: 3.3125rem;
     margin-top: ${props=>props.currentMenu === "Product" ? "0.8125rem" : 0};
-    font-family: Messina Sans semibold;
+    font-family: Messina Sans bold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;

@@ -302,7 +302,7 @@ const Article = () => {
                 <FixedRow>
                     
                     <StyledTitle>
-                        <FixedRow className="Title">Identity Security1</FixedRow>
+                        <FixedRow className="Title">Identity Security</FixedRow>
                         <FixedRow>for{'\u00A0'}<ColoredP>Your Workforce</ColoredP></FixedRow>
                     </StyledTitle>
                 </FixedRow>

@@ -164,9 +164,10 @@ const Styledimg = styled.img`
     margin-bottom: 0;
     margin-right: 3.125em;
     @media (max-width: 991px) {
-        min-width: 23.4375rem;
+        
+        min-width: 30.4375rem;
         max-width: 23.4375rem;
-        margin-left: -4rem;
+        margin-left: -5rem;
         margin-right: 0;
     }
 
@@ -205,6 +206,19 @@ const ListElement = styled(Row)`
 
 `
 
+const Wrapper = styled.div`
+    @media (max-width: 991px) {
+    min-width: 22.3375rem;
+    overflow: hidden;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        overflow: hidden;
+        
+        min-width: 45vw;
+        min-height: 19.375rem;
+    }
+`
+
 export const Offer = () => {
     return (
         <div style={{background: "#FCF5F0"}}>
@@ -235,7 +249,7 @@ export const Offer = () => {
                     
                 </TextContainer>
                 <ImageContainer >
-                    <Styledimg src={image} />
+                    <Wrapper><Styledimg src={image} /></Wrapper>
                 </ImageContainer>
 
             </StyledRow>

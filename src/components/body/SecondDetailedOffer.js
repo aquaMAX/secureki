@@ -18,7 +18,7 @@ const Container = styled.div`
     margin-right: auto;
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 58.8025rem;
+        height: 56.6025rem;
         padding-bottom: 0;
     } 
 `
@@ -145,6 +145,7 @@ const StyledContent = styled.div`
         letter-spacing: 0.0063rem;
         text-align: left;
         max-width: 21.3125rem;
+        margin-bottom: 1.5625rem;
         > .Content {
             max-width: 21.3125rem;
         }
@@ -198,8 +199,22 @@ const Styledimg = styled.img`
     @media (max-width: 991px) {
         max-width: 100vw;
         height: 30.0625rem;
-        min-width: 33.5rem;
-        margin-left: -10.0625rem;
+        min-width: 33.8rem;
+        margin-left: -8.9225rem;
+        margin-top: -2.2rem;
+    }
+`
+
+const Wrapper = styled.div`
+    @media (max-width: 991px) {
+    min-width: 23.3375rem;
+    overflow: hidden;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        overflow: hidden;
+        
+        min-width: 45vw;
+        min-height: 19.375rem;
     }
 `
 
@@ -210,7 +225,7 @@ export const SecondDetailedOffer = () => {
 
             <StyledRow xs={1} lg={2}>
                 <ImageContainer xs={{ order: 2 }} lg={{ order: 1 }} lg={6} xl>
-                    <Styledimg src={drugi} />
+                    <Wrapper><Styledimg src={drugi} /></Wrapper>
                 </ImageContainer>
                 <TextContainer lg={{ order: 2 }}>
                     <StyledSlogan>

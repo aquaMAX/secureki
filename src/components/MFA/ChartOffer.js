@@ -116,6 +116,7 @@ const StyledContent = styled.div`
     @media (max-width: 991px) {
         padding: 0;
         margin-left: 0.9375rem;
+        padding-right: 0.9375rem;
         margin-bottom: 1.5625rem;
         max-width: 20.5rem;
     }

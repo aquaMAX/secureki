@@ -126,6 +126,9 @@ const StyledMoreabout = styled.button`
     color: #FFFFFF;
     margin-right: 0;
     border: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
     background: none;
     padding: 0;
     

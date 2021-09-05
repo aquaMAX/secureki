@@ -27,6 +27,7 @@ const StyledCarousel = styled(Carousel)`
             -moz-border-radius: 200px 200px 200px 200px;
             -webkit-border-radius: 200px 200px 200px 200px;
             border: 0px solid #000000;
+            
             margin: 0px 4px;
             opacity: 0.2;
             margin-bottom: 2.0625em;

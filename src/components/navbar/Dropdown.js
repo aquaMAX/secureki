@@ -28,6 +28,9 @@ const StyledLink = styled.div`
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(7, 50, 51, 0.08);
     border-radius: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     min-width: 10em;
     transition: all .5s cubic-bezier(.165,.84,.44,1);
     transition-property: transform;
@@ -62,6 +65,9 @@ const StyledButton = styled.button`
     padding-top: 1.6875em;
     font-size: 1em;
     border: none;
+    border-radius: none;
+    -moz-border-radius: none;
+    -webkit-border-radius: none;
     font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: semibold;

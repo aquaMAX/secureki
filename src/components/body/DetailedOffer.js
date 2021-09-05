@@ -147,6 +147,9 @@ const StyledMoreabout = styled.button`
     letter-spacing: 0.00625em;
     color: #073233;
     border: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
     background: none;
     padding: 0;
     > text {

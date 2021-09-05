@@ -9,6 +9,9 @@ const StyledButton = styled.button`
     background: ${props => props.background};
     color: ${props => props.font};
     border-radius: 1.9em;
+    border-radius: 1.9em;
+    -moz-border-radius: 1.9em;
+    -webkit-border-radius: 1.9em;
     border-width: 0px;
     font-family: Messina Sans;
     font-style: normal;

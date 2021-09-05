@@ -93,6 +93,9 @@ const StyledSlogan = styled.div`
 
     background: #FF6938;
     border-radius: 2.5em;
+    border-radius: 2.5em;
+    -moz-border-radius: 2.5em;
+    -webkit-border-radius: 2.5em;
 `
 
 const StyledTitle = styled.div`
@@ -153,6 +156,9 @@ const StyledMoreabout = styled.button`
     
     color: #073233;
     border: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
     background: none;
     padding: 0;
     > text {

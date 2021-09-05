@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: `/site`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `SecureKi`,
+    description: `The automation in SecureKi can save you time and double your revenue.`,
     author: `@KarolHamuda`,
   },
   plugins: [
@@ -18,6 +18,24 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 90,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

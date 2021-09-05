@@ -42,6 +42,9 @@ const FeatureContainer = styled.div`
     background: #FFFFFF;
     border: 1px solid #EDEDED;
     border-radius: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
     align-items: center;
     z-index: 2;
     @media (max-width: 991px) {

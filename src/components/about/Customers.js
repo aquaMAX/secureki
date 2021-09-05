@@ -4,12 +4,15 @@ import { Row, Col } from 'react-bootstrap'
 
 import StyledButton from '../navbar/Button.js'
 
-import ebay from '../../assets/about/customers/ebay.svg'
-import airbnb from '../../assets/about/customers/airbnb.svg'
-import cisco from '../../assets/about/customers/cisco.svg'
-import cnn from '../../assets/about/customers/cnn.svg'
-import uber from '../../assets/about/customers/uber.svg'
-import google from '../../assets/about/customers/google.svg'
+import TM from '../../assets/about/customers/TM.png'
+import KWAP from '../../assets/about/customers/KWAP.png'
+import Alliance from '../../assets/about/customers/Alliance.png'
+import Hitachi from '../../assets/about/customers/Hitachi.png'
+import Takaful from '../../assets/about/customers/Takaful.png'
+import Sunway from '../../assets/about/customers/Sunway.png'
+import Petrofac from '../../assets/about/customers/Petrofac.png'
+
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Layout = styled.div`
     max-width: 90em;
@@ -44,6 +47,10 @@ const MFAButton = styled(StyledButton)`
     
     background: #FF6938;
     border-radius: 1.875rem;
+    border-radius: 1.875rem;
+    -moz-border-radius: 1.875rem;
+    -webkit-border-radius: 1.875rem;
+    
     margin: 0;
     font-family: Messina Sans semibold;
     font-size: 1.125rem;
@@ -112,11 +119,11 @@ const StyledContent = styled(Row)`
 `
 
 const ButtonContainer = styled.div`
-    margin-top: 2.125rem;
+    margin-top: 2.525rem;
     margin-left: 37.5rem;
     @media (max-width: 991px) {
         margin-left: 4.1875rem;
-        margin-top: 5rem;
+        margin-top: 2.7rem;
     }
     @media (min-width: 992px) and (max-width: 1439px) {
         margin-left: auto;
@@ -127,27 +134,45 @@ const ButtonContainer = styled.div`
 `
 
 const CustomersRow = styled(Row)`
+    max-width: 56.25rem;
     margin: 0;
     margin-top: 2.5rem;
-    height: 3.0625rem;
+    width: 100%;
+    
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
+    margin-left: 16.9375rem;
+    
     @media (max-width: 991px) {
-        margin-right: 1.125rem;
-        margin-left: 1.125rem;
-       
+        flex-wrap: wrap;
+        margin-right: 1rem;
+        margin-left: 0;
+        margin-top: 2.0625rem;
+        
     }
 `
 
-const StyledCustomer = styled.img`
-    margin-right: 3.125rem;
-    &:last-child {
-        margin-right: 0;
-    }
+
+
+const StyledCol = styled(Col)`
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+const StyledKwap = styled(Col)`
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media (max-width: 991px) {
-        justify-content: center;
-        margin-left: auto;
-        margin-right: 2rem;
+        display: none;
+        
     }
 `
 
@@ -164,13 +189,28 @@ return (
             <StyledContent>
                 The best way to get to know us is through the experience of our valued customers. Discover from our customers how SecureKi improves their security and business.                    
             </StyledContent>
-            <CustomersRow>
-                <StyledCustomer src={ebay} />
-                <StyledCustomer src={cnn} />
-                <StyledCustomer src={google} />
-                <StyledCustomer src={cisco} />
-                <StyledCustomer src={airbnb} />
-                <StyledCustomer src={uber} />
+            <CustomersRow xs={3} lg={6}>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/TM.png" width={65} height={30}/>
+                </StyledCol>
+                <StyledKwap>
+                <StaticImage src="../../assets/about/customers/KWAP.png" width={96}/>
+                </StyledKwap>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Alliance.png" width={70}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Hitachi.png" width={105}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Takaful.png" width={38}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Sunway.png" width={107}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Petrofac.png" width={116.6}/>
+                </StyledCol>
             </CustomersRow>
             <ButtonContainer>
                 <MFAButton background={"#FF6938"} font={"#FFFFFF"}>

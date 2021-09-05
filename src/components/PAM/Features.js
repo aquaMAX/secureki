@@ -70,6 +70,9 @@ const StyledBasic = styled.button`
     transition: 0.3s;
     background: none;
     border: none;
+    border-radius: none;
+    -moz-border-radius: none;
+    -webkit-border-radius: none;
     margin-left: 40.5em;
     @media (max-width: 991px) {
         margin-left: 0;
@@ -92,6 +95,9 @@ const StyledAdvanced = styled.button`
     transition: 0.3s;
     background: none;
     border: none;
+    border-radius: none;
+    -moz-border-radius: none;
+    -webkit-border-radius: none;
     margin-left: 2.59375em;   
     @media (max-width: 991px) {
         margin-left: 6.125rem;

@@ -172,7 +172,7 @@ const StyledResourcesLinkRow = styled(Row)`
     padding: 0;
     margin-left: 3.3125rem;
     margin-top: ${props=>props.currentMenu === "Resources" ? "0.8125rem" : 0};
-    font-family: Messina Sans semibold;
+    font-family: Messina Sans bold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
@@ -191,7 +191,7 @@ const StyledCompanyLinkRow = styled(Row)`
     padding: 0;
     margin-left: 3.3125rem;
     margin-top: ${props=>props.currentMenu === "Company" ? "0.8125rem" : 0};
-    font-family: Messina Sans semibold;
+    font-family: Messina Sans bold;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;

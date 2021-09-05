@@ -68,6 +68,9 @@ const StyledSlogan = styled.div`
 
     background: #FF6938;
     border-radius: 2.5em;
+    border-radius: 2.5em;
+    -moz-border-radius: 2.5em;
+    -webkit-border-radius: 2.5em;
     @media (max-width: 991px) {
         
         

@@ -25,7 +25,7 @@ const Container = styled.div`
     }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
-        height: 68.75rem;
+        height: 73.75rem;
     } 
 `
 
@@ -150,26 +150,26 @@ export const Stories = () => {
                 <StoriesCol>
                 
                     <StoriesCard 
-                    story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
-                    image="andrea"
-                    title="Jasmine Jakuza"
-                    position="Solutions Engineer"
+                    story="“Having a secure authentication and privileged access management system in place for better control and visibility of our user access is a mandatory requirement under our Security Policy guidelines; we are glad that SecureKi helped us to achieve this objective...”"
+                    image="mental"
+                    title="Beh Swan Swan"
+                    position="Magnum Group, CIO"
                     />
                 </StoriesCol>
                 <StoriesCol>
                 <StoriesCard 
-                    story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
-                    image="andrea"
-                    title="Jasmine Jakuza"
-                    position="Solutions Engineer"
+                    story="“Deployment of Privileged Access Management (PAM) solution across enterprises has never been an easy feat. It takes an effort for the initial deployment, but the end result backed by exceptional support from SecureKi is worth it...”"
+                    image="ketut"
+                    title="Chia Nam"
+                    position="Hap Seng Group, CIO"
                     />
                 </StoriesCol>
                 <StoriesCol>   
                 <StoriesCard 
-                    story="“All base UI elements are made using Nested Symbols and shared styles that are logically connected. Gorgeous, high-quality video sharing on desktop, mobile, tablet. All base UI elements are made using Nested Symbols”"
+                    story="“SecureKi PAM reduces our operational overheads while provides the capability to define accessrights on a need-to-know basis for all our users and helps us monitor their activities...”"
                     image="andrea"
-                    title="Jasmine Jakuza"
-                    position="Solutions Engineer"
+                    title="Bill Zhu"
+                    position="MNRB, CIO"
                     />
                 </StoriesCol>
             </StyledRow>

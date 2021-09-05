@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
-import andrea from '../../assets/andrea.png'
+
+
+import andreaa from '../../assets/andreaa.png'
+import ketut from '../../assets/ketut.png'
+import mental from '../../assets/mental.png'
+
 
 const Container = styled.div`
-    width: 22.0625em;
-    height: 22.3125em;
+    width: 22.0625rem;
+    height: 22.3125rem;
     background: #FFFFFF;
     box-shadow: 0px 0.9375em 2.1875em rgba(0, 0, 0, 0.06);
     align-items: center;
@@ -13,7 +18,7 @@ const Container = styled.div`
     margin-bottom: 1.25rem;
     @media (max-width: 991px) {
         width: 19.375rem;
-        height: 17.25rem;
+        height: auto;
         padding-bottom: 0;
     } 
 
@@ -24,21 +29,28 @@ const TextContainer = styled(Row)`
     font-family: Messina Sans;
     font-style: italic;
     font-weight: normal;
-    font-size: 1.125em;
-    line-height: 1.5555555555555556em;
+    font-size: 1.0625rem;
+    line-height: 1.6875rem;
     text-align: left;
     vertical-align: top;
     /* or 156% */
-
+    height: 12.375rem;
+    width: 18.625rem;
     color: #5F6E70;
     margin: 0;
-    padding-left: 1.7777777777777777em;
-    padding-right: 1.2777777777777777em;
-    padding-top: 1.8888888888888888em;
-    padding-bottom: 0.5655555555555556em;
+    margin-left: 2rem;
+    margin-top: 2.125rem;
+    margin-right: 1.4375rem;
+    
 
     @media (max-width: 991px) {
         font-size: 0.9375rem;
+        margin-left: 1.25rem;
+        margin-top: 1.0625rem;
+        margin-right: 0.3125rem;
+        margin-bottom: 0.75rem;
+        width: auto;
+        height: auto;
     } 
 `
 
@@ -49,6 +61,9 @@ const ImageContainer = styled.img`
     margin-top: 0.80125em;
     
     padding: 0;
+    @media (max-width: 991px) {
+        margin-left: 1.25rem;
+    } 
 `
 
 const TitleContainer = styled(Row)`
@@ -68,7 +83,7 @@ const TitleContainer = styled(Row)`
 `
 
 const JobContainer = styled(Row)`
-    width: 9.714285714285714em;
+    
     height: 1.4285714285714286em;
 
     font-family: Messina Sans;
@@ -81,11 +96,12 @@ const JobContainer = styled(Row)`
     align-items: center;
 
     color: #68737D;
-
+    margin-right: 0;
+    
 
 `
 
-const StoriesCard = ({story, title, position}) => {
+const StoriesCard = ({story, image, title, position}) => {
     return (
         <Container>
                 <TextContainer>
@@ -93,7 +109,7 @@ const StoriesCard = ({story, title, position}) => {
                 </TextContainer>
             <Row style={{margin: 0}}>
                 <Col xs={4} style={{padding: 0}}>
-                    <ImageContainer src={andrea} />
+                    {image === "andrea" ? <ImageContainer src={andreaa} /> : image === "ketut" ? <ImageContainer src={ketut} /> : <ImageContainer src={mental} />}                    
                 </Col>
                 <Col>
                     <TitleContainer>

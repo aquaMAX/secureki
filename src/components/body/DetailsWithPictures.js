@@ -2,9 +2,9 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import pierwszy from "../../assets/pierwszy.png"
-import paypal from "../../assets/paypal.svg"
-import pay from "../../assets/pay.svg"
-import mailchimp from "../../assets/mailchimp.svg"
+import TIME from "../../assets/TIME.png"
+import Magnum from "../../assets/Magnum.png"
+import Hap from "../../assets/Hap.png"
 import { StackedPictures } from './StackedPictures';
 import Total from "../../assets/stacked images/Total.png"
 import Media from 'react-media'
@@ -119,6 +119,9 @@ const StyledMoreabout = styled.button`
     
     color: #073233;
     border: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
     background: none;
     padding: 0;
     > text {
@@ -143,9 +146,11 @@ const StyledPointer = styled.div`
 `
 
 const LogosRow = styled(Row)`
-    width: 23.4375rem;
-    height: 2.9375em;
+    width: 29.375rem;
+    height: 2.5625rem;
     padding-left: 0.9375em;
+    display: flex;
+    align-items: center;
     @media (max-width: 991px) {
         width: 23.0375rem;
         padding-left: 0.925rem;
@@ -153,37 +158,50 @@ const LogosRow = styled(Row)`
     }
 `
 
-const PaypalLogo = styled.img`
-    min-width: 5.726875em;
-    width: 5.726875em;
-    padding-top: 0.7415625em;
+const HapLogo = styled.img`
+    min-width: 9.9375rem;
+    width: 9.9375rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
     @media (max-width: 991px) {
-        min-width: 5.6719rem;
-        padding-top: 0.625rem;
+       width: auto;
+       min-width: auto;
+       
     } 
 `
 
-const PayLogo = styled.img`
-    min-width: 2.73125em;
-    width: 2.73125em;
-    
+const MagnumLogo = styled.img`
+    min-width: 4.75rem;
+    width: 4.75rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
     @media (max-width: 991px) {
-        min-width: 2.7056rem;
+        width: auto;
+       min-width: auto;
+       margin-left: 0.725rem;
         
     } 
 `
 
-const MailchimpLogo = styled.img`
-    min-width: 10.25em;
-    width: 10.25em;
+const TimeLogo = styled.img`
+    min-width: 7.4375rem;
+    width: 7.4375rem;
+    padding: 0;
+    margin: 0;
     @media (max-width: 991px) {
-        min-width: 9.0506rem;
-        margin-top: 0.24rem;
-        margin-left: 0.25rem;
+        width: auto;
+       min-width: auto;
+       margin-left: -1.25rem;
+       
     } 
 `
 
 const StyledCol = styled(Col)`
+
     @media (max-width: 991px) {
         padding: 0
     } 
@@ -224,14 +242,14 @@ export const DetailsWithPictures = () => {
                         Discover from our customers how SecureKi improves their security and business.
                     </Row><Row><span><br />
                         <LogosRow>
-                            <StyledCol xs={4}>
-                                <PaypalLogo src={paypal} />
+                            <StyledCol>
+                                <HapLogo src={Hap} />
                             </StyledCol>
-                            <StyledCol xs={2}>
-                                <PayLogo src={pay} />
+                            <StyledCol>
+                                <MagnumLogo src={Magnum} />
                             </StyledCol>
-                            <StyledCol xs={5}>
-                                <MailchimpLogo src={mailchimp} />
+                            <StyledCol>
+                                <TimeLogo src={TIME} />
                             </StyledCol>
                         </LogosRow>
                     </span></Row>

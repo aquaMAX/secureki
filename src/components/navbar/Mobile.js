@@ -6,6 +6,7 @@ import SecurekiLogo from "../../assets/SECUREKi Logo.svg"
 import burger from "../../assets/burger.svg"
 import MobileMenu from './MobileMenu'
 import { CSSTransition } from 'react-transition-group'
+import { Link } from 'gatsby'
 
 const Container = styled.div`
     height: 4rem;
@@ -68,7 +69,9 @@ const Mobile = () => {
         <Container>
             <StyledRow>
                 <StyledCol>
-                    <StyledLogo src={SecurekiLogo} />
+                    <Link to="http://secureki.maverickstudio.pl/">
+                        <StyledLogo src={SecurekiLogo} />
+                    </Link>
                 </StyledCol>
                 <StyledBurgerCol>
                     <div onClick={()=>{show === false ? isShow(true) : isShow(false)}}>

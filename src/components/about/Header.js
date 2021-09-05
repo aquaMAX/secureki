@@ -43,6 +43,9 @@ const MFAButton = styled(StyledButton)`
     padding-bottom: 1rem;
     background: #FF6938;
     border-radius: 1.875em;
+    border-radius: 1.875rem;
+    -moz-border-radius: 1.875rem;
+    -webkit-border-radius: 1.875rem;
     margin: 0;
     font-family: Messina Sans semibold;
     font-size: 1.125rem;

@@ -56,6 +56,9 @@ const StyledTitle = styled.div`
 const StyledButton = styled(Button)`
     border: 2px solid #FF6938;
     border-radius: 40px;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
   
     margin-left: 61.625rem;
     margin-top: 3.8125rem;

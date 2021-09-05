@@ -25,6 +25,9 @@ const StyledRow = styled(Row)`
 
 const ImageContainer = styled.img`
     border-radius: 0.8125em;
+    border-radius: 0.8125em;
+    -moz-border-radius: 0.8125em;
+    -webkit-border-radius: 0.8125em;
     box-shadow: 7px 7px 20px rgba(7, 50, 51, 0.06);
     margin-bottom: 1.875em;
     

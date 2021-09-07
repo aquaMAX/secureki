@@ -16,6 +16,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 56.6025rem;
@@ -30,7 +33,7 @@ const TextContainer = styled(Col)`
     @media (max-width: 1439px) {
         max-width: 47vw;
         align-items: right;
-        
+        padding-left: 0;
         margin-left: auto;
     }
     @media (max-width: 991px) {
@@ -196,17 +199,18 @@ const StyledPointer = styled.div`
 
 const Styledimg = styled.img`
     min-width: 41.125em;
-    @media (max-width: 1439px) {
+    @media (min-width: 992px) and (max-width: 1439px) {
         min-width: auto;
-        max-width: 44.5vw;
+        max-width: 33rem;
         height: auto;
         margin-bottom: 0;
+        margin-left: -6rem;
     }
     @media (max-width: 991px) {
         max-width: 100vw;
         height: 30.0625rem;
         min-width: 33.8rem;
-        margin-left: -8.9225rem;
+        margin-left: -8.4225rem;
         margin-top: -2.2rem;
     }
 `
@@ -219,7 +223,7 @@ const Wrapper = styled.div`
     @media (min-width: 992px) and (max-width: 1439px) {
         overflow: hidden;
         
-        min-width: 45vw;
+        max-width: 28rem;
         min-height: 19.375rem;
     }
 `

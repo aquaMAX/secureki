@@ -22,6 +22,9 @@ const Layout = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 69.625rem;
@@ -37,6 +40,9 @@ const StyledRec = styled.img`
     position: absolute;
     margin-left: 2.6875rem;
     margin-top: 11.75rem;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: none;
+    }
     @media (max-width: 991px) {
         display: none;
     }
@@ -53,6 +59,9 @@ const StyledSideRec = styled.div`
     @media (min-width: 1523px) {
         width: 9.3125rem;
     }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: none;
+    }
     @media (max-width: 991px) {
         display: none;
     }
@@ -63,6 +72,9 @@ const StyledEmptyRec = styled.img`
     position: absolute;
     margin-left: -2rem;
     margin-top: 13.0625rem;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: none;
+    }
     @media (max-width: 991px) {
         display: none;
     }
@@ -73,6 +85,9 @@ const StyledSmallOneCircle = styled.img`
     position: absolute;
     margin-left: 2em;
     margin-top: 46.125em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: none;
+    }
     @media (max-width: 991px) {
         display: none;
     }
@@ -83,6 +98,9 @@ const StyledCircle = styled.img`
     position: absolute;
     margin-left: 4.5625rem;
     margin-top: 48.75rem;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: none;
+    }
     @media (max-width: 991px) {
         display: none;
     }
@@ -93,6 +111,9 @@ const StyledSmallTwoCircle = styled.img`
     position: absolute;
     margin-left: 1.4375rem;
     margin-top: 55.25rem;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: none;
+    }
     @media (max-width: 991px) {
         display: none;
     }
@@ -112,6 +133,9 @@ const StyledText = styled(Col)`
     margin-left: 10.3125em;
     max-width: 29.3125em;
     padding: 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 1.5rem;
+    }
     @media (max-width: 991px) {
         margin-left: 18px;
         margin-top: 0;

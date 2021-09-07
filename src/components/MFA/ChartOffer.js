@@ -16,6 +16,11 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        height: 55rem;
+        max-width: 62rem;
+    }
+
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 72.5625rem;
@@ -25,6 +30,9 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 7.625em;
     margin-left: 3.125em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 0;
+    }
     @media (max-width: 991px) {
         padding: 0;
         margin: 0;
@@ -48,6 +56,9 @@ const StyledRow = styled(Row)`
     padding-left: 5.625em;
     margin-right: 0;
     margin-left: 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 1.5rem;
+    }
     @media (max-width: 991px) {
         padding: 0;
         margin: 0;
@@ -116,6 +127,9 @@ const StyledContent = styled.div`
     color: #17494D;
     padding-right: 9.75em;
     padding-left: 0.9375em; 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-right: 1rem;
+    }
     @media (max-width: 991px) {
         padding: 0;
         margin-left: 0.9375rem;
@@ -172,6 +186,11 @@ const SecondParagraph = styled(Row)`
 
 const Styledimg = styled.img`
     min-width: 41.125em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        min-width: 29.125em;
+        margin-top: 7rem;
+        max-width: 29rem;
+    }
     @media (max-width: 991px) {
         max-width: 30.5rem;
         min-width: 30.5rem;
@@ -268,6 +287,9 @@ const ChartBody = styled.div`
     letter-spacing: 0.0038461539034660044em;
     text-align: left;
     color: #FF6938;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: auto;
+    }
     @media (max-width: 991px) {
         display: flex;
         justify-content: center;
@@ -296,6 +318,7 @@ const ChartText = styled.div`
     margin-top: 2.6225em;
     margin-left: 8em;
     position: absolute;
+
     @media (max-width: 991px) {
         margin-left: 0;
         margin-top: 7.8875rem;

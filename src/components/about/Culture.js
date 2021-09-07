@@ -3,6 +3,7 @@ import { StackedPictures } from '../body/StackedPictures'
 import styled from 'styled-components'
 import { Col, Row } from "react-bootstrap"
 import pictures from '../../assets/about/culture/Group 603.png'
+import test from '../../assets/about/culture/test.svg'
 
 
 const Container = styled.div`
@@ -14,6 +15,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 45.6875rem;
@@ -23,6 +27,7 @@ const TextContainer = styled(Col)`
     padding-top: 8.1875em;
     
     padding-right: 0;
+
     @media (max-width: 991px) {
         padding-top: 0;
     } 
@@ -39,9 +44,11 @@ const StyledRow = styled(Row)`
     margin-left: 0;
     @media (max-width: 991px) {
         padding: 0;
+        margin-left: -10rem;
         
     } 
     @media (min-width: 992px) and (max-width: 1439px) {
+        
         padding-left: 0;
         margin-left: auto;
         display: flex;
@@ -143,12 +150,16 @@ const DesktopDisplayer = styled.div`
     }
 `
 
+const Styledsvg = styled.img`
+
+`
+
 const Culture = () => {
     return (
         <>
         <Container>
             <StyledRow xs={1} lg={2}>
-                <TextContainer xs lg={5}>
+                <TextContainer xs lg={6} xxl={5}>
                     <StyledTitle>
                         Our Culture
                     </StyledTitle>
@@ -163,7 +174,7 @@ const Culture = () => {
                 <ImageContainer>
                     <>
                         <DesktopDisplayer>
-                            <StackedPictures />
+                            <Styledsvg src={test} />
                         </DesktopDisplayer>
                         <MobileDisplayer>
                             <Wrapper>

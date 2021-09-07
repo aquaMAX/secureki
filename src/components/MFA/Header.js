@@ -17,6 +17,9 @@ const Layout = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 58em;
@@ -57,7 +60,8 @@ const StyledSmallOneCircle = styled.img`
     position: absolute;
     margin-left: 3.1875rem;
     margin-top: 21.5rem;
-    @media (max-width: 991px) {
+    
+    @media (max-width: 1439px) {
         display: none;
     }
 `
@@ -67,7 +71,7 @@ const StyledCircle = styled.img`
     position: absolute;
     margin-left: 6.3125rem;
     margin-top: 15rem;
-    @media (max-width: 991px) {
+    @media (max-width: 1439px) {
         display: none;
     }
 `
@@ -77,7 +81,7 @@ const StyledSmallTwoCircle = styled.img`
     position: absolute;
     margin-left: 4.25rem;
     margin-top: 11.4375rem;
-    @media (max-width: 991px) {
+    @media (max-width: 1439px) {
         display: none;
     }
 `
@@ -87,6 +91,9 @@ const StyledText = styled(Col)`
     margin-left: 10.3125em;
     max-width: 29.3125em;
     padding: 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 1.5em;
+    }
     @media (max-width: 991px) {
         margin: 0;
     }
@@ -102,6 +109,9 @@ const StyledImage = styled.img`
     width: 40.375em;
     position: absolute;
     z-index: -1;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-right: 1.5em;
+    }
     @media (max-width: 991px) {
         margin-left: -2.0625rem;
         min-width: 24.25rem;

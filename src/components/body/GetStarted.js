@@ -55,7 +55,10 @@ const StyledTitle = styled(Col)`
 const StyledButton = styled(Button)`
     border: 2px solid #FF6938;
     border-radius: 40px;
-    position: absolute;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    
+    
     margin-left: 9em;
     padding: 0.5687em 1.425em 0.5687em 1.425em;
     font-family: Messina Sans bold;
@@ -70,17 +73,18 @@ const StyledButton = styled(Button)`
     @media (max-width: 991px) {
         margin-top: 0;
         margin-bottom: 0;
+        margin-left: 10em;
     } 
 `
 
 const StyledSecondButton = styled(Button)`
-    position: absolute;
+    
     margin-right: 9.5em;
     padding: 0.6687em 1.525em 0.6687em 1.525em;
     font-family: Messina Sans bold;
     font-size: 1.125em;
-    font-weight: bold;
     transition: 0.3s;
+    
     &:hover {
         background: #E55A2D;
         
@@ -88,12 +92,17 @@ const StyledSecondButton = styled(Button)`
     @media (max-width: 991px) {
         margin-top: 0;
         margin-bottom: 0;
+        margin-right: 0;
     } 
 `
 
 const StyledCol = styled(Col)`
     justify-content: center;
     display: flex;
+    @media (max-width: 991px) {
+        align-content: space-between;
+        justify-content: space-between;
+    }
 `
 
 const StyledRow = styled(Row)`
@@ -102,6 +111,8 @@ const StyledRow = styled(Row)`
     @media (max-width: 991px) {
         margin-top: 0;
         margin-bottom: 0;
+        justify-content: space-between;
+        align-content: space-between;
     } 
 `
 
@@ -118,7 +129,7 @@ export const GetStarted = () => {
             </StyledRow>
             <StyledRow>
                 <StyledCol>
-                    <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
               
                     <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
                 </StyledCol>

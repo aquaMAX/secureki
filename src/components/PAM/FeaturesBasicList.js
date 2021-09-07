@@ -16,6 +16,10 @@ const StyledRow = styled(Row)`
     opacity: ${props => props.newstate == true ? "1" : "0"};
     align-content: space-around;
     transition: all 0.3s;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 0;
+        width: auto;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         margin-left: 0; 

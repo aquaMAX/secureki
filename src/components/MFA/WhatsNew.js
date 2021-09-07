@@ -13,6 +13,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 88.75rem;
@@ -29,6 +32,8 @@ const StyledTitle = styled(Col)`
     display: flex;
     color: #073233;
     margin-bottom: 5.125em;
+
+    
     @media (max-width: 991px) {
         
         height: 2em;
@@ -55,6 +60,10 @@ const StyledRow = styled(Row)`
     margin: 0;
     padding-left: 6.541666666666667em;
     padding-right: 6.541666666666667em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 `
 
 const StoriesCol = styled(Col)`

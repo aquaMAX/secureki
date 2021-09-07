@@ -22,6 +22,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 47.875rem;
@@ -151,6 +154,9 @@ const LogosRow = styled(Row)`
     padding-left: 0.9375em;
     display: flex;
     align-items: center;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: auto;
+    }
     @media (max-width: 991px) {
         width: 23.0375rem;
         padding-left: 0.925rem;
@@ -165,6 +171,10 @@ const HapLogo = styled.img`
     display: flex;
     align-items: center;
     margin: 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        min-width: 8.9375rem;
+        width: 8.9375rem;
+    }
     @media (max-width: 991px) {
        width: auto;
        min-width: auto;
@@ -179,6 +189,7 @@ const MagnumLogo = styled.img`
     display: flex;
     align-items: center;
     margin: 0;
+
     @media (max-width: 991px) {
         width: auto;
        min-width: auto;
@@ -192,6 +203,10 @@ const TimeLogo = styled.img`
     width: 7.4375rem;
     padding: 0;
     margin: 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        min-width: 5.4375rem;
+        width: 5.4375rem;
+    }
     @media (max-width: 991px) {
         width: auto;
        min-width: auto;

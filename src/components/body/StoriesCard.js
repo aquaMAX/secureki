@@ -16,6 +16,10 @@ const Container = styled.div`
     align-items: center;
     z-index: 2;
     margin-bottom: 1.25rem;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: 19rem;
+        height: 24.5rem;
+    }
     @media (max-width: 991px) {
         width: 19.375rem;
         height: auto;
@@ -41,6 +45,11 @@ const TextContainer = styled(Row)`
     margin-left: 2rem;
     margin-top: 2.125rem;
     margin-right: 1.4375rem;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        height: 15.375rem;
+    width: 15.625rem;
+        
+    }
     
 
     @media (max-width: 991px) {

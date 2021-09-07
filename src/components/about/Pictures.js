@@ -10,14 +10,15 @@ const StyledPic = styled.img`
     &:last-child {
         margin-right: 0;
     }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 30rem;
+        margin-right: 0.3125rem;
+    }
     @media (max-width: 991px) {
         max-height: 6.4375rem; 
         margin-right: 0.5625rem; 
     } 
-    @media (min-width: 992px) and (max-width: 1439px) {
-        max-width: 33vw;
-        
-    }
+
 `
 
 const Container = styled.div`
@@ -44,22 +45,37 @@ const PicRow = styled(Row)`
     }
     @media (min-width: 992px) and (max-width: 1439px) {
         justify-content: center;
-    -webkit-justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+        -webkit-justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: nowrap;
+        max-width: 62rem;
         
+    }
+`
+
+const Wrapper = styled.div`
+
+    @media (min-width: 992px) and (max-width: 1439px) {
+        overflow: hidden;
         
+        min-width: 62rem;
+        min-height: 19.375rem;
     }
 `
 
 const Pictures = () => {
     return (
         <Container>
+            <Wrapper>
             <PicRow>
+                
                 <StyledPic src={img1} />
                 <StyledPic src={img2} />
                 <StyledPic src={img3} />
+                
             </PicRow>
+            </Wrapper>
             
         </Container>
     )

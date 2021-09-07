@@ -38,6 +38,9 @@ const StyledContent = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
     }
@@ -131,10 +134,7 @@ const StyledLeftColumn = styled(Col)`
     }
 `
 
-const ButtonsRow = styled(Row)`
-    justify-content: center;
-    display: flex;
-`
+
 
 const StyledTrialText = styled.button`
     /* Separated they live */
@@ -302,7 +302,7 @@ const Article = () => {
                 <FixedRow>
                     
                     <StyledTitle>
-                        <FixedRow className="Title">Identity Security</FixedRow>
+                        <FixedRow className="Title">Identity1 Security</FixedRow>
                         <FixedRow>for{'\u00A0'}<ColoredP>Your Workforce</ColoredP></FixedRow>
                     </StyledTitle>
                 </FixedRow>

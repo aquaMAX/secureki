@@ -20,9 +20,7 @@ const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
 
-    @media (max-width: 1078px) {
-        height: 60em;
-    }
+
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 73.75rem;

@@ -14,6 +14,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 54.75rem;
@@ -50,11 +53,12 @@ const StyledRow = styled(Row)`
     padding-right: 4.25em;
     margin-right: 0;
     margin-left: 0;
-    @media (max-width: 1429px) {
-        padding-left: 3.125rem;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 0;
         padding-right: 0;
     }
     @media (max-width: 991px) {
+        padding-right: 0;
         padding-left: 0;
     } 
 `
@@ -171,6 +175,9 @@ const StyledPointer = styled.div`
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FF6938;
+    @media (max-width: 991px) {
+        margin-left: 0.5rem;
+    } 
 `
 
 const Styledimg = styled.img`

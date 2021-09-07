@@ -25,8 +25,14 @@ const TextContainer = styled(Col)`
     padding-top: 10.6875em;
     margin-left: 0;
     @media (max-width: 1439px) {
-        padding-top: 9.6875em;
+        
     }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-top: 9.6875em;
+        padding-right: 0;
+        max-width: 40%;
+    }
+
     @media (max-width: 991px) {
         padding-top: 0;
         padding-bottom: 0;
@@ -46,9 +52,9 @@ const StyledRow = styled(Row)`
     padding-left: 10.375em;
     margin-right: 0;
     margin-left: 0;
-    @media (max-width: 1439px) {
-        
-        padding-left: 4vw;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 2rem;
+        padding-right: 1rem;
     }
     @media (max-width: 991px) {
         padding-left: 0;
@@ -94,7 +100,7 @@ const StyledTitle = styled.div`
     letter-spacing: 0.01625em;
 
     @media (max-width: 1439px) {
-        padding-right: 1em;
+        padding-right: 0;
     }
     @media (max-width: 991px) {
         font-size: 1.25rem;
@@ -166,9 +172,14 @@ const Styledimg = styled.img`
     min-width: 30.125rem;
     z-index: 2;
     position: absolute;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 26rem;
+        min-width: 26rem;
+    }
     @media (max-width: 991px) {
         display: none;
     }
+
 
 `
 

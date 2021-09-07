@@ -21,6 +21,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 151.375rem;
@@ -74,11 +77,12 @@ const StyledBasic = styled.button`
     -moz-border-radius: none;
     -webkit-border-radius: none;
     margin-left: 40.5em;
-    @media (max-width: 991px) {
+    @media (min-width: 992px) and (max-width: 1439px) {
         margin-left: 0;
     } 
-        
-
+    @media (max-width: 991px) {
+        margin-left: 0;
+    }
 `
 
 const StyledAdvanced = styled.button`
@@ -98,10 +102,12 @@ const StyledAdvanced = styled.button`
     border-radius: none;
     -moz-border-radius: none;
     -webkit-border-radius: none;
-    margin-left: 2.59375em;   
+    margin-left: 2.59375em; 
+  
     @media (max-width: 991px) {
         margin-left: 6.125rem;
     } 
+
 `
 
 const StyledButtonsRow = styled.div`
@@ -110,6 +116,10 @@ const StyledButtonsRow = styled.div`
     display: flex;
     height: 2.25em;
     margin-bottom: 3.1875em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        display: flex;
+        justify-content: center;
+    }
     @media (max-width: 991px) {
         display: flex;
         justify-content: center;
@@ -125,6 +135,10 @@ const StyledLine = styled(Row)`
     background-color: #EDEDED;
     z-index: 1;
     position: absolute;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: 60.5rem;
+        margin-left: 1.5rem;
+    }
     @media (max-width: 991px) {
         width: 21.25rem;
         margin-left: 0;
@@ -140,6 +154,9 @@ const StyledUnderline = styled.div`
     z-index: 2;
     position: absolute;
     transition: 0.3s;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: ${props => (props.state == true ? "22.8em" : "28.5125em")};
+    }
     @media (max-width: 991px) {
         width: 10.625rem;
         margin-left: ${props => (props.state == true ? "0" : "10.625rem")};

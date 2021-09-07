@@ -15,6 +15,10 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+       height: 47rem;
+       max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 69.75rem;
@@ -46,6 +50,9 @@ const StyledRow = styled(Row)`
     padding-left: 10.3125em;
     margin-right: 0;
     margin-left: 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 1.5rem;
+    }
     @media (max-width: 991px) {
         padding-left: 1.125rem;
         

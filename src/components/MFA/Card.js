@@ -10,7 +10,10 @@ const Container = styled.div`
    
     align-items: center;
     z-index: 2;
-
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: 19rem;
+        height: 25rem;
+    }
     @media (max-width: 991px) {
         height: 26.0625rem;
     } 
@@ -49,7 +52,9 @@ const TitleContainer = styled(Row)`
     width: 14.583333333333334em;
     color: #FF6938;
 
-
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: auto;
+    }
 `
 
 const DescriptionContainer = styled(Row)`
@@ -64,6 +69,9 @@ const DescriptionContainer = styled(Row)`
     text-align: left;
     color: #073233;
     margin: 1em 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        width: auto;
+    }
 
 `
 const LinkContainer = styled(Row)`

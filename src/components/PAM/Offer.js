@@ -15,6 +15,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 52.8125rem;
@@ -24,6 +27,9 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 11.0625rem;
     margin-left: 3.6875em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 0;
+    }
     @media (max-width: 991px) {
         margin-top: 3.0625rem;
         margin-left: 1.125rem;
@@ -42,6 +48,9 @@ const StyledRow = styled(Row)`
     padding-left: 1.5em;
     margin-right: 0;
     margin-left: 0;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 0;
+    }
     @media (max-width: 991px) {
         padding-left: 0;
     }
@@ -157,6 +166,10 @@ const StyledPointer = styled.div`
 `
 
 const Wrapper = styled.div`
+    @media (min-width: 992px) and (max-width: 1439px) {
+        min-width: 3.8125rem;
+        
+    }
 @media (max-width: 991px) {
     max-width: 22.1375rem;
     overflow: hidden;
@@ -165,6 +178,11 @@ const Wrapper = styled.div`
 
 const Styledimg = styled.img`
     min-width: 46.6875em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        min-width: 33.8125rem;
+        margin-top: 7rem;
+        margin-left: -3rem;
+    }
     @media (max-width: 991px) {
         min-width: 29.8125rem;
         margin-left: -4.9375rem;
@@ -180,7 +198,7 @@ export const Offer = () => {
                 <ImageContainer xs={{ order: 2 }} lg={{ order: 1 }}>
                     <Wrapper><Styledimg src={drugi} /></Wrapper>
                 </ImageContainer>
-                <TextContainer>
+                <TextContainer xs={{ order: 1 }} lg={{ order: 2 }}>
                     <StyledSlogan>
                         PAM
                     </StyledSlogan>

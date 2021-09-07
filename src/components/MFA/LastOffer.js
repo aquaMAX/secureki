@@ -17,6 +17,9 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 46.3125rem;
@@ -26,6 +29,9 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-top: 12.5625em;
     margin-left: 10.3125em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 3rem;
+    }
     @media (max-width: 991px) {
         padding: 0;
         margin-left: 1.125rem;
@@ -60,6 +66,9 @@ const ImageContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     padding-left: 13.5625em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 1.5rem;
+    }
     @media (max-width: 991px) {
         padding: 0;
         margin-left: 1.125rem;

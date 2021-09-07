@@ -16,10 +16,14 @@ const Container = styled.div`
     margin-right: auto;
     
     padding-top: 5.09375em;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 34.4375rem;
     } 
+
 `
 const StyledRow = styled(Row)`
     padding-left: 10.5rem;
@@ -30,6 +34,11 @@ const StyledRow = styled(Row)`
         padding-left: 1.125rem;
         padding-right: 1.5rem;
     } 
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+
 `
 
 const StyledParagraph = styled(Row)`

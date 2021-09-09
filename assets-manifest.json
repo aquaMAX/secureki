@@ -6,16 +6,11 @@
   "render-page.js.map": "render-page.js.map",
   "static/Group 603.png": "static/Group 603-167920d009c320e24eda11bafd78e8c9.png",
   "static/Group 605.png": "static/Group 605-d5ce69d54e62d05352ee6d2ec0dc8b28.png",
-  "static/Hitachi.png": "static/Hitachi-dcd11986a234cd09a7d0b5dfb35621f0.png",
   "static/Hitachi.webp": "static/Hitachi-b1626f64d726a96a05eac93eb131cc85.webp",
-  "static/KWAP.png": "static/KWAP-21b3217acc8d8195276a3ccf45c614aa.png",
   "static/KWAP.webp": "static/KWAP-b2b366da770e73e20bc7975e2f6583b6.webp",
-  "static/Petrofac.png": "static/Petrofac-4aeefc4a521ba84e808215b9d4274a3e.png",
   "static/Petrofac.webp": "static/Petrofac-b80e07bc09ac5f4eaa2444c90bd3f91b.webp",
   "static/Sunway.webp": "static/Sunway-c03a172322b05b1feb4e91702e2490d0.webp",
-  "static/TM.png": "static/TM-132beca4fd03bb31eee141ec6aa8af3f.png",
   "static/TM.webp": "static/TM-df650e55d4cb70166267657438ee8a16.webp",
-  "static/Takaful.png": "static/Takaful-9326d85b8cc5fdc4caa3e670314edb4a.png",
   "static/Total.png": "static/Total-9a7daf9f154864da11a85cce141fcabe.png",
   "static/about-header-mobile.png": "static/about-header-mobile-e9ae4ab739af8aa2a0776641216a14c0.png",
   "static/andrea.png": "static/andrea-646fd7de0620b27c4d8c329da3530408.png",
@@ -39,6 +34,5 @@
   "static/offer-3.png": "static/offer-3-eb55f0be4274daa5cd3b6a1c8db01c5b.png",
   "static/offer-4.png": "static/offer-4-d033250388f5788c66fd91fb285ca593.png",
   "static/pierwszy.png": "static/pierwszy-6fb8f3245a8cab01b5d65431518b1101.png",
-  "static/test.png": "static/test-8ba21c7c2e2ca5c669aff0f9f90b4c65.png",
-  "static/test.svg": "static/test-af7c408b81f37c29e5a5379af55c990b.svg"
+  "static/test.png": "static/test-8ba21c7c2e2ca5c669aff0f9f90b4c65.png"
 }

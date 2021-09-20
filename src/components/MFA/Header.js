@@ -103,7 +103,7 @@ const StyledImageContainer = styled(Col)`
 `
 
 const StyledImage = styled.img`
-    margin-top: 16.3125em;
+    margin-top: 14.1125em;
     margin-left: 4rem;
     margin-bottom: 0;
     width: 36.375em;

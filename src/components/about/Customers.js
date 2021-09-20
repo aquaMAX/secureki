@@ -1,16 +1,10 @@
 import * as React from "react";
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 
 import StyledButton from '../navbar/Button.js'
 
-import TM from '../../assets/about/customers/TM.webp'
-import KWAP from '../../assets/about/customers/KWAP.webp'
-import Alliance from '../../assets/about/customers/Alliance.webp'
-import Hitachi from '../../assets/about/customers/Hitachi.webp'
-import Takaful from '../../assets/about/customers/Takaful.webp'
-import Sunway from '../../assets/about/customers/Sunway.webp'
-import Petrofac from '../../assets/about/customers/Petrofac.webp'
+
 
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -135,20 +129,23 @@ const ButtonContainer = styled.div`
         text-align: center;
     }
 `
+const scroll = keyframes`
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-60.25rem)}
+  `
 
 const CustomersRow = styled(Row)`
     max-width: 56.25rem;
-    
+    overflow: hidden;
     margin: 0;
     margin-top: 2.5rem;
-    width: 100%;
+    
     
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: nowrap;
     margin-left: 16.9375rem;
     
+    white-space: nowrap;
     @media (max-width: 991px) {
         flex-wrap: wrap;
         margin-right: 0;
@@ -186,6 +183,19 @@ const StyledKwap = styled(Col)`
     }
 `
 
+const SlideTrack = styled(Row)`
+    	animation: ${scroll} 10s linear infinite;
+		display: flex;
+		min-width: 120.5rem;
+        @media (max-width: 991px) {
+            animation: ${scroll} 10s linear infinite;
+        
+        
+    }
+`
+
+
+
 export const Customers = () => {
 return (
     <>
@@ -200,6 +210,7 @@ return (
                 The best way to get to know us is through the experience of our valued customers. Discover from our customers how SecureKi improves their security and business.                    
             </StyledContent>
             <CustomersRow xs={3} lg={6}>
+                <SlideTrack>
             <StyledCol>
                 <StaticImage src="../../assets/about/customers/TM.png" width={65} height={30}/>
                 </StyledCol>
@@ -220,7 +231,31 @@ return (
                 </StyledCol>
                 <StyledCol>
                 <StaticImage src="../../assets/about/customers/Petrofac.png" width={116.6}/>
-                </StyledCol>           
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/TM.png" width={65} height={30}/>
+                </StyledCol>
+                <StyledKwap>
+                <StaticImage src="../../assets/about/customers/KWAP.png" width={96}/>
+                </StyledKwap>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Alliance.png" width={70}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Hitachi.png" width={105}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Takaful.png" width={38}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Sunway.png" width={107}/>
+                </StyledCol>
+                <StyledCol>
+                <StaticImage src="../../assets/about/customers/Petrofac.png" width={116.6}/>
+                </StyledCol>
+                
+  
+                </SlideTrack>          
             </CustomersRow>
             <ButtonContainer>
                 <MFAButton background={"#FF6938"} font={"#FFFFFF"}>

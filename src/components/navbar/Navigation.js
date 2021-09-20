@@ -18,6 +18,9 @@ const Nav = styled.nav`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    }
 
 `;
 
@@ -42,11 +45,17 @@ const StyledDropdown = styled.div`
     justify-content: center;
     align-content: center;
     transition: 0.3s;
+    @media (min-width: 1200px) and (max-width: 1439px) {
+        min-width: 21.875rem;
+        margin-left: -1.875rem;
+    }
 `
 
 const StyledRow = styled(Row)`
     margin-left: 0px;
     margin-right: 0px;
+
+
 `
 
 const StyledCol = styled(Col)`
@@ -54,12 +63,12 @@ const StyledCol = styled(Col)`
 `
 
 const StickyInner = styled.div`
-position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: #FFFFFF;
     box-shadow: 0 0.25em 1.25em rgba(7, 50, 51, 0.04);
 `
 
@@ -93,6 +102,12 @@ const DesktopDisplayer = styled.div`
     }
 `
 
+const StyledNavCol = styled(Col)`
+    @media (min-width: 1200px) and (max-width: 1439px) {
+        padding: 0;
+    }
+`
+
 const Navigation = () => {
     return (
         <StickyInner className="sticky-inner">
@@ -114,7 +129,7 @@ const Navigation = () => {
                                                     </StyledCol>
                                                     <Col lg={5} xl={4}>
                                                         <Row>
-                                                            <Col>
+                                                            <StyledNavCol>
                                                                 
                                                                 <StyledDropdown>
                                                                     <DropdownMenu name="Product" />
@@ -122,10 +137,10 @@ const Navigation = () => {
                                                                     <DropdownMenu name="Company" />
                                                                 </StyledDropdown>
                                                                 
-                                                            </Col>
+                                                            </StyledNavCol>
                                                         </Row>
                                                     </Col>
-                                                    <Col lg={3} xl style={{paddingLeft: "3em"}}>
+                                                    <Col lg={4} xl style={{paddingLeft: "3em"}}>
                                                         
                                                             
                                                             <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400">Contact Us</StyledContactButton>

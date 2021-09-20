@@ -161,7 +161,7 @@ const StyledMoreabout = styled.button`
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.00625em;
+    
     
     color: #073233;
     border: 0;
@@ -180,6 +180,11 @@ const StyledMoreabout = styled.button`
         }   
 
     } 
+    @media (max-width: 991px) {
+        margin-top: 1.5625rem;
+        flex-wrap: nowrap;
+    }  
+    
 `
 
 const StyledPointer = styled.div`
@@ -189,6 +194,9 @@ const StyledPointer = styled.div`
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FF6938;
+    @media (max-width: 991px) {
+        margin-left: 0.4rem;
+    } 
 `
 
 const Styledimg = styled.img`

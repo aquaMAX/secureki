@@ -4,13 +4,13 @@ import { Row, Col } from 'react-bootstrap'
 
 import StyledButton from '../navbar/Button.js'
 
-import TM from '../../assets/about/customers/TM.png'
-import KWAP from '../../assets/about/customers/KWAP.png'
-import Alliance from '../../assets/about/customers/Alliance.png'
-import Hitachi from '../../assets/about/customers/Hitachi.png'
-import Takaful from '../../assets/about/customers/Takaful.png'
-import Sunway from '../../assets/about/customers/Sunway.png'
-import Petrofac from '../../assets/about/customers/Petrofac.png'
+import TM from '../../assets/about/customers/TM.webp'
+import KWAP from '../../assets/about/customers/KWAP.webp'
+import Alliance from '../../assets/about/customers/Alliance.webp'
+import Hitachi from '../../assets/about/customers/Hitachi.webp'
+import Takaful from '../../assets/about/customers/Takaful.webp'
+import Sunway from '../../assets/about/customers/Sunway.webp'
+import Petrofac from '../../assets/about/customers/Petrofac.webp'
 
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -138,6 +138,7 @@ const ButtonContainer = styled.div`
 
 const CustomersRow = styled(Row)`
     max-width: 56.25rem;
+    
     margin: 0;
     margin-top: 2.5rem;
     width: 100%;
@@ -150,10 +151,11 @@ const CustomersRow = styled(Row)`
     
     @media (max-width: 991px) {
         flex-wrap: wrap;
-        margin-right: 1rem;
+        margin-right: 0;
         margin-left: 0;
         margin-top: 2.0625rem;
-        
+        padding-right: 1.5em;
+        padding-left: 1em;
     }
     @media (min-width: 992px) and (max-width: 1439px) {
         margin-left: 5rem;
@@ -198,7 +200,7 @@ return (
                 The best way to get to know us is through the experience of our valued customers. Discover from our customers how SecureKi improves their security and business.                    
             </StyledContent>
             <CustomersRow xs={3} lg={6}>
-                <StyledCol>
+            <StyledCol>
                 <StaticImage src="../../assets/about/customers/TM.png" width={65} height={30}/>
                 </StyledCol>
                 <StyledKwap>
@@ -218,7 +220,7 @@ return (
                 </StyledCol>
                 <StyledCol>
                 <StaticImage src="../../assets/about/customers/Petrofac.png" width={116.6}/>
-                </StyledCol>
+                </StyledCol>           
             </CustomersRow>
             <ButtonContainer>
                 <MFAButton background={"#FF6938"} font={"#FFFFFF"}>

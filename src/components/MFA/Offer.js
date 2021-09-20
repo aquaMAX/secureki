@@ -130,7 +130,7 @@ const StyledContent = styled.div`
     }
 `
 
-const StyledMoreabout = styled.div`
+const StyledMoreabout = styled.button`
     
     font-family: Messina Sans semibold;
     font-style: normal;
@@ -140,7 +140,7 @@ const StyledMoreabout = styled.div`
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.00625em;
+    
     color: #073233;
     border: 0;
     border-radius: 0;
@@ -158,7 +158,11 @@ const StyledMoreabout = styled.div`
             padding-right: 1em;
         }   
 
+    }
+    @media (max-width: 991px) {
+        flex-wrap: nowrap;
     }  
+    
 `
 
 const StyledPointer = styled.div`
@@ -168,20 +172,33 @@ const StyledPointer = styled.div`
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FF6938;
+    @media (max-width: 991px) {
+        margin-left: 0.4rem;
+    }
 `
 
 const Styledimg = styled.img`
-    min-width: 44.375em;
-    max-width: 44.375rem;
-    margin-left: -7.95rem;
+    min-width: 35.375em;
+    max-width: 35.375rem;
+    margin-left: -4.95rem;
+    margin-top: 4rem;
     margin-bottom: 0;
-    margin-right: 3.125em;
+    
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-top: 5rem;
+        min-width: auto;
+        max-width: 31rem;
+    }
     @media (max-width: 991px) {
         
-        min-width: 30.4375rem;
+        min-width: 22.4375rem;
         max-width: 23.4375rem;
-        margin-left: -5rem;
+        margin-left: -1rem;
         margin-right: 0;
+        margin-top: 1rem;
     }
 
 `
@@ -219,18 +236,7 @@ const ListElement = styled(Row)`
 
 `
 
-const Wrapper = styled.div`
-    @media (max-width: 991px) {
-    min-width: 22.3375rem;
-    overflow: hidden;
-    }
-    @media (min-width: 992px) and (max-width: 1439px) {
-        overflow: hidden;
-        
-        min-width: 45vw;
-        min-height: 19.375rem;
-    }
-`
+
 
 export const Offer = () => {
     return (
@@ -262,7 +268,7 @@ export const Offer = () => {
                     
                 </TextContainer>
                 <ImageContainer >
-                    <Wrapper><Styledimg src={image} /></Wrapper>
+                    <Styledimg src={image} />
                 </ImageContainer>
 
             </StyledRow>

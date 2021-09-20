@@ -114,7 +114,7 @@ export  const FeaturesAdvancedList = ({state}) => {
                     <FeatureContainer>
                         <StyledIcon src={second}/>
                         <StyledTitle>
-                        Fine-Grained Access Control
+                        Fine-Grained Access<br /> Control
                         </StyledTitle>
                         <TextContainer>
                         With enterprise-grade access rules on a granular level such as session lengths and role-based parameters, blacklisting, whitelisting, and greylisting groupings to manage your user's access, and more.

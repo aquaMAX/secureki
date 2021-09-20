@@ -29,6 +29,11 @@ const TextContainer = styled(Col)`
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
+    @media (max-width: 1439px) {
+        
+        padding-left: 2.5rem;
+        
+    }
     @media (max-width: 991px) {
         padding-left: 1.125rem;
         padding-top: 3.4375rem;
@@ -37,14 +42,16 @@ const TextContainer = styled(Col)`
 `
 
 const ImageContainer = styled(Col)`
-    padding-top: 3.5em;
-    padding-left: 0;
+    padding-top: 7.5em;
+    padding-left: 6em;
     padding-right: 0;
     margin-left: 0;
     @media (max-width: 1439px) {
+        
+        padding-left: 0;
         display: flex;
         align-items: center;
-        padding-top: 0;
+        padding-top: 7.4em;
     }
 
 `
@@ -148,7 +155,7 @@ const StyledMoreabout = styled.div`
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.00625em;
+    
     color: #073233;
     border: 0;
     border-radius: 0;
@@ -165,6 +172,9 @@ const StyledMoreabout = styled.div`
             padding-right: 1em;
         }   
 
+    } 
+    @media (max-width: 991px) {
+        flex-wrap: nowrap;
     }  
 `
 
@@ -176,40 +186,30 @@ const StyledPointer = styled.div`
     letter-spacing: 0.00625em;
     color: #FF6938;
     @media (max-width: 991px) {
-        margin-left: 0.5rem;
+        margin-left: 0.4rem;
     } 
 `
 
 const Styledimg = styled.img`
-    min-width: 39.8125em;
+    
+    max-width: 31.25rem;
     margin-bottom: 0;
     @media (max-width: 1439px) {
-        min-width: auto;
-        max-width: 53.5vw;
+        margin-left: auto;
+        max-width: 28rem;
         height: auto;
     }
     @media (max-width: 991px) {
-        max-width: 100vw;
-        min-height: 22.5rem;
-        max-width: 33.35rem;
         
-        margin-left: -4.8125rem;
+        
+        max-width: 20.35rem;
+        margin-left: 1.3rem;
+         
         padding-bottom: 0;
     } 
 `
 
-const Wrapper = styled.div`
-    @media (max-width: 991px) {
-    min-width: 23.3375rem;
-    overflow: hidden;
-    }
-    @media (min-width: 992px) and (max-width: 1439px) {
-        overflow: hidden;
-        
-        min-width: 45vw;
-        min-height: 19.375rem;
-    }
-`
+
 
 export const DetailedOffer = () => {
     return (
@@ -239,7 +239,7 @@ export const DetailedOffer = () => {
                     
                 </TextContainer>
                 <ImageContainer>
-                    <Wrapper><Styledimg src={pierwszy} /></Wrapper>
+                    <Styledimg src={pierwszy} />
                 </ImageContainer>
 
             </StyledRow>

@@ -39,6 +39,10 @@ const Container = styled.div`
     -webkit-justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 62rem;
+    
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 56.5625rem;
@@ -53,11 +57,11 @@ const TextContainer = styled(Col)`
         padding-left: 0;
     } 
     @media (min-width: 992px) and (max-width: 1439px) {
-        padding-left: 1.125rem;
+        padding-left: 3rem;
         width: auto;
         justify-content: center;
         -webkit-justify-content: center;
-        margin-left: 1.25rem;
+        margin-left: 0;
     
     }
 `
@@ -188,9 +192,10 @@ const Styledimg = styled.img`
         margin-left: -6rem;
     } 
     @media (min-width: 992px) and (max-width: 1439px) {
-        max-width: 45vw;
-        min-width: 45vw;
-        margin-left: auto;
+        max-width: 33rem;
+        min-width: 30rem;
+        margin-top: 1rem;
+        margin-left: -1rem;
     }
 
 
@@ -207,7 +212,7 @@ const Wrapper = styled.div`
     @media (min-width: 992px) and (max-width: 1439px) {
         overflow: hidden;
         
-        min-width: 45vw;
+        min-width: 27.8rem;
         min-height: 19.375rem;
     }
 `

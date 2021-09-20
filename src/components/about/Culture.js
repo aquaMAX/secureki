@@ -3,7 +3,7 @@ import { StackedPictures } from '../body/StackedPictures'
 import styled from 'styled-components'
 import { Col, Row } from "react-bootstrap"
 import pictures from '../../assets/about/culture/Group 603.png'
-import test from '../../assets/about/culture/test.svg'
+import test from '../../assets/about/culture/test.png'
 
 
 const Container = styled.div`
@@ -44,7 +44,7 @@ const StyledRow = styled(Row)`
     margin-left: 0;
     @media (max-width: 991px) {
         padding: 0;
-        margin-left: -10rem;
+       
         
     } 
     @media (min-width: 992px) and (max-width: 1439px) {
@@ -113,7 +113,8 @@ const StyledContent = styled(Row)`
 `
 
 const Styledimg = styled.img`
-    min-width: 41.125em;
+    max-width: 41.125em;
+    
     @media (max-width: 991px) {
         max-width: 21.1875rem;
         min-width: 21.1875rem;
@@ -127,8 +128,12 @@ const Wrapper = styled.div`
 
 const TextRow = styled(Row)`
     padding-left: 0.8333333333333334em;
+    max-width: 32rem;
     > b {
         font-family: Messina Sans bold;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 28rem;
     }
     @media (max-width: 991px) {
         
@@ -151,7 +156,14 @@ const DesktopDisplayer = styled.div`
 `
 
 const Styledsvg = styled.img`
-
+    margin-top: 5.5rem;
+    margin-left: -5rem;
+        max-width: 34.125em;
+        @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 34em;
+        margin-left: -1rem;
+        margin-top: 6.5rem;
+    }
 `
 
 const Culture = () => {

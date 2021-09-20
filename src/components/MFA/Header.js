@@ -104,17 +104,22 @@ const StyledImageContainer = styled(Col)`
 
 const StyledImage = styled.img`
     margin-top: 16.3125em;
-    margin-right: 10.5em;
+    margin-left: 4rem;
     margin-bottom: 0;
-    width: 40.375em;
+    width: 36.375em;
+    max-width: 36.375em; 
     position: absolute;
     z-index: -1;
     @media (min-width: 992px) and (max-width: 1439px) {
         margin-right: 1.5em;
+        width: 29.375em;
+        max-width: 29.375em; 
+        margin-left: 2rem;
     }
     @media (max-width: 991px) {
-        margin-left: -2.0625rem;
-        min-width: 24.25rem;
+        margin-left: 1.3125rem;
+        min-width: 20.25rem;
+        max-width: 20.25rem;
         margin-top: 5.625rem;
         position: relative;
         margin-right: 0;

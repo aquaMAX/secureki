@@ -145,22 +145,28 @@ const StyledText = styled(Col)`
 const StyledImageContainer = styled(Col)`
     padding: 0;
 `
-const Wrapper = styled.div`
-    max-width: 22.1375rem;
-    overflow: hidden;
-`
+ 
 
 const StyledImage = styled.img`
     margin-top: 12.6875em;
-    margin-right: 5.3125em;
+    margin-right: 0;
     margin-bottom: 0;
-    width: 46.75em;
+    max-width: 38.75em;
+    margin-left: 4rem;
     position: absolute;
     z-index: -1;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        margin-top: 17em;
+        margin-left: 2rem;
+        margin-right: 0;
+        min-width: 29em;
+        max-width: 29em;
+        position: relative;
+    }
     @media (max-width: 991px) {
-        min-width: 27rem;
-        margin-top: 3.5625rem;
-        margin-left: -2.275rem;
+        max-width: 21rem;
+        margin-top: 7.5625rem;
+        margin-left: 1.3rem;
         margin-right: 0;
         position: relative;
     }
@@ -189,7 +195,7 @@ const StyledTitle = styled.div`
         line-height: 3rem;
         letter-spacing: -0.0625rem;
         text-align: center;
-        margin-top: -3rem;
+        margin-top: 1rem;
     }
 `
 
@@ -288,6 +294,8 @@ const Breaker = styled.div`
     }
 `
 
+
+
 export const PAMHeader = () => {
 return (
     <Layout>
@@ -331,9 +339,9 @@ return (
             
             </StyledText>
             <StyledImageContainer xs={{order: 1}} lg={{order: 2}}>
-                <Wrapper>
+                
                     <StyledImage src={Header}/>
-                </Wrapper>
+                
             </StyledImageContainer>
         </FixedRow>
     </Layout>

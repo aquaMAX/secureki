@@ -16,13 +16,17 @@ const StyledImage = styled.img`
     margin-top: 12.25em;
 
     @media (max-width: 1439px) {
+        margin-left: 1rem;
         min-width: auto;
-        max-width: 53.5vw;
+        min-width: 28rem;
+        max-width: 25rem;
+        margin-top: 15.25em;
         height: auto;
     }
     @media (max-width: 991px) {
-        max-width: 23.4375rem;
+        max-width: 21.4375rem;
         margin-top: 3.1875rem;
+        min-width: 21.4375rem;
     } 
     
 `
@@ -40,6 +44,7 @@ const StyledContent = styled.div`
     margin-right: auto;
     @media (min-width: 992px) and (max-width: 1439px) {
         max-width: 62rem;
+        padding-left: 2.8rem;
     }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
@@ -64,9 +69,7 @@ const StyledTitle = styled.div`
     order: 0;
     flex-grow: 0;
     margin-bottom: 0.42857142857142855em;
-    @media (max-width: 1439px) {
-        font-size: calc(100vw / 25)
-    }
+
     @media (max-width: 991px) {
         margin-left: 1.3125rem;
         margin-right: 1.25rem;
@@ -121,16 +124,19 @@ const StyledTextBody = styled.div`
 `
 
 const StyledLeftColumn = styled(Col)`
+    max-width: 38%;
     margin-left: 10.5em;
     margin-right: 0;
     padding: 0;
     margin-top: 17em;
     @media (max-width: 1439px) {
-        margin-left: 3.125rem;
+        margin-left: 0;
+        max-width: none;
     }
     @media (max-width: 991px) {
         margin-left: 0;
         margin-top: 8.4375rem;
+        max-width: none;
     }
 `
 
@@ -161,6 +167,7 @@ const StyledTrialText = styled.button`
     background: none;
     padding: 0;
     border-bottom: 3px solid #FF6938;
+    flex-wrap: nowrap;
     transition: 0.3s;
     &:hover {
         color: #1E5A5F;
@@ -186,10 +193,11 @@ const StyledButtonFix = styled(StyledButton)`
     font-style: normal;
     font-weight: 600;
     line-height: 1.3333333333333333em;
-    letter-spacing: 0.005555555638339784em;
+    
     text-align: center;
     border-radius: 1.6666666666666667em;
     transition: 0.3s;
+    flex-wrap: nowrap;
     &:hover {
         background: #E55A2D;
     }
@@ -222,9 +230,7 @@ const StyledSquare = styled.img`
     margin-left: 6.75em;
     margin-top: 13.75em;
     @media (max-width: 1439px) {
-        margin-left: -0.45rem;
-        margin-top: 6.625rem;
-        max-height: 8.1875rem;
+        display: none;
     }
 
 `
@@ -296,13 +302,12 @@ const Article = () => {
         <StyledSmallThreeCircle src={smallcircle} />
             
         <FixedRow xs={1} lg={2}>
-
             <>
-            <StyledLeftColumn lg={5} xl>
+            <StyledLeftColumn>
                 <FixedRow>
                     
                     <StyledTitle>
-                        <FixedRow className="Title">Identity1 Security</FixedRow>
+                        <FixedRow className="Title">Identity Security</FixedRow>
                         <FixedRow>for{'\u00A0'}<ColoredP>Your Workforce</ColoredP></FixedRow>
                     </StyledTitle>
                 </FixedRow>
@@ -332,7 +337,7 @@ const Article = () => {
             </StyledLeftColumn>
             </>
 
-            <FixedCol xl>
+            <FixedCol>
                 <StyledImage src={hero}/>
             </FixedCol>
         </FixedRow>   

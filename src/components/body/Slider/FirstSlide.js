@@ -14,6 +14,9 @@ const Container = styled.div`
     background: #114748;
     padding-bottom: 7.125em;
     margin: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        padding-left: 2.5rem;
+    }
     @media (max-width: 991px) {
         max-width: 23.4375rem;
         height: 36.5625rem;

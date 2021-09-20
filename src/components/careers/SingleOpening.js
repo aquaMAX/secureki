@@ -7,6 +7,10 @@ const Container = styled.div`
     padding-left: 10.3125rem;
     margin-top: 4.1875rem;
     height: auto;
+    @media (min-width: 992px) and (max-width: 1439px) {
+        max-width: 60.25rem;
+        padding-left: 4rem;
+    }
     @media (max-width: 991px) {
         max-width: 99vw;
         padding-left: 1.125rem;

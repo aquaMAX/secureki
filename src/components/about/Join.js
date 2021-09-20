@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import Button from "../navbar/Button"
 
+
 const Container = styled.div`
     height: 10.5625rem;
  
@@ -31,6 +32,7 @@ const StyledTitle = styled.div`
         margin: 0;
         margin-top: 4.3125rem;
         text-align: center;
+        display: flex;
         justify-content: center;
     } 
 
@@ -55,10 +57,7 @@ const StyledTitle = styled.div`
 
 const StyledButton = styled(Button)`
     border: 2px solid #FF6938;
-    border-radius: 40px;
-    border-radius: 40px;
-    -moz-border-radius: 40px;
-    -webkit-border-radius: 40px;
+    
   
     margin-left: 61.625rem;
     margin-top: 3.8125rem;
@@ -74,13 +73,9 @@ const StyledButton = styled(Button)`
     }
     @media (max-width: 991px) {
         margin: 0;
-        margin-left: 0;
-        margin-right: 8em;
-        margin-top: 9.3125rem;
-        text-align: center;
-        justify-content: center;
-        
-        
+        margin-left: 2rem;
+        margin-right: 0;
+        margin-top: 3.3125rem;
     } 
     @media (min-width: 992px) and (max-width: 1439px) {
         margin-left: 66vw;
@@ -101,8 +96,8 @@ const StyledSecondButton = styled(Button)`
     }
     @media (max-width: 991px) {
         margin: 0;
-        margin-top: 9.3125rem;
-        margin-left: 8em;
+        margin-top: 3.3125rem;
+        margin-left: 11.5rem;
         
         text-align: center;
         justify-content: center;
@@ -123,25 +118,74 @@ const StyledRow = styled(Row)`
     } 
 `
 
+const StyledButtonCol = styled(Col)`
+    
+    
+    
+    @media (max-width: 991px) {
+        display: flex;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+`
+
+const StyledButtonRow = styled(Row)`
+    margin-left: 0;
+    margin-right: 0;
+    @media (max-width: 991px) {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        text-align: center;
+        justify-content: center;
+        align-content: space-between;
+    } 
+`
+
+const SmallContainer = styled.div`
+    @media (min-width: 992px) {
+        display: none;
+    } 
+`
+
+const BigContainer = styled.div`
+    @media (max-width: 991px) {
+        display: none;
+    } 
+`
 
 
 export const Join = () => {
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
-            <StyledRow>
-                <StyledTitle>
-                    <h1>
-                    Want to join us?
-                    </h1>
-                </StyledTitle>
-                
-                <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
-                    <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
-                
-                    
-                
-            </StyledRow>
+            <BigContainer>
+                <StyledRow>
+                    <StyledTitle>
+                        <h1>
+                        Want to join us?
+                        </h1>
+                    </StyledTitle>
+                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
+                </StyledRow>
+            </BigContainer>
+
+            <SmallContainer> 
+                <StyledButtonRow>
+                    <StyledTitle>
+                        <h1>
+                        Want to join us?
+                        </h1>
+                    </StyledTitle>
+                </StyledButtonRow>
+                <StyledButtonRow>
+                    <StyledButtonCol>
+                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
+                    </StyledButtonCol>
+                </StyledButtonRow>
+            </SmallContainer> 
         </Container>
         </div>
     )

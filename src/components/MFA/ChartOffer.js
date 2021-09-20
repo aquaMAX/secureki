@@ -139,7 +139,7 @@ const StyledContent = styled.div`
     }
 `
 
-const StyledMoreabout = styled.div`
+const StyledMoreabout = styled.button`
     font-family: Messina Sans semibold;
     font-style: normal;
     font-weight: 600;
@@ -148,7 +148,7 @@ const StyledMoreabout = styled.div`
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.00625em;
+    
     
     color: #073233;
     border: 0;
@@ -159,6 +159,9 @@ const StyledMoreabout = styled.div`
     
     background: none;
     padding: 0;
+    @media (max-width: 991px) {
+        flex-wrap: nowrap;
+    }  
     > text {
         text-underline-offset: 2.5px;
         text-decoration: underline solid #FF6938;
@@ -169,6 +172,7 @@ const StyledMoreabout = styled.div`
         }   
 
     } 
+
 `
 
 const StyledPointer = styled.div`
@@ -178,24 +182,26 @@ const StyledPointer = styled.div`
     line-height: 1.5em;
     letter-spacing: 0.00625em;
     color: #FF6938;
-`
-
-const SecondParagraph = styled(Row)`
-
+    @media (max-width: 991px) {
+        margin-left: 0.4rem;
+    } 
 `
 
 const Styledimg = styled.img`
-    min-width: 41.125em;
+    max-width: 32.125em;
+    margin-top: 6rem;
+    margin-left: 2.5rem;
     @media (min-width: 992px) and (max-width: 1439px) {
-        min-width: 29.125em;
+        margin-left: -2rem;
+        
         margin-top: 7rem;
         max-width: 29rem;
     }
     @media (max-width: 991px) {
-        max-width: 30.5rem;
-        min-width: 30.5rem;
-        margin-left: -4rem;
-        margin-bottom: -2rem;
+        max-width: 22.5rem;
+        margin-top: 3rem;
+        margin-left: 0rem;
+        margin-bottom: 2rem;
     }
 `
 

@@ -59,19 +59,13 @@ const Slider = () => {
                 <StyledCarousel>
                     <Carousel.Item>
                         
-                        <FirstSlide />
+                        <FirstSlide title="Chia Nam Liang, Hap Seng Group, CIO" description="“Having a manual system for password management these days just won’t cut it anymore.”" image='first'/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <FirstSlide />
+                        <FirstSlide title={"ARIANNE KOWALSKI, LEAD MARKETING SPECIALIST, MAILCHIP"} description="“All base UI elements are made using Nested Symbols and shared styles that are logically connected.”" image="second"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <FirstSlide />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <FirstSlide />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <FirstSlide />
+                        <FirstSlide title="ARIANNE KOWALSKI, LEAD MARKETING SPECIALIST, MAILCHIP" description="“All base UI elements are made using Nested Symbols and shared styles that are logically connected.”" image="second"/>
                     </Carousel.Item>
                 </StyledCarousel>
         </Container>

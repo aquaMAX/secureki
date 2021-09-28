@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import drugi from "../../../assets/anna.png"
-import drugi2 from "../../../assets/ann2.png"
+import second from "../../../assets/anna.png"
+import seconddesktop from "../../../assets/ann2.png"
+import firstdesktop from "../../../assets/chia2.png"
+import first from "../../../assets/chia.png"
 import group from "../../../assets/elementsgroup.svg"
 import squareslide from "../../../assets/decorations/squareslide.svg"
 import circleslide from "../../../assets/decorations/circleslide.svg"
@@ -248,7 +250,8 @@ const StyledDesktopimg = styled.img`
 
 
 
-export const FirstSlide = () => {
+export const FirstSlide = ({title, description, image}) => {
+    
     return (
         <>
         <Container>
@@ -258,15 +261,15 @@ export const FirstSlide = () => {
             <StyledCircle src={circleslide} />
             <StyledGroupElements src={group} />
                 <ImageContainer lg={7} xl>
-                    <Styledimg src={drugi} />
-                    <StyledDesktopimg src={drugi2} />
+                    <Styledimg src={image == 'first' ? first : second} />
+                    <StyledDesktopimg src={image == 'first' ? firstdesktop : seconddesktop} />
                 </ImageContainer>
                 <TextContainer>
                     <StyledSlogan>
-                    ARIANNE KOWALSKI, LEAD MARKETING SPECIALIST,{'\u00A0'}MAILCHIP
+                    {title}
                     </StyledSlogan>
                     <StyledTitle>
-                    “All base UI elements are made using Nested Symbols and shared styles that are logically connected.”
+                    {description}
                     </StyledTitle>
                     <StyledMoreabout>
                         <text>Read full case study</text>

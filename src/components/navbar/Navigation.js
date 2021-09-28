@@ -8,6 +8,7 @@ import { Row, Col } from 'react-bootstrap';
 import DropdownMenu from './Dropdown';
 import Media from 'react-media'
 import Mobile from './Mobile';
+import ContactForm from './ContactForm';
 
 const Nav = styled.nav`
 
@@ -72,14 +73,7 @@ const StickyInner = styled.div`
     box-shadow: 0 0.25em 1.25em rgba(7, 50, 51, 0.04);
 `
 
-const StyledContactButton = styled(Button)`
-    font-family: Messina Sans semibold;
-    font-weight: 600;
-    transition: 0.3s;
-    &:hover {
-        background: #EEDDD7;
-    }
-`
+
 
 const StyledStartedButton = styled(Button)`
     font-family: Messina Sans semibold;
@@ -113,7 +107,9 @@ const Navigation = () => {
         <StickyInner className="sticky-inner">
             
                                 <>
-                                 <MobileDisplayer><Mobile /></MobileDisplayer>
+                                 <MobileDisplayer>
+                                     <Mobile />
+                                    </MobileDisplayer>
                                  <DesktopDisplayer>
                                             <Information/>
                                             <Nav>
@@ -143,7 +139,7 @@ const Navigation = () => {
                                                     <Col lg={4} xl style={{paddingLeft: "3em"}}>
                                                         
                                                             
-                                                            <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400">Contact Us</StyledContactButton>
+                                                            <ContactForm />
                                                             <StyledStartedButton background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton>
                                                             
                                                         

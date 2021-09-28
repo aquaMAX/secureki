@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import { Link } from 'gatsby'
+import ContactForm from './ContactForm'
 
 const Container = styled.div`
     height: ${props=>props.status === true ? "100vh" : "0"};
@@ -287,9 +288,8 @@ const MobileMenu = ({status}) => {
                     Blog
                 </StyledCompanyLinkRow>
             <StyledButtonRow status={status}>
-                <StyledButton status={status}>
-                    Request a demo
-                </StyledButton>
+                <ContactForm type='mobile'/>
+                
             </StyledButtonRow>
         </Container>
     )

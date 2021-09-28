@@ -184,11 +184,11 @@ const StyledKwap = styled(Col)`
 `
 
 const SlideTrack = styled(Row)`
-    	animation: ${scroll} 10s linear infinite;
+    	animation: ${scroll} 40s linear infinite;
 		display: flex;
 		min-width: 120.5rem;
         @media (max-width: 991px) {
-            animation: ${scroll} 10s linear infinite;
+            animation: ${scroll} 20s linear infinite;
         
         
     }

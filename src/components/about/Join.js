@@ -154,6 +154,18 @@ const BigContainer = styled.div`
     } 
 `
 
+const SmallContainer = styled.div`
+    @media (min-width: 992px) {
+        display: none;
+    } 
+`
+
+const BigContainer = styled.div`
+    @media (max-width: 991px) {
+        display: none;
+    } 
+`
+
 
 export const Join = () => {
     return (

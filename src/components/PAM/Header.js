@@ -242,6 +242,8 @@ const MFAButton = styled(StyledButton)`
     flex-direction: column;
     align-items: center;
     padding: 0.75em 2.625em;
+    padding-right: 1.6666666666666667em;
+    padding-left: 1.6666666666666667em;
     background: #FF6938;
     border-radius: 1.875em;
     border-radius: 1.875em;
@@ -332,7 +334,7 @@ return (
                 </StyledList>
                 <TextRow>
                 <MFAButton background={"#FF6938"} font={"#FFFFFF"}>
-                    Try free
+                    Request a demo
                 </MFAButton>
                 </TextRow>
                 

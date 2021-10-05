@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import StoriesCard from './StoriesCard.js'
@@ -7,6 +7,7 @@ import cirbig from '../../assets/customer/cirbig.svg'
 import cirsmall from '../../assets/customer/cirsmall.svg'
 import rec from '../../assets/customer/rec.svg'
 import recempty from '../../assets/customer/recempty.svg'
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 const Container = styled.div`
@@ -129,7 +130,21 @@ const StyledRecEmpty = styled.img`
 
 
 
-export const Stories = () => {
+const Stories = () => {
+
+const data = useStaticQuery(graphql`
+query {
+    allStrapiArticles {
+      edges {
+        node {
+          id
+          content
+        }
+      }
+    }
+  }
+`)
+    
     return (
         <Container>
             <StyledRecEmpty src={recempty} />
@@ -144,11 +159,11 @@ export const Stories = () => {
                 </StyledTitle>
             </Row>
             <StyledRow>
-            
-                <StoriesCol>
                 
+                <StoriesCol>
+                    
                     <StoriesCard 
-                    story="“Having a secure authentication and privileged access management system in place for better control and visibility of our user access is a mandatory requirement under our Security Policy guidelines; we are glad that SecureKi helped us to achieve this objective...”"
+                    story={data.allStrapiArticles.edges.map(document=>document.node.id === "Articles_1" ? document.node.content :  null)}
                     image="mental"
                     title="Beh Swan Swan"
                     position="Magnum Group, CIO"
@@ -156,7 +171,7 @@ export const Stories = () => {
                 </StoriesCol>
                 <StoriesCol>
                 <StoriesCard 
-                    story="“Deployment of Privileged Access Management (PAM) solution across enterprises has never been an easy feat. It takes an effort for the initial deployment, but the end result backed by exceptional support from SecureKi is worth it...”"
+                    story={data.allStrapiArticles.edges.map(document=>document.node.id === "Articles_2" ? document.node.content :  null)}
                     image="ketut"
                     title="Chia Nam"
                     position="Hap Seng Group, CIO"
@@ -164,14 +179,18 @@ export const Stories = () => {
                 </StoriesCol>
                 <StoriesCol>   
                 <StoriesCard 
-                    story="“SecureKi PAM reduces our operational overheads while provides the capability to define accessrights on a need-to-know basis for all our users and helps us monitor their activities...”"
+                    story={data.allStrapiArticles.edges.map(document=>document.node.id === "Articles_3" ? document.node.content :  null)}
                     image="andrea"
-                    title="Bill Zhu"
-                    position="MNRB, CIO"
-                    />
+                    title="Lee Kok Seong"
+                    position="Takaful Ikhlas, CIO"
+                />
                 </StoriesCol>
             </StyledRow>
             
         </Container>
     )
 }
+
+export default Stories;
+
+

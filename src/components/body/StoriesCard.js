@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 
 
-import andreaa from '../../assets/andreaa.png'
-import ketut from '../../assets/ketut.png'
-import mental from '../../assets/mental.png'
+import first from '../../assets/customerstories/Lee Kok Seong (Takaful Ikhlas CIO).png'
+import second from '../../assets/customerstories/Chia Nam Liang (Hap Seng CIO).png'
 
+import third from '../../assets/customerstories/Beh Swan Swan (Magnum CIO).png'
 
 const Container = styled.div`
     width: 22.0625rem;
@@ -118,7 +118,7 @@ const StoriesCard = ({story, image, title, position}) => {
                 </TextContainer>
             <Row style={{margin: 0}}>
                 <Col xs={4} style={{padding: 0}}>
-                    {image === "andrea" ? <ImageContainer src={andreaa} /> : image === "ketut" ? <ImageContainer src={ketut} /> : <ImageContainer src={mental} />}                    
+                    {image === "andrea" ? <ImageContainer src={first} /> : image === "ketut" ? <ImageContainer src={second} /> : <ImageContainer src={third} />}                    
                 </Col>
                 <Col>
                     <TitleContainer>

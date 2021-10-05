@@ -148,6 +148,11 @@ flex-wrap: nowrap;
 
 const StyledNameInput = styled.input`
     display: flex;
+    font-family: Messina Sans semibold;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 24px;
+    color: #768F87;
     
     background: rgba(20, 81, 86, 0.05);
     height: 3rem;
@@ -156,6 +161,13 @@ const StyledNameInput = styled.input`
     border: 0;
     margin-right: 3rem;
     margin-bottom: 1.375rem;
+    padding-left: 0.425rem;
+    &:focus {
+      background: rgba(20, 81, 86, 0.05);
+      border: 2px solid #17494D;
+      border-radius: 0rem;
+      outline: none;
+   }
     @media (max-width: 991px) {
         width: 20rem;
         margin-right: 0;
@@ -164,13 +176,24 @@ const StyledNameInput = styled.input`
 
 const StyledLastnameInput = styled.input`
 display: flex;
-
+font-family: Messina Sans semibold;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 24px;
+    color: #768F87;
     background: #1451560D;
     height: 3rem;
     width: 20.4375rem;
     border-radius: 0rem;
     border: 0;
     margin-bottom: 1.375rem;
+    padding-left: 0.425rem;
+    &:focus {
+      background: rgba(20, 81, 86, 0.05);
+      border: 2px solid #17494D;
+      border-radius: 0rem;
+      outline: none;
+   }
     @media (max-width: 991px) {
         width: 20rem;
     }
@@ -178,26 +201,50 @@ display: flex;
 
 const StyledEmailInput = styled.input`
 display: flex;
+font-family: Messina Sans semibold;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 24px;
+    color: #768F87;
     background: #1451560D;
     height: 3rem;
     width: 44.0625rem;
     border-radius: 0rem;
     border: 0;
     margin-bottom: 1.125rem;
+    padding-left: 0.425rem;
+    &:focus {
+      background: rgba(20, 81, 86, 0.05);
+      border: 2px solid #17494D;
+      border-radius: 0rem;
+      outline: none;
+   }
     @media (max-width: 991px) {
         width: 20rem;
     }
 
 `
 
-const StyledMessageInput = styled.input`
+const StyledMessageInput = styled.textarea`
 display: flex;
+font-family: Messina Sans semibold;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 24px;
+    color: #768F87;
   background: #1451560D;
   height: 8.3125rem;
   width: 44.0625rem;
   border-radius: 0rem;
   border: 0;
   margin-bottom: 1.5rem;
+  padding: 0.425rem;
+  &:focus {
+    background: rgba(20, 81, 86, 0.05);
+    border: 2px solid #17494D;
+    border-radius: 0rem;
+    outline: none;
+  }
   @media (max-width: 991px) {
         width: 20rem;
     }
@@ -281,7 +328,7 @@ function MyVerticallyCenteredModal(props) {
             <StyledInputDescription>Work email</StyledInputDescription>
             <StyledEmailInput />
             <StyledInputDescription>Message</StyledInputDescription>
-            <StyledMessageInput />
+            <StyledMessageInput type="text" />
             <StyledButton>Contact</StyledButton>
           </StyledContainer>
 

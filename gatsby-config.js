@@ -6,6 +6,15 @@ module.exports = {
     author: `@KarolHamuda`,
   },
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://secureki.herokuapp.com`,
+        collectionTypes: [`articles`],
+        queryLimit: 1000,
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,

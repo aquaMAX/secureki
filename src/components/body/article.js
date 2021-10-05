@@ -104,7 +104,7 @@ const StyledTextBody = styled.div`
     /* or 156% */
     color: #17494D;
     mix-blend-mode: normal;
-    margin-right: 5.555555555555555em;
+    margin-right: 3.555555555555555em;
     margin-bottom: 2.2222222222222223em;
     @media (max-width: 991px) {
         font-family: Messina Sans;
@@ -314,7 +314,7 @@ const Article = () => {
                 <FixedRow>
                     <StyledTextBody>
                         Secure access for your business, customers, or employees with our unparalleled identity security backed by
-                        <br />a zero–trust philosophy.
+                        a zero–trust philosophy.
                     </StyledTextBody>
                 </FixedRow>
                 <FixedButtonsRow xs={1} lg={2}>
@@ -322,16 +322,12 @@ const Article = () => {
                     <StyledButtonFix background="#FF6938" font="#FFFFFF">
                         Request a demo
                     </StyledButtonFix>
-                    <StyledTrialText>
-                        Free trial
-                    </StyledTrialText>
+                    
                     
                 </FixedButtonsRow>
                 <FixedRow>
                     
-                    <Notice>
-                    *We never sell your data. No credit card required.
-                    </Notice>
+                    
                     
                 </FixedRow>
             </StyledLeftColumn>

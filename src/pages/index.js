@@ -9,7 +9,7 @@ import { ThreePrinciplesSection } from "../components/body/ThreePrinciplesSectio
 import { DetailedOffer } from "../components/body/DetailedOffer";
 import { SecondDetailedOffer } from "../components/body/SecondDetailedOffer";
 import { DetailsWithPictures } from "../components/body/DetailsWithPictures";
-import { Stories } from "../components/body/Stories";
+import Stories from "../components/body/Stories";
 import { GetStarted } from "../components/body/GetStarted"
 import { Footer } from "../components/body/Footer"
 import StickyNav from "../components/navbar/StickyNav.js"

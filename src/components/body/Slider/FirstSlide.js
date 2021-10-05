@@ -76,7 +76,7 @@ const StyledSlogan = styled.div`
     font-size: 0.75rem;
     line-height: 2em;
     /* or 200% */
-    letter-spacing: 0.050333333333333333em;
+    //letter-spacing:  0.050333333333333333em;
     color: #BDCCC7;
     @media (max-width: 991px) {
            margin-left: 1.125rem; 
@@ -102,7 +102,7 @@ const StyledTitle = styled.div`
     color: #FFFFFF;
     margin-top: 0.5em;
     margin-bottom: 0.35em;
-    letter-spacing: 0.01625em;
+    //letter-spacing:  0.01625em;
 
     @media (max-width: 1439px) {
         padding-right: 0;
@@ -111,7 +111,7 @@ const StyledTitle = styled.div`
         font-size: 1.25rem;
         font-weight: 700;
         line-height: 1.75rem;
-        letter-spacing: 0rem;
+        //letter-spacing:  0rem;
         text-align: left;
         margin-left: 1.125rem;
         margin-top: 1.375rem;
@@ -130,7 +130,7 @@ const StyledMoreabout = styled.button`
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.01825em;
+    //letter-spacing:  0.01825em;
     margin-top: 7.475em;
 
     /* Link */
@@ -168,7 +168,7 @@ const StyledPointer = styled.div`
     font-size: 0.9em;
     font-weight: bold;
     line-height: 1.5em;
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     color: #FFFFFF;
 `
 

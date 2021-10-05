@@ -31,7 +31,7 @@ const StyledTitle = styled(Row)`
     font-size: 1.5rem;
     font-style: normal;
     line-height: 2rem;
-    letter-spacing: -0.0063rem;
+    //letter-spacing:  -0.0063rem;
     text-align: left;
     color: #073233;
     @media (max-width: 991px) {

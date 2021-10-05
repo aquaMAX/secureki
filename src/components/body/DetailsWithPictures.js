@@ -68,7 +68,7 @@ const StyledTitle = styled.div`
     font-size: 3em;
     line-height: 1.0625em;
     /* or 120% */
-    letter-spacing: -0.010416666666666666em;
+    //letter-spacing:  -0.010416666666666666em;
 
     color: #073233;
 
@@ -78,7 +78,7 @@ const StyledTitle = styled.div`
 
         font-weight: 700;
         line-height: 2.4375rem;
-        letter-spacing: 0rem;
+        //letter-spacing:  0rem;
         text-align: left;
         margin-bottom: 1.5625rem;
         margin-top: 3.0625rem;
@@ -95,7 +95,7 @@ const StyledContent = styled(Row)`
     font-size: 1.125em;
     line-height: 1.5555555555555556em;
     /* or 150% */
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     margin-bottom: 2em;
     color: #17494D;
     padding-left: 0.9375em;
@@ -116,7 +116,7 @@ const StyledMoreabout = styled.div`
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
 
     margin-top: 7.625em;
     
@@ -144,7 +144,7 @@ const StyledPointer = styled.div`
     margin-bottom: 0.18em;
     font-size: 1.1em;
     line-height: 1.5em;
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     color: #FF6938;
 `
 
@@ -225,7 +225,7 @@ const StyledCol = styled(Col)`
 const StyledImage = styled.img`
     
     margin-top: 1.5625rem;
-    min-width: 22.25rem;
+    max-width: 21.25rem;
     @media (min-width: 992px) {
         display: none;
     }

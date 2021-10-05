@@ -129,7 +129,7 @@ const StyledTitle = styled.div`
     font-size: 3.5rem;
     line-height: 3.75rem;
     /* or 107% */
-    letter-spacing: -0.0625rem;
+    //letter-spacing:  -0.0625rem;
 
     color: #073233;
 

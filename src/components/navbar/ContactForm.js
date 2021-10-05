@@ -31,7 +31,7 @@ const StyledMobileContactButton = styled(Button)`
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
+    //letter-spacing:  0.10000000149011612px;
     text-align: center;
     @media (min-width: 991px) {
         display: none;
@@ -97,7 +97,7 @@ const StyledTitle = styled.div`
   font-size: 3.5rem;
   font-style: normal;
   line-height: 3.75rem;
-  letter-spacing: -0.0625rem;
+  //letter-spacing:  -0.0625rem;
   text-align: center;
   margin-top: 2.75rem;
   margin-bottom: 1.4375rem;
@@ -117,7 +117,7 @@ const StyledDescription = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
-  letter-spacing: 0rem;
+  //letter-spacing:  0rem;
   text-align: left;
   margin-bottom: 2.875rem;
   @media (max-width: 991px) {
@@ -135,7 +135,7 @@ flex-wrap: nowrap;
     font-style: normal;
     font-weight: 600;
     line-height: 1.25rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
 
     /* Input */

@@ -45,7 +45,7 @@ const StyledTitle = styled.div`
         font-size: 2.5rem;
         line-height: 1.2em;
         text-align: center;
-        letter-spacing: -0.0125em;
+        //letter-spacing:  -0.0125em;
         @media (max-width: 991px) {
             font-size: 1.875rem;
             margin: 0;
@@ -154,17 +154,7 @@ const BigContainer = styled.div`
     } 
 `
 
-const SmallContainer = styled.div`
-    @media (min-width: 992px) {
-        display: none;
-    } 
-`
 
-const BigContainer = styled.div`
-    @media (max-width: 991px) {
-        display: none;
-    } 
-`
 
 
 export const Join = () => {

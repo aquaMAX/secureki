@@ -46,7 +46,7 @@ const TitleContainer = styled(Row)`
     font-style: normal;
     font-weight: 700;
     line-height: 32px;
-    letter-spacing: -0.10000000149011612px;
+    //letter-spacing:  -0.10000000149011612px;
     text-align: left;
 
     width: 14.583333333333334em;
@@ -65,7 +65,7 @@ const DescriptionContainer = styled(Row)`
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
+    //letter-spacing:  0.10000000149011612px;
     text-align: left;
     color: #073233;
     margin: 1em 0;
@@ -81,7 +81,7 @@ const LinkContainer = styled(Row)`
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
+    //letter-spacing:  0.10000000149011612px;
     text-align: left;
     color: #073233;
     text-decoration-line: underline;

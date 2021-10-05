@@ -185,7 +185,7 @@ const StyledTitle = styled.div`
     font-size: 3.1875em;
     line-height: 1.1764705882352942em;
     /* or 118% */
-    letter-spacing: -0.0196078431372549em;
+    //letter-spacing:  -0.0196078431372549em;
     color: #073233;
     @media (max-width: 991px) {
         padding: 0;
@@ -193,7 +193,7 @@ const StyledTitle = styled.div`
         font-size: 2.375rem;
         font-style: normal;
         line-height: 3rem;
-        letter-spacing: -0.0625rem;
+        //letter-spacing:  -0.0625rem;
         text-align: center;
         margin-top: 1rem;
     }
@@ -272,7 +272,7 @@ const StyledParagraph = styled.div`
             /* identical to box height, or 150% */
             display: flex;
             align-items: center;
-            letter-spacing: 0.00625em;
+            //letter-spacing:  0.00625em;
             
             color: #17494D; 
             &::last-child {

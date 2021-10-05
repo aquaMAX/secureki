@@ -40,12 +40,12 @@ const StyledTitle = styled(Col)`
         font-size: 2.5em;
         line-height: 1.2em;
         text-align: center;
-        letter-spacing: -0.0125em;
+        //letter-spacing:  -0.0125em;
         @media (max-width: 991px) {
             font-size: 1.875rem;
             font-weight: 700;
             line-height: 2.4375rem;
-            letter-spacing: 0rem;
+            //letter-spacing:  0rem;
             text-align: center;
             margin-bottom: 0;
         } 

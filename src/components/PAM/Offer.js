@@ -71,7 +71,7 @@ const StyledSlogan = styled.div`
     text-align: center;
     display: flex;
     align-items: center;
-    letter-spacing: 0.041666666666666664em;
+    //letter-spacing:  0.041666666666666664em;
 
     color: #FFFFFF;
 
@@ -100,7 +100,7 @@ const StyledTitle = styled.div`
     font-size: 2.5em;
     line-height: 1.2em;
     /* or 120% */
-    letter-spacing: -0.00625em;
+    //letter-spacing:  -0.00625em;
 
     color: #073233;
     @media (max-width: 991px) {
@@ -119,7 +119,7 @@ const StyledContent = styled.div`
     font-size: 1em;
     line-height: 1.5em;
     /* or 150% */
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     margin-bottom: 2em;
     color: #17494D;
     @media (max-width: 991px) {
@@ -138,7 +138,7 @@ const StyledMoreabout = styled.button`
     /* or 150% */
     display: flex;
     align-items: center;
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     
     color: #073233;
     border: 0;
@@ -161,7 +161,7 @@ const StyledPointer = styled.div`
     margin-bottom: 0.18em;
     font-size: 1.1em;
     line-height: 1.5em;
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     color: #FF6938;
 `
 

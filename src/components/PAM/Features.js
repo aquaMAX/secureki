@@ -52,7 +52,7 @@ const StyledTitle = styled(Col)`
         font-size: 2.5em;
         line-height: 1.2em;
         text-align: center;
-        letter-spacing: -0.0125em;
+        //letter-spacing:  -0.0125em;
     }
     @media (max-width: 991px) {
         margin-top: 3.0625rem;
@@ -65,7 +65,7 @@ const StyledBasic = styled.button`
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    letter-spacing: 0.468px;
+    //letter-spacing:  0.468px;
     text-align: center;
     padding: 0;
     
@@ -91,7 +91,7 @@ const StyledAdvanced = styled.button`
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    letter-spacing: 0.468px;
+    //letter-spacing:  0.468px;
     text-align: center;
     padding: 0;
     

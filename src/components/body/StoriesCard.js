@@ -87,7 +87,7 @@ const TitleContainer = styled(Row)`
     margin-top: 1.36375em;
     display: flex;
     align-items: center;
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     color: #FF6938;
 `
 

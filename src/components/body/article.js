@@ -60,7 +60,7 @@ const StyledTitle = styled.div`
     font-size: 3.5em;
     line-height: 1.0714285714285714em;
     /* or 107% */
-    letter-spacing: -0.017857142857142856em;
+    //letter-spacing:  -0.017857142857142856em;
     color: #073233;
 
     mix-blend-mode: normal;
@@ -79,7 +79,7 @@ const StyledTitle = styled.div`
         font-style: normal;
         font-weight: 700;
         line-height: 3rem;
-        letter-spacing: -0.0625rem;
+        //letter-spacing:  -0.0625rem;
         text-align: center;
 
         > .Title {
@@ -112,7 +112,7 @@ const StyledTextBody = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: 1.75rem;
-        letter-spacing: 0rem;
+        //letter-spacing:  0rem;
         text-align: center;
         margin-left: 1.125rem;
         margin-right: 1.125rem;

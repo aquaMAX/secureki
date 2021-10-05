@@ -18,7 +18,7 @@ const StyledInformation = styled.div`
         font-weight: 400;
         font-size: 0.9375em;
         line-height: 1.6em;
-        letter-spacing: 0.006666666666666667em;
+        //letter-spacing:  0.006666666666666667em;
         color: #FFFFFF;
 
         > p {

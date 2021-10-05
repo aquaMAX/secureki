@@ -53,7 +53,7 @@ const MFAButton = styled(StyledButton)`
     font-family: Messina Sans semibold;
     font-size: 1.125rem;
     line-height: 1.5rem;
-    letter-spacing: 0.0063rem;
+    //letter-spacing:  0.0063rem;
     transition: 0.3s;
     
     &:hover {
@@ -89,7 +89,7 @@ const StyledTitle = styled(Row)`
         font-size: 3.5em;
         line-height: 0.8571428571428571em;
         text-align: center;
-        letter-spacing: -0.008928571428571428em;
+        //letter-spacing:  -0.008928571428571428em;
         @media (max-width: 991px) {
             font-size: 2.375rem;
             

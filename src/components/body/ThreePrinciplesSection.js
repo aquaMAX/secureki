@@ -48,7 +48,7 @@ const StyledParagraph = styled(Row)`
     font-weight: normal;
     font-size: 1em;
     line-height: 1.5em;
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     color: #17494D;
     flex: none;
     order: 1;

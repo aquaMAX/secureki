@@ -36,7 +36,7 @@ const StyledCol = styled.div`
         font-size: 0.875em;
         line-height: 1.7142857142857142em;
         /* identical to box height, or 171% */
-        letter-spacing: 0.0071428571428571435em;
+        //letter-spacing:  0.0071428571428571435em;
         color: #B5C1C2;
         opacity: 1;
         /* Inside Auto Layout */
@@ -65,7 +65,7 @@ const StyledCol = styled.div`
         font-size: 1em;
         line-height: 1.5em;
         /* identical to box height, or 150% */
-        letter-spacing: 0.0325em;
+        //letter-spacing:  0.0325em;
 
         color: #FFFFFF;
         @media (max-width: 991px) {
@@ -168,7 +168,7 @@ const StyledRights = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 1.25rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
     @media (max-width: 991px) {
         margin-left: 0;
@@ -192,7 +192,7 @@ const StyledSocials = styled.img`
     font-style: normal;
     font-weight: 400;
     line-height: 1.25rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
 `
 

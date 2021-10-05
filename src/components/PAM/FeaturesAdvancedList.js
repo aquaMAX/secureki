@@ -88,7 +88,7 @@ const StyledTitle = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: 1.625rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
     padding-left: 1.65em;
     color: #073233;

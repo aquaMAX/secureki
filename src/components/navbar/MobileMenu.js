@@ -51,7 +51,7 @@ const StyledProduct = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 1.3125rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
     
 
@@ -71,7 +71,7 @@ const StyledResources = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 1.3125rem;
-    letter-spacing: 0px;
+    //letter-spacing:  0px;
     text-align: left;
     color: #073233;
     transition: 0s cubic-bezier(.83,.13,.18,1.06);
@@ -87,7 +87,7 @@ const StyledCompany = styled.div`
     font-style: normal;
     font-weight: 600;
     line-height: 1.3125rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
     color: #073233;
     transition: 0s cubic-bezier(.83,.13,.18,1.06);
@@ -121,7 +121,7 @@ const StyledButton = styled.button`
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
+    //letter-spacing:  0.10000000149011612px;
     text-align: center;
 `
 const StyledIcon = styled.svg`
@@ -158,7 +158,7 @@ const StyledProductLinkRow = styled(Row)`
     font-style: normal;
     font-weight: 700;
     line-height: 1.3125rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
     color: #073233;
     /*transform: ${props=>props.currentMenu === "Product" ? "translateY(0)" : "translateY(-100%)"};
@@ -178,7 +178,7 @@ const StyledResourcesLinkRow = styled(Row)`
     font-style: normal;
     font-weight: 700;
     line-height: 1.3125rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
     color: #073233;
     /* transition: height 0s;
@@ -197,7 +197,7 @@ const StyledCompanyLinkRow = styled(Row)`
     font-style: normal;
     font-weight: 700;
     line-height: 1.3125rem;
-    letter-spacing: 0rem;
+    //letter-spacing:  0rem;
     text-align: left;
     color: #073233;
    /* transition: height 0s;

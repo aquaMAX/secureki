@@ -16,7 +16,7 @@ const StyledButton = styled.button`
     font-family: Messina Sans;
     font-style: normal;
     font-weight: ${props => props.weight};
-    letter-spacing: 0.1px;
+    
     line-height: 24px;
 
 `

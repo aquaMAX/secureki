@@ -68,7 +68,7 @@ const StyledTitle = styled.div`
     font-size: 2.5rem;
     line-height: 2.3rem;
     /* or 120% */
-    letter-spacing: -0.0313rem;
+    //letter-spacing:  -0.0313rem;
 
     display: flex;
     align-items: flex-end;
@@ -90,7 +90,7 @@ const StyledContent = styled(Row)`
     font-size: 1.125em;
     line-height: 1.5555555555555556em;
     /* or 150% */
-    letter-spacing: 0.00625em;
+    //letter-spacing:  0.00625em;
     margin-bottom: 2em;
     color: #17494D;
     padding-left: 0.9375em;
@@ -99,7 +99,7 @@ const StyledContent = styled(Row)`
         font-style: normal;
         font-weight: 400;
         line-height: 1.5rem;
-        letter-spacing: 0.0063rem;
+        //letter-spacing:  0.0063rem;
         text-align: left;
         width: auto;
         margin-left: 0;

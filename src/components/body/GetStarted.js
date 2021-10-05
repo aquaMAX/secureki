@@ -59,7 +59,7 @@ const StyledButton = styled(Button)`
     -webkit-border-radius: 40px;
     
     
-    margin-left: 9em;
+    
     padding: 0.5687em 1.425em 0.5687em 1.425em;
     font-family: Messina Sans bold;
     font-size: 1.125em;
@@ -79,7 +79,7 @@ const StyledButton = styled(Button)`
 
 const StyledSecondButton = styled(Button)`
     
-    margin-right: 9.5em;
+   
     padding: 0.6687em 1.525em 0.6687em 1.525em;
     font-family: Messina Sans bold;
     font-size: 1.125em;
@@ -106,13 +106,26 @@ const StyledCol = styled(Col)`
 `
 
 const StyledRow = styled(Row)`
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 26.9375rem;
     @media (max-width: 991px) {
         margin-top: 0;
         margin-bottom: 0;
         justify-content: space-between;
         align-content: space-between;
+    } 
+`
+
+const SmallContainer = styled.div`
+    @media (min-width: 992px) {
+        display: none;
+    } 
+`
+
+const BigContainer = styled.div`
+    @media (max-width: 991px) {
+        display: none;
     } 
 `
 
@@ -127,13 +140,25 @@ export const GetStarted = () => {
                     </h1>
                 </StyledTitle>
             </StyledRow>
-            <StyledRow>
-                <StyledCol>
-                <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
-              
-                    <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
-                </StyledCol>
-            </StyledRow>
+            <SmallContainer>
+                <StyledRow>
+                    <StyledCol>
+                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                
+                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
+                    </StyledCol>
+                </StyledRow>
+            </SmallContainer>
+            <BigContainer>
+                <StyledRow>
+                    <StyledCol>
+                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                    </StyledCol><StyledCol>
+                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
+                    </StyledCol>
+                </StyledRow>
+            </BigContainer>
+
         </Container>
         </div>
     )

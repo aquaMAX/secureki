@@ -4,8 +4,8 @@ import { Row, Col, Modal } from 'react-bootstrap'
 import Button from './Button';
 
 const StyledContactButton = styled(Button)`
-    font-family: Messina Sans semibold;
-    font-weight: 600;
+    font-family: Messina Sans bold;
+    
     transition: 0.3s;
     &:hover {
         background: #EEDDD7;

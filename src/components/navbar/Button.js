@@ -13,8 +13,8 @@ const StyledButton = styled.button`
     -moz-border-radius: 1.9em;
     -webkit-border-radius: 1.9em;
     border-width: 0px;
-    font-family: Messina Sans;
-    font-style: normal;
+    font-family: Messina Sans bold;
+    
     font-weight: ${props => props.weight};
     
     line-height: 24px;

@@ -108,7 +108,21 @@ const StyledCol = styled(Col)`
 const StyledRow = styled(Row)`
     margin-left: auto;
     margin-right: auto;
-    max-width: 26.9375rem;
+    max-width: 25.9375rem;
+    white-space: nowrap;
+    @media (max-width: 991px) {
+        margin-top: 0;
+        margin-bottom: 0;
+        justify-content: space-between;
+        align-content: space-between;
+    } 
+`
+
+const StyledButtonRow = styled(Row)`
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20.5375rem;
+    white-space: nowrap;
     @media (max-width: 991px) {
         margin-top: 0;
         margin-bottom: 0;
@@ -150,13 +164,13 @@ export const GetStarted = () => {
                 </StyledRow>
             </SmallContainer>
             <BigContainer>
-                <StyledRow>
+                <StyledButtonRow>
                     <StyledCol>
                         <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
                     </StyledCol><StyledCol>
                         <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
                     </StyledCol>
-                </StyledRow>
+                </StyledButtonRow>
             </BigContainer>
 
         </Container>

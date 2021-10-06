@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Row, Col, Modal } from 'react-bootstrap'
+import { Row, Modal } from 'react-bootstrap'
 import Button from './Button';
 
 const StyledContactButton = styled(Button)`
-    font-family: Messina Sans bold;
+    font-family: Messina Sans semibold;
     
     transition: 0.3s;
     &:hover {
@@ -29,7 +29,7 @@ const StyledMobileContactButton = styled(Button)`
     font-family: Messina Sans semibold;
     font-size: 18px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 24px;
     //letter-spacing:  0.10000000149011612px;
     text-align: center;
@@ -70,14 +70,14 @@ const StyledRow = styled(Row)`
     @media (max-width: 991px) {
         flex-wrap: wrap;
     }
-
-
 `
 
 const StyledContainer = styled.div`
     padding-left: 18%;
+    width: 87%;
     @media (min-width: 992px) and (max-width: 1199px) {
         padding-left: 1.8rem;
+        width: 97%;
     }
     @media (max-width: 991px) {
         padding-left: 0;
@@ -118,8 +118,9 @@ const StyledDescription = styled.div`
   font-weight: 400;
   line-height: 1.25rem;
   //letter-spacing:  0rem;
-  text-align: left;
+  
   margin-bottom: 2.875rem;
+  
   @media (max-width: 991px) {
       margin-bottom: 1.625rem;
   }
@@ -133,7 +134,7 @@ flex-wrap: nowrap;
     font-family: Messina Sans semibold;
     font-size: 0.875rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.25rem;
     //letter-spacing:  0rem;
     text-align: left;
@@ -283,6 +284,16 @@ const Desktop = styled.div`
     }
 `
 
+const StyledDesktopRow = styled(Row)`
+  margin: 0;
+  padding: 0;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    
+`
+
+
+
 function MyVerticallyCenteredModal(props) {
     return (
       <StyledModal
@@ -298,19 +309,19 @@ function MyVerticallyCenteredModal(props) {
             Contact sales
             </StyledTitle>
             <StyledDescription>
-            Let’s get this conversation started. Tell us a bit about yourself, and we’ll get in touch as soon as we can.
+            Let’s get this conversation started. Tell us a bit about yourself, we’ll get in touch as soon as we can.
             </StyledDescription>
           <Desktop>
-            <StyledRow>
+            <StyledDesktopRow>
               <StyledInputDescription>First name</StyledInputDescription>
               <StyledInputDescription>Last name</StyledInputDescription>
-            </StyledRow>
-            <StyledRow>
+            </StyledDesktopRow>
+            <StyledDesktopRow>
               <StyledNameInput />
               <StyledLastnameInput />
-            </StyledRow>
+            </StyledDesktopRow>
           </Desktop>
-           <Mobile>
+          <Mobile>
             <StyledRow>
                 <StyledInputDescription>First name</StyledInputDescription>
                 <StyledNameInput />
@@ -322,7 +333,7 @@ function MyVerticallyCenteredModal(props) {
                 <StyledInputDescription>Last name</StyledInputDescription>
                 <StyledLastnameInput />
               </StyledRow>
-            </Mobile> 
+          </Mobile> 
             
             
             <StyledInputDescription>Work email</StyledInputDescription>

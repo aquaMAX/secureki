@@ -63,7 +63,7 @@ const StyledBasic = styled.button`
     font-family: Messina Sans semibold;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 24px;
     //letter-spacing:  0.468px;
     text-align: center;
@@ -89,7 +89,7 @@ const StyledAdvanced = styled.button`
     font-family: Messina Sans semibold;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 24px;
     //letter-spacing:  0.468px;
     text-align: center;

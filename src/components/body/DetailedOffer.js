@@ -149,7 +149,7 @@ const StyledMoreabout = styled.div`
    
     font-family: Messina Sans semibold;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1em;
     line-height: 1.5em;
     /* or 150% */

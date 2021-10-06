@@ -76,7 +76,7 @@ const StickyInner = styled.div`
 
 
 const StyledStartedButton = styled(Button)`
-    font-family: Messina Sans bold;
+    font-family: Messina Sans semibold;
     margin-left: 9.1875em;
     transition: 0.3s;
     &:hover {

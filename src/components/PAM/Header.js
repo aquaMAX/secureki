@@ -178,7 +178,7 @@ const ColoredP = styled.div`
 
 const StyledTitle = styled.div`
     /* Medium length displa */
-    width: 8.333333333333334em;
+    width: 9.933333333333334em;
     font-family: Messina Sans bold;
     font-style: normal;
     font-weight: bold;

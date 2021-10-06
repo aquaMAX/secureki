@@ -16,7 +16,7 @@ const StyledImage = styled.img`
     margin-top: 12.25em;
 
     @media (max-width: 1439px) {
-        margin-left: 1rem;
+        margin-left: 2rem;
         min-width: auto;
         min-width: 28rem;
         max-width: 25rem;
@@ -25,7 +25,7 @@ const StyledImage = styled.img`
     }
     @media (max-width: 991px) {
         max-width: 21.4375rem;
-        margin-top: 3.1875rem;
+        margin-top: 7.1875rem;
         min-width: 21.4375rem;
     } 
     
@@ -56,7 +56,7 @@ const StyledTitle = styled.div`
 
     font-family: "Messina Sans bold";
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 3.5em;
     line-height: 1.0714285714285714em;
     /* or 107% */
@@ -140,48 +140,6 @@ const StyledLeftColumn = styled(Col)`
     }
 `
 
-
-
-const StyledTrialText = styled.button`
-    /* Separated they live */
-
-    position: absolute;
-    
-    height: 1.25em;
-    margin-top: 1em;
-
-    font-family: Messina Sans semibold;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1em;
-    line-height: 1.25em;
-    /* identical to box height, or 125% */
-    display: flex;
-    align-items: center;
-    margin-left: 13.9375em;
-    color: #073233;
-
-    mix-blend-mode: normal;
-    
-    border: 0;
-    background: none;
-    padding: 0;
-    border-bottom: 3px solid #FF6938;
-    flex-wrap: nowrap;
-    transition: 0.3s;
-    &:hover {
-        color: #1E5A5F;
-        
-    }
-    @media (max-width: 991px) {
-        margin-left: 9.625rem;
-        margin-top: 6.5rem;    
-    } 
-`
-
-
-
-
 const StyledButtonFix = styled(StyledButton)`
     margin: 0;
     padding-top: 0.6666666666666666em;
@@ -191,7 +149,7 @@ const StyledButtonFix = styled(StyledButton)`
     font-family: Messina Sans semibold;
     font-size: 1.125em;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 200;
     line-height: 1.3333333333333333em;
     
     text-align: center;
@@ -206,22 +164,6 @@ const StyledButtonFix = styled(StyledButton)`
         margin-top: 1.6875rem;    
     } 
 
-`
-
-const Notice = styled.div`
-    
-    margin-top: 4.5em;
-    font-family: Messina Sans;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 0.8125em;
-    line-height: 2.1538461538461537em;
-    color: #17494D;
-    mix-blend-mode: normal;
-    @media (max-width: 991px) {
-        margin-left: 2.6875rem;
-        margin-top: 9.3125rem;    
-    } 
 `
 
 const StyledSquare = styled.img`

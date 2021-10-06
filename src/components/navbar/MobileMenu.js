@@ -49,7 +49,7 @@ const StyledProduct = styled.div`
     font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.3125rem;
     //letter-spacing:  0rem;
     text-align: left;
@@ -69,7 +69,7 @@ const StyledResources = styled.div`
     font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.3125rem;
     //letter-spacing:  0px;
     text-align: left;
@@ -85,7 +85,7 @@ const StyledCompany = styled.div`
     font-family: Messina Sans semibold;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.3125rem;
     //letter-spacing:  0rem;
     text-align: left;
@@ -119,7 +119,7 @@ const StyledButton = styled.button`
     font-family: Messina Sans semibold;
     font-size: 18px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 24px;
     //letter-spacing:  0.10000000149011612px;
     text-align: center;

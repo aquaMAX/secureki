@@ -146,7 +146,7 @@ query {
 `)
     
     return (
-        <Container>
+        <Container id="Stories">
             <StyledRecEmpty src={recempty} />
             <StyledRec src={rec} />
             <StyledSmallCircle src={cirsmall} />

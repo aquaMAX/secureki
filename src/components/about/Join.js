@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import Button from "../navbar/Button"
+import { Link } from 'gatsby'
 
 
 const Container = styled.div`
@@ -83,7 +84,7 @@ const StyledButton = styled(Button)`
 `
 
 const StyledSecondButton = styled(Button)`
-    margin-left: 71.375rem;
+    margin-left: 42.125rem;
     margin-top: 3.875rem;
     padding: 0.6687em 1.525em 0.6687em 1.525em;
     font-family: Messina Sans bold;
@@ -102,9 +103,14 @@ const StyledSecondButton = styled(Button)`
         text-align: center;
         justify-content: center;
     } 
+
     @media (min-width: 992px) and (max-width: 1439px) {
-        margin-left: 81vw;
+        margin-left: 38vw;
     } 
+    @media (min-width: 1140px) and (max-width: 1439px) {
+        margin-left: 44vw;
+    } 
+
 `
 
 const StyledRow = styled(Row)`
@@ -168,8 +174,10 @@ export const Join = () => {
                         Want to join us?
                         </h1>
                     </StyledTitle>
-                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                    <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                        <Link to='/careers'> 
                         <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
+                        </Link>
                 </StyledRow>
             </BigContainer>
 
@@ -183,8 +191,10 @@ export const Join = () => {
                 </StyledButtonRow>
                 <StyledButtonRow>
                     <StyledButtonCol>
-                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                        <Link to='./careers'> 
                         <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
+                        </Link>
                     </StyledButtonCol>
                 </StyledButtonRow>
             </SmallContainer> 

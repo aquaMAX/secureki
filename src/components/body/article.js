@@ -260,11 +260,11 @@ const Article = () => {
                     </StyledTextBody>
                 </FixedRow>
                 <FixedButtonsRow xs={1} lg={2}>
-                    
-                    <StyledButtonFix background="#FF6938" font="#FFFFFF">
+                <a href="mailto:info@secureki.com?subject=Request a demo&body=The message">
+                    <StyledButtonFix id="btnOutlook" background="#FF6938" font="#FFFFFF">
                         Request a demo
                     </StyledButtonFix>
-                    
+                   </a> 
                     
                 </FixedButtonsRow>
                 <FixedRow>

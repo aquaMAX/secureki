@@ -196,6 +196,7 @@ const StyledTitle = styled.div`
         //letter-spacing:  -0.0625rem;
         text-align: center;
         margin-top: 1rem;
+        width: auto;
     }
 `
 
@@ -333,7 +334,7 @@ return (
                     </StyledParagraph>
                 </StyledList>
                 <TextRow>
-                <MFAButton background={"#FF6938"} font={"#FFFFFF"}>
+                <MFAButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background={"#FF6938"} font={"#FFFFFF"}>
                     Request a demo
                 </MFAButton>
                 </TextRow>

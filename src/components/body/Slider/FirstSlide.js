@@ -142,8 +142,13 @@ const StyledMoreabout = styled.button`
     -webkit-border-radius: 0;
     background: none;
     padding: 0;
-    
-    > text {
+    > a {
+        color: #FFFFFF;
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+    }
+
+        > text {
         text-underline-offset: 4px;
         text-decoration: underline solid #FF6938;
         text-decoration-thickness: 3px;
@@ -152,6 +157,8 @@ const StyledMoreabout = styled.button`
             padding-right: 1em;
         }   
     }
+    }
+
 
     @media (max-width: 1130px) {
         margin-top: 9.275rem
@@ -272,7 +279,8 @@ export const FirstSlide = ({title, description, image}) => {
                     {description}
                     </StyledTitle>
                     <StyledMoreabout>
-                        <text>Read full case study</text>
+                        <a href="https://drive.google.com/file/d/1_xwYnMLYoqdUUzzLDiSodLO3iad18lb_/view?usp=sharing">
+                        <text>Read full case study</text></a>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
                     

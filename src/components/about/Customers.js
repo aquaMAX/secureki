@@ -258,7 +258,7 @@ return (
                 </SlideTrack>          
             </CustomersRow>
             <ButtonContainer>
-                <MFAButton background={"#FF6938"} font={"#FFFFFF"}>
+                <MFAButton onClick={()=>window.location.href="#Stories"} type="submit" background={"#FF6938"} font={"#FFFFFF"}>
                 See customer stories
                 </MFAButton>
             </ButtonContainer>

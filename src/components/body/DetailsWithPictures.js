@@ -8,6 +8,7 @@ import Hap from "../../assets/Hap.png"
 import { StackedPictures } from './StackedPictures';
 import Total from "../../assets/stacked images/Total.png"
 import Media from 'react-media'
+import { Link } from 'gatsby'
 
 
 
@@ -127,6 +128,14 @@ const StyledMoreabout = styled.div`
     -webkit-border-radius: 0;
     background: none;
     padding: 0;
+    > .link {
+        color: #073233;
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+        }
+        &:hover {
+            cursor: pointer;
+        }
     > text {
         text-underline-offset: 2.5px;
         text-decoration: underline solid #FF6938;
@@ -135,7 +144,7 @@ const StyledMoreabout = styled.div`
         &:hover {
             padding-right: 1em;
         }   
-
+    }
     } 
 `
 
@@ -244,6 +253,8 @@ const DesktopDisplayer = styled.div`
 `
 
 export const DetailsWithPictures = () => {
+    
+
     return (
         <>
         <Container>
@@ -270,7 +281,8 @@ export const DetailsWithPictures = () => {
                     </span></Row>
                     </StyledContent>
                     <StyledMoreabout>
-                        <text>See customer stories</text>
+                        <a className="link" onClick={()=>window.scroll(0, 3430)}>
+                        <text>See customer stories</text></a>
                         <StyledPointer>   →</StyledPointer>
                     </StyledMoreabout>
                     

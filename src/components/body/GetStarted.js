@@ -157,18 +157,22 @@ export const GetStarted = () => {
             <SmallContainer>
                 <StyledRow>
                     <StyledCol>
-                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
-                
-                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
+                    
+                        <StyledSecondButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                   
+                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
                     </StyledCol>
                 </StyledRow>
             </SmallContainer>
             <BigContainer>
                 <StyledButtonRow>
                     <StyledCol>
-                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                        
+                        <StyledSecondButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                        
+                    
                     </StyledCol><StyledCol>
-                        <StyledButton background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
+                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
                     </StyledCol>
                 </StyledButtonRow>
             </BigContainer>

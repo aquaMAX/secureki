@@ -4,6 +4,7 @@ html {
   font: 16px georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .modal {
   padding-right: 0px !important;

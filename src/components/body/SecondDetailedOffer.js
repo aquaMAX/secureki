@@ -217,6 +217,18 @@ const Styledimg = styled.img`
     }
 `
 
+const MobileDisplayer = styled.div`
+    @media (min-width: 992px) {
+       display: none;
+    } 
+`
+
+const DesktopDisplayer = styled.div`
+    @media (max-width: 991px) {
+       display: none;
+    } 
+`
+
 export const SecondDetailedOffer = () => {
     return (
         <div style={{background: "#FCF5F0"}}>
@@ -244,20 +256,19 @@ export const SecondDetailedOffer = () => {
                         to="/pam"
                         style={{textDecoration: "none"}}
                     >
-                    <StyledMoreabout>
-                        <Media queries={{
-                            small: "(max-width: 991px)",
-                            large: "(min-width: 961px)"
-                        }}>
-                            {matches => (
-                                <>
-                                {matches.small && <text>Learn more on PAM</text> }
-                                {matches.large && <text>Learn more on Privileged Access Management</text> }
-                                </>
-                            )}
-                        </Media>
-                        <StyledPointer>   →</StyledPointer>
-                    </StyledMoreabout>
+                    <MobileDisplayer>
+                        <StyledMoreabout>                        
+                                    <text>Learn more on PAM</text>
+                                    
+                            <StyledPointer>   →</StyledPointer>
+                        </StyledMoreabout>
+                    </MobileDisplayer>
+                    <DesktopDisplayer>
+                        <StyledMoreabout>                        
+                                    <text>Learn more on Privileged Access Management</text>
+                            <StyledPointer>   →</StyledPointer>
+                        </StyledMoreabout>
+                    </DesktopDisplayer>
                     </Link>
                     
                 </TextContainer>

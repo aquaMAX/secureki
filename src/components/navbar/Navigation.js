@@ -140,7 +140,7 @@ const Navigation = () => {
                                                         
                                                             
                                                             <ContactForm />
-                                                            <StyledStartedButton background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton>
+                                                            <StyledStartedButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton>
                                                             
                                                         
                                                     </Col>

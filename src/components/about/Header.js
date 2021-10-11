@@ -226,7 +226,7 @@ return (
                         Founded in 2013 by Brandon Low and Hak Jae Bang, SecureKi specializes in helping our customers secure and manage their credentials with industry-leading identity security technologies and solutions. With offices in Malaysia, South Korea, and Taiwan, we are dedicated to <b>our mission to empower organizations to securely, efficiently, and effortlessly protect their digital identities for a better tomorrow.</b>
                     </StyledContent>
                 <ButtonContainer>
-                    <MFAButton background={"#FF6938"} font={"#FFFFFF"}>
+                    <MFAButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background={"#FF6938"} font={"#FFFFFF"}>
                         Say hello
                     </MFAButton>
                 </ButtonContainer>

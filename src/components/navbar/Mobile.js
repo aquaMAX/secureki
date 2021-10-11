@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import Logo from './Logo'
 import SecurekiLogo from "../../assets/SECUREKi Logo.svg"
+import SecurekiAnimated from "../../assets/SECUREKI_LOGO_ANIMATION.mp4"
 import burger from "../../assets/burger.svg"
 import MobileMenu from './MobileMenu'
 import { CSSTransition } from 'react-transition-group'
@@ -21,14 +22,14 @@ const Container = styled.div`
     }
 `
 
-const StyledLogo = styled.img`
-    height: 1.25rem;
-    width: 8.625rem;
+const StyledLogo = styled.video`
+    height: 3.05rem;
+    width: 10.625rem;
     border-radius: 0;
     margin-bottom: 0;
-    margin-top: 1.375rem;
+    margin-top: .375rem;
     position: absolute;
-    margin-left: 1.125rem;
+    margin-left: 1.625rem;
 `;
 
 const StyledBurger = styled.svg`
@@ -69,9 +70,11 @@ const Mobile = () => {
         <Container>
             <StyledRow>
                 <StyledCol>
-                    <Link to="http://secureki.maverickstudio.pl/">
-                        <StyledLogo src={SecurekiLogo} />
-                    </Link>
+                    <a href="http://secureki.maverickstudio.pl/">
+                        <StyledLogo autoPlay muted playsInline>
+                            <source src={SecurekiAnimated} type="video/mp4" />
+                        </StyledLogo>
+                    </a>
                 </StyledCol>
                 <StyledBurgerCol>
                     <div onClick={()=>{show === false ? isShow(true) : isShow(false)}}>

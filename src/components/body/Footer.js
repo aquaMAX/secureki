@@ -6,6 +6,7 @@ import mark from "../../assets/footermark.svg"
 import instagram from "../../assets/logos/instagram.svg"
 import facebook from "../../assets/logos/facebook.svg"
 import linkedin from "../../assets/logos/linkedin.svg"
+import { Link } from 'gatsby'
 
 const Container = styled.div`
     height: 24.9375em;
@@ -246,6 +247,80 @@ const Findus = styled(Col)`
     } 
 `
 
+const StyledInnerLink = styled(Link)`
+    text-decoration: none;
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+        >p {
+            font-family: Messina Sans;
+            font-style: regular;
+            font-weight: 400;
+            font-size: 0.875em;
+            line-height: 1.7142857142857142em;
+            /* identical to box height, or 171% */
+            //letter-spacing:  0.0071428571428571435em;
+            color: #B5C1C2;
+            opacity: 1;
+            /* Inside Auto Layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0.3125em 0;
+            transition: 0.3s;
+            &:hover {
+                    transform: translateX(0.75em);
+                    cursor: pointer;
+                    text-decoration: none;
+                    border: none;
+                    underline: none
+            }
+            @media (max-width: 991px) {
+            margin: 0;
+            margin-bottom: 0.3125rem;
+            font-size: 0.875rem;
+            line-height: auto;
+            } 
+        }
+        
+`
+
+const StyledLink = styled.a`
+        text-decoration: none;
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+    }
+        >p {
+            font-family: Messina Sans;
+            font-style: regular;
+            font-weight: 400;
+            font-size: 0.875em;
+            line-height: 1.7142857142857142em;
+            /* identical to box height, or 171% */
+            //letter-spacing:  0.0071428571428571435em;
+            color: #B5C1C2;
+            opacity: 1;
+            /* Inside Auto Layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0.3125em 0;
+            transition: 0.3s;
+            &:hover {
+                transform: translateX(0.75em);
+                cursor: pointer;
+                text-decoration: none;
+                border: none;  
+            }
+            @media (max-width: 991px) {
+            margin: 0;
+            margin-bottom: 0.3125rem;
+            font-size: 0.875rem;
+            line-height: auto;
+            } 
+        }
+`
+
 
 
 export const Footer = () => {
@@ -259,8 +334,8 @@ export const Footer = () => {
                     <Product>
                         <StyledCol>
                             <h1>Product</h1>
-                            <p>Multifactor Authentication</p>
-                            <p>Privileged Access Management</p>
+                            <StyledInnerLink to={"/mfa"}><p>Multifactor Authentication</p></StyledInnerLink>
+                            <StyledInnerLink to={"/pam"}><p>Privileged Access Management</p></StyledInnerLink>
                         </StyledCol>
                     </Product>
                     <Resources>
@@ -274,16 +349,16 @@ export const Footer = () => {
                         <StyledCol>
                             <h1>Company</h1>
                             <p>Newsroom</p>
-                            <p>About Us</p>
-                            <p>Career</p>
+                            <StyledInnerLink to={"/about"}><p>About Us</p></StyledInnerLink>
+                            <StyledInnerLink to={"/careers"}><p>Career</p></StyledInnerLink>
                         </StyledCol>
                     </Company>
                     <Findus>
                         <StyledCol>
                             <h1>Find us</h1>
-                            <p><StyledSocials src={instagram} />Instagram</p>
-                            <p><StyledSocials src={facebook} />Facebook</p>
-                            <p><StyledSocials src={linkedin} />Linkedin</p>
+                            <StyledLink href="https://www.linkedin.com/company/secureki"><p><StyledSocials src={instagram} />Instagram</p></StyledLink>
+                            <StyledLink href="https://www.facebook.com/Secureki"><p><StyledSocials src={facebook} />Facebook</p></StyledLink>
+                            <StyledLink href="https://www.linkedin.com/company/secureki"><p><StyledSocials src={linkedin} />Linkedin</p></StyledLink>
                         </StyledCol>
                     </Findus>
             </StyledRow>

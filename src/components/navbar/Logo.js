@@ -2,18 +2,19 @@ import * as React from 'react'
 import styled from "styled-components";
 //import SecurekiLogo from "../../assets/securekianimated.gif"
 import SecurekiLogo from "../../assets/SECUREKi Logo.svg"
+import SecurekiAnimated from "../../assets/SECUREKI_LOGO_ANIMATION.mp4"
 import { Link } from 'gatsby'
 
-const LogoStyling = styled.img`
-    height: 2.6875em;
-    width: 12.0625em;
+const LogoStyling = styled.video`
+    max-height: 2.6875em;
+    max-width: 12.0625em;
     border-radius: 0;
     margin-bottom: 0;
     margin-top: 1.125em;
-    position: absolute;
+    overflow: hidden;
     margin-left: 10.8875em;
-    
-
+    border: none;
+    border-width: 0;
     @media (max-width: 1439px) {
         margin-left: 3.125rem;
     }
@@ -21,9 +22,11 @@ const LogoStyling = styled.img`
 
 const Logo = () => {
     return (
-        <Link to="http://secureki.maverickstudio.pl/">
-            <LogoStyling src={SecurekiLogo} />
-        </Link>
+        <a href="http://secureki.maverickstudio.pl/">
+            <LogoStyling autoPlay muted>
+                <source src={SecurekiAnimated} type="video/mp4" />
+            </LogoStyling>
+        </a>
     )
 }
 

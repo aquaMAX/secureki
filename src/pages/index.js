@@ -1,10 +1,10 @@
 import * as React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Article } from '../components/body/Article.js'
 import Slider from '../components/body/Slider/Slider.js'
 import '../fonts/typography.css';
 
+import { Article } from '../components/body/Article.js'
 import { ThreePrinciplesSection } from "../components/body/ThreePrinciplesSection";
 import { DetailedOffer } from "../components/body/DetailedOffer";
 import { SecondDetailedOffer } from "../components/body/SecondDetailedOffer";

@@ -230,7 +230,7 @@ const FixedRow = styled(Row)`
 
 
 
-const Article = () => {
+export const Article = () => {
     return (
         
 
@@ -284,4 +284,3 @@ const Article = () => {
     )
 }
 
-export default Article;

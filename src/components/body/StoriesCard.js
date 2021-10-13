@@ -110,6 +110,8 @@ const JobContainer = styled(Row)`
 
 `
 
+
+
 const StoriesCard = ({story, image, title, position}) => {
     return (
         <Container>

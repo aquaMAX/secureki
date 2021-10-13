@@ -127,6 +127,12 @@ const StyledRecEmpty = styled.img`
         display: none;
     }
 `
+const Hook = styled.div`
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+`
 
 
 
@@ -146,6 +152,7 @@ query {
 `)
     
     return (
+        <>
         <Container id="Stories">
             <StyledRecEmpty src={recempty} />
             <StyledRec src={rec} />
@@ -187,7 +194,10 @@ query {
                 </StoriesCol>
             </StyledRow>
             
+            <Hook id="Hook" />
         </Container>
+        
+        </>
     )
 }
 

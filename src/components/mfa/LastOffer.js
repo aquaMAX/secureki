@@ -1,10 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import drugi from "../../assets/mfa/offer-3.png"
-
-import circle from "../../assets/decorations/circle.svg"
-import smallcircle from "../../assets/decorations/smallcircle.svg"
+import drugi from "../../assets/mfa/offer-3.png";
+import circle from "../../assets/decorations/circle.svg";
+import smallcircle from "../../assets/decorations/smallcircle.svg";
 
 const Container = styled.div`
     height: 37.8125em;

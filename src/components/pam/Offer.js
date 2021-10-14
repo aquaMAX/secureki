@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import drugi from "../../assets/PAM/offer-1.png"
+import drugi from "../../assets/pam/offer-1.png"
 import Media from 'react-media'
 
 const Container = styled.div`

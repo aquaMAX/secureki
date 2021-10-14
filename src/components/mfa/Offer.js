@@ -2,8 +2,8 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import pierwszy from "../../assets/pierwszy.png"
-import image from "../../assets/MFA/offer-2.png"
-import dot from "../../assets/MFA/dot.svg"
+import image from "../../assets/mfa/offer-2.png"
+import dot from "../../assets/mfa/dot.svg"
 
 const Container = styled.div`
     height: 51em;

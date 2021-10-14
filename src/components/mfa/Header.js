@@ -2,9 +2,9 @@ import React from 'react'
 
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
-import Header from '../../assets/MFA/header.png'
+import Header from '../../assets/mfa/header.png'
 import StyledButton from '../navbar/Button.js'
-import checkpoint from '../../assets/MFA/checkpoint.svg'
+import checkpoint from '../../assets/mfa/checkpoint.svg'
 
 import circle from "../../assets/decorations/circle.svg"
 import smallcircle from "../../assets/decorations/smallcircle.svg"

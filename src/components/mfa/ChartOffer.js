@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import drugi from "../../assets/MFA/offer-1.png"
-import chart from "../../assets/MFA/chart.svg"
+import drugi from "../../assets/mfa/offer-1.png"
+import chart from "../../assets/mfa/chart.svg"
 import Media from 'react-media'
 
 const Container = styled.div`

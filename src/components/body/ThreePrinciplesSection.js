@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Row, Col } from 'react-bootstrap';
 import accesibility from '../../assets/logos/accesibility.svg'
 import automation from '../../assets/logos/automation.svg'
-import security from '../../assets/logos/security.svg'
+import security from '../../assets/logos/Security.svg'
 
 const Container = styled.div`
     height: 21.3125em;

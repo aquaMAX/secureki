@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
-import Header from '../../assets/PAM/header.png'
+import Header from '../../assets/pam/header.png'
 import StyledButton from '../navbar/Button.js'
-import checkpoint from '../../assets/MFA/checkpoint.svg'
+import checkpoint from '../../assets/mfa/checkpoint.svg'
 
 import image from '../../assets/about/header/image.png'
 import mobile from '../../assets/about/header/about-header-mobile.png'

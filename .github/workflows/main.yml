@@ -43,7 +43,7 @@ jobs:
           # FTP User.
           user: u107731145.maverickstudio.test.pl
           # FTP Password.
-          password: #z5u^oowL
+          password: ${{ secrets.PASSWORD }}
           # Local directory.
           local_dir: './public'
           # Remote directory.

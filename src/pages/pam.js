@@ -8,7 +8,7 @@ import { GetStarted } from "../components/body/GetStarted"
 import { Footer } from "../components/body/Footer"
 import { Offer } from "../components/pam/Offer.js"
 import { Features } from "../components/pam/Features.js"
-import { WhatsNew } from "../components/MFA/WhatsNew"
+import { WhatsNew } from "../components/mfa/WhatsNew"
 import StickyNav from "../components/navbar/StickyNav.js"
 import Slider from '../components/body/Slider/Slider.js'
 

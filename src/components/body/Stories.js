@@ -137,19 +137,18 @@ const Hook = styled.div`
 
 
 const Stories = () => {
-
-const data = useStaticQuery(graphql`
-query {
-    allStrapiArticles {
-      edges {
-        node {
-          id
-          content
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiArticle {
+        edges {
+            node {
+            id
+            content
+            }
         }
-      }
+        }
     }
-  }
-`)
+    `)
     
     return (
         <>
@@ -170,7 +169,7 @@ query {
                 <StoriesCol>
                     
                     <StoriesCard 
-                    story={data.allStrapiArticles.edges.map(document=>document.node.id === "Articles_1" ? document.node.content :  null)}
+                    story={data.allStrapiArticle.edges.map(document=>document.node.id === "Article_1" ? document.node.content :  null)}
                     image="mental"
                     title="Beh Swan Swan"
                     position="Magnum Group, CIO"
@@ -178,7 +177,7 @@ query {
                 </StoriesCol>
                 <StoriesCol>
                 <StoriesCard 
-                    story={data.allStrapiArticles.edges.map(document=>document.node.id === "Articles_2" ? document.node.content :  null)}
+                    story={data.allStrapiArticle.edges.map(document=>document.node.id === "Article_2" ? document.node.content :  null)}
                     image="ketut"
                     title="Chia Nam"
                     position="Hap Seng Group, CIO"
@@ -186,7 +185,7 @@ query {
                 </StoriesCol>
                 <StoriesCol>   
                 <StoriesCard 
-                    story={data.allStrapiArticles.edges.map(document=>document.node.id === "Articles_3" ? document.node.content :  null)}
+                    story={data.allStrapiArticle.edges.map(document=>document.node.id === "Article_3" ? document.node.content :  null)}
                     image="andrea"
                     title="Lee Kok Seong"
                     position="Takaful Ikhlas, CIO"

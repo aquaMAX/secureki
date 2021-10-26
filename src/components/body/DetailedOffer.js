@@ -2,7 +2,8 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import pierwszy from "../../assets/pierwszy.png"
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
+
 
 const Container = styled.div`
     height: 40em;
@@ -212,6 +213,18 @@ const Styledimg = styled.img`
 
 
 export const DetailedOffer = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiArticle {
+        edges {
+            node {
+            id
+            content
+            }
+        }
+        }
+    }
+    `)
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
@@ -225,7 +238,7 @@ export const DetailedOffer = () => {
                         Eliminate the main cause of a breach. Authenticate with ease.
                     </StyledTitle>
                     <StyledContent>
-                        When it comes to protecting your data, passwords are the weakest link. That is why multifactor authentication has become the identity and access management standard for preventing unauthorized access. Verify the identity of all users with SecureKi.   
+                    {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_8" ? document.node.content :  null)}   
                     </StyledContent>
                     <Link 
                         to="/mfa"

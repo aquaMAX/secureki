@@ -6,6 +6,7 @@ import StyledButton from "../navbar/Button.js"
 import square from "../../assets/decorations/square.svg"
 import circle from "../../assets/decorations/circle.svg"
 import smallcircle from "../../assets/decorations/smallcircle.svg"
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 const StyledImage = styled.img`
@@ -231,6 +232,18 @@ const FixedRow = styled(Row)`
 
 
 export const Article = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiArticle {
+        edges {
+            node {
+            id
+            content
+            }
+        }
+        }
+    }
+    `)
     return (
         
 
@@ -255,8 +268,7 @@ export const Article = () => {
                 </FixedRow>
                 <FixedRow>
                     <StyledTextBody>
-                        Secure access for your business, customers, or employees with our unparalleled identity security backed by
-                        a zero–trust philosophy.
+                        {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_7" ? document.node.content :  null)}
                     </StyledTextBody>
                 </FixedRow>
                 <FixedButtonsRow xs={1} lg={2}>

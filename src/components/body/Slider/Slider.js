@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Row, Col, Carousel } from 'react-bootstrap';
 import logo from '../../../assets/hero NEW 1.svg'
 import { FirstSlide } from './FirstSlide';
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Container = styled.div`
     height: 32.5em;
@@ -54,18 +55,31 @@ const StyledCarousel = styled(Carousel)`
 `
 
 const Slider = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiCarousel {
+            edges {
+              node {
+                id
+                content
+                title
+              }
+            }
+          }
+    }
+    `)
     return (
         <Container>
                 <StyledCarousel>
                     <Carousel.Item>
                         
-                        <FirstSlide title="Chia Nam Liang, Hap Seng Group, CIO" description="“Having a manual system for password management these days just won’t cut it anymore.”" image='first'/>
+                        <FirstSlide title={data.allStrapiCarousel.edges.map(document=>document.node.id === "Carousel_1" ? document.node.title :  null)} description={data.allStrapiCarousel.edges.map(document=>document.node.id === "Carousel_1" ? document.node.content :  null)} image='first'/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <FirstSlide title={"ARIANNE KOWALSKI, LEAD MARKETING SPECIALIST, MAILCHIP"} description="“All base UI elements are made using Nested Symbols and shared styles that are logically connected.”" image="second"/>
+                        <FirstSlide title={data.allStrapiCarousel.edges.map(document=>document.node.id === "Carousel_2" ? document.node.title :  null)} description={data.allStrapiCarousel.edges.map(document=>document.node.id === "Carousel_2" ? document.node.content :  null)} image="second"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <FirstSlide title="ARIANNE KOWALSKI, LEAD MARKETING SPECIALIST, MAILCHIP" description="“All base UI elements are made using Nested Symbols and shared styles that are logically connected.”" image="second"/>
+                        <FirstSlide title={data.allStrapiCarousel.edges.map(document=>document.node.id === "Carousel_2" ? document.node.title :  null)} description={data.allStrapiCarousel.edges.map(document=>document.node.id === "Carousel_2" ? document.node.content :  null)} image="second"/>
                     </Carousel.Item>
                 </StyledCarousel>
         </Container>

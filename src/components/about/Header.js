@@ -11,6 +11,8 @@ import elementsgroup from '../../assets/about/header/elementsgroup.svg'
 import rec from '../../assets/about/header/rec.svg'
 import Media from 'react-media';
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Layout = styled.div`
     max-width: 90em;
     height: ${45.625 + 7.6875}em;
@@ -212,6 +214,19 @@ const Wrapper = styled.div`
 `
 
 export const AboutHeader = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiAbout {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
 return (
     <>
     <div style={{backgroundColor: "#FCF5F0"}}>
@@ -223,8 +238,9 @@ return (
                         </h1>
                     </StyledTitle>
                     <StyledContent>
-                        Founded in 2013 by Brandon Low and Hak Jae Bang, SecureKi specializes in helping our customers secure and manage their credentials with industry-leading identity security technologies and solutions. With offices in Malaysia, South Korea, and Taiwan, we are dedicated to <b>our mission to empower organizations to securely, efficiently, and effortlessly protect their digital identities for a better tomorrow.</b>
-                    </StyledContent>
+                    {data.allStrapiAbout.edges.map(document=>document.node.id === "About_1" ? document.node.content :  null)}  
+
+                        </StyledContent>
                 <ButtonContainer>
                     <MFAButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background={"#FF6938"} font={"#FFFFFF"}>
                         Say hello

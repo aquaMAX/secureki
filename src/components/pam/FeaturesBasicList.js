@@ -8,6 +8,8 @@ import fourth from '../../assets/pam/features/basic/fourth.svg'
 import fifth from '../../assets/pam/features/basic/fifth.svg'
 import sixth from '../../assets/pam/features/basic/sixth.svg'
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const StyledRow = styled(Row)`
     margin: 0;
     width: 64.225em; 
@@ -104,6 +106,19 @@ const StyledTitle = styled.div`
 
 
 export const FeaturesBasicList = ({state}) => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiFeatures {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <Container>
             <StyledRow newstate={state} lg={4} xs={1} >
@@ -111,10 +126,10 @@ export const FeaturesBasicList = ({state}) => {
                     <FeatureContainer>
                         <StyledIcon src={first}/>
                         <StyledTitle>
-                            Integrated Password Management
+                        {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_1" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                            Support and integrate with various operating systems and platforms, from Unix to Windows, to compliant directories like AD and LDAP, to systems like RADIUS and TACACS.
+                        {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_1" ? document.node.content :  null)}  
                         </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
@@ -122,22 +137,19 @@ export const FeaturesBasicList = ({state}) => {
                     <FeatureContainer>
                         <StyledIcon src={second}/>
                         <StyledTitle>
-                            Centralized Vision
-                        </StyledTitle>
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_2" ? document.node.title :  null)}                        </StyledTitle>
                         <TextContainer>
-                            See all your security events and what they mean for your business with simple clarity and prioritization on our centralized administrative dashboard.                 
-                        </TextContainer>
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_2" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={third}/>
                         <StyledTitle>
-                            Workflow for the Pros
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_3" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                            Easily limit and control who has access with request and approval workflow. Approve access with time-bound durations and get instant notifications whenever there’s a request needed for approval.
-                        </TextContainer>
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_3" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
             </StyledRow>
@@ -147,33 +159,30 @@ export const FeaturesBasicList = ({state}) => {
                     <FeatureContainer>
                         <StyledIcon src={fourth}/>
                         <StyledTitle>
-                        Automated Password Policy
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_4" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                        Password changes automatically based on your preference. After each uses, scheduled, or manual batch changes. You have complete control.                 
-                        </TextContainer>
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_4" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={fifth}/>
                         <StyledTitle>
-                        Real–time Monitoring
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_5" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                        Real-time session recording, monitoring, and playback functionalities for all your privileged activities and audits.                    
-                        </TextContainer>
+                            {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_5" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={sixth}/>
                         <StyledTitle>
-                        Report Generator   
+                        {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_6" ? document.node.title :  null)}   
                         </StyledTitle>
                         <TextContainer>
-                        Improve decision making and auditing with complete audit trails of every privileged activity with customizable reporting to meet your regulatory requirements.                    
-                        </TextContainer>
+                        {data.allStrapiFeatures.edges.map(document=>document.node.id === "Features_6" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
             </StyledRow>

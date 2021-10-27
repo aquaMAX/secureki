@@ -5,6 +5,8 @@ import drugi from "../../assets/mfa/offer-3.png";
 import circle from "../../assets/decorations/circle.svg";
 import smallcircle from "../../assets/decorations/smallcircle.svg";
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Container = styled.div`
     height: 37.8125em;
     
@@ -215,6 +217,19 @@ const FixedRow = styled(Row)`
 `
 
 export const LastOffer = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiMfa {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <div style={{background: "#FFFFFF"}}>
         <Container>
@@ -229,11 +244,11 @@ export const LastOffer = () => {
                         MFA
                     </StyledSlogan>
                     <StyledTitle>
-                    Seamless, Fast Deployment
+                    {data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_4" ? document.node.title :  null)}  
                     </StyledTitle>
                     <StyledContent>
                         <FixedRow>
-                        Setting up shouldn’t be a headache. SecureKi MFA integrates with your existing infrastructure with little to no effort to deploy.
+                        {data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_4" ? document.node.content :  null)}  
                         </FixedRow>
                     </StyledContent>
                     <StyledMoreabout>

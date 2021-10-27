@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 import accesibility from '../../assets/logos/accesibility.svg'
 import automation from '../../assets/logos/automation.svg'
 import security from '../../assets/logos/Security.svg'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Container = styled.div`
     height: 21.3125em;
@@ -110,6 +111,19 @@ const StyledTitleRow = styled(Row)`
 `
 
 export const ThreePrinciplesSection = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiArticle {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <Container>
             <StyledRow xs={1} lg={3}>
@@ -117,34 +131,29 @@ export const ThreePrinciplesSection = () => {
                     <StyledTitleRow>
                         <StyledImage src={accesibility} />
                         <StyledTitle>
-                            Accessibility
-                        </StyledTitle>
+                        {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_4" ? document.node.title :  null)}                         </StyledTitle>
                     </StyledTitleRow>
                     <StyledParagraph>
-                        Work securely from anywhere, anytime, across all devices for your users.
+                    {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_4" ? document.node.content :  null)}                 
                     </StyledParagraph>
                 </StyledAccesibilityCol>
                 <StyledAutomationCol>
                     <StyledTitleRow>
                         <StyledImage src={automation} />
                         <StyledTitle>
-                            Automation
-                        </StyledTitle>
+                        {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_5" ? document.node.title :  null)}                         </StyledTitle>
                     </StyledTitleRow>
                     <StyledParagraph>
-                        Reduce operational cost and complexity with automated and streamlined processes 
-                    </StyledParagraph>
+                    {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_5" ? document.node.content :  null)}                     </StyledParagraph>
                 </StyledAutomationCol>
                 <StyledSecurityCol>
                     <StyledTitleRow>
                         <StyledImage src={security} />
                         <StyledTitle>
-                            Security
-                        </StyledTitle>
+                        {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_6" ? document.node.title :  null)}                         </StyledTitle>
                     </StyledTitleRow>
                     <StyledParagraph>
-                        Prevent identity breaches and improve your security posture, giving you the peace of mind your business deserved.
-                    </StyledParagraph>
+                    {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_6" ? document.node.content :  null)}                     </StyledParagraph>
                 </StyledSecurityCol>
             </StyledRow>
         </Container>

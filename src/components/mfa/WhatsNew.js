@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import Card from './Card.js'
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Container = styled.div`
     height: 49.375em;
     padding-top: 4.375em;
@@ -77,6 +79,19 @@ const StoriesCol = styled(Col)`
 
 
 export const WhatsNew = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiMfa {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <Container>
             <Row style={{textAlign: "center", marginLeft: 0, marginRight: 0}}>
@@ -89,22 +104,22 @@ export const WhatsNew = () => {
             <StyledRow>
                 <StoriesCol>
                     <Card 
-                    title="Learn how our MFA works"
-                    description="The company invested $4 billion in a robotics and AI research institute to create safer"
+                    title={data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_5" ? document.node.title :  null)}
+                    description={data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_5" ? document.node.content :  null)}
                     link="→ Get the eBook"
                     />
                 </StoriesCol>
                 <StoriesCol>
                 <Card 
-                    title="More on PAM Case Study"
-                    description="The company invested $4 billion in a robotics and AI research institute to create safer"
+                    title={data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_6" ? document.node.title :  null)}
+                    description={data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_6" ? document.node.content :  null)}
                     link="→ Get the eBook"
                     />
                 </StoriesCol>
                 <StoriesCol>   
                 <Card 
-                    title={"SECUREKI is a leading platform\u00A0service in Asia"}
-                    description="The company invested $4 billion in a robotics and AI research institute to create safer"
+                    title={data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_7" ? document.node.title :  null)}
+                    description={data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_7" ? document.node.content :  null)}
                     link="→ Read the Article"
                     />
                 </StoriesCol>

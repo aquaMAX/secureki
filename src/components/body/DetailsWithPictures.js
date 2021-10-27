@@ -1,14 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import pierwszy from "../../assets/pierwszy.png"
 import TIME from "../../assets/TIME.png"
 import Magnum from "../../assets/Magnum.png"
 import Hap from "../../assets/Hap.png"
 import { StackedPictures } from './StackedPictures';
 import Total from "../../assets/stacked images/Total.png"
-import Media from 'react-media'
-import { Link } from 'gatsby'
+
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 
@@ -253,7 +252,19 @@ const DesktopDisplayer = styled.div`
 `
 
 export const DetailsWithPictures = () => {
-    
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiArticle {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
 
     return (
         <>
@@ -261,12 +272,11 @@ export const DetailsWithPictures = () => {
             <StyledRow xs={1} lg={2}>
                 <TextContainer xl={5} lg={5}>
                     <StyledTitle>
-                    Trusted by leading companies
+                    {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_10" ? document.node.title :  null)}  
                     </StyledTitle>
                     <StyledContent>
                         <Row style={{paddingLeft: "0.8333333333333334em"}}>
-                        Discover from our customers how SecureKi improves their security and business.
-                    </Row><Row><span><br />
+                        {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_10" ? document.node.content :  null)}                    </Row><Row><span><br />
                         <LogosRow>
                             <StyledCol>
                                 <HapLogo src={Hap} />

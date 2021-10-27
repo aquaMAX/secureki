@@ -14,6 +14,9 @@ import siderec from "../../assets/pam/header/siderec.svg"
 import emptyrec from "../../assets/pam/header/emptyrec.svg"
 import sidesmallrec from "../../assets/pam/header/sidesmallrec.svg"
 
+import { graphql, useStaticQuery } from 'gatsby'
+
+
 const Layout = styled.div`
     max-width: 90em;
     height: 60.75em;
@@ -300,6 +303,19 @@ const Breaker = styled.div`
 
 
 export const PAMHeader = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiPam {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
 return (
     <Layout>
         <StyledRec src={rec} />
@@ -315,7 +331,7 @@ return (
                 <TextRow><Displayer>from{'\u00A0'}</Displayer><ColoredP>SecureKi</ColoredP></TextRow>    
                 </StyledTitle>
                 <StyledBody>
-                Our next generation of privileged access management (PAM) solution is a simple-to-deploy, automated, proven solution to secure your privileged credentials in any physical and virtual environment.
+                {data.allStrapiPam.edges.map(document=>document.node.id === "Pam_1" ? document.node.content :  null)}  
                 </StyledBody>
                 <StyledList>
                     <StyledParagraph>

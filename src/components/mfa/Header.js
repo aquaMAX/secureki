@@ -9,6 +9,9 @@ import checkpoint from '../../assets/mfa/checkpoint.svg'
 import circle from "../../assets/decorations/circle.svg"
 import smallcircle from "../../assets/decorations/smallcircle.svg"
 
+import { graphql, useStaticQuery } from 'gatsby'
+
+
 const Layout = styled.div`
     max-width: 90em;
     height: 55.9375em;
@@ -230,6 +233,19 @@ const StyledParagraph = styled.div`
 `
 
 export const MFAHeader = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiMfa {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
 return (
     <Layout>
         <StyledCircle src={circle} />
@@ -243,7 +259,7 @@ return (
                 <TextTitleRow>from{'\u00A0'}<ColoredP>SecureKi</ColoredP></TextTitleRow>    
                 </StyledTitle>
                 <StyledBody>
-                    Whether you’re looking for a two-factor authentication solution to meet your compliance needs or building a full zero-trust security framework, SecureKi has got you covered.
+                {data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_1" ? document.node.content :  null)}  
                 </StyledBody>
                 <StyledList>
                     <StyledParagraph>

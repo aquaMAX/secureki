@@ -9,6 +9,9 @@ import fourth from '../../assets/pam/features/advanced/fourth.svg'
 import fifth from '../../assets/pam/features/advanced/fifth.svg'
 import sixth from '../../assets/pam/features/advanced/sixth.svg'
 
+import { graphql, useStaticQuery } from 'gatsby'
+
+
 const StyledRow = styled(Row)`
     margin: 0;
     width: 64.225em;
@@ -96,17 +99,30 @@ const StyledTitle = styled.div`
 `
 
 export  const FeaturesAdvancedList = ({state}) => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiFeaturesAdvanced {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <>
-            <StyledRow newstate={state} xs={1} lg={3}>
+             <StyledRow newstate={state} xs={1} lg={3}>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={first}/>
                         <StyledTitle>
-                        Compliance Control
+                        {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_1" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                        Prevent the reuse of passwords and with mass password change capabilities. No two passwords are the same. 
+                        {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_1" ? document.node.content :  null)}  
                         </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
@@ -114,22 +130,19 @@ export  const FeaturesAdvancedList = ({state}) => {
                     <FeatureContainer>
                         <StyledIcon src={second}/>
                         <StyledTitle>
-                        Fine-Grained Access<br /> Control
-                        </StyledTitle>
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_2" ? document.node.title :  null)}                        </StyledTitle>
                         <TextContainer>
-                        With enterprise-grade access rules on a granular level such as session lengths and role-based parameters, blacklisting, whitelisting, and greylisting groupings to manage your user's access, and more.
-                        </TextContainer>
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_2" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={third}/>
                         <StyledTitle>
-                        Single Sign-on and Multifactor Authentication
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_3" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                        Gain faster access and productivity improvements with single sign-on for all your applications in one place, with an additional level of security with MFA for verification before granting access.
-                        </TextContainer>
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_3" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
             </StyledRow>
@@ -138,33 +151,30 @@ export  const FeaturesAdvancedList = ({state}) => {
                     <FeatureContainer>
                         <StyledIcon src={fourth}/>
                         <StyledTitle>
-                        App-to-app Password Management
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_4" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                        Automatically eliminate hard-coded passwords from your scripts, which leaves your passwords vulnerable to internal and external threats.
-                        </TextContainer>
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_4" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={fifth}/>
                         <StyledTitle>
-                        Best-in-class Encryption
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_5" ? document.node.title :  null)}
                         </StyledTitle>
                         <TextContainer>
-                        To keep your data secure, we use ARIA encryption application to automatically manage the generation and distribution of encryption keys and AES (Advanced Encryption Standard) with 256-bit keys.
-                        </TextContainer>
+                            {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_5" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
                 <StoriesCol>
                     <FeatureContainer>
                         <StyledIcon src={sixth}/>
                         <StyledTitle>
-                        Always Reliable
+                        {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_6" ? document.node.title :  null)}   
                         </StyledTitle>
                         <TextContainer>
-                        With built-in High Availability configurations that support real-time synchronization in the event of appliance redundancy.
-                        </TextContainer>
+                        {data.allStrapiFeaturesAdvanced.edges.map(document=>document.node.id === "Features-advanced_6" ? document.node.content :  null)}                        </TextContainer>
                     </FeatureContainer>
                 </StoriesCol>
             </StyledRow>

@@ -5,6 +5,8 @@ import drugi from "../../assets/mfa/offer-1.png"
 import chart from "../../assets/mfa/chart.svg"
 import Media from 'react-media'
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Container = styled.div`
     height: 48.6875em;
     
@@ -338,6 +340,19 @@ const ChartSVG = styled.svg`
 `
 
 export const ChartOffer = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiMfa {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
@@ -383,11 +398,11 @@ export const ChartOffer = () => {
                         MFA
                     </StyledSlogan>
                     <StyledTitle>
-                    Simple, Effective Multifactor Authentication
+                    {data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_2" ? document.node.title :  null)} 
                     </StyledTitle>
                     <StyledContent>
                         <Row>
-                        Multifactor authentication from SecureKi protects your applications by using a second source of validation, like a phone or token, to verify user identity before granting access. Combining Biometric Authentication as an added layer of authentication ensures additional security yet providing a streamlined login experience.
+                        {data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_2" ? document.node.content :  null)}  
                         </Row>
                     </StyledContent>
                     <StyledMoreabout>

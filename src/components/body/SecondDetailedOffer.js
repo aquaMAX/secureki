@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import drugi from "../../assets/drugi.png"
-import { Link } from 'gatsby'
-import Media from 'react-media'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 const Container = styled.div`
     height: 45.5em;
@@ -230,6 +229,19 @@ const DesktopDisplayer = styled.div`
 `
 
 export const SecondDetailedOffer = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiArticle {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
@@ -243,14 +255,13 @@ export const SecondDetailedOffer = () => {
                         PAM
                     </StyledSlogan>
                     <StyledTitle>
-                        Keep unauthorized users out. Safeguard privileged access and credentials.
+                    {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_9" ? document.node.title :  null)}  
                     </StyledTitle>
                     <StyledContent>
                         <Row className="Content">
-                        Compromised access and credentials most often are the leading attack vectors of a security breach.
-                        </Row><Row className="Content"><span><br />
-                        Our comprehensive privileged access management is designed to manage and monitor privileged access to accounts and applications, alert system administrators on high-risk events, reduce operations complexity, and meeting regulatory compliance with ease.  
-                        </span></Row>
+                        {data.allStrapiArticle.edges.map(document=>document.node.id === "Article_9" ? document.node.content :  null)}                    
+
+                        </Row>
                     </StyledContent>
                     <Link 
                         to="/pam"

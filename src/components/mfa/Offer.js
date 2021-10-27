@@ -5,6 +5,9 @@ import pierwszy from "../../assets/pierwszy.png"
 import image from "../../assets/mfa/offer-2.png"
 import dot from "../../assets/mfa/dot.svg"
 
+import { graphql, useStaticQuery } from 'gatsby'
+
+
 const Container = styled.div`
     height: 51em;
     
@@ -239,6 +242,19 @@ const ListElement = styled(Row)`
 
 
 export const Offer = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiMfa {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
@@ -249,10 +265,10 @@ export const Offer = () => {
                         MFA
                     </StyledSlogan>
                     <StyledTitle>
-                    Convenient Authentication Methods
+                    {data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_3" ? document.node.title :  null)}
                     </StyledTitle>
                     <StyledContent>
-                    Providing user-friendly authentication methods does not mean you’ll add unnecessary friction to your experience. With various login options provided, users get to choose the one that best fits their workflow.   
+                    {data.allStrapiMfa.edges.map(document=>document.node.id === "Mfa_3" ? document.node.content :  null)}  
                     </StyledContent>
                     <StyledList>
                         <ListElement><StyledDot src={dot}/><div>SMS and email One Time Password (OTP)</div></ListElement>

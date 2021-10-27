@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import drugi from "../../assets/pam/offer-1.png"
 import Media from 'react-media'
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Container = styled.div`
     height: 45.5em;
     
@@ -182,6 +184,19 @@ const Styledimg = styled.img`
 `
 
 export const Offer = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiPam {
+        edges {
+            node {
+            id
+            content
+            title
+            }
+        }
+        }
+    }
+    `)
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
@@ -194,10 +209,10 @@ export const Offer = () => {
                         PAM
                     </StyledSlogan>
                     <StyledTitle>
-                    Comprehensive for the Modern Workforce
+                    {data.allStrapiPam.edges.map(document=>document.node.id === "Pam_2" ? document.node.title :  null)}
                     </StyledTitle>
                     <StyledContent>
-                        Credential management alone isn’t sufficient when it comes to protecting your privileged access. Our SecureKi’s Privileged Access Management solutions come equipped with session recording, fine-grained access control, multifactor authentication, single sign-on, and policy defining capabilities — all the essential needs when it comes to securing your credentials. 
+                    {data.allStrapiPam.edges.map(document=>document.node.id === "Pam_2" ? document.node.content :  null)}  
                     </StyledContent>
                     <StyledMoreabout>
                     <Media queries={{

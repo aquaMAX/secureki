@@ -220,6 +220,7 @@ export const DetailedOffer = () => {
             node {
             id
             content
+            title
             }
         }
         }

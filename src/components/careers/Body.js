@@ -76,6 +76,7 @@ const ImageContainer = styled(Col)`
     justify-content: end;
     @media (max-width: 991px) {
         padding: 0;
+        max-width: none;
     } 
  
     @media (min-width: 992px) and (max-width: 1439px) {

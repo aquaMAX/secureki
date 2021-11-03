@@ -7,6 +7,7 @@ import StyledButton from '../navbar/Button.js'
 
 
 import { StaticImage } from 'gatsby-plugin-image'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Layout = styled.div`
     max-width: 90em;
@@ -197,6 +198,18 @@ const SlideTrack = styled(Row)`
 
 
 export const Customers = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
+    }
+    `)
 return (
     <>
     <Layout>
@@ -259,7 +272,7 @@ return (
             </CustomersRow>
             <ButtonContainer>
                 <MFAButton onClick={()=>(window.location.href="../#Hook")} type="submit" background={"#FF6938"} font={"#FFFFFF"}>
-                See customer stories
+                {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_7" ? document.node.title :  null)}
                 </MFAButton>
             </ButtonContainer>
         

@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `https://secureki.herokuapp.com`,
-        collectionTypes: [`article`, `about`, `career`, `features-advanced`, `features`, `mfa`, `pam`, `opening`, `carousel`],
+        collectionTypes: [`article`, `about`, `career`, `features-advanced`, `features`, `mfa`, `pam`, `opening`, `carousel`, `first-job`, `second-job`, `buttons`],
         queryLimit: 1000,
       }
     },

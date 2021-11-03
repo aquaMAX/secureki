@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 
 import SingleOpening from './SingleOpening';
+import SinglePE from './SinglePE';
 
 const Container = styled.div`
     height: 78.3125rem;
@@ -59,7 +60,7 @@ const Openings = () => {
                         </h1>
                 </StyledTitle>
                 <SingleOpening section="Data" />
-                <SingleOpening section="Product Engineering" />
+                <SinglePE section="Product Engineering" />
             
         </Container>
     )

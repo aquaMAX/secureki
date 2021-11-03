@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import Button from "../navbar/Button"
 import { Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 const Container = styled.div`
@@ -164,6 +165,18 @@ const BigContainer = styled.div`
 
 
 export const Join = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
+    }
+    `)
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
@@ -174,9 +187,13 @@ export const Join = () => {
                         Want to join us?
                         </h1>
                     </StyledTitle>
-                    <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                    <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">
+                        {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_8" ? document.node.title :  null)}
+                    </StyledButton>
                         <Link to='/careers'> 
-                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
+                        <StyledSecondButton background="#FF6938" font="#FFFFFF">
+                        {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_9" ? document.node.title :  null)}
+                        </StyledSecondButton>
                         </Link>
                 </StyledRow>
             </BigContainer>
@@ -191,9 +208,13 @@ export const Join = () => {
                 </StyledButtonRow>
                 <StyledButtonRow>
                     <StyledButtonCol>
-                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Try demo</StyledButton>
+                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">
+                            {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_8" ? document.node.title :  null)}
+                        </StyledButton>
                         <Link to='./careers'> 
-                        <StyledSecondButton background="#FF6938" font="#FFFFFF">Careers</StyledSecondButton>
+                        <StyledSecondButton background="#FF6938" font="#FFFFFF">
+                        {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_9" ? document.node.title :  null)}
+                        </StyledSecondButton>
                         </Link>
                     </StyledButtonCol>
                 </StyledButtonRow>

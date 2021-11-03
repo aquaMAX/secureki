@@ -5,6 +5,7 @@ import { Col, Row } from "react-bootstrap"
 import pictures from '../../assets/about/culture/Group 603.png'
 import test from '../../assets/about/culture/test.png'
 
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Container = styled.div`
     height: 44.4375rem;
@@ -167,6 +168,20 @@ const Styledsvg = styled.img`
 `
 
 const Culture = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiAbout {
+        edges {
+            node {
+            id
+            content
+            title
+            bold
+            }
+        }
+        }
+    }
+    `)
     return (
         <>
         <Container>
@@ -177,9 +192,9 @@ const Culture = () => {
                     </StyledTitle>
                     <StyledContent>
                         <TextRow>
-                        <b>At SecureKi, we believe that building the right kind of products has to start from within by hiring people from different backgrounds and empowering team members to innovate, learn together, and lead.</b>
+                        <b>{data.allStrapiAbout.edges.map(document=>document.node.id === "About_3" ? document.node.bold :  null)}</b>
                         <br />
-                        As a company, we are constantly iterating, solving problems, and working together to build better products and create better experiences for everyone.
+                        {data.allStrapiAbout.edges.map(document=>document.node.id === "About_3" ? document.node.content :  null)}
                         </TextRow>
                     </StyledContent>
                 </TextContainer>

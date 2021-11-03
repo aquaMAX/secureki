@@ -314,6 +314,14 @@ export const PAMHeader = () => {
             }
         }
         }
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
     }
     `)
 return (
@@ -351,7 +359,7 @@ return (
                 </StyledList>
                 <TextRow>
                 <MFAButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background={"#FF6938"} font={"#FFFFFF"}>
-                    Request a demo
+                    {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_3" ? document.node.title :  null)}
                 </MFAButton>
                 </TextRow>
                 

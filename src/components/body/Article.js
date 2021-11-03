@@ -242,6 +242,14 @@ export const Article = () => {
             }
         }
         }
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
     }
     `)
     return (
@@ -274,7 +282,7 @@ export const Article = () => {
                 <FixedButtonsRow xs={1} lg={2}>
                 <a href="mailto:info@secureki.com?subject=Request a demo&body=The message">
                     <StyledButtonFix id="btnOutlook" background="#FF6938" font="#FFFFFF">
-                        Request a demo
+                        {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_3" ? document.node.title :  null)}
                     </StyledButtonFix>
                    </a> 
                     

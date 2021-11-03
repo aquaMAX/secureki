@@ -222,9 +222,18 @@ export const AboutHeader = () => {
             id
             content
             title
+            bold
             }
         }
         }
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
     }
     `)
 return (
@@ -238,12 +247,15 @@ return (
                         </h1>
                     </StyledTitle>
                     <StyledContent>
-                    {data.allStrapiAbout.edges.map(document=>document.node.id === "About_1" ? document.node.content :  null)}  
+                    <>
+                    {data.allStrapiAbout.edges.map(document=>document.node.id === "About_1" ? document.node.content :  null)}
+                    <b>{data.allStrapiAbout.edges.map(document=>document.node.id === "About_1" ? document.node.bold :  null)}</b>
+                    </>  
 
                         </StyledContent>
                 <ButtonContainer>
                     <MFAButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background={"#FF6938"} font={"#FFFFFF"}>
-                        Say hello
+                    {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_6" ? document.node.title :  null)}
                     </MFAButton>
                 </ButtonContainer>
                 

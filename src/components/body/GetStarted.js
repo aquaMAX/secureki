@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 import Button from "../navbar/Button"
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Container = styled.div`
     height: 22.875em;
     max-width: 90em;
@@ -144,6 +146,18 @@ const BigContainer = styled.div`
 `
 
 export const GetStarted = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
+    }
+    `)
     return (
         <div style={{background: "#FCF5F0"}}>
         <Container>
@@ -158,9 +172,13 @@ export const GetStarted = () => {
                 <StyledRow>
                     <StyledCol>
                     
-                        <StyledSecondButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                        <StyledSecondButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF">
+                            {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_4" ? document.node.title :  null)}
+                        </StyledSecondButton>
                    
-                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
+                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">
+                            {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_5" ? document.node.title :  null)}
+                        </StyledButton>
                     </StyledCol>
                 </StyledRow>
             </SmallContainer>
@@ -168,11 +186,15 @@ export const GetStarted = () => {
                 <StyledButtonRow>
                     <StyledCol>
                         
-                        <StyledSecondButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF">Get in touch</StyledSecondButton>
+                        <StyledSecondButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF">
+                            {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_4" ? document.node.title :  null)}
+                        </StyledSecondButton>
                         
                     
                     </StyledCol><StyledCol>
-                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">Free demo</StyledButton>
+                        <StyledButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FCF5F0" font="#FF6938" weight="400">
+                            {data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_5" ? document.node.title :  null)}
+                        </StyledButton>
                     </StyledCol>
                 </StyledButtonRow>
             </BigContainer>

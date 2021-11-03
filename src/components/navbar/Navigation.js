@@ -10,6 +10,8 @@ import Media from 'react-media'
 import Mobile from './Mobile';
 import ContactForm from './ContactForm';
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Nav = styled.nav`
 
     height: 4.8125em;
@@ -103,6 +105,18 @@ const StyledNavCol = styled(Col)`
 `
 
 const Navigation = () => {
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
+    }
+    `)
     return (
         <StickyInner className="sticky-inner">
             
@@ -140,7 +154,7 @@ const Navigation = () => {
                                                         
                                                             
                                                             <ContactForm />
-                                                            <StyledStartedButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF" weight="200">Get Started</StyledStartedButton>
+                                                            <StyledStartedButton onClick={()=>window.location.href="mailto:info@secureki.com?subject=Request a demo&body=The message"} type="submit" background="#FF6938" font="#FFFFFF" weight="200">{data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_1" ? document.node.title :  null)}</StyledStartedButton>
                                                             
                                                         
                                                     </Col>

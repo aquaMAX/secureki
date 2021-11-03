@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row, Modal } from 'react-bootstrap'
 import Button from './Button';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const StyledContactButton = styled(Button)`
     font-family: Messina Sans semibold;
-    
     transition: 0.3s;
     &:hover {
         background: #EEDDD7;
@@ -354,10 +354,23 @@ function MyVerticallyCenteredModal(props) {
 const ContactForm = ({type}) => {
     const [modalShow, setModalShow] = React.useState(false);
 
+    const data = useStaticQuery(graphql`
+    query {
+        allStrapiButtons {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
+    }
+    `)
+
     return (
     <>
-        <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400" onClick={() => setModalShow(true)}>Contact Us</StyledContactButton>
-        <StyledMobileContactButton background="#F9F1EE" font="#FF6938" weight="400" onClick={() => setModalShow(true)}>Contact Us</StyledMobileContactButton>
+        <StyledContactButton background="#F9F1EE" font="#FF6938" weight="400" onClick={() => setModalShow(true)}>{data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_2" ? document.node.title :  null)}</StyledContactButton>
+        <StyledMobileContactButton background="#F9F1EE" font="#FF6938" weight="400" onClick={() => setModalShow(true)}>{data.allStrapiButtons.edges.map(document=>document.node.id === "Buttons_2" ? document.node.title :  null)}</StyledMobileContactButton>
         <MyVerticallyCenteredModal
           show={modalShow}
           onHide={() => setModalShow(false)}

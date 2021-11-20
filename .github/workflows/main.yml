@@ -44,5 +44,5 @@ jobs:
         with:
           source_dir: 'public'
           container_name: '$web'
-          connection_string: ${{ secrets.ConnectionString }}
+          connection_string: ${{ secrets.CONNECTIONSTRING }}
           sync: true

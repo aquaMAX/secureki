@@ -39,18 +39,10 @@ jobs:
           npm install --production
           npm run-script build
           
-      - name: FTP Deployment
-        uses: airvzxf/ftp-deployment-action@latest
+      - name: Azure Deployment
+        uses: bacongobbler/azure-blob-storage-upload@latest
         with:
-          # FTP Server.
-          server: ${{ secrets.SERVER }}
-          # FTP User.
-          user: ${{ secrets.USER }}
-          # FTP Password.
-          password: ${{ secrets.PASSWORD }}
-          # Local directory.
-          local_dir: './public'
-          # Remote directory.
-          remote_dir: ./test
-          # Delete all the files inside of the remote directory.
-          delete: ./test
+          source_dir: 'public'
+          container_name: '$web'
+          connection_string: ${{ secrets.ConnectionString }}
+          sync: true

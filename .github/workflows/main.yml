@@ -40,7 +40,7 @@ jobs:
           npm run-script build
           
       - name: Azure Deployment
-        uses: bacongobbler/azure-blob-storage-upload@latest
+        uses: bacongobbler/azure-blob-storage-upload@v1.2.0
         with:
           source_dir: 'public'
           container_name: '$web'

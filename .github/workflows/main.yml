@@ -44,5 +44,5 @@ jobs:
         with:
           source_dir: 'public'
           container_name: '$web'
-          connection_string: ${{ secrets.CONNECTIONSTRING }}
+          connection_string: ${{ secrets.SECUREKI_AZURE }}
           sync: true
